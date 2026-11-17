@@ -1,0 +1,407 @@
+{
+  "id": "cvl",
+  "titre": "Civilisation latino-américaine",
+  "langue": "es",
+  "statut_maquette": "ORL?",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6J5C, CM 10 h + TD 10 h, 2 ECTS)",
+    "enseignant": "Marcos Eymar",
+    "description": "La ville latino-américaine contemporaine, étudiée à travers la photographie, le cinéma et des textes littéraires et journalistiques.",
+    "bibliographie": [
+      "Donnée en cours"
+    ],
+    "sources": [
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [],
+  "competences_examen": [
+    "Commenter un document visuel ou un extrait de film sur la ville"
+  ],
+  "incertitudes": [
+    "Le statut « ORL? » de cours peut être levé : la page S6 consultée le 2026-11-17 liste bien la matière."
+  ],
+  "chapitres": [
+    {
+      "id": "cvl.urbanizacion",
+      "titre": "Urbanización",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvl.urbanizacion.exodo",
+          "titre": "El éxodo rural",
+          "niveau": "F"
+        },
+        {
+          "id": "cvl.urbanizacion.metropolis",
+          "titre": "Las metrópolis latinoamericanas",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.onu-habitat"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Exode rural",
+          "en": "rural exodus / rural-urban migration",
+          "es": "éxodo rural / migración campo-ciudad"
+        },
+        {
+          "fr": "Taux d'urbanisation",
+          "en": "urbanisation rate",
+          "es": "tasa de urbanización"
+        },
+        {
+          "fr": "Industrialisation par substitution aux importations",
+          "en": "import substitution industrialisation (ISI)",
+          "es": "industrialización por sustitución de importaciones (ISI)"
+        },
+        {
+          "fr": "Latifundium",
+          "en": "large estate",
+          "es": "latifundio"
+        },
+        {
+          "fr": "Métropole",
+          "en": "metropolis / metropolitan area",
+          "es": "metrópoli / área metropolitana"
+        },
+        {
+          "fr": "Primauté urbaine",
+          "en": "urban primacy",
+          "es": "primacía urbana"
+        },
+        {
+          "fr": "Centre historique",
+          "en": "historic centre",
+          "es": "centro histórico / casco antiguo"
+        },
+        {
+          "fr": "Étalement urbain",
+          "en": "urban sprawl",
+          "es": "expansión urbana / dispersión"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvl.informalidad",
+      "titre": "Informalidad",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvl.informalidad.asentamientos",
+          "titre": "Favelas, villas, barriadas: los barrios informales",
+          "niveau": "F"
+        },
+        {
+          "id": "cvl.informalidad.economia",
+          "titre": "La economía informal",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.onu-habitat",
+        "src.davis-slums",
+        "src.oit-informalidad",
+        "src.de-soto"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvl.urbanizacion"
+      ],
+      "terminologie": [
+        {
+          "fr": "Quartier informel",
+          "en": "informal settlement / slum",
+          "es": "asentamiento informal"
+        },
+        {
+          "fr": "Autoconstruction",
+          "en": "self-built housing",
+          "es": "autoconstrucción"
+        },
+        {
+          "fr": "Occupation illégale",
+          "en": "land invasion / squatting",
+          "es": "invasión / toma de tierras"
+        },
+        {
+          "fr": "Régularisation foncière",
+          "en": "land titling / regularisation",
+          "es": "regularización / titulación de tierras"
+        },
+        {
+          "fr": "Économie informelle",
+          "en": "informal economy",
+          "es": "economía informal"
+        },
+        {
+          "fr": "Vendeur ambulant",
+          "en": "street vendor",
+          "es": "vendedor ambulante"
+        },
+        {
+          "fr": "Emploi informel",
+          "en": "informal employment",
+          "es": "empleo informal"
+        },
+        {
+          "fr": "Recycleur informel",
+          "en": "waste picker",
+          "es": "cartonero / reciclador"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvl.fracturas",
+      "titre": "Fracturas urbanas",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvl.fracturas.segregacion",
+          "titre": "Segregación y barrios cerrados",
+          "niveau": "F"
+        },
+        {
+          "id": "cvl.fracturas.violencia",
+          "titre": "La violencia urbana",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.caldeira",
+        "src.onu-habitat",
+        "src.unodc-homicide"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvl.urbanizacion"
+      ],
+      "terminologie": [
+        {
+          "fr": "Ségrégation résidentielle",
+          "en": "residential segregation",
+          "es": "segregación residencial"
+        },
+        {
+          "fr": "Quartier fermé",
+          "en": "gated community",
+          "es": "barrio cerrado / urbanización cerrada"
+        },
+        {
+          "fr": "Fragmentation urbaine",
+          "en": "urban fragmentation",
+          "es": "fragmentación urbana"
+        },
+        {
+          "fr": "Espace public",
+          "en": "public space",
+          "es": "espacio público"
+        },
+        {
+          "fr": "Taux d'homicide",
+          "en": "homicide rate",
+          "es": "tasa de homicidios"
+        },
+        {
+          "fr": "Narcotrafic",
+          "en": "drug trafficking",
+          "es": "narcotráfico"
+        },
+        {
+          "fr": "Gang (Amérique centrale)",
+          "en": "gang",
+          "es": "mara / pandilla"
+        },
+        {
+          "fr": "Politique de la main de fer",
+          "en": "iron-fist policy",
+          "es": "mano dura"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvl.politicas",
+      "titre": "Políticas urbanas",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvl.politicas.medellin",
+          "titre": "Medellín y el urbanismo social",
+          "niveau": "F"
+        },
+        {
+          "id": "cvl.politicas.otros",
+          "titre": "Otros casos: Bogotá y Curitiba",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.echeverri-orsini",
+        "src.onu-habitat"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvl.fracturas",
+        "cvl.urbanizacion"
+      ],
+      "terminologie": [
+        {
+          "fr": "Urbanisme social",
+          "en": "social urbanism",
+          "es": "urbanismo social"
+        },
+        {
+          "fr": "Téléphérique urbain",
+          "en": "urban cable car",
+          "es": "metrocable / teleférico urbano"
+        },
+        {
+          "fr": "Bibliothèque-parc",
+          "en": "library park",
+          "es": "biblioteca parque"
+        },
+        {
+          "fr": "Budget participatif",
+          "en": "participatory budgeting",
+          "es": "presupuesto participativo"
+        },
+        {
+          "fr": "Bus à haut niveau de service",
+          "en": "bus rapid transit (BRT)",
+          "es": "bus de tránsito rápido (BRT)"
+        },
+        {
+          "fr": "Culture citoyenne",
+          "en": "civic culture",
+          "es": "cultura ciudadana"
+        },
+        {
+          "fr": "Piétonnisation",
+          "en": "pedestrianisation",
+          "es": "peatonalización"
+        },
+        {
+          "fr": "Piste cyclable",
+          "en": "cycle lane",
+          "es": "ciclorruta / ciclovía"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvl.representaciones",
+      "titre": "Representaciones",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvl.representaciones.cine",
+          "titre": "El cine de la ciudad latinoamericana",
+          "niveau": "F"
+        },
+        {
+          "id": "cvl.representaciones.metodo-imagen",
+          "titre": "Analizar una imagen o una secuencia de película",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.rocha"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvl.informalidad"
+      ],
+      "terminologie": [
+        {
+          "fr": "Esthétique de la faim",
+          "en": "aesthetics of hunger",
+          "es": "estética del hambre"
+        },
+        {
+          "fr": "Pornomisère",
+          "en": "poverty porn",
+          "es": "pornomiseria"
+        },
+        {
+          "fr": "Acteur non professionnel",
+          "en": "non-professional actor",
+          "es": "actor natural"
+        },
+        {
+          "fr": "Cinema Novo",
+          "en": "Cinema Novo",
+          "es": "Cinema Novo"
+        },
+        {
+          "fr": "Plan",
+          "en": "shot",
+          "es": "plano"
+        },
+        {
+          "fr": "Cadrage",
+          "en": "framing",
+          "es": "encuadre"
+        },
+        {
+          "fr": "Plongée / contre-plongée",
+          "en": "high angle / low angle",
+          "es": "picado / contrapicado"
+        },
+        {
+          "fr": "Montage",
+          "en": "editing",
+          "es": "montaje"
+        },
+        {
+          "fr": "Hors-champ",
+          "en": "off-screen space",
+          "es": "fuera de campo"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

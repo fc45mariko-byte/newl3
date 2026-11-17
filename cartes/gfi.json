@@ -1,0 +1,493 @@
+{
+  "id": "gfi",
+  "titre": "Gestion financière",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6J6A, CM 10 h + TD 15 h, 2 ECTS)",
+    "enseignant": "Isabelle Noël selon la page officielle ; Izabela Jankiewicz-Anker selon le plan des modules du support de comptabilité",
+    "description": "Analyse du bilan (bilan fonctionnel, FRNG, BFR, trésorerie nette), équilibre financier par les ratios, analyse du compte de résultat par les soldes intermédiaires de gestion.",
+    "bibliographie": [
+      "G. Langlois et M. Friédérich, Introduction à la comptabilité, Foucher",
+      "C. Buisard, Analyse financière, Foucher"
+    ],
+    "sources": [
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [
+    "Bilan fonctionnel",
+    "Soldes intermédiaires de gestion",
+    "Capacité d'autofinancement",
+    "Effet de levier"
+  ],
+  "competences_examen": [
+    "Construire un bilan fonctionnel",
+    "Calculer et interpréter FRNG, BFR et trésorerie nette",
+    "Calculer les SIG et la CAF",
+    "Rédiger un diagnostic financier"
+  ],
+  "incertitudes": [
+    "La suppression des transferts de charges (ANC 2022-06) modifie le calcul des SIG et de la CAF : à vérifier dans les fiches gfi.performance de cours."
+  ],
+  "chapitres": [
+    {
+      "id": "gfi.bilan-fonctionnel",
+      "titre": "Le bilan fonctionnel",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gfi.bilan-fonctionnel.reclassement",
+          "titre": "Du bilan comptable au bilan fonctionnel",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.bilan-fonctionnel.retraitements",
+          "titre": "Retraitements usuels",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.pcg"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.synthese",
+        "cpt.tresorerie"
+      ],
+      "terminologie": [
+        {
+          "fr": "Bilan fonctionnel",
+          "en": "functional balance sheet",
+          "es": "balance funcional"
+        },
+        {
+          "fr": "Emplois stables",
+          "en": "long-term uses of funds",
+          "es": "empleos estables"
+        },
+        {
+          "fr": "Ressources stables",
+          "en": "long-term sources of funds / permanent capital",
+          "es": "recursos permanentes"
+        },
+        {
+          "fr": "Concours bancaires courants",
+          "en": "bank overdrafts",
+          "es": "descubiertos bancarios / créditos a corto plazo"
+        },
+        {
+          "fr": "Effets escomptés non échus",
+          "en": "discounted bills not yet due",
+          "es": "efectos descontados pendientes de vencimiento"
+        },
+        {
+          "fr": "Crédit-bail",
+          "en": "finance lease / leasing",
+          "es": "arrendamiento financiero / leasing"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gfi.equilibre",
+      "titre": "Équilibre financier",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gfi.equilibre.frng",
+          "titre": "Fonds de roulement net global",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.equilibre.bfr",
+          "titre": "Besoin en fonds de roulement : exploitation et hors exploitation",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.equilibre.tresorerie-nette",
+          "titre": "Trésorerie nette",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.equilibre.situations",
+          "titre": "Les six situations d'équilibre et de déséquilibre",
+          "niveau": "A"
+        },
+        {
+          "id": "gfi.equilibre.rentabilite-vs-liquidite",
+          "titre": "Rentabilité et liquidité",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.equilibre.effet-ciseaux",
+          "titre": "Croissance et effet de ciseaux",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "gfi.bilan-fonctionnel",
+        "gfi.performance"
+      ],
+      "terminologie": [
+        {
+          "fr": "Fonds de roulement net global",
+          "en": "net working capital (functional approach)",
+          "es": "fondo de maniobra"
+        },
+        {
+          "fr": "Besoin en fonds de roulement",
+          "en": "working capital requirement",
+          "es": "necesidades operativas de fondos (NOF)"
+        },
+        {
+          "fr": "Cycle d'exploitation",
+          "en": "operating cycle",
+          "es": "ciclo de explotación"
+        },
+        {
+          "fr": "Trésorerie nette",
+          "en": "net cash position",
+          "es": "tesorería neta"
+        },
+        {
+          "fr": "Équilibre financier",
+          "en": "financial balance",
+          "es": "equilibrio financiero"
+        },
+        {
+          "fr": "Rentabilité",
+          "en": "profitability",
+          "es": "rentabilidad"
+        },
+        {
+          "fr": "Liquidité",
+          "en": "liquidity",
+          "es": "liquidez"
+        },
+        {
+          "fr": "Cessation des paiements",
+          "en": "insolvency (inability to pay debts as they fall due)",
+          "es": "insolvencia / cesación de pagos"
+        },
+        {
+          "fr": "Effet de ciseaux",
+          "en": "scissors effect",
+          "es": "efecto tijera"
+        },
+        {
+          "fr": "Croissance non financée",
+          "en": "overtrading",
+          "es": "sobreexpansión / crecimiento no financiado"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gfi.performance",
+      "titre": "Analyse de l'activité",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gfi.performance.sig",
+          "titre": "Soldes intermédiaires de gestion",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.performance.caf",
+          "titre": "Capacité d'autofinancement (méthodes additive et soustractive)",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.pcg"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.synthese",
+        "cpt.investissements"
+      ],
+      "terminologie": [
+        {
+          "fr": "Valeur ajoutée",
+          "en": "value added",
+          "es": "valor añadido"
+        },
+        {
+          "fr": "Excédent brut d'exploitation (EBE)",
+          "en": "gross operating profit (≈ EBITDA)",
+          "es": "resultado bruto de explotación (≈ EBITDA)"
+        },
+        {
+          "fr": "Marge commerciale",
+          "en": "gross margin on goods for resale",
+          "es": "margen comercial"
+        },
+        {
+          "fr": "Capacité d'autofinancement (CAF)",
+          "en": "cash flow from operations (self-financing capacity)",
+          "es": "capacidad de autofinanciación"
+        },
+        {
+          "fr": "Autofinancement",
+          "en": "self-financing / retained cash flow",
+          "es": "autofinanciación"
+        },
+        {
+          "fr": "Charge calculée",
+          "en": "non-cash expense",
+          "es": "gasto no desembolsable"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gfi.ratios",
+      "titre": "Les ratios",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gfi.ratios.structure",
+          "titre": "Ratios de structure et d'endettement",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.ratios.liquidite",
+          "titre": "Ratios de liquidité",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.ratios.rotation",
+          "titre": "Délais clients, fournisseurs, rotation des stocks",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.ratios.rentabilite",
+          "titre": "Rentabilité économique et financière",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.ratios.levier",
+          "titre": "Effet de levier",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.code-commerce"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "gfi.bilan-fonctionnel",
+        "gfi.performance",
+        "gfi.equilibre"
+      ],
+      "terminologie": [
+        {
+          "fr": "Taux d'endettement",
+          "en": "gearing / debt-to-equity ratio",
+          "es": "ratio de endeudamiento"
+        },
+        {
+          "fr": "Capacité de remboursement",
+          "en": "debt repayment capacity",
+          "es": "capacidad de devolución"
+        },
+        {
+          "fr": "Autonomie financière",
+          "en": "equity ratio / financial independence",
+          "es": "autonomía financiera"
+        },
+        {
+          "fr": "Liquidité générale",
+          "en": "current ratio",
+          "es": "ratio de liquidez general"
+        },
+        {
+          "fr": "Liquidité réduite",
+          "en": "quick ratio / acid-test ratio",
+          "es": "prueba ácida"
+        },
+        {
+          "fr": "Délai de recouvrement clients",
+          "en": "days sales outstanding (DSO)",
+          "es": "periodo medio de cobro"
+        },
+        {
+          "fr": "Délai fournisseurs",
+          "en": "days payable outstanding (DPO)",
+          "es": "periodo medio de pago"
+        },
+        {
+          "fr": "Rotation des stocks",
+          "en": "days inventory outstanding / stock turnover",
+          "es": "rotación de existencias"
+        },
+        {
+          "fr": "Rentabilité économique",
+          "en": "return on capital employed (ROCE) / return on assets",
+          "es": "rentabilidad económica"
+        },
+        {
+          "fr": "Rentabilité financière",
+          "en": "return on equity (ROE)",
+          "es": "rentabilidad financiera"
+        },
+        {
+          "fr": "Effet de levier",
+          "en": "financial leverage effect",
+          "es": "efecto apalancamiento financiero"
+        },
+        {
+          "fr": "Effet de massue",
+          "en": "reverse leverage effect",
+          "es": "efecto apalancamiento negativo"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gfi.diagnostic",
+      "titre": "Diagnostic financier",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gfi.diagnostic.methode",
+          "titre": "Méthode du diagnostic financier rédigé",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "gfi.equilibre",
+        "gfi.performance",
+        "gfi.ratios"
+      ],
+      "terminologie": [
+        {
+          "fr": "Diagnostic financier",
+          "en": "financial analysis / financial diagnosis",
+          "es": "diagnóstico financiero"
+        },
+        {
+          "fr": "Forces et faiblesses",
+          "en": "strengths and weaknesses",
+          "es": "fortalezas y debilidades"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gfi.financement",
+      "titre": "Financement",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gfi.financement.court-terme",
+          "titre": "Découvert, escompte, affacturage, Dailly",
+          "niveau": "F"
+        },
+        {
+          "id": "gfi.financement.long-terme",
+          "titre": "Emprunt, crédit-bail, augmentation de capital",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.cmf"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "gfi.equilibre",
+        "cpt.tresorerie",
+        "gfi.performance"
+      ],
+      "terminologie": [
+        {
+          "fr": "Découvert bancaire",
+          "en": "bank overdraft",
+          "es": "descubierto bancario"
+        },
+        {
+          "fr": "Affacturage",
+          "en": "factoring",
+          "es": "factoring"
+        },
+        {
+          "fr": "Cession Dailly",
+          "en": "assignment of receivables (Dailly)",
+          "es": "cesión de créditos profesionales (tipo Dailly)"
+        },
+        {
+          "fr": "Crédit de campagne",
+          "en": "seasonal credit",
+          "es": "crédito de campaña"
+        },
+        {
+          "fr": "Emprunt indivis",
+          "en": "bank loan (single lender)",
+          "es": "préstamo bancario"
+        },
+        {
+          "fr": "Annuité constante",
+          "en": "level annuity / equal instalment",
+          "es": "anualidad constante (sistema francés)"
+        },
+        {
+          "fr": "Augmentation de capital",
+          "en": "capital increase / equity issue",
+          "es": "ampliación de capital"
+        },
+        {
+          "fr": "Option d'achat",
+          "en": "purchase option",
+          "es": "opción de compra"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

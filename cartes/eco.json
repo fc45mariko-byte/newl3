@@ -1,0 +1,370 @@
+{
+  "id": "eco",
+  "titre": "Économie internationale",
+  "langue": "fr",
+  "statut_maquette": "COMP",
+  "complement": true,
+  "officiel": {
+    "semestres": "hors maquette",
+    "enseignant": "aucun",
+    "description": "Complément hors maquette : prérequis pour TCI, ICI et le tourisme.",
+    "bibliographie": [],
+    "sources": []
+  },
+  "cadres": [
+    "Avantage absolu et comparatif",
+    "HOS",
+    "Balance des paiements (BPM6)"
+  ],
+  "competences_examen": [],
+  "incertitudes": [],
+  "chapitres": [
+    {
+      "id": "eco.theories",
+      "titre": "Théories du commerce international",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE",
+        "SUPPLEMENTARY KNOWLEDGE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eco.theories.avantage-absolu",
+          "titre": "Avantage absolu (Smith)",
+          "niveau": "F"
+        },
+        {
+          "id": "eco.theories.avantage-comparatif",
+          "titre": "Avantage comparatif (Ricardo)",
+          "niveau": "F"
+        },
+        {
+          "id": "eco.theories.hos",
+          "titre": "Le modèle HOS",
+          "niveau": "A"
+        },
+        {
+          "id": "eco.theories.nouvelles",
+          "titre": "Nouvelles théories du commerce international",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.smith",
+        "src.krugman-obstfeld",
+        "src.ricardo"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Avantage absolu",
+          "en": "absolute advantage",
+          "es": "ventaja absoluta"
+        },
+        {
+          "fr": "Division du travail",
+          "en": "division of labour",
+          "es": "división del trabajo"
+        },
+        {
+          "fr": "Mercantilisme",
+          "en": "mercantilism",
+          "es": "mercantilismo"
+        },
+        {
+          "fr": "Spécialisation",
+          "en": "specialisation",
+          "es": "especialización"
+        },
+        {
+          "fr": "Avantage comparatif",
+          "en": "comparative advantage",
+          "es": "ventaja comparativa"
+        },
+        {
+          "fr": "Coût d'opportunité",
+          "en": "opportunity cost",
+          "es": "coste de oportunidad"
+        },
+        {
+          "fr": "Autarcie",
+          "en": "autarky",
+          "es": "autarquía"
+        },
+        {
+          "fr": "Gains à l'échange",
+          "en": "gains from trade",
+          "es": "ganancias del comercio"
+        },
+        {
+          "fr": "Dotation factorielle",
+          "en": "factor endowment",
+          "es": "dotación de factores"
+        },
+        {
+          "fr": "Intensité factorielle",
+          "en": "factor intensity",
+          "es": "intensidad factorial"
+        },
+        {
+          "fr": "Paradoxe de Leontief",
+          "en": "Leontief paradox",
+          "es": "paradoja de Leontief"
+        },
+        {
+          "fr": "Égalisation des prix des facteurs",
+          "en": "factor price equalisation",
+          "es": "igualación de los precios de los factores"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "eco.mesure",
+      "titre": "Mesurer les échanges",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE",
+        "SUPPLEMENTARY KNOWLEDGE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eco.mesure.balance-paiements",
+          "titre": "Balance des paiements",
+          "niveau": "F"
+        },
+        {
+          "id": "eco.mesure.termes-echange",
+          "titre": "Termes de l'échange, taux de couverture",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.fmi-bpm6",
+        "src.krugman-obstfeld",
+        "src.prebisch"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Balance des paiements",
+          "en": "balance of payments",
+          "es": "balanza de pagos"
+        },
+        {
+          "fr": "Compte des transactions courantes",
+          "en": "current account",
+          "es": "cuenta corriente"
+        },
+        {
+          "fr": "Compte financier",
+          "en": "financial account",
+          "es": "cuenta financiera"
+        },
+        {
+          "fr": "Investissement direct étranger",
+          "en": "foreign direct investment (FDI)",
+          "es": "inversión extranjera directa (IED)"
+        },
+        {
+          "fr": "Envois de fonds des migrants",
+          "en": "remittances",
+          "es": "remesas"
+        },
+        {
+          "fr": "Termes de l'échange",
+          "en": "terms of trade",
+          "es": "términos de intercambio / relación real de intercambio"
+        },
+        {
+          "fr": "Taux de couverture",
+          "en": "export-import coverage ratio",
+          "es": "tasa de cobertura"
+        },
+        {
+          "fr": "Produits primaires",
+          "en": "primary commodities",
+          "es": "materias primas / productos primarios"
+        },
+        {
+          "fr": "Compétitivité-prix",
+          "en": "price competitiveness",
+          "es": "competitividad-precio"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "eco.change",
+      "titre": "Le change",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE",
+        "SUPPLEMENTARY KNOWLEDGE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eco.change.taux-change",
+          "titre": "Taux de change, régimes",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.krugman-obstfeld"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "eco.mesure"
+      ],
+      "terminologie": [
+        {
+          "fr": "Taux de change",
+          "en": "exchange rate",
+          "es": "tipo de cambio"
+        },
+        {
+          "fr": "Appréciation / dépréciation",
+          "en": "appreciation / depreciation",
+          "es": "apreciación / depreciación"
+        },
+        {
+          "fr": "Dévaluation / réévaluation",
+          "en": "devaluation / revaluation",
+          "es": "devaluación / revaluación"
+        },
+        {
+          "fr": "Régime de change",
+          "en": "exchange rate regime",
+          "es": "régimen cambiario"
+        },
+        {
+          "fr": "Caisse d'émission",
+          "en": "currency board",
+          "es": "caja de conversión"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "eco.politique",
+      "titre": "Politiques commerciales",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE",
+        "SUPPLEMENTARY KNOWLEDGE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eco.politique.protectionnisme",
+          "titre": "Libre-échange et protectionnisme",
+          "niveau": "F"
+        },
+        {
+          "id": "eco.politique.integration-regionale",
+          "titre": "Intégration régionale",
+          "niveau": "F"
+        },
+        {
+          "id": "eco.politique.chaines-valeur",
+          "titre": "Chaînes de valeur mondiales",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.omc",
+        "src.list",
+        "src.krugman-obstfeld",
+        "src.balassa",
+        "src.viner",
+        "src.banque-mondiale-cvm",
+        "src.ocde-tiva",
+        "src.xing-detert"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "eco.theories"
+      ],
+      "terminologie": [
+        {
+          "fr": "Droit de douane",
+          "en": "tariff / customs duty",
+          "es": "arancel / derecho de aduana"
+        },
+        {
+          "fr": "Contingent",
+          "en": "quota",
+          "es": "contingente / cupo"
+        },
+        {
+          "fr": "Barrière non tarifaire",
+          "en": "non-tariff barrier",
+          "es": "barrera no arancelaria"
+        },
+        {
+          "fr": "Dumping",
+          "en": "dumping",
+          "es": "dumping"
+        },
+        {
+          "fr": "Clause de la nation la plus favorisée",
+          "en": "most-favoured-nation (MFN) clause",
+          "es": "cláusula de nación más favorecida"
+        },
+        {
+          "fr": "Zone de libre-échange",
+          "en": "free trade area",
+          "es": "zona de libre comercio"
+        },
+        {
+          "fr": "Union douanière",
+          "en": "customs union",
+          "es": "unión aduanera"
+        },
+        {
+          "fr": "Tarif extérieur commun",
+          "en": "common external tariff",
+          "es": "arancel externo común"
+        },
+        {
+          "fr": "Création / détournement de commerce",
+          "en": "trade creation / trade diversion",
+          "es": "creación / desviación de comercio"
+        },
+        {
+          "fr": "Règles d'origine",
+          "en": "rules of origin",
+          "es": "reglas de origen"
+        },
+        {
+          "fr": "Chaîne de valeur mondiale",
+          "en": "global value chain (GVC)",
+          "es": "cadena global de valor"
+        },
+        {
+          "fr": "Commerce en valeur ajoutée",
+          "en": "trade in value added (TiVA)",
+          "es": "comercio en valor añadido"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

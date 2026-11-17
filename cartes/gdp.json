@@ -1,0 +1,495 @@
+{
+  "id": "gdp",
+  "titre": "Gestion de projet",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J6D, CM non présentiel 6 h + TD 18 h, 2 ECTS)",
+    "enseignant": "Sonia Tesson selon la page officielle ; Izabela Jankiewicz-Anker selon les supports",
+    "description": "Bases de la gestion de projet, puis réalisation d'un projet par les étudiants.",
+    "bibliographie": [
+      "Pairis",
+      "Bouchaouir, Dentinger et Olivier"
+    ],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "Triangle qualité-coûts-délais (Olsen 1971 ; Atkinson 1999)",
+    "Diagramme de Gantt",
+    "Note de cadrage",
+    "Matrice des responsabilités"
+  ],
+  "competences_examen": [
+    "Rédiger une note de cadrage",
+    "Construire un diagramme de Gantt avec jalons",
+    "Définir des indicateurs de suivi",
+    "Présenter oralement l'avancement d'un projet"
+  ],
+  "incertitudes": [
+    "Contradiction sur l'enseignant (page officielle contre supports).",
+    "Les dates du CC2 ne figurent pas dans les documents reçus."
+  ],
+  "chapitres": [
+    {
+      "id": "gdp.cadrage",
+      "titre": "Cadrage",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gdp.cadrage.projet",
+          "titre": "Projet et triangle QCD",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.cadrage.charte",
+          "titre": "Charte, cahier des charges",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.cadrage.smart",
+          "titre": "Objectifs SMART",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.cadrage.parties-prenantes",
+          "titre": "Parties prenantes, matrice pouvoir / intérêt",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.gdp-pptx",
+        "doc.gdp-docx"
+      ],
+      "sources": [
+        "src.pmbok"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Projet",
+          "en": "project",
+          "es": "proyecto"
+        },
+        {
+          "fr": "Triangle qualité-coût-délai",
+          "en": "iron triangle (scope, cost, time)",
+          "es": "triángulo de hierro (alcance, coste, plazo)"
+        },
+        {
+          "fr": "Maître d'ouvrage",
+          "en": "project owner / sponsor",
+          "es": "promotor / patrocinador"
+        },
+        {
+          "fr": "Jalon",
+          "en": "milestone",
+          "es": "hito"
+        },
+        {
+          "fr": "Charte de projet",
+          "en": "project charter",
+          "es": "acta de constitución del proyecto"
+        },
+        {
+          "fr": "Cahier des charges",
+          "en": "specifications / statement of work",
+          "es": "pliego de condiciones / especificaciones"
+        },
+        {
+          "fr": "Périmètre",
+          "en": "scope",
+          "es": "alcance"
+        },
+        {
+          "fr": "Livrable",
+          "en": "deliverable",
+          "es": "entregable"
+        },
+        {
+          "fr": "Objectif SMART",
+          "en": "SMART objective (specific, measurable, achievable, relevant/realistic, time-bound)",
+          "es": "objetivo SMART (específico, medible, alcanzable, realista, temporal)"
+        },
+        {
+          "fr": "Partie prenante",
+          "en": "stakeholder",
+          "es": "parte interesada / grupo de interés"
+        },
+        {
+          "fr": "Commanditaire",
+          "en": "sponsor",
+          "es": "patrocinador"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gdp.organisation",
+      "titre": "Organisation",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gdp.organisation.wbs",
+          "titre": "WBS",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.organisation.raci",
+          "titre": "Matrice RACI",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.gdp-pptx"
+      ],
+      "sources": [
+        "src.pmbok"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "gdp.cadrage"
+      ],
+      "terminologie": [
+        {
+          "fr": "Organigramme des tâches (OTP / WBS)",
+          "en": "work breakdown structure (WBS)",
+          "es": "estructura de desglose del trabajo (EDT)"
+        },
+        {
+          "fr": "Lot de travail",
+          "en": "work package",
+          "es": "paquete de trabajo"
+        },
+        {
+          "fr": "Matrice RACI",
+          "en": "RACI matrix (responsible, accountable, consulted, informed)",
+          "es": "matriz RACI"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gdp.planification",
+      "titre": "Planification",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gdp.planification.anteriorites",
+          "titre": "Tableau des antériorités",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.planification.pert",
+          "titre": "Réseau PERT",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.planification.mpm",
+          "titre": "Méthode MPM",
+          "niveau": "A"
+        },
+        {
+          "id": "gdp.planification.dates-marges",
+          "titre": "Dates au plus tôt / au plus tard, marges totale et libre",
+          "niveau": "A"
+        },
+        {
+          "id": "gdp.planification.chemin-critique",
+          "titre": "Chemin critique",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.planification.gantt",
+          "titre": "Diagramme de Gantt",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.planification.pert-probabiliste",
+          "titre": "Durées PERT à trois estimations",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.gdp-pptx"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "gdp.organisation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Antériorité",
+          "en": "predecessor / dependency",
+          "es": "predecesora / precedencia"
+        },
+        {
+          "fr": "Tâche",
+          "en": "task / activity",
+          "es": "tarea / actividad"
+        },
+        {
+          "fr": "Réseau PERT",
+          "en": "PERT network / activity-on-arrow diagram",
+          "es": "red PERT"
+        },
+        {
+          "fr": "Tâche fictive",
+          "en": "dummy activity",
+          "es": "actividad ficticia"
+        },
+        {
+          "fr": "Méthode des potentiels (MPM)",
+          "en": "precedence diagramming method / activity-on-node",
+          "es": "método de los potenciales / diagrama de precedencias"
+        },
+        {
+          "fr": "Date au plus tôt",
+          "en": "earliest start (ES)",
+          "es": "fecha más temprana"
+        },
+        {
+          "fr": "Date au plus tard",
+          "en": "latest start (LS)",
+          "es": "fecha más tardía"
+        },
+        {
+          "fr": "Marge totale",
+          "en": "total float / total slack",
+          "es": "holgura total"
+        },
+        {
+          "fr": "Marge libre",
+          "en": "free float / free slack",
+          "es": "holgura libre"
+        },
+        {
+          "fr": "Chemin critique",
+          "en": "critical path",
+          "es": "ruta crítica / camino crítico"
+        },
+        {
+          "fr": "Diagramme de Gantt",
+          "en": "Gantt chart",
+          "es": "diagrama de Gantt"
+        },
+        {
+          "fr": "Estimation à trois points",
+          "en": "three-point estimate",
+          "es": "estimación de tres valores"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gdp.pilotage",
+      "titre": "Pilotage et clôture",
+      "priorite": "IMPORTANT",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "gdp.pilotage.risques",
+          "titre": "Gestion des risques : éviter, réduire, transférer, accepter",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.pilotage.budget",
+          "titre": "Budget de projet",
+          "niveau": "F"
+        },
+        {
+          "id": "gdp.pilotage.valeur-acquise",
+          "titre": "Valeur acquise",
+          "niveau": "A"
+        },
+        {
+          "id": "gdp.pilotage.agile",
+          "titre": "Méthodes agiles",
+          "niveau": "A"
+        },
+        {
+          "id": "gdp.pilotage.cloture",
+          "titre": "Clôture, retour d'expérience",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.gdp-pptx"
+      ],
+      "sources": [
+        "src.pmbok",
+        "src.manifeste-agile",
+        "src.scrum-guide"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "gdp.cadrage",
+        "gdp.organisation",
+        "gdp.planification"
+      ],
+      "terminologie": [
+        {
+          "fr": "Risque",
+          "en": "risk",
+          "es": "riesgo"
+        },
+        {
+          "fr": "Registre des risques",
+          "en": "risk register",
+          "es": "registro de riesgos"
+        },
+        {
+          "fr": "Criticité",
+          "en": "risk score / criticality",
+          "es": "criticidad"
+        },
+        {
+          "fr": "Plan de contingence",
+          "en": "contingency plan",
+          "es": "plan de contingencia"
+        },
+        {
+          "fr": "Budget de projet",
+          "en": "project budget",
+          "es": "presupuesto del proyecto"
+        },
+        {
+          "fr": "Réserve pour aléas",
+          "en": "contingency reserve",
+          "es": "reserva para contingencias"
+        },
+        {
+          "fr": "Coût à terminaison",
+          "en": "estimate at completion (EAC)",
+          "es": "estimación a la conclusión"
+        },
+        {
+          "fr": "Valeur acquise",
+          "en": "earned value (EV)",
+          "es": "valor ganado"
+        },
+        {
+          "fr": "Valeur planifiée",
+          "en": "planned value (PV)",
+          "es": "valor planificado"
+        },
+        {
+          "fr": "Coût réel",
+          "en": "actual cost (AC)",
+          "es": "coste real"
+        },
+        {
+          "fr": "Budget à terminaison",
+          "en": "budget at completion (BAC)",
+          "es": "presupuesto hasta la conclusión"
+        },
+        {
+          "fr": "Méthode agile",
+          "en": "agile methodology",
+          "es": "metodología ágil"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "gdp.documents",
+      "titre": "La gestion des documents du projet",
+      "priorite": "IMPORTANT",
+      "statut": "Not researched",
+      "provenance": [
+        "UNIVERSITY MATERIAL"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Partie 05 annoncée dans le plan de l'enseignante, sans contenu reçu",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.gdp-pptx"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "gdp.projet-filiale",
+      "titre": "Projet évalué : création d'une filiale à l'étranger",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "CC1 : phase avant la création (étapes 1 à 3), présentation orale, grille 65 % contenu et 35 % forme",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "CC2 : phase de création (statuts, capital, immatriculation, fiscalité, banque, licences)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Après la création : comptabilité, fiscalité, flux intragroupe, social, gouvernance",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.gdp-pptx",
+        "doc.gdp-docx"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "ici.diagnostic",
+        "ici.information",
+        "ici.risque",
+        "ici.presence",
+        "ici.prospection",
+        "ici.mix",
+        "mks.marketing",
+        "tci.financement"
+      ],
+      "terminologie": [],
+      "note": null
+    }
+  ]
+}

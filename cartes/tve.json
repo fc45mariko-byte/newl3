@@ -1,0 +1,369 @@
+{
+  "id": "tve",
+  "titre": "Thème et version espagnols",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (thème LLA5J4C1 et version LLA5J4A2, TD 12 h chacun, 2 ECTS chacun) et S6 (LLA6J4C4 et LLA6J4C5, TD 10 h chacun, 1 ECTS chacun)",
+    "enseignant": "Annie Baccon (thème), Sylvie Fournié-Chaboche (version)",
+    "description": "Thème : textes journalistiques. Version : textes courants (presse, publicité) et spécialisés (correspondance commerciale). Le dossier 2026-2027 reçu porte le code LAL5J2C1.",
+    "bibliographie": [
+      "Remise au premier cours"
+    ],
+    "sources": [
+      "r.orleans-l3-s5",
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [],
+  "competences_examen": [
+    "Traduire un texte journalistique dans les deux sens"
+  ],
+  "incertitudes": [
+    "Bibliographie non publiée.",
+    "Code du dossier 2026-2027 (LAL5J2C1) différent du code de la page officielle (LLA5J4C1) : la page officielle n'est probablement pas à jour."
+  ],
+  "chapitres": [
+    {
+      "id": "tve.contrastes",
+      "titre": "Contrastes français / espagnol",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tve.contrastes.calque",
+          "titre": "Le calque",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.ser-estar",
+          "titre": "Ser et estar",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.por-para",
+          "titre": "Por et para",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.subjuntivo",
+          "titre": "Le subjonctif",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.concordancia",
+          "titre": "Concordance des temps",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.a-personal",
+          "titre": "La a personal",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.gustar",
+          "titre": "Verbes du type gustar",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.on",
+          "titre": "Traduire « on »",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.contrastes.perifrasis",
+          "titre": "Périphrases verbales",
+          "niveau": "A"
+        },
+        {
+          "id": "tve.contrastes.pronombres",
+          "titre": "Pronoms et enclise",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.tve-dossier-theme-s5"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "tra.procedes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Gallicisme",
+          "en": "gallicism",
+          "es": "galicismo"
+        },
+        {
+          "fr": "Calque",
+          "en": "calque",
+          "es": "calco"
+        },
+        {
+          "fr": "Être (essence)",
+          "en": "to be (identity)",
+          "es": "ser"
+        },
+        {
+          "fr": "Être (état, lieu)",
+          "en": "to be (state, location)",
+          "es": "estar"
+        },
+        {
+          "fr": "Pour (but)",
+          "en": "for / in order to",
+          "es": "para"
+        },
+        {
+          "fr": "Par / à cause de",
+          "en": "by / because of",
+          "es": "por"
+        },
+        {
+          "fr": "Subjonctif présent",
+          "en": "present subjunctive",
+          "es": "presente de subjuntivo"
+        },
+        {
+          "fr": "Subjonctif imparfait",
+          "en": "imperfect subjunctive",
+          "es": "pretérito imperfecto de subjuntivo"
+        },
+        {
+          "fr": "Concordance des temps",
+          "en": "sequence of tenses",
+          "es": "concordancia de tiempos"
+        },
+        {
+          "fr": "Complément d'objet direct",
+          "en": "direct object",
+          "es": "complemento directo"
+        },
+        {
+          "fr": "Préposition « a » personnelle",
+          "en": "personal « a »",
+          "es": "a personal"
+        },
+        {
+          "fr": "Complément d'objet indirect",
+          "en": "indirect object",
+          "es": "complemento indirecto"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tve.lexico",
+      "titre": "Lexique et registre",
+      "priorite": "IMPORTANT",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tve.lexico.falsos-amigos",
+          "titre": "Faux amis",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.lexico.registro",
+          "titre": "Registre",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.tve-dossier-theme-s5",
+        "doc.tve-td1"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "eec.lexico"
+      ],
+      "terminologie": [
+        {
+          "fr": "Faux ami partiel",
+          "en": "partial false friend",
+          "es": "falso amigo parcial"
+        },
+        {
+          "fr": "Subir (des pertes)",
+          "en": "to suffer losses",
+          "es": "sufrir pérdidas"
+        },
+        {
+          "fr": "Registre",
+          "en": "register",
+          "es": "registro"
+        },
+        {
+          "fr": "Voseo",
+          "en": "voseo (use of « vos »)",
+          "es": "voseo"
+        },
+        {
+          "fr": "Variété linguistique",
+          "en": "language variety",
+          "es": "variedad lingüística"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tve.metodo",
+      "titre": "Méthode",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tve.metodo.tema",
+          "titre": "Le thème",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.metodo.version",
+          "titre": "La version",
+          "niveau": "F"
+        },
+        {
+          "id": "tve.metodo.diario-errores",
+          "titre": "Le journal d'erreurs",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.tve-dossier-theme-s5"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "tve.contrastes",
+        "tve.lexico"
+      ],
+      "terminologie": [
+        {
+          "fr": "Thème",
+          "en": "translation into a foreign language",
+          "es": "traducción inversa / tema"
+        },
+        {
+          "fr": "Accent écrit",
+          "en": "written accent",
+          "es": "tilde"
+        },
+        {
+          "fr": "Version",
+          "en": "translation into one's native language",
+          "es": "traducción directa / versión"
+        },
+        {
+          "fr": "Passé simple",
+          "en": "simple past (literary)",
+          "es": "pretérito indefinido (équivalent narratif)"
+        },
+        {
+          "fr": "Journal d'erreurs",
+          "en": "error log",
+          "es": "diario de errores"
+        },
+        {
+          "fr": "Check-list de relecture",
+          "en": "proofreading checklist",
+          "es": "lista de comprobación"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tve.chiffres",
+      "titre": "Traduire les chiffres et l'évolution économique",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "crecer un / en un 10 %",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "estabilizarse en el 3,7 %",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "caer al 2 %, recortarse hasta el 2 %",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "superar con creces, llevar la ventaja a, liderar el ranking",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.tve-dossier-theme-s5"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tve.pratique-corrigee",
+      "titre": "Textes du dossier 2026-2027 et propositions de traduction",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Dialogues professionnels (TD 1, corrigé reçu)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Texte 2 : expatriation (proposition de traduction reçue)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Textes 1, 3 à 8 : à traduire (pas de corrigé reçu)",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.tve-texto2",
+        "doc.tve-td1"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    }
+  ]
+}

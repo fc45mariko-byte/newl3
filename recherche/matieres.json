@@ -1,0 +1,1176 @@
+{
+  "_lisezmoi": "Données de recherche par matière, saisies à la main. scripts/generer.mjs les fusionne avec le catalogue du dépôt cours pour produire les cartes de cursus (cartes/). « officiel » vient des pages de l'université d'Orléans (P1, consultées le 2026-11-17) : c'est de la RECHERCHE ACADÉMIQUE de priorité 1, pas du matériel de cours. Les chapitres non listés dans « essentiels » ou « avances » reçoivent la priorité IMPORTANT. « verifies » liste les chapitres recoupés pendant cette session avec au moins deux sources indépendantes.",
+  "matieres": [
+    {
+      "id": "tci",
+      "officiel": {
+        "semestres": "S5 (LLA5J6B, TD 24 h, 3 ECTS) et S6 (LLA6J6C, TD 20 h, 2 ECTS)",
+        "enseignant": "Isabelle Noël",
+        "description": "S5 : Incoterms, logistique et supply chain, moyens de paiement, gestion documentaire. S6 : échanges intracommunautaires, procédures de dédouanement, régimes douaniers, détermination et liquidation de la dette douanière.",
+        "bibliographie": [
+          "Incoterms 2010, CCI (édition dépassée : Incoterms® 2020 en vigueur)",
+          "Exporter, 26e édition, Foucher",
+          "Belotti, Transport international de marchandises, 5e édition, Vuibert"
+        ],
+        "sources": [
+          "r.orleans-l3-s5",
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "tci.operation",
+        "tci.incoterms",
+        "tci.transport",
+        "tci.documents",
+        "tci.paiement",
+        "tci.douane",
+        "tci.intra-ue"
+      ],
+      "avances": [
+        "tci.change"
+      ],
+      "chapitres_ajoutes": [
+        {
+          "id": "tci.financement",
+          "titre": "Financement de l'international",
+          "priorite": "IMPORTANT",
+          "documents": [
+            "doc.financement-intl"
+          ],
+          "sources": [
+            "r.bpifrance-gpi",
+            "r.bpifrance-assurance-prospection"
+          ],
+          "notions": [
+            "Financements à court terme : préfinancement, MCNE, affacturage international, avance en devises",
+            "Crédit documentaire escomptable et lettre de crédit stand-by",
+            "Crédit fournisseur et crédit acheteur",
+            "Aides publiques : assurance prospection, garantie de projets à l'international"
+          ],
+          "note": "Rattachement à TCI provisoire : le support ne nomme pas la matière."
+        }
+      ],
+      "verifies": {
+        "tci.financement": [
+          "r.bpifrance-gpi",
+          "r.bpifrance-assurance-prospection"
+        ]
+      },
+      "cadres": [
+        "Incoterms® 2020 (ICC, publication 723)",
+        "RUU 600 (crédit documentaire)",
+        "RUE 522 (encaissements)",
+        "Code des douanes de l'Union (règlement UE 952/2013)",
+        "Directive TVA 2006/112/CE"
+      ],
+      "competences_examen": [
+        "Choisir et rédiger un Incoterm adapté à une opération",
+        "Calculer un fret maritime ou aérien (poids taxable)",
+        "Vérifier la cohérence d'un jeu de documents",
+        "Choisir une technique de paiement selon le risque",
+        "Calculer une valeur en douane, des droits et une TVA à l'import",
+        "Traiter une livraison intracommunautaire"
+      ],
+      "incertitudes": [
+        "Le contenu exact des séances (TD) n'est pas connu : seuls les schémas FCA, FOB et CIF de l'enseignante ont été reçus.",
+        "La bibliographie officielle cite Incoterms 2010 : vérifier auprès de l'enseignante que le cours suit bien la version 2020.",
+        "Applications reçues (11 exercices de transport) : la carte doit ajouter ISPS, SOLAS VGM et la tarification ULD au chapitre transport."
+      ]
+    },
+    {
+      "id": "ici",
+      "officiel": {
+        "semestres": "S5 (LLA5J7B, CM 20 h, 3 ECTS)",
+        "enseignant": "Isabelle Noël",
+        "description": "Démarche marketing, diagnostic et prospection des marchés étrangers.",
+        "bibliographie": [
+          "Exporter, 26e édition, Foucher",
+          "Charlot et al., Études, veille et prospection"
+        ],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "ici.diagnostic",
+        "ici.presence",
+        "ici.prospection",
+        "ici.mix",
+        "ici.segmentation"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [
+        {
+          "id": "ici.segmentation",
+          "titre": "Segmentation et positionnement (chapitre VII du cours)",
+          "priorite": "ESSENTIAL",
+          "documents": [
+            "doc.ici-ch7"
+          ],
+          "sources": [],
+          "notions": [
+            "Segmentation : définition, intérêts, limites",
+            "Macro-segmentation, micro-segmentation, segments cross-culturels",
+            "Conditions d'efficacité d'un segment",
+            "Méthodes : 20/80 et ABC, RFM, associations, corrélation",
+            "Marketing indifférencié, différencié, concentré, adapté",
+            "Positionnement : six qualités, identification et différenciation, triangle d'or, cartes perceptuelles",
+            "Positionnement international standardisé ou adapté ; matrice de Quelch et Hoff (1986)"
+          ]
+        }
+      ],
+      "verifies": {},
+      "cadres": [
+        "SWOT",
+        "Modèle d'Uppsala et distance psychique",
+        "Born global",
+        "Standardisation / adaptation",
+        "Escalade des prix export"
+      ],
+      "competences_examen": [
+        "Réaliser un diagnostic export",
+        "Construire une grille de sélection des marchés",
+        "Choisir et justifier un mode de présence",
+        "Proposer un plan de prospection"
+      ],
+      "incertitudes": [
+        "Le rapport de complétude de cours disait qu'aucun descriptif officiel n'existait : la page S5 en donne un (consultée le 2026-11-17).",
+        "Le chapitre reçu est numéroté VII : le cours a au moins sept chapitres, la carte reconstruite en avait six. L'ordre réel des chapitres I à VI est inconnu."
+      ]
+    },
+    {
+      "id": "tou",
+      "officiel": {
+        "semestres": "S5 d'après l'emploi du temps fourni (CM et TD le lundi 9 h-11 h, salle 257)",
+        "enseignant": "non connu",
+        "description": "Aucune fiche officielle trouvée en L3. Le seul enseignement de tourisme sur le site officiel est « Communication for international tourism » (L2 S4, LLA4J8C, Alice Michel) : connaissance de l'industrie du tourisme, compétences culturelles et langagières, tourisme en France et en région Centre-Val de Loire.",
+        "bibliographie": [
+          "(L2) J. Rouanet-Laplace, Les mots-clés du tourisme et de l'hôtellerie, Bréal, 2015",
+          "(L2) C. Peyroutet, I. Juguet, C. Bouthier (dir.), Le tourisme en France, Nathan, 2015",
+          "(L2) C. Cooper, C. M. Hall, B. Duthion, J.-L. Michaud, Le tourisme aujourd'hui : une approche internationale, De Boeck, 2015"
+        ],
+        "sources": [
+          "r.orleans-l3-s5",
+          "r.orleans-l2-s4"
+        ]
+      },
+      "reconstruit": true,
+      "essentiels": [
+        "tou.definitions",
+        "tou.systeme",
+        "tou.flux"
+      ],
+      "avances": [
+        "tou.crises"
+      ],
+      "chapitres_ajoutes": [
+        {
+          "id": "tou.definitions",
+          "titre": "Définir et mesurer le tourisme",
+          "priorite": "ESSENTIAL",
+          "statut": "Verified against additional academic sources",
+          "sources": [
+            "r.irts-2008",
+            "r.untourism-glossaire"
+          ],
+          "notions": [
+            "Visiteur, touriste (avec nuitée) et excursionniste (visiteur de la journée)",
+            "Environnement habituel et durée de moins d'un an",
+            "Motifs de voyage : personnels, affaires et motifs professionnels",
+            "Formes de tourisme : interne, récepteur, émetteur ; intérieur, national, international"
+          ]
+        },
+        {
+          "id": "tou.systeme",
+          "titre": "Le système touristique",
+          "priorite": "ESSENTIAL",
+          "statut": "Reconstructed",
+          "sources": [
+            "r.leiper-1979",
+            "r.cooper-hall-contemporary-tourism"
+          ],
+          "notions": [
+            "Modèle de Leiper : région émettrice, région de transit, région de destination",
+            "Facteurs d'incitation (push) et d'attraction (pull)",
+            "Le tourisme comme système ouvert sur son environnement"
+          ]
+        },
+        {
+          "id": "tou.flux",
+          "titre": "Géographie des flux touristiques internationaux",
+          "priorite": "ESSENTIAL",
+          "statut": "Verified against additional academic sources",
+          "sources": [
+            "r.untourism-2025",
+            "r.untourism-barometre-2026-09",
+            "r.atout-france-2025",
+            "r.bordeaux-montaigne-tourisme"
+          ],
+          "notions": [
+            "Grands bassins émetteurs et récepteurs ; prédominance de l'Europe",
+            "Chiffres clés 2025 et premier semestre 2026",
+            "La France première destination mondiale en arrivées ; l'Espagne",
+            "Lire un baromètre d'ONU Tourisme"
+          ]
+        },
+        {
+          "id": "tou.acteurs",
+          "titre": "Les acteurs et l'industrie du tourisme",
+          "priorite": "IMPORTANT",
+          "statut": "Research in progress",
+          "sources": [
+            "r.cooper-hall-contemporary-tourism"
+          ],
+          "notions": [
+            "Hébergement, transport, restauration, attractions",
+            "Voyagistes, agences, plateformes de réservation en ligne",
+            "Acteurs publics : ONU Tourisme, Atout France, comités régionaux, offices de tourisme"
+          ]
+        },
+        {
+          "id": "tou.destination",
+          "titre": "La destination : attractivité et cycle de vie",
+          "priorite": "IMPORTANT",
+          "statut": "Reconstructed",
+          "sources": [
+            "r.butler-1980",
+            "r.cooper-hall-contemporary-tourism"
+          ],
+          "notions": [
+            "Cycle de vie d'une destination (Butler, 1980) : exploration, implication, développement, consolidation, stagnation, déclin ou rajeunissement",
+            "Types d'espaces touristiques",
+            "Marketing de destination"
+          ]
+        },
+        {
+          "id": "tou.economie",
+          "titre": "Le poids économique du tourisme international",
+          "priorite": "IMPORTANT",
+          "statut": "Research in progress",
+          "sources": [
+            "r.untourism-2025",
+            "r.atout-france-2025"
+          ],
+          "notions": [
+            "Recettes et dépenses touristiques ; le poste « voyages » de la balance des paiements",
+            "Tourisme et emploi",
+            "Dépendance au tourisme"
+          ],
+          "prerequis": [
+            "eco.mesure"
+          ]
+        },
+        {
+          "id": "tou.durable",
+          "titre": "Impacts et tourisme durable",
+          "priorite": "IMPORTANT",
+          "statut": "Not researched",
+          "sources": [],
+          "notions": [
+            "Impacts économiques, socioculturels et environnementaux",
+            "Surtourisme et régulation",
+            "Tourisme durable : définitions et labels"
+          ]
+        },
+        {
+          "id": "tou.france-centre",
+          "titre": "Le tourisme en France et en Centre-Val de Loire",
+          "priorite": "IMPORTANT",
+          "statut": "Research in progress",
+          "sources": [
+            "r.atout-france-2025",
+            "r.orleans-l2-s4"
+          ],
+          "notions": [
+            "Fréquentation et recettes de la France en 2025",
+            "Les atouts du Centre-Val de Loire (à documenter)"
+          ]
+        },
+        {
+          "id": "tou.crises",
+          "titre": "Crises et résilience du tourisme",
+          "priorite": "ADVANCED",
+          "statut": "Reconstructed",
+          "sources": [
+            "r.untourism-barometre-2026-09",
+            "r.untourism-2025"
+          ],
+          "notions": [
+            "Chocs : pandémie de 2020, conflits, prix de l'énergie",
+            "Exemple 2026 : chute de 22 % des arrivées au Moyen-Orient au premier semestre"
+          ]
+        }
+      ],
+      "verifies": {
+        "tou.definitions": [
+          "r.irts-2008",
+          "r.untourism-glossaire"
+        ],
+        "tou.flux": [
+          "r.untourism-2025",
+          "r.untourism-barometre-2026-09",
+          "r.atout-france-2025"
+        ]
+      },
+      "cadres": [
+        "Définitions IRTS 2008",
+        "Système touristique de Leiper (1979)",
+        "Cycle de vie de Butler (1980)"
+      ],
+      "competences_examen": [
+        "Définir et distinguer visiteur, touriste et excursionniste",
+        "Commenter des statistiques de flux et de recettes",
+        "Analyser une destination avec le modèle de Butler",
+        "Présenter les acteurs d'une filière touristique"
+      ],
+      "incertitudes": [
+        "Matière absente des pages officielles S5 et S6 ; présente seulement dans l'emploi du temps. Intitulé exact, enseignant, volume, ECTS, modalités d'évaluation et langue d'enseignement inconnus.",
+        "La langue du cours est inconnue : l'intitulé de l'emploi du temps est en anglais (« Intro international tourism »).",
+        "Tout le plan est une RECONSTRUCTION à partir d'autres universités et de manuels. À comparer avec le premier support de l'enseignant dès réception."
+      ]
+    },
+    {
+      "id": "dai",
+      "officiel": {
+        "semestres": "S5 (LLA5J7A, CM 10 h + TD 10 h, 3 ECTS)",
+        "enseignant": "Isabelle Noël",
+        "description": "Sources du droit du commerce international, instruments d'harmonisation (hard law et soft law), règlement des litiges.",
+        "bibliographie": [
+          "Boyé (LexisNexis)",
+          "Deman et Julian (LexisNexis)",
+          "Gleason, International Commercial Law for Managers (Campus ouvert)"
+        ],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "dai.normes",
+        "dai.cvim",
+        "dai.conflits",
+        "dai.litiges"
+      ],
+      "avances": [
+        "dai.distribution"
+      ],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "CVIM (Vienne, 1980)",
+        "Principes UNIDROIT",
+        "Règlements Rome I et Bruxelles I bis",
+        "Convention de New York (1958)"
+      ],
+      "competences_examen": [
+        "Identifier la source applicable à une situation",
+        "Appliquer la CVIM (champ, formation, obligations, remèdes)",
+        "Distinguer loi applicable et juridiction compétente",
+        "Rédiger une clause compromissoire"
+      ],
+      "incertitudes": [
+        "La bibliographie officielle cite Gleason : la phase 2 de cours disait ne pas l'avoir trouvé. La page S5 le cite bien pour DAI (pas pour la common law)."
+      ]
+    },
+    {
+      "id": "dcl",
+      "officiel": {
+        "semestres": "S6 (LLA6J7B, CM 10 h + TD 10 h, 3 ECTS)",
+        "enseignant": "Isabelle Noël",
+        "description": "Vocabulaire et mécanismes des contrats anglo-saxons courants dans le commerce international ; common law, equity, UCC, influence du droit européen, conséquences du Brexit ; systèmes judiciaires anglais, britannique et américain.",
+        "bibliographie": [
+          "E. Boyé, L'anglais des contrats internationaux, LexisNexis",
+          "M. Harvey, C. Kirby-Legier, M. Charret-Del Bove, Droit anglais et droit américain, Armand Colin",
+          "S. Azzouz, Contract Law, Ophrys"
+        ],
+        "sources": [
+          "r.orleans-l3-s6",
+          "r.lille-l3-tci"
+        ]
+      },
+      "essentiels": [
+        "dcl.systemes",
+        "dcl.juridictions",
+        "dcl.formation",
+        "dcl.inexecution",
+        "dcl.lexique"
+      ],
+      "avances": [
+        "dcl.vices"
+      ],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Stare decisis",
+        "Equity",
+        "UCC article 2",
+        "Hadley v Baxendale (1854)"
+      ],
+      "competences_examen": [
+        "Expliquer la formation d'un contrat en common law",
+        "Qualifier une clause (condition, warranty, innominate term)",
+        "Choisir un remède en cas de breach",
+        "Traduire et expliquer le vocabulaire contractuel anglais"
+      ],
+      "incertitudes": [
+        "L'« influence du droit européen » figure dans le descriptif officiel mais n'a pas de chapitre propre : elle est traitée dans dcl.juridictions (Brexit)."
+      ]
+    },
+    {
+      "id": "cpt",
+      "officiel": {
+        "semestres": "S5 (LLA5J6A, CM 15 h + TD 15 h, 3 ECTS)",
+        "enseignant": "Isabelle Noël selon la page officielle ; Izabela Jankiewicz-Anker selon les supports de cours et Celene",
+        "description": "Principes comptables, opérations courantes, opérations d'inventaire.",
+        "bibliographie": [
+          "G. Langlois et M. Friédérich, Introduction à la comptabilité, Foucher"
+        ],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "cpt.cadre",
+        "cpt.mecanisme",
+        "cpt.tva",
+        "cpt.achats-ventes",
+        "cpt.investissements",
+        "cpt.inventaire",
+        "cpt.synthese"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [
+        {
+          "id": "cpt.sic",
+          "titre": "Le système d'information comptable et les PGI",
+          "priorite": "IMPORTANT",
+          "documents": [
+            "doc.cpt-ch1"
+          ],
+          "sources": [],
+          "notions": [
+            "Structure et fonctions du SIC",
+            "Progiciels de gestion intégrés et droits d'accès",
+            "Flux physiques et flux financiers"
+          ]
+        },
+        {
+          "id": "cpt.bilan-detaille",
+          "titre": "Le bilan détaillé : postes d'actif et de passif",
+          "priorite": "ESSENTIAL",
+          "documents": [
+            "doc.cpt-bloc3"
+          ],
+          "sources": [
+            "r.anc-2022-06",
+            "r.hoche-2025"
+          ],
+          "notions": [
+            "Actif immobilisé incorporel, corporel, financier",
+            "Actif circulant et comptes de régularisation",
+            "Capitaux propres, réserves, subventions d'investissement",
+            "Provisions pour risques et charges, dettes",
+            "Affectation du résultat",
+            "Engagements hors bilan"
+          ],
+          "note": "Plusieurs présentations du support sont antérieures au règlement ANC 2022-06 : voir les écarts dans recherche/documents.json."
+        },
+        {
+          "id": "cpt.groupes-normes",
+          "titre": "Groupes, consolidation et normes IFRS",
+          "priorite": "ADVANCED",
+          "documents": [
+            "doc.cpt-bloc3"
+          ],
+          "sources": [
+            "r.anc-2020-01"
+          ],
+          "notions": [
+            "Comptes consolidés : intégration globale, mise en équivalence (intégration proportionnelle : à vérifier)",
+            "Normes IAS/IFRS obligatoires depuis 2005 pour les groupes cotés de l'UE"
+          ]
+        }
+      ],
+      "verifies": {
+        "cpt.bilan-detaille": [
+          "r.anc-2022-06",
+          "r.hoche-2025",
+          "r.bma-2025"
+        ]
+      },
+      "cadres": [
+        "Plan comptable général (règlement ANC 2014-03 modifié par ANC 2022-06)",
+        "Code de commerce",
+        "IAS/IFRS"
+      ],
+      "competences_examen": [
+        "Passer les écritures courantes (achats, ventes, TVA, règlements)",
+        "Établir un plan d'amortissement",
+        "Passer les écritures d'inventaire",
+        "Établir un bilan et un compte de résultat",
+        "Expliquer les principes comptables"
+      ],
+      "incertitudes": [
+        "Contradiction sur l'enseignant (page officielle contre supports) : les supports reçus font foi pour le contenu.",
+        "Le bloc 2 n'a pas été reçu : son contenu est inconnu (probablement le compte de résultat ou les opérations courantes).",
+        "Les supports suivent l'ancien PCG sur plusieurs points ; l'examen peut suivre le support plutôt que la réglementation 2025 : à clarifier avec l'enseignante."
+      ]
+    },
+    {
+      "id": "gfi",
+      "officiel": {
+        "semestres": "S6 (LLA6J6A, CM 10 h + TD 15 h, 2 ECTS)",
+        "enseignant": "Isabelle Noël selon la page officielle ; Izabela Jankiewicz-Anker selon le plan des modules du support de comptabilité",
+        "description": "Analyse du bilan (bilan fonctionnel, FRNG, BFR, trésorerie nette), équilibre financier par les ratios, analyse du compte de résultat par les soldes intermédiaires de gestion.",
+        "bibliographie": [
+          "G. Langlois et M. Friédérich, Introduction à la comptabilité, Foucher",
+          "C. Buisard, Analyse financière, Foucher"
+        ],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "gfi.bilan-fonctionnel",
+        "gfi.equilibre",
+        "gfi.performance",
+        "gfi.ratios"
+      ],
+      "avances": [
+        "gfi.financement"
+      ],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Bilan fonctionnel",
+        "Soldes intermédiaires de gestion",
+        "Capacité d'autofinancement",
+        "Effet de levier"
+      ],
+      "competences_examen": [
+        "Construire un bilan fonctionnel",
+        "Calculer et interpréter FRNG, BFR et trésorerie nette",
+        "Calculer les SIG et la CAF",
+        "Rédiger un diagnostic financier"
+      ],
+      "incertitudes": [
+        "La suppression des transferts de charges (ANC 2022-06) modifie le calcul des SIG et de la CAF : à vérifier dans les fiches gfi.performance de cours."
+      ]
+    },
+    {
+      "id": "odg",
+      "officiel": {
+        "semestres": "S6 (LLA6J6B, CM 15 h, 2 ECTS)",
+        "enseignant": "Isabelle Noël selon la page officielle ; Izabela Jankiewicz-Anker selon le plan des modules du support de comptabilité",
+        "description": "Outils de contrôle de gestion : prévision, gestion des stocks, seuil de rentabilité ; objectif : construire un tableau de bord.",
+        "bibliographie": [],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "odg.couts",
+        "odg.stocks",
+        "odg.prevision",
+        "odg.pilotage"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Seuil de rentabilité",
+        "Modèle de Wilson",
+        "Moindres carrés",
+        "Balanced scorecard (Kaplan et Norton)"
+      ],
+      "competences_examen": [
+        "Calculer un seuil de rentabilité",
+        "Valoriser des stocks (CMUP, FIFO)",
+        "Calculer une quantité économique",
+        "Construire un tableau de bord"
+      ],
+      "incertitudes": [
+        "Aucune bibliographie officielle."
+      ]
+    },
+    {
+      "id": "mgi",
+      "officiel": {
+        "semestres": "S6 (LLA6J7A, TD 20 h, 3 ECTS)",
+        "enseignant": "Isabelle Noël",
+        "description": "Concepts nécessaires à la gestion des relations interpersonnelles en environnement interculturel : analyse interculturelle, culture et pratiques managériales, négociation internationale.",
+        "bibliographie": [
+          "S. Chevrier, Le management interculturel, PUF, « Que sais-je ? »",
+          "C. A. Rabasso, Introduction au management interculturel, Ellipses"
+        ],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "mgi.fondements",
+        "mgi.grilles",
+        "mgi.negociation"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Hofstede",
+        "Hall (contexte, temps)",
+        "Trompenaars",
+        "GLOBE",
+        "d'Iribarne"
+      ],
+      "competences_examen": [
+        "Appliquer une grille d'analyse culturelle à un cas",
+        "Analyser un incident critique",
+        "Préparer une négociation interculturelle"
+      ],
+      "incertitudes": []
+    },
+    {
+      "id": "gdp",
+      "officiel": {
+        "semestres": "S5 (LLA5J6D, CM non présentiel 6 h + TD 18 h, 2 ECTS)",
+        "enseignant": "Sonia Tesson selon la page officielle ; Izabela Jankiewicz-Anker selon les supports",
+        "description": "Bases de la gestion de projet, puis réalisation d'un projet par les étudiants.",
+        "bibliographie": [
+          "Pairis",
+          "Bouchaouir, Dentinger et Olivier"
+        ],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "gdp.cadrage",
+        "gdp.organisation",
+        "gdp.planification",
+        "gdp.projet-filiale"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [
+        {
+          "id": "gdp.documents",
+          "titre": "La gestion des documents du projet",
+          "priorite": "IMPORTANT",
+          "statut": "Not researched",
+          "documents": [
+            "doc.gdp-pptx"
+          ],
+          "sources": [],
+          "notions": [
+            "Partie 05 annoncée dans le plan de l'enseignante, sans contenu reçu"
+          ]
+        },
+        {
+          "id": "gdp.projet-filiale",
+          "titre": "Projet évalué : création d'une filiale à l'étranger",
+          "priorite": "ESSENTIAL",
+          "documents": [
+            "doc.gdp-docx",
+            "doc.gdp-pptx"
+          ],
+          "sources": [],
+          "notions": [
+            "CC1 : phase avant la création (étapes 1 à 3), présentation orale, grille 65 % contenu et 35 % forme",
+            "CC2 : phase de création (statuts, capital, immatriculation, fiscalité, banque, licences)",
+            "Après la création : comptabilité, fiscalité, flux intragroupe, social, gouvernance"
+          ],
+          "prerequis": [
+            "ici.diagnostic",
+            "ici.information",
+            "ici.risque",
+            "ici.presence",
+            "ici.prospection",
+            "ici.mix",
+            "mks.marketing",
+            "tci.financement"
+          ]
+        }
+      ],
+      "verifies": {},
+      "cadres": [
+        "Triangle qualité-coûts-délais (Olsen 1971 ; Atkinson 1999)",
+        "Diagramme de Gantt",
+        "Note de cadrage",
+        "Matrice des responsabilités"
+      ],
+      "competences_examen": [
+        "Rédiger une note de cadrage",
+        "Construire un diagramme de Gantt avec jalons",
+        "Définir des indicateurs de suivi",
+        "Présenter oralement l'avancement d'un projet"
+      ],
+      "incertitudes": [
+        "Contradiction sur l'enseignant (page officielle contre supports).",
+        "Les dates du CC2 ne figurent pas dans les documents reçus."
+      ]
+    },
+    {
+      "id": "red",
+      "officiel": {
+        "semestres": "S5 (LLA5J6C, CM 18 h + TD 12 h, 2 ECTS)",
+        "enseignant": "Sonia Tesson",
+        "description": "Aucun descriptif ni bibliographie sur la page officielle.",
+        "bibliographie": [],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "red.sources",
+        "red.argumentation",
+        "red.attribution"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Normes de citation (APA, ISO 690)"
+      ],
+      "competences_examen": [
+        "Évaluer une source",
+        "Construire un plan argumenté",
+        "Citer et référencer sans plagiat"
+      ],
+      "incertitudes": [
+        "Intitulé officiel : « Rédaction de documents universitaires » ; le catalogue de cours l'appelle « Initiation à la recherche et rédaction universitaire ». Garder l'intitulé officiel.",
+        "Contenu entièrement reconstruit : aucun descriptif officiel."
+      ]
+    },
+    {
+      "id": "aec",
+      "officiel": {
+        "semestres": "S5 (LLA5J20, TD 18 h, 3 ECTS) et S6 (LLA6J21, TD 15 h, 1 ECTS)",
+        "enseignant": "Alice Michel",
+        "description": "S5 : correspondance professionnelle (commandes, offres, réclamations, recouvrement). S6 : suite du S5 ; articles de presse sur des enjeux socio-économiques, approche critique et argumentative.",
+        "bibliographie": [
+          "Supports sur Celene"
+        ],
+        "sources": [
+          "r.orleans-l3-s5",
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "aec.correspondance",
+        "aec.lexique",
+        "aec.presse"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Structure d'une lettre ou d'un courriel commercial",
+        "Registres formel et informel"
+      ],
+      "competences_examen": [
+        "Rédiger une lettre de commande, d'offre, de réclamation, de relance",
+        "Résumer et commenter un article économique en anglais"
+      ],
+      "incertitudes": []
+    },
+    {
+      "id": "tra",
+      "officiel": {
+        "semestres": "S5 (LLA5J10, TD 24 h, 3 ECTS)",
+        "enseignant": "Alice Michel",
+        "description": "Traduction d'articles de presse dans les deux sens.",
+        "bibliographie": [],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "tra.procedes",
+        "tra.contrastes",
+        "tra.pratique"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Procédés de Vinay et Darbelnet"
+      ],
+      "competences_examen": [
+        "Traduire un article de presse en temps limité",
+        "Justifier un choix de traduction"
+      ],
+      "incertitudes": []
+    },
+    {
+      "id": "cea",
+      "officiel": {
+        "semestres": "S6 (LLA6J11, TD 20 h, 2 ECTS)",
+        "enseignant": "Elodie Gallet",
+        "description": "Compréhension de documents audio authentiques de la BBC.",
+        "bibliographie": [],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "cea.oral",
+        "cea.methode"
+      ],
+      "avances": [
+        "cea.expression"
+      ],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [
+        "Restituer un document audio de la BBC (compte rendu, réponses à des questions)"
+      ],
+      "incertitudes": [
+        "Format exact de l'épreuve inconnu."
+      ]
+    },
+    {
+      "id": "eec",
+      "officiel": {
+        "semestres": "S5 (LLA5J4C2, TD 18 h, 2 ECTS) et S6 (LLA6J4C3, TD 15 h, 1 ECTS)",
+        "enseignant": "Claire Decobert",
+        "description": "Langue de l'entreprise ; secteurs d'activité des économies espagnole et latino-américaine ; rédaction commerciale (lettres, CV, rapports, synthèses).",
+        "bibliographie": [
+          "A. Segura, Textos y Métodos activos, Nathan, 2013 (achat obligatoire)",
+          "Supports sur Celene"
+        ],
+        "sources": [
+          "r.orleans-l3-s5",
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "eec.correspondencia",
+        "eec.lexico",
+        "eec.economia",
+        "eec.escritos"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [
+        "Rédiger une lettre commerciale en espagnol",
+        "Présenter un secteur économique espagnol ou latino-américain",
+        "Rédiger une synthèse"
+      ],
+      "incertitudes": [
+        "La phase 2 de cours disait ne pas trouver l'ouvrage de Segura : la page officielle le cite bien (Nathan, 2013)."
+      ]
+    },
+    {
+      "id": "tve",
+      "officiel": {
+        "semestres": "S5 (thème LLA5J4C1 et version LLA5J4A2, TD 12 h chacun, 2 ECTS chacun) et S6 (LLA6J4C4 et LLA6J4C5, TD 10 h chacun, 1 ECTS chacun)",
+        "enseignant": "Annie Baccon (thème), Sylvie Fournié-Chaboche (version)",
+        "description": "Thème : textes journalistiques. Version : textes courants (presse, publicité) et spécialisés (correspondance commerciale). Le dossier 2026-2027 reçu porte le code LAL5J2C1.",
+        "bibliographie": [
+          "Remise au premier cours"
+        ],
+        "sources": [
+          "r.orleans-l3-s5",
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "tve.contrastes",
+        "tve.metodo"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [
+        {
+          "id": "tve.chiffres",
+          "titre": "Traduire les chiffres et l'évolution économique",
+          "priorite": "ESSENTIAL",
+          "documents": [
+            "doc.tve-dossier-theme-s5"
+          ],
+          "sources": [],
+          "notions": [
+            "crecer un / en un 10 %",
+            "estabilizarse en el 3,7 %",
+            "caer al 2 %, recortarse hasta el 2 %",
+            "superar con creces, llevar la ventaja a, liderar el ranking"
+          ]
+        },
+        {
+          "id": "tve.pratique-corrigee",
+          "titre": "Textes du dossier 2026-2027 et propositions de traduction",
+          "priorite": "ESSENTIAL",
+          "documents": [
+            "doc.tve-dossier-theme-s5",
+            "doc.tve-td1",
+            "doc.tve-texto2"
+          ],
+          "sources": [],
+          "notions": [
+            "Dialogues professionnels (TD 1, corrigé reçu)",
+            "Texte 2 : expatriation (proposition de traduction reçue)",
+            "Textes 1, 3 à 8 : à traduire (pas de corrigé reçu)"
+          ]
+        }
+      ],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [
+        "Traduire un texte journalistique dans les deux sens"
+      ],
+      "incertitudes": [
+        "Bibliographie non publiée.",
+        "Code du dossier 2026-2027 (LAL5J2C1) différent du code de la page officielle (LLA5J4C1) : la page officielle n'est probablement pas à jour."
+      ]
+    },
+    {
+      "id": "cvb",
+      "officiel": {
+        "semestres": "S5 (LLA5J30, CM 12 h + TD 12 h, 1 ECTS)",
+        "enseignant": "Karine Rivière de Franco selon la page officielle ; Nora Vouteau selon la page Celene relevée dans cours",
+        "description": "Le Royaume-Uni de 1945 à nos jours.",
+        "bibliographie": [
+          "Avril et Schnapper (2014)",
+          "Dutton (1991)",
+          "Kavanagh et Morris (1994)",
+          "Lurbe (2013)",
+          "Oakland (2011)",
+          "O'Morgan (2001)",
+          "Marx (1999)"
+        ],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "cvb.constitution",
+        "cvb.welfare",
+        "cvb.consensus",
+        "cvb.thatcher",
+        "cvb.new-labour",
+        "cvb.methode"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [
+        {
+          "id": "cvb.constitution",
+          "titre": "Understanding and reassessing the UK system of government",
+          "priorite": "ESSENTIAL",
+          "documents": [
+            "doc.cvb-plan-lecture-1"
+          ],
+          "sources": [
+            "r.guardian-burnham-2026",
+            "r.telegraph-sumption-2026",
+            "r.conversation-burnham-2026",
+            "r.lords-library-constitution"
+          ],
+          "notions": [
+            "Uncodified constitution: sources, conventions, principles; advantages and drawbacks",
+            "Parliamentary sovereignty and its limits (referendums, EU law, devolution)",
+            "Parliament: Commons, Lords and democratic legitimacy",
+            "First Past the Post",
+            "Political parties",
+            "Devolution: Scotland, Wales, Northern Ireland",
+            "Local government",
+            "2026 debate: Burnham's case for a codified constitution v Sumption"
+          ],
+          "note": "Plan de révision du cours de L2, utilisé comme leçon 1 du cours de L3 (problématique : How democratic is the British system of government?)."
+        }
+      ],
+      "verifies": {
+        "cvb.constitution": [
+          "r.guardian-burnham-2026",
+          "r.conversation-burnham-2026",
+          "r.lords-library-constitution"
+        ]
+      },
+      "cadres": [
+        "Dicey : souveraineté parlementaire et rule of law",
+        "Post-war consensus",
+        "Thatcherism",
+        "Third Way"
+      ],
+      "competences_examen": [
+        "Répondre à une problématique de civilisation en anglais (dissertation ou commentaire)",
+        "Exploiter un article de presse comme document",
+        "Situer un événement dans la chronologie depuis 1945"
+      ],
+      "incertitudes": [
+        "Contradiction sur l'enseignante (page officielle contre Celene).",
+        "Le chapitre cvb.institutions du catalogue de cours recoupe cvb.constitution : à fusionner lors de la prochaine mise à jour de cours.",
+        "La présence en S5 en 2026-2027 est confirmée par les documents reçus (leçon 1 et devoir du 18 novembre)."
+      ]
+    },
+    {
+      "id": "cve",
+      "officiel": {
+        "semestres": "S5 (LLA5J5C, CM 12 h + TD 12 h, 1 ECTS)",
+        "enseignant": "Claire Decobert",
+        "description": "L'Espagne de la Transition à nos jours.",
+        "bibliographie": [
+          "Donnée en cours"
+        ],
+        "sources": [
+          "r.orleans-l3-s5"
+        ]
+      },
+      "essentiels": [
+        "cve.transicion",
+        "cve.consolidacion",
+        "cve.autonomias",
+        "cve.actualidad",
+        "cve.metodo"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Constitution de 1978",
+        "Pactes de la Moncloa"
+      ],
+      "competences_examen": [
+        "Commenter un document de civilisation espagnole",
+        "Expliquer les étapes de la Transition"
+      ],
+      "incertitudes": [
+        "Le chapitre cve.franquismo sert de prérequis : le programme officiel commence à la Transition. ECTS : 1 sur la page actuelle (la phase 2 de cours indiquait 2)."
+      ]
+    },
+    {
+      "id": "cva",
+      "officiel": {
+        "semestres": "S6 (LLA6J30, CM 10 h + TD 10 h, 2 ECTS)",
+        "enseignant": "Eric Tabuteau",
+        "description": "Histoire de la publicité et du marketing aux États-Unis, de la première moitié du XXe siècle à nos jours.",
+        "bibliographie": [
+          "Bibliographie sélective donnée en début de semestre"
+        ],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "cva.naissance",
+        "cva.age-or",
+        "cva.contemporain",
+        "cva.methode"
+      ],
+      "avances": [
+        "cva.regulation"
+      ],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [
+        "Analyser une publicité comme document historique"
+      ],
+      "incertitudes": [
+        "Bibliographie non publiée."
+      ]
+    },
+    {
+      "id": "cvl",
+      "officiel": {
+        "semestres": "S6 (LLA6J5C, CM 10 h + TD 10 h, 2 ECTS)",
+        "enseignant": "Marcos Eymar",
+        "description": "La ville latino-américaine contemporaine, étudiée à travers la photographie, le cinéma et des textes littéraires et journalistiques.",
+        "bibliographie": [
+          "Donnée en cours"
+        ],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "cvl.urbanizacion",
+        "cvl.informalidad",
+        "cvl.fracturas",
+        "cvl.representaciones"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [
+        "Commenter un document visuel ou un extrait de film sur la ville"
+      ],
+      "incertitudes": [
+        "Le statut « ORL? » de cours peut être levé : la page S6 consultée le 2026-11-17 liste bien la matière."
+      ]
+    },
+    {
+      "id": "stg",
+      "officiel": {
+        "semestres": "S6 (LLA6JS02, 8 ECTS, coefficient 6)",
+        "enseignant": "Aline Henninger et Mayumi Shimosakai",
+        "description": "Aucun descriptif sur la page officielle.",
+        "bibliographie": [],
+        "sources": [
+          "r.orleans-l3-s6"
+        ]
+      },
+      "essentiels": [
+        "stg.cadre",
+        "stg.rapport",
+        "stg.soutenance",
+        "stg.evaluation"
+      ],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [
+        "Rédiger un rapport de stage conforme au livret",
+        "Soutenir oralement"
+      ],
+      "incertitudes": [
+        "Règles tirées du livret 2021-2022 ; un livret plus récent existe en ligne et doit être consulté."
+      ]
+    },
+    {
+      "id": "eco",
+      "officiel": {
+        "semestres": "hors maquette",
+        "enseignant": "aucun",
+        "description": "Complément hors maquette : prérequis pour TCI, ICI et le tourisme.",
+        "bibliographie": [],
+        "sources": []
+      },
+      "complement": true,
+      "essentiels": [],
+      "avances": [
+        "eco.theories",
+        "eco.politique"
+      ],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [
+        "Avantage absolu et comparatif",
+        "HOS",
+        "Balance des paiements (BPM6)"
+      ],
+      "competences_examen": [],
+      "incertitudes": []
+    },
+    {
+      "id": "mks",
+      "officiel": {
+        "semestres": "hors maquette",
+        "enseignant": "aucun",
+        "description": "Complément hors maquette : prérequis pour ICI et le projet de filiale.",
+        "bibliographie": [],
+        "sources": []
+      },
+      "complement": true,
+      "essentiels": [],
+      "avances": [],
+      "chapitres_ajoutes": [],
+      "verifies": {},
+      "cadres": [],
+      "competences_examen": [],
+      "incertitudes": []
+    }
+  ],
+  "_maquette": "CONTRADICTION MAJEURE : les pages officielles S5/S6 (consultées le 2026-11-17, sans année indiquée) utilisent des codes LLA5…/LLA6…, alors que les documents 2026-2027 utilisent des codes LAL5… (thème espagnol LAL5J2C1, gestion de projet LAL5J3D). Les données « officiel » de ce fichier peuvent donc décrire une maquette antérieure. Elles restent la meilleure source publique disponible, mais chaque divergence avec un document de cours est tranchée en faveur du document."
+}

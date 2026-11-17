@@ -1,0 +1,12 @@
+{
+  "name": "newl3",
+  "private": true,
+  "type": "module",
+  "description": "Moteur de recherche académique et cartes de cursus pour la L3 LEA anglais-espagnol, parcours commerce international (Université d'Orléans)",
+  "scripts": {
+    "generer": "node scripts/generer.mjs",
+    "valider": "node scripts/valider.mjs",
+    "check": "node scripts/valider.mjs && node scripts/generer.mjs"
+  },
+  "engines": { "node": ">=20" }
+}

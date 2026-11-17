@@ -1,0 +1,378 @@
+{
+  "id": "tou",
+  "titre": "Introduction au tourisme international",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 d'après l'emploi du temps fourni (CM et TD le lundi 9 h-11 h, salle 257)",
+    "enseignant": "non connu",
+    "description": "Aucune fiche officielle trouvée en L3. Le seul enseignement de tourisme sur le site officiel est « Communication for international tourism » (L2 S4, LLA4J8C, Alice Michel) : connaissance de l'industrie du tourisme, compétences culturelles et langagières, tourisme en France et en région Centre-Val de Loire.",
+    "bibliographie": [
+      "(L2) J. Rouanet-Laplace, Les mots-clés du tourisme et de l'hôtellerie, Bréal, 2015",
+      "(L2) C. Peyroutet, I. Juguet, C. Bouthier (dir.), Le tourisme en France, Nathan, 2015",
+      "(L2) C. Cooper, C. M. Hall, B. Duthion, J.-L. Michaud, Le tourisme aujourd'hui : une approche internationale, De Boeck, 2015"
+    ],
+    "sources": [
+      "r.orleans-l3-s5",
+      "r.orleans-l2-s4"
+    ]
+  },
+  "cadres": [
+    "Définitions IRTS 2008",
+    "Système touristique de Leiper (1979)",
+    "Cycle de vie de Butler (1980)"
+  ],
+  "competences_examen": [
+    "Définir et distinguer visiteur, touriste et excursionniste",
+    "Commenter des statistiques de flux et de recettes",
+    "Analyser une destination avec le modèle de Butler",
+    "Présenter les acteurs d'une filière touristique"
+  ],
+  "incertitudes": [
+    "Matière absente des pages officielles S5 et S6 ; présente seulement dans l'emploi du temps. Intitulé exact, enseignant, volume, ECTS, modalités d'évaluation et langue d'enseignement inconnus.",
+    "La langue du cours est inconnue : l'intitulé de l'emploi du temps est en anglais (« Intro international tourism »).",
+    "Tout le plan est une RECONSTRUCTION à partir d'autres universités et de manuels. À comparer avec le premier support de l'enseignant dès réception."
+  ],
+  "chapitres": [
+    {
+      "id": "tou.definitions",
+      "titre": "Définir et mesurer le tourisme",
+      "priorite": "ESSENTIAL",
+      "statut": "Verified against additional academic sources",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Visiteur, touriste (avec nuitée) et excursionniste (visiteur de la journée)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Environnement habituel et durée de moins d'un an",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Motifs de voyage : personnels, affaires et motifs professionnels",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Formes de tourisme : interne, récepteur, émetteur ; intérieur, national, international",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.irts-2008",
+        "r.untourism-glossaire"
+      ],
+      "verifie_par": [
+        "r.irts-2008",
+        "r.untourism-glossaire"
+      ],
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.systeme",
+      "titre": "Le système touristique",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Modèle de Leiper : région émettrice, région de transit, région de destination",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Facteurs d'incitation (push) et d'attraction (pull)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Le tourisme comme système ouvert sur son environnement",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.leiper-1979",
+        "r.cooper-hall-contemporary-tourism"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.flux",
+      "titre": "Géographie des flux touristiques internationaux",
+      "priorite": "ESSENTIAL",
+      "statut": "Verified against additional academic sources",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Grands bassins émetteurs et récepteurs ; prédominance de l'Europe",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Chiffres clés 2025 et premier semestre 2026",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "La France première destination mondiale en arrivées ; l'Espagne",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Lire un baromètre d'ONU Tourisme",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.untourism-2025",
+        "r.untourism-barometre-2026-09",
+        "r.atout-france-2025",
+        "r.bordeaux-montaigne-tourisme"
+      ],
+      "verifie_par": [
+        "r.untourism-2025",
+        "r.untourism-barometre-2026-09",
+        "r.atout-france-2025"
+      ],
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.acteurs",
+      "titre": "Les acteurs et l'industrie du tourisme",
+      "priorite": "IMPORTANT",
+      "statut": "Research in progress",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Hébergement, transport, restauration, attractions",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Voyagistes, agences, plateformes de réservation en ligne",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Acteurs publics : ONU Tourisme, Atout France, comités régionaux, offices de tourisme",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.cooper-hall-contemporary-tourism"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.destination",
+      "titre": "La destination : attractivité et cycle de vie",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Cycle de vie d'une destination (Butler, 1980) : exploration, implication, développement, consolidation, stagnation, déclin ou rajeunissement",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Types d'espaces touristiques",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Marketing de destination",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.butler-1980",
+        "r.cooper-hall-contemporary-tourism"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.economie",
+      "titre": "Le poids économique du tourisme international",
+      "priorite": "IMPORTANT",
+      "statut": "Research in progress",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Recettes et dépenses touristiques ; le poste « voyages » de la balance des paiements",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Tourisme et emploi",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Dépendance au tourisme",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.untourism-2025",
+        "r.atout-france-2025"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "eco.mesure"
+      ],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.durable",
+      "titre": "Impacts et tourisme durable",
+      "priorite": "IMPORTANT",
+      "statut": "Not researched",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Impacts économiques, socioculturels et environnementaux",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Surtourisme et régulation",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Tourisme durable : définitions et labels",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.france-centre",
+      "titre": "Le tourisme en France et en Centre-Val de Loire",
+      "priorite": "IMPORTANT",
+      "statut": "Research in progress",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Fréquentation et recettes de la France en 2025",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Les atouts du Centre-Val de Loire (à documenter)",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.atout-france-2025",
+        "r.orleans-l2-s4"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "tou.crises",
+      "titre": "Crises et résilience du tourisme",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "ajouté par la recherche",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Chocs : pandémie de 2020, conflits, prix de l'énergie",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Exemple 2026 : chute de 22 % des arrivées au Moyen-Orient au premier semestre",
+          "niveau": null
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "r.untourism-barometre-2026-09",
+        "r.untourism-2025"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    }
+  ]
+}

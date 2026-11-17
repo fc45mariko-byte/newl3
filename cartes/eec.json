@@ -1,0 +1,407 @@
+{
+  "id": "eec",
+  "titre": "Espagnol économique et commercial",
+  "langue": "es",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J4C2, TD 18 h, 2 ECTS) et S6 (LLA6J4C3, TD 15 h, 1 ECTS)",
+    "enseignant": "Claire Decobert",
+    "description": "Langue de l'entreprise ; secteurs d'activité des économies espagnole et latino-américaine ; rédaction commerciale (lettres, CV, rapports, synthèses).",
+    "bibliographie": [
+      "A. Segura, Textos y Métodos activos, Nathan, 2013 (achat obligatoire)",
+      "Supports sur Celene"
+    ],
+    "sources": [
+      "r.orleans-l3-s5",
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [],
+  "competences_examen": [
+    "Rédiger une lettre commerciale en espagnol",
+    "Présenter un secteur économique espagnol ou latino-américain",
+    "Rédiger une synthèse"
+  ],
+  "incertitudes": [
+    "La phase 2 de cours disait ne pas trouver l'ouvrage de Segura : la page officielle le cite bien (Nathan, 2013)."
+  ],
+  "chapitres": [
+    {
+      "id": "eec.correspondencia",
+      "titre": "Correspondencia comercial",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eec.correspondencia.estructura",
+          "titre": "La estructura de la carta comercial",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.correspondencia.cortesia",
+          "titre": "Usted, subjuntivo y condicional de cortesía",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.correspondencia.ciclo",
+          "titre": "El ciclo comercial: consulta, presupuesto, pedido, albarán, factura",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.correspondencia.reclamacion",
+          "titre": "La reclamación",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.correspondencia.email",
+          "titre": "El correo electrónico profesional en español",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "En-tête",
+          "en": "letterhead",
+          "es": "membrete"
+        },
+        {
+          "fr": "Objet",
+          "en": "subject",
+          "es": "asunto"
+        },
+        {
+          "fr": "Formule d'appel",
+          "en": "salutation",
+          "es": "saludo / encabezamiento"
+        },
+        {
+          "fr": "Formule de clôture",
+          "en": "complimentary close",
+          "es": "despedida"
+        },
+        {
+          "fr": "Pièces jointes",
+          "en": "enclosures",
+          "es": "anexos"
+        },
+        {
+          "fr": "Vouvoiement",
+          "en": "formal address",
+          "es": "trato de usted"
+        },
+        {
+          "fr": "Conditionnel",
+          "en": "conditional",
+          "es": "condicional"
+        },
+        {
+          "fr": "Subjonctif",
+          "en": "subjunctive",
+          "es": "subjuntivo"
+        },
+        {
+          "fr": "Devis",
+          "en": "quotation",
+          "es": "presupuesto (cotización en Latinoamérica)"
+        },
+        {
+          "fr": "Commande",
+          "en": "order",
+          "es": "pedido"
+        },
+        {
+          "fr": "Bon de livraison",
+          "en": "delivery note",
+          "es": "albarán (remito, guía de remisión)"
+        },
+        {
+          "fr": "Facture",
+          "en": "invoice",
+          "es": "factura"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "eec.lexico",
+      "titre": "Léxico",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eec.lexico.empresa",
+          "titre": "El vocabulario de la empresa en español",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.lexico.finanzas",
+          "titre": "Finanzas y contabilidad en español",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.lexico.comercio-exterior",
+          "titre": "El vocabulario del comercio exterior en español",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.lexico.falsos-amigos",
+          "titre": "Los falsos amigos francés-español en el ámbito profesional",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.directive-tva"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Société anonyme",
+          "en": "public limited company",
+          "es": "sociedad anónima (S.A.)"
+        },
+        {
+          "fr": "Société à responsabilité limitée",
+          "en": "private limited company",
+          "es": "sociedad limitada (S.L.)"
+        },
+        {
+          "fr": "Travailleur indépendant",
+          "en": "self-employed",
+          "es": "autónomo"
+        },
+        {
+          "fr": "Effectif",
+          "en": "workforce",
+          "es": "plantilla"
+        },
+        {
+          "fr": "Compte de résultat",
+          "en": "income statement",
+          "es": "cuenta de pérdidas y ganancias"
+        },
+        {
+          "fr": "Capitaux propres",
+          "en": "equity",
+          "es": "patrimonio neto"
+        },
+        {
+          "fr": "Encaisser",
+          "en": "to collect",
+          "es": "cobrar"
+        },
+        {
+          "fr": "Créancier",
+          "en": "creditor",
+          "es": "acreedor"
+        },
+        {
+          "fr": "Droit de douane",
+          "en": "customs duty / tariff",
+          "es": "arancel"
+        },
+        {
+          "fr": "Transitaire",
+          "en": "freight forwarder",
+          "es": "transitario"
+        },
+        {
+          "fr": "Connaissement",
+          "en": "bill of lading",
+          "es": "conocimiento de embarque"
+        },
+        {
+          "fr": "Fret",
+          "en": "freight",
+          "es": "flete"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "eec.economia",
+      "titre": "Economía",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eec.economia.espana-sectores",
+          "titre": "Los sectores de la economía española",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.economia.espana-historia",
+          "titre": "Hitos: Plan de Estabilización de 1959, ingreso en la CEE en 1986, euro",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.economia.latam",
+          "titre": "Las economías latinoamericanas",
+          "niveau": "F"
+        },
+        {
+          "id": "eec.economia.bloques",
+          "titre": "Mercosur, Alianza del Pacífico y acuerdos con la UE",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.omc"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Secteur tertiaire",
+          "en": "service sector",
+          "es": "sector servicios / terciario"
+        },
+        {
+          "fr": "Taux de chômage",
+          "en": "unemployment rate",
+          "es": "tasa de paro (ES) / tasa de desempleo"
+        },
+        {
+          "fr": "Contrat temporaire",
+          "en": "temporary contract",
+          "es": "contrato temporal"
+        },
+        {
+          "fr": "Huile d'olive",
+          "en": "olive oil",
+          "es": "aceite de oliva"
+        },
+        {
+          "fr": "Autarcie",
+          "en": "autarky / self-sufficiency",
+          "es": "autarquía"
+        },
+        {
+          "fr": "Bulle immobilière",
+          "en": "housing bubble",
+          "es": "burbuja inmobiliaria"
+        },
+        {
+          "fr": "Fonds structurels",
+          "en": "structural funds",
+          "es": "fondos estructurales"
+        },
+        {
+          "fr": "Matières premières",
+          "en": "commodities",
+          "es": "materias primas"
+        },
+        {
+          "fr": "Économie informelle",
+          "en": "informal economy",
+          "es": "economía informal / sumergida"
+        },
+        {
+          "fr": "Relocalisation de proximité",
+          "en": "nearshoring",
+          "es": "relocalización cercana (nearshoring)"
+        },
+        {
+          "fr": "Union douanière",
+          "en": "customs union",
+          "es": "unión aduanera"
+        },
+        {
+          "fr": "Zone de libre-échange",
+          "en": "free trade area",
+          "es": "zona de libre comercio"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "eec.escritos",
+      "titre": "Escritos profesionales",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "eec.escritos.informe",
+          "titre": "El informe en español",
+          "niveau": "A"
+        },
+        {
+          "id": "eec.escritos.cv",
+          "titre": "El CV en español",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "eec.correspondencia",
+        "red.argumentation",
+        "stg.recherche"
+      ],
+      "terminologie": [
+        {
+          "fr": "Rapport",
+          "en": "report",
+          "es": "informe"
+        },
+        {
+          "fr": "Recommandation",
+          "en": "recommendation",
+          "es": "recomendación"
+        },
+        {
+          "fr": "Il convient de souligner",
+          "en": "it should be noted",
+          "es": "cabe destacar"
+        },
+        {
+          "fr": "Stage",
+          "en": "internship",
+          "es": "prácticas"
+        },
+        {
+          "fr": "Lettre de motivation",
+          "en": "cover letter",
+          "es": "carta de presentación"
+        },
+        {
+          "fr": "Langue maternelle",
+          "en": "native language",
+          "es": "lengua materna"
+        },
+        {
+          "fr": "Licence (diplôme)",
+          "en": "bachelor's degree",
+          "es": "grado / licenciatura"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

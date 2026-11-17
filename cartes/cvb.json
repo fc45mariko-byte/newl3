@@ -1,0 +1,629 @@
+{
+  "id": "cvb",
+  "titre": "Civilisation britannique : the UK since 1945",
+  "langue": "en",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J30, CM 12 h + TD 12 h, 1 ECTS)",
+    "enseignant": "Karine Rivière de Franco selon la page officielle ; Nora Vouteau selon la page Celene relevée dans cours",
+    "description": "Le Royaume-Uni de 1945 à nos jours.",
+    "bibliographie": [
+      "Avril et Schnapper (2014)",
+      "Dutton (1991)",
+      "Kavanagh et Morris (1994)",
+      "Lurbe (2013)",
+      "Oakland (2011)",
+      "O'Morgan (2001)",
+      "Marx (1999)"
+    ],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "Dicey : souveraineté parlementaire et rule of law",
+    "Post-war consensus",
+    "Thatcherism",
+    "Third Way"
+  ],
+  "competences_examen": [
+    "Répondre à une problématique de civilisation en anglais (dissertation ou commentaire)",
+    "Exploiter un article de presse comme document",
+    "Situer un événement dans la chronologie depuis 1945"
+  ],
+  "incertitudes": [
+    "Contradiction sur l'enseignante (page officielle contre Celene).",
+    "Le chapitre cvb.institutions du catalogue de cours recoupe cvb.constitution : à fusionner lors de la prochaine mise à jour de cours.",
+    "La présence en S5 en 2026-2027 est confirmée par les documents reçus (leçon 1 et devoir du 18 novembre)."
+  ],
+  "chapitres": [
+    {
+      "id": "cvb.institutions",
+      "titre": "Institutions",
+      "priorite": "IMPORTANT",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvb.institutions.parlement",
+          "titre": "Parliament and government",
+          "niveau": "P"
+        },
+        {
+          "id": "cvb.institutions.partis",
+          "titre": "Parties and the electoral system",
+          "niveau": "P"
+        }
+      ],
+      "documents": [
+        "doc.cvb-plan-lecture-1"
+      ],
+      "sources": [
+        "src.uk-parliament"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Monarchie constitutionnelle",
+          "en": "constitutional monarchy",
+          "es": "monarquía constitucional"
+        },
+        {
+          "fr": "Chambre des communes",
+          "en": "House of Commons",
+          "es": "Cámara de los Comunes"
+        },
+        {
+          "fr": "Souveraineté parlementaire",
+          "en": "parliamentary sovereignty",
+          "es": "soberanía parlamentaria"
+        },
+        {
+          "fr": "Cabinet fantôme",
+          "en": "shadow cabinet",
+          "es": "gabinete en la sombra"
+        },
+        {
+          "fr": "Scrutin majoritaire à un tour",
+          "en": "first past the post (FPTP)",
+          "es": "sistema mayoritario uninominal a una vuelta"
+        },
+        {
+          "fr": "Circonscription",
+          "en": "constituency",
+          "es": "circunscripción"
+        },
+        {
+          "fr": "Bipartisme",
+          "en": "two-party system",
+          "es": "bipartidismo"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvb.welfare",
+      "titre": "The Welfare State",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvb.welfare.beveridge",
+          "titre": "The Beveridge Report (1942)",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.welfare.attlee",
+          "titre": "Attlee and the Welfare State: the NHS",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.welfare.nationalisations",
+          "titre": "Nationalisation",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.beveridge",
+        "src.morgan-britain"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "État-providence",
+          "en": "Welfare State",
+          "es": "Estado de bienestar"
+        },
+        {
+          "fr": "Assurance sociale",
+          "en": "social insurance",
+          "es": "seguro social"
+        },
+        {
+          "fr": "Universalité",
+          "en": "universalism",
+          "es": "universalidad"
+        },
+        {
+          "fr": "Service national de santé",
+          "en": "National Health Service (NHS)",
+          "es": "Servicio Nacional de Salud"
+        },
+        {
+          "fr": "Gratuit au point d'accès",
+          "en": "free at the point of use",
+          "es": "gratuito en el punto de uso"
+        },
+        {
+          "fr": "Victoire écrasante",
+          "en": "landslide victory",
+          "es": "victoria aplastante"
+        },
+        {
+          "fr": "Nationalisation",
+          "en": "nationalisation",
+          "es": "nacionalización"
+        },
+        {
+          "fr": "Économie mixte",
+          "en": "mixed economy",
+          "es": "economía mixta"
+        },
+        {
+          "fr": "Clause IV",
+          "en": "Clause IV",
+          "es": "Cláusula IV"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvb.consensus",
+      "titre": "Consensus and crisis",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvb.consensus.butskellism",
+          "titre": "The post-war consensus (\"Butskellism\")",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.consensus.declin",
+          "titre": "Relative decline and \"stop-go\"",
+          "niveau": "A"
+        },
+        {
+          "id": "cvb.consensus.europe",
+          "titre": "The United Kingdom and Europe (1973, 1975)",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.consensus.crise-1970",
+          "titre": "The crisis of the 1970s and the Winter of Discontent",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.morgan-britain"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvb.welfare"
+      ],
+      "terminologie": [
+        {
+          "fr": "Consensus d'après-guerre",
+          "en": "post-war consensus",
+          "es": "consenso de posguerra"
+        },
+        {
+          "fr": "Keynésianisme",
+          "en": "Keynesianism",
+          "es": "keynesianismo"
+        },
+        {
+          "fr": "Chancelier de l'Échiquier",
+          "en": "Chancellor of the Exchequer",
+          "es": "Ministro de Hacienda británico"
+        },
+        {
+          "fr": "Déclin relatif",
+          "en": "relative decline",
+          "es": "declive relativo"
+        },
+        {
+          "fr": "Dévaluation",
+          "en": "devaluation",
+          "es": "devaluación"
+        },
+        {
+          "fr": "Balance des paiements",
+          "en": "balance of payments",
+          "es": "balanza de pagos"
+        },
+        {
+          "fr": "Adhésion",
+          "en": "accession / membership",
+          "es": "adhesión"
+        },
+        {
+          "fr": "Eurosceptique",
+          "en": "Eurosceptic",
+          "es": "euroescéptico"
+        },
+        {
+          "fr": "Relation spéciale",
+          "en": "special relationship",
+          "es": "relación especial"
+        },
+        {
+          "fr": "Stagflation",
+          "en": "stagflation",
+          "es": "estanflación"
+        },
+        {
+          "fr": "Hiver du mécontentement",
+          "en": "Winter of Discontent",
+          "es": "invierno del descontento"
+        },
+        {
+          "fr": "Motion de censure",
+          "en": "vote of no confidence",
+          "es": "moción de censura"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvb.thatcher",
+      "titre": "Thatcherism",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvb.thatcher.monetarisme",
+          "titre": "Monetarism",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.thatcher.privatisations",
+          "titre": "Privatisation",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.thatcher.syndicats",
+          "titre": "The trade unions and the miners' strike",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.thatcher.big-bang",
+          "titre": "The Big Bang in the City (1986)",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.thatcher.poll-tax",
+          "titre": "The poll tax and Thatcher's downfall",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.cvb-devoir-18-11"
+      ],
+      "sources": [
+        "src.morgan-britain"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvb.consensus",
+        "cvb.welfare"
+      ],
+      "terminologie": [
+        {
+          "fr": "Monétarisme",
+          "en": "monetarism",
+          "es": "monetarismo"
+        },
+        {
+          "fr": "Masse monétaire",
+          "en": "money supply",
+          "es": "masa monetaria / oferta monetaria"
+        },
+        {
+          "fr": "Désindustrialisation",
+          "en": "deindustrialisation",
+          "es": "desindustrialización"
+        },
+        {
+          "fr": "Privatisation",
+          "en": "privatisation",
+          "es": "privatización"
+        },
+        {
+          "fr": "Capitalisme populaire",
+          "en": "popular capitalism",
+          "es": "capitalismo popular"
+        },
+        {
+          "fr": "Droit d'achat des logements sociaux",
+          "en": "Right to Buy",
+          "es": "derecho a compra (vivienda social)"
+        },
+        {
+          "fr": "Syndicat",
+          "en": "trade union (UK) / labor union (US)",
+          "es": "sindicato"
+        },
+        {
+          "fr": "Piquet de grève",
+          "en": "picket line",
+          "es": "piquete"
+        },
+        {
+          "fr": "Monopole syndical d'embauche",
+          "en": "closed shop",
+          "es": "taller cerrado / sindicación obligatoria"
+        },
+        {
+          "fr": "Dérégulation",
+          "en": "deregulation",
+          "es": "desregulación"
+        },
+        {
+          "fr": "Place financière",
+          "en": "financial centre",
+          "es": "plaza financiera"
+        },
+        {
+          "fr": "Contrôle des changes",
+          "en": "exchange controls",
+          "es": "control de cambios"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvb.new-labour",
+      "titre": "From Major to New Labour",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvb.new-labour.major",
+          "titre": "The Major government (1990-1997)",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.new-labour.third-way",
+          "titre": "New Labour and the Third Way",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.new-labour.devolution",
+          "titre": "Devolution",
+          "niveau": "F"
+        },
+        {
+          "id": "cvb.new-labour.good-friday",
+          "titre": "The Good Friday Agreement (1998)",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.morgan-britain",
+        "src.uk-parliament",
+        "src.belfast-agreement"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cvb.thatcher"
+      ],
+      "terminologie": [
+        {
+          "fr": "Mercredi noir",
+          "en": "Black Wednesday",
+          "es": "Miércoles Negro"
+        },
+        {
+          "fr": "Exemption (clause de non-participation)",
+          "en": "opt-out",
+          "es": "cláusula de exención (opt-out)"
+        },
+        {
+          "fr": "Affaires, corruption",
+          "en": "sleaze",
+          "es": "escándalos / corrupción"
+        },
+        {
+          "fr": "Troisième voie",
+          "en": "Third Way",
+          "es": "Tercera Vía"
+        },
+        {
+          "fr": "Salaire minimum",
+          "en": "national minimum wage",
+          "es": "salario mínimo nacional"
+        },
+        {
+          "fr": "Du chômage à l'emploi",
+          "en": "welfare to work",
+          "es": "del subsidio al empleo"
+        },
+        {
+          "fr": "Dévolution",
+          "en": "devolution",
+          "es": "devolución (de competencias)"
+        },
+        {
+          "fr": "Question du West Lothian",
+          "en": "West Lothian question",
+          "es": "cuestión de West Lothian"
+        },
+        {
+          "fr": "Référendum d'indépendance",
+          "en": "independence referendum",
+          "es": "referéndum de independencia"
+        },
+        {
+          "fr": "Partage du pouvoir",
+          "en": "power-sharing",
+          "es": "reparto del poder"
+        },
+        {
+          "fr": "Unioniste",
+          "en": "unionist",
+          "es": "unionista"
+        },
+        {
+          "fr": "Républicain / nationaliste",
+          "en": "republican / nationalist",
+          "es": "republicano / nacionalista"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvb.methode",
+      "titre": "Method",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cvb.methode.commentaire",
+          "titre": "The British civilisation document commentary",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "red.argumentation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Commentaire de document",
+          "en": "document analysis / commentary",
+          "es": "comentario de documento"
+        },
+        {
+          "fr": "Paraphrase",
+          "en": "paraphrase",
+          "es": "paráfrasis"
+        },
+        {
+          "fr": "Portée",
+          "en": "significance / impact",
+          "es": "alcance"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cvb.constitution",
+      "titre": "Understanding and reassessing the UK system of government",
+      "priorite": "ESSENTIAL",
+      "statut": "Verified against additional academic sources",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Uncodified constitution: sources, conventions, principles; advantages and drawbacks",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Parliamentary sovereignty and its limits (referendums, EU law, devolution)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Parliament: Commons, Lords and democratic legitimacy",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "First Past the Post",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Political parties",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Devolution: Scotland, Wales, Northern Ireland",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Local government",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "2026 debate: Burnham's case for a codified constitution v Sumption",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.cvb-plan-lecture-1"
+      ],
+      "sources": [
+        "r.guardian-burnham-2026",
+        "r.telegraph-sumption-2026",
+        "r.conversation-burnham-2026",
+        "r.lords-library-constitution"
+      ],
+      "verifie_par": [
+        "r.guardian-burnham-2026",
+        "r.conversation-burnham-2026",
+        "r.lords-library-constitution"
+      ],
+      "prerequis": [],
+      "terminologie": [],
+      "note": "Plan de révision du cours de L2, utilisé comme leçon 1 du cours de L3 (problématique : How democratic is the British system of government?)."
+    }
+  ]
+}

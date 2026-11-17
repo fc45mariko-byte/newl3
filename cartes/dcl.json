@@ -1,0 +1,728 @@
+{
+  "id": "dcl",
+  "titre": "Droit des contrats de la Common law",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6J7B, CM 10 h + TD 10 h, 3 ECTS)",
+    "enseignant": "Isabelle Noël",
+    "description": "Vocabulaire et mécanismes des contrats anglo-saxons courants dans le commerce international ; common law, equity, UCC, influence du droit européen, conséquences du Brexit ; systèmes judiciaires anglais, britannique et américain.",
+    "bibliographie": [
+      "E. Boyé, L'anglais des contrats internationaux, LexisNexis",
+      "M. Harvey, C. Kirby-Legier, M. Charret-Del Bove, Droit anglais et droit américain, Armand Colin",
+      "S. Azzouz, Contract Law, Ophrys"
+    ],
+    "sources": [
+      "r.orleans-l3-s6",
+      "r.lille-l3-tci"
+    ]
+  },
+  "cadres": [
+    "Stare decisis",
+    "Equity",
+    "UCC article 2",
+    "Hadley v Baxendale (1854)"
+  ],
+  "competences_examen": [
+    "Expliquer la formation d'un contrat en common law",
+    "Qualifier une clause (condition, warranty, innominate term)",
+    "Choisir un remède en cas de breach",
+    "Traduire et expliquer le vocabulaire contractuel anglais"
+  ],
+  "incertitudes": [
+    "L'« influence du droit européen » figure dans le descriptif officiel mais n'a pas de chapitre propre : elle est traitée dans dcl.juridictions (Brexit)."
+  ],
+  "chapitres": [
+    {
+      "id": "dcl.systemes",
+      "titre": "Les systèmes juridiques",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.systemes.civil-common",
+          "titre": "Civil law et common law",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.systemes.precedent",
+          "titre": "Stare decisis, ratio decidendi, obiter dictum",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.systemes.equity",
+          "titre": "Equity et ses remèdes",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.systemes.statutes",
+          "titre": "Statute law et case law",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.harvey",
+        "src.uk-statutes"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Common law",
+          "en": "common law",
+          "es": "common law / derecho anglosajón"
+        },
+        {
+          "fr": "Tradition civiliste",
+          "en": "civil law tradition",
+          "es": "tradición romano-germánica / derecho civil"
+        },
+        {
+          "fr": "Jurisprudence (au sens de décisions)",
+          "en": "case law",
+          "es": "jurisprudencia"
+        },
+        {
+          "fr": "Procédure accusatoire",
+          "en": "adversarial system",
+          "es": "sistema adversarial / acusatorio"
+        },
+        {
+          "fr": "Règle du précédent",
+          "en": "doctrine of precedent / stare decisis",
+          "es": "doctrina del precedente / stare decisis"
+        },
+        {
+          "fr": "Ratio decidendi",
+          "en": "ratio decidendi",
+          "es": "ratio decidendi"
+        },
+        {
+          "fr": "Obiter dictum",
+          "en": "obiter dictum (pl. obiter dicta)",
+          "es": "obiter dictum"
+        },
+        {
+          "fr": "Equity",
+          "en": "equity",
+          "es": "equity (equidad)"
+        },
+        {
+          "fr": "Remède discrétionnaire",
+          "en": "discretionary remedy",
+          "es": "remedio discrecional"
+        },
+        {
+          "fr": "Maxime d'equity",
+          "en": "maxim of equity",
+          "es": "máxima de equidad"
+        },
+        {
+          "fr": "Loi (du Parlement)",
+          "en": "statute / Act of Parliament",
+          "es": "ley parlamentaria"
+        },
+        {
+          "fr": "Souveraineté parlementaire",
+          "en": "parliamentary sovereignty",
+          "es": "soberanía parlamentaria"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.juridictions",
+      "titre": "Organisation judiciaire",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.juridictions.angleterre",
+          "titre": "Organisation judiciaire anglaise et britannique",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.juridictions.usa",
+          "titre": "Organisation judiciaire américaine (fédéral / États)",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.juridictions.brexit",
+          "titre": "Conséquences du Brexit : CJUE, reconnaissance des jugements, Conventions de La Haye 2005 et 2019",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.harvey",
+        "src.ucc",
+        "src.la-haye",
+        "src.bruxelles1bis",
+        "src.new-york-1958"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.systemes",
+        "dai.conflits"
+      ],
+      "terminologie": [
+        {
+          "fr": "Cour suprême du Royaume-Uni",
+          "en": "Supreme Court of the United Kingdom (UKSC)",
+          "es": "Tribunal Supremo del Reino Unido"
+        },
+        {
+          "fr": "Cour d'appel",
+          "en": "Court of Appeal",
+          "es": "Tribunal de Apelación"
+        },
+        {
+          "fr": "Haute Cour de justice",
+          "en": "High Court of Justice",
+          "es": "Tribunal Superior de Justicia"
+        },
+        {
+          "fr": "Juge",
+          "en": "judge / justice",
+          "es": "juez / magistrado"
+        },
+        {
+          "fr": "Tribunal fédéral de district",
+          "en": "U.S. District Court",
+          "es": "tribunal federal de distrito"
+        },
+        {
+          "fr": "Compétence fondée sur la diversité de citoyenneté",
+          "en": "diversity jurisdiction",
+          "es": "jurisdicción por diversidad de ciudadanía"
+        },
+        {
+          "fr": "Fédéralisme",
+          "en": "federalism",
+          "es": "federalismo"
+        },
+        {
+          "fr": "Accord d'élection de for",
+          "en": "choice of court agreement",
+          "es": "acuerdo de elección de foro"
+        },
+        {
+          "fr": "Période de transition",
+          "en": "transition period",
+          "es": "período transitorio"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.formation",
+      "titre": "Formation du contrat",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.formation.offer",
+          "titre": "Offer et invitation to treat",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.formation.acceptance",
+          "titre": "Acceptance, mirror image rule, postal rule",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.formation.consideration",
+          "titre": "Consideration et promissory estoppel",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.formation.intention",
+          "titre": "Intention to create legal relations",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.formation.capacity-formalities",
+          "titre": "Capacité, deeds, forme écrite",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.azzouz",
+        "src.harvey"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.systemes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Offre",
+          "en": "offer",
+          "es": "oferta"
+        },
+        {
+          "fr": "Invitation à entrer en pourparlers",
+          "en": "invitation to treat",
+          "es": "invitación a ofertar"
+        },
+        {
+          "fr": "Pollicitant / destinataire",
+          "en": "offeror / offeree",
+          "es": "oferente / destinatario"
+        },
+        {
+          "fr": "Révocation",
+          "en": "revocation",
+          "es": "revocación"
+        },
+        {
+          "fr": "Acceptation",
+          "en": "acceptance",
+          "es": "aceptación"
+        },
+        {
+          "fr": "Contre-offre",
+          "en": "counter-offer",
+          "es": "contraoferta"
+        },
+        {
+          "fr": "Règle de l'envoi postal",
+          "en": "postal rule / mailbox rule",
+          "es": "regla del buzón"
+        },
+        {
+          "fr": "Contrepartie (consideration)",
+          "en": "consideration",
+          "es": "contraprestación (consideration)"
+        },
+        {
+          "fr": "Estoppel",
+          "en": "promissory estoppel",
+          "es": "estoppel (doctrina de los actos propios)"
+        },
+        {
+          "fr": "Acte formel",
+          "en": "deed",
+          "es": "escritura formal (deed)"
+        },
+        {
+          "fr": "Intention de créer des relations juridiques",
+          "en": "intention to create legal relations",
+          "es": "intención de crear relaciones jurídicas"
+        },
+        {
+          "fr": "Sous réserve de contrat",
+          "en": "subject to contract",
+          "es": "sujeto a contrato"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.contenu",
+      "titre": "Contenu du contrat",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.contenu.terms",
+          "titre": "Express et implied terms",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.contenu.classification",
+          "titre": "Conditions, warranties, innominate terms",
+          "niveau": "A"
+        },
+        {
+          "id": "dcl.contenu.exclusion",
+          "titre": "Clauses d'exclusion et limites",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.uk-statutes",
+        "src.azzouz"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.formation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Clause expresse",
+          "en": "express term",
+          "es": "cláusula expresa"
+        },
+        {
+          "fr": "Clause implicite",
+          "en": "implied term",
+          "es": "cláusula implícita"
+        },
+        {
+          "fr": "Qualité satisfaisante",
+          "en": "satisfactory quality",
+          "es": "calidad satisfactoria"
+        },
+        {
+          "fr": "Clause d'intégralité",
+          "en": "entire agreement clause",
+          "es": "cláusula de acuerdo íntegro"
+        },
+        {
+          "fr": "Condition (terme essentiel)",
+          "en": "condition",
+          "es": "condición (cláusula esencial)"
+        },
+        {
+          "fr": "Garantie (terme accessoire)",
+          "en": "warranty",
+          "es": "garantía (cláusula accesoria)"
+        },
+        {
+          "fr": "Terme intermédiaire",
+          "en": "innominate / intermediate term",
+          "es": "cláusula intermedia"
+        },
+        {
+          "fr": "Rompre / mettre fin au contrat",
+          "en": "repudiate / terminate",
+          "es": "resolver el contrato"
+        },
+        {
+          "fr": "Clause d'exclusion de responsabilité",
+          "en": "exclusion clause / exemption clause",
+          "es": "cláusula de exoneración de responsabilidad"
+        },
+        {
+          "fr": "Interprétation contre le rédacteur",
+          "en": "contra proferentem rule",
+          "es": "interpretación contra proferentem"
+        },
+        {
+          "fr": "Critère du caractère raisonnable",
+          "en": "reasonableness test",
+          "es": "criterio de razonabilidad"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.vices",
+      "titre": "Vices du consentement",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.vices.misrepresentation",
+          "titre": "Misrepresentation",
+          "niveau": "A"
+        },
+        {
+          "id": "dcl.vices.mistake-duress",
+          "titre": "Mistake, duress, undue influence",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.uk-statutes",
+        "src.azzouz"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.contenu"
+      ],
+      "terminologie": [
+        {
+          "fr": "Déclaration inexacte",
+          "en": "misrepresentation",
+          "es": "declaración falsa / tergiversación"
+        },
+        {
+          "fr": "Annulation (rescision)",
+          "en": "rescission",
+          "es": "rescisión / anulación"
+        },
+        {
+          "fr": "Annulable",
+          "en": "voidable",
+          "es": "anulable"
+        },
+        {
+          "fr": "Dol (approx.)",
+          "en": "fraudulent misrepresentation / deceit",
+          "es": "dolo"
+        },
+        {
+          "fr": "Erreur",
+          "en": "mistake",
+          "es": "error"
+        },
+        {
+          "fr": "Violence / contrainte",
+          "en": "duress",
+          "es": "intimidación / violencia"
+        },
+        {
+          "fr": "Abus d'influence",
+          "en": "undue influence",
+          "es": "influencia indebida"
+        },
+        {
+          "fr": "Nul",
+          "en": "void",
+          "es": "nulo"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.inexecution",
+      "titre": "Inexécution et remèdes",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.inexecution.breach",
+          "titre": "Breach et discharge",
+          "niveau": "F"
+        },
+        {
+          "id": "dcl.inexecution.damages",
+          "titre": "Damages : expectation, remoteness (Hadley v Baxendale), mitigation",
+          "niveau": "A"
+        },
+        {
+          "id": "dcl.inexecution.equitable",
+          "titre": "Specific performance et injunction",
+          "niveau": "A"
+        },
+        {
+          "id": "dcl.inexecution.privity",
+          "titre": "Privity of contract",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.azzouz",
+        "src.code-civil",
+        "src.uk-statutes"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.contenu",
+        "dcl.systemes",
+        "dcl.formation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Inexécution / violation du contrat",
+          "en": "breach of contract",
+          "es": "incumplimiento contractual"
+        },
+        {
+          "fr": "Extinction du contrat",
+          "en": "discharge",
+          "es": "extinción del contrato"
+        },
+        {
+          "fr": "Frustration (impossibilité)",
+          "en": "frustration",
+          "es": "frustración del contrato"
+        },
+        {
+          "fr": "Inexécution anticipée",
+          "en": "anticipatory breach",
+          "es": "incumplimiento anticipado"
+        },
+        {
+          "fr": "Dommages-intérêts",
+          "en": "damages",
+          "es": "daños y perjuicios"
+        },
+        {
+          "fr": "Caractère prévisible du dommage",
+          "en": "remoteness of damage",
+          "es": "previsibilidad del daño"
+        },
+        {
+          "fr": "Atténuation du préjudice",
+          "en": "mitigation",
+          "es": "mitigación del daño"
+        },
+        {
+          "fr": "Indemnité forfaitaire",
+          "en": "liquidated damages",
+          "es": "cláusula penal / indemnización pactada"
+        },
+        {
+          "fr": "Exécution forcée en nature",
+          "en": "specific performance",
+          "es": "cumplimiento específico / en forma específica"
+        },
+        {
+          "fr": "Injonction",
+          "en": "injunction",
+          "es": "medida cautelar / orden judicial"
+        },
+        {
+          "fr": "Effet relatif du contrat",
+          "en": "privity of contract",
+          "es": "relatividad de los contratos"
+        },
+        {
+          "fr": "Tiers bénéficiaire",
+          "en": "third party beneficiary",
+          "es": "tercero beneficiario"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.ucc",
+      "titre": "Uniform Commercial Code",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.ucc.article2",
+          "titre": "UCC article 2 : champ, battle of the forms",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.ucc",
+        "src.cvim"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.juridictions",
+        "dcl.formation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Code de commerce uniforme (UCC)",
+          "en": "Uniform Commercial Code (UCC)",
+          "es": "Código Comercial Uniforme (UCC)"
+        },
+        {
+          "fr": "Commerçant (au sens de l'UCC)",
+          "en": "merchant",
+          "es": "comerciante"
+        },
+        {
+          "fr": "Garantie implicite de qualité marchande",
+          "en": "implied warranty of merchantability",
+          "es": "garantía implícita de comerciabilidad"
+        },
+        {
+          "fr": "Règle de l'annulation réciproque",
+          "en": "knock-out rule",
+          "es": "regla de anulación recíproca"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dcl.lexique",
+      "titre": "Vocabulaire juridique",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dcl.lexique.contrat-anglais",
+          "titre": "Vocabulaire des contrats anglo-saxons",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.boye"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dcl.systemes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Préambule / considérants",
+          "en": "recitals (Whereas clauses)",
+          "es": "exponendo / considerandos"
+        },
+        {
+          "fr": "Clauses types",
+          "en": "boilerplate clauses",
+          "es": "cláusulas estándar / de estilo"
+        },
+        {
+          "fr": "Divisibilité",
+          "en": "severability clause",
+          "es": "cláusula de divisibilidad / salvaguarda"
+        },
+        {
+          "fr": "Renonciation",
+          "en": "waiver",
+          "es": "renuncia"
+        },
+        {
+          "fr": "Cession",
+          "en": "assignment",
+          "es": "cesión"
+        },
+        {
+          "fr": "Garantir et indemniser",
+          "en": "indemnify and hold harmless",
+          "es": "indemnizar y mantener indemne"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

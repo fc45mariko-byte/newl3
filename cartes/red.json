@@ -1,0 +1,286 @@
+{
+  "id": "red",
+  "titre": "Initiation à la recherche et rédaction universitaire",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J6C, CM 18 h + TD 12 h, 2 ECTS)",
+    "enseignant": "Sonia Tesson",
+    "description": "Aucun descriptif ni bibliographie sur la page officielle.",
+    "bibliographie": [],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "Normes de citation (APA, ISO 690)"
+  ],
+  "competences_examen": [
+    "Évaluer une source",
+    "Construire un plan argumenté",
+    "Citer et référencer sans plagiat"
+  ],
+  "incertitudes": [
+    "Intitulé officiel : « Rédaction de documents universitaires » ; le catalogue de cours l'appelle « Initiation à la recherche et rédaction universitaire ». Garder l'intitulé officiel.",
+    "Contenu entièrement reconstruit : aucun descriptif officiel."
+  ],
+  "chapitres": [
+    {
+      "id": "red.sources",
+      "titre": "Sources",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "red.sources.typologie",
+          "titre": "Types et fiabilité des sources",
+          "niveau": "F"
+        },
+        {
+          "id": "red.sources.recherche",
+          "titre": "Recherche documentaire",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Source primaire",
+          "en": "primary source",
+          "es": "fuente primaria"
+        },
+        {
+          "fr": "Source secondaire",
+          "en": "secondary source",
+          "es": "fuente secundaria"
+        },
+        {
+          "fr": "Évaluation par les pairs",
+          "en": "peer review",
+          "es": "revisión por pares"
+        },
+        {
+          "fr": "Mot-clé",
+          "en": "keyword",
+          "es": "palabra clave"
+        },
+        {
+          "fr": "Opérateur booléen",
+          "en": "Boolean operator",
+          "es": "operador booleano"
+        },
+        {
+          "fr": "Base de données bibliographique",
+          "en": "bibliographic database",
+          "es": "base de datos bibliográfica"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "red.argumentation",
+      "titre": "Argumentation",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "red.argumentation.problematique",
+          "titre": "Problématique",
+          "niveau": "F"
+        },
+        {
+          "id": "red.argumentation.plan",
+          "titre": "Plan",
+          "niveau": "F"
+        },
+        {
+          "id": "red.argumentation.paragraphe",
+          "titre": "Paragraphe argumentatif",
+          "niveau": "F"
+        },
+        {
+          "id": "red.argumentation.intro-conclusion",
+          "titre": "Introduction et conclusion",
+          "niveau": "F"
+        },
+        {
+          "id": "red.argumentation.note-synthese",
+          "titre": "Note de synthèse",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "red.sources",
+        "red.attribution"
+      ],
+      "terminologie": [
+        {
+          "fr": "Problématique",
+          "en": "research question / central question",
+          "es": "problemática / pregunta de investigación"
+        },
+        {
+          "fr": "Enjeu",
+          "en": "issue / what is at stake",
+          "es": "reto / lo que está en juego"
+        },
+        {
+          "fr": "Plan",
+          "en": "outline / structure",
+          "es": "plan / estructura"
+        },
+        {
+          "fr": "Transition",
+          "en": "transition",
+          "es": "transición"
+        },
+        {
+          "fr": "Titre argumentatif",
+          "en": "argumentative heading",
+          "es": "título argumentativo"
+        },
+        {
+          "fr": "Connecteur logique",
+          "en": "linking word / connective",
+          "es": "conector"
+        },
+        {
+          "fr": "Argument",
+          "en": "argument",
+          "es": "argumento"
+        },
+        {
+          "fr": "Accroche",
+          "en": "hook / opening",
+          "es": "gancho / entrada"
+        },
+        {
+          "fr": "Annonce du plan",
+          "en": "outline statement / roadmap",
+          "es": "anuncio del plan"
+        },
+        {
+          "fr": "Ouverture",
+          "en": "broader perspective",
+          "es": "apertura"
+        },
+        {
+          "fr": "Note de synthèse",
+          "en": "summary note / synthesis",
+          "es": "nota de síntesis"
+        },
+        {
+          "fr": "Tableau de confrontation",
+          "en": "comparison grid",
+          "es": "cuadro comparativo"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "red.attribution",
+      "titre": "Citer et référencer",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "red.attribution.citation-paraphrase",
+          "titre": "Citation, paraphrase",
+          "niveau": "F"
+        },
+        {
+          "id": "red.attribution.plagiat",
+          "titre": "Plagiat",
+          "niveau": "F"
+        },
+        {
+          "id": "red.attribution.normes",
+          "titre": "Normes bibliographiques (norme à confirmer)",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage",
+        "src.code-pi",
+        "src.iso690",
+        "src.apa7"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "red.sources"
+      ],
+      "terminologie": [
+        {
+          "fr": "Citation",
+          "en": "quotation",
+          "es": "cita textual"
+        },
+        {
+          "fr": "Paraphrase",
+          "en": "paraphrase",
+          "es": "paráfrasis"
+        },
+        {
+          "fr": "Appel de note",
+          "en": "footnote reference / citation marker",
+          "es": "llamada de nota"
+        },
+        {
+          "fr": "Plagiat",
+          "en": "plagiarism",
+          "es": "plagio"
+        },
+        {
+          "fr": "Intégrité académique",
+          "en": "academic integrity",
+          "es": "integridad académica"
+        },
+        {
+          "fr": "Contrefaçon",
+          "en": "copyright infringement",
+          "es": "infracción de derechos de autor"
+        },
+        {
+          "fr": "Bibliographie",
+          "en": "bibliography / reference list",
+          "es": "bibliografía"
+        },
+        {
+          "fr": "Système auteur-date",
+          "en": "author-date system",
+          "es": "sistema autor-fecha"
+        },
+        {
+          "fr": "Note de bas de page",
+          "en": "footnote",
+          "es": "nota a pie de página"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

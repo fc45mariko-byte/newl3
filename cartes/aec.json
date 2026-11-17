@@ -1,0 +1,417 @@
+{
+  "id": "aec",
+  "titre": "Anglais économique et commercial",
+  "langue": "en",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J20, TD 18 h, 3 ECTS) et S6 (LLA6J21, TD 15 h, 1 ECTS)",
+    "enseignant": "Alice Michel",
+    "description": "S5 : correspondance professionnelle (commandes, offres, réclamations, recouvrement). S6 : suite du S5 ; articles de presse sur des enjeux socio-économiques, approche critique et argumentative.",
+    "bibliographie": [
+      "Supports sur Celene"
+    ],
+    "sources": [
+      "r.orleans-l3-s5",
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [
+    "Structure d'une lettre ou d'un courriel commercial",
+    "Registres formel et informel"
+  ],
+  "competences_examen": [
+    "Rédiger une lettre de commande, d'offre, de réclamation, de relance",
+    "Résumer et commenter un article économique en anglais"
+  ],
+  "incertitudes": [],
+  "chapitres": [
+    {
+      "id": "aec.correspondance",
+      "titre": "Business correspondence",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "aec.correspondance.layout",
+          "titre": "Business letter layout",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.salutations",
+          "titre": "Salutations and complimentary closes",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.registre",
+          "titre": "Register and softening",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.enquiry",
+          "titre": "Enquiry (request for information)",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.offer",
+          "titre": "Offer and quotation",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.order",
+          "titre": "Order and acknowledgement",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.complaint",
+          "titre": "Complaint and reply",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.reminder",
+          "titre": "Payment reminders",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.correspondance.email",
+          "titre": "Professional e-mail",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "En-tête",
+          "en": "letterhead",
+          "es": "membrete"
+        },
+        {
+          "fr": "Objet",
+          "en": "subject line (Re:)",
+          "es": "asunto / referencia"
+        },
+        {
+          "fr": "Pièce jointe",
+          "en": "enclosure (Enc.) / attachment (e-mail)",
+          "es": "anexo / adjunto"
+        },
+        {
+          "fr": "Présentation à la française en bloc",
+          "en": "full block format",
+          "es": "formato bloque"
+        },
+        {
+          "fr": "Formule d'appel",
+          "en": "salutation",
+          "es": "saludo"
+        },
+        {
+          "fr": "Formule de politesse finale",
+          "en": "complimentary close / sign-off",
+          "es": "despedida"
+        },
+        {
+          "fr": "Atténuation",
+          "en": "hedging / softening",
+          "es": "atenuación"
+        },
+        {
+          "fr": "Registre soutenu",
+          "en": "formal register",
+          "es": "registro formal"
+        },
+        {
+          "fr": "Anglais clair",
+          "en": "plain English",
+          "es": "lenguaje claro"
+        },
+        {
+          "fr": "Demande de renseignements",
+          "en": "enquiry (UK) / inquiry (US)",
+          "es": "consulta / solicitud de información"
+        },
+        {
+          "fr": "Liste de prix",
+          "en": "price list",
+          "es": "lista de precios / tarifa"
+        },
+        {
+          "fr": "Remise sur quantité",
+          "en": "quantity discount",
+          "es": "descuento por volumen"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "aec.lexique",
+      "titre": "Vocabulary",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "aec.lexique.entreprise",
+          "titre": "Company vocabulary",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.lexique.finance",
+          "titre": "Finance and accounting in English",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.lexique.commerce-international",
+          "titre": "International trade vocabulary",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.lexique.marketing",
+          "titre": "Marketing vocabulary",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.lexique.economie",
+          "titre": "Economics vocabulary",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.lexique.faux-amis",
+          "titre": "False friends in business English",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.lexique.chiffres",
+          "titre": "Numbers and trends",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.icc-incoterms-2020"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Actionnaire",
+          "en": "shareholder (UK) / stockholder (US)",
+          "es": "accionista"
+        },
+        {
+          "fr": "Partie prenante",
+          "en": "stakeholder",
+          "es": "parte interesada"
+        },
+        {
+          "fr": "Filiale",
+          "en": "subsidiary",
+          "es": "filial"
+        },
+        {
+          "fr": "Effectif / personnel",
+          "en": "workforce / staff / headcount",
+          "es": "plantilla / personal"
+        },
+        {
+          "fr": "Chiffre d'affaires",
+          "en": "turnover (UK) / revenue (US)",
+          "es": "volumen de negocio / facturación"
+        },
+        {
+          "fr": "Bilan",
+          "en": "balance sheet",
+          "es": "balance"
+        },
+        {
+          "fr": "Compte de résultat",
+          "en": "income statement / P&L",
+          "es": "cuenta de resultados / de pérdidas y ganancias"
+        },
+        {
+          "fr": "Bénéfice brut",
+          "en": "gross profit",
+          "es": "beneficio bruto / margen bruto"
+        },
+        {
+          "fr": "Flux de trésorerie",
+          "en": "cash flow",
+          "es": "flujo de caja"
+        },
+        {
+          "fr": "Dividende",
+          "en": "dividend",
+          "es": "dividendo"
+        },
+        {
+          "fr": "Transitaire",
+          "en": "freight forwarder",
+          "es": "transitario"
+        },
+        {
+          "fr": "Destinataire",
+          "en": "consignee",
+          "es": "consignatario / destinatario"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "aec.presse",
+      "titre": "The business press",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "aec.presse.lecture",
+          "titre": "Reading a business article in English",
+          "niveau": "F"
+        },
+        {
+          "id": "aec.presse.synthese",
+          "titre": "Writing a synthesis in English",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "aec.lexique",
+        "red.argumentation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Lecture en survol",
+          "en": "skimming",
+          "es": "lectura rápida / de exploración"
+        },
+        {
+          "fr": "Lecture de repérage",
+          "en": "scanning",
+          "es": "lectura de búsqueda"
+        },
+        {
+          "fr": "Chapeau",
+          "en": "standfirst / lead",
+          "es": "entradilla"
+        },
+        {
+          "fr": "Tribune",
+          "en": "op-ed / opinion piece",
+          "es": "artículo de opinión / tribuna"
+        },
+        {
+          "fr": "Synthèse",
+          "en": "synthesis / summary",
+          "es": "síntesis"
+        },
+        {
+          "fr": "Verbe introducteur",
+          "en": "reporting verb",
+          "es": "verbo introductorio"
+        },
+        {
+          "fr": "Reformuler",
+          "en": "to rephrase / paraphrase",
+          "es": "reformular"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "aec.grammaire",
+      "titre": "Useful grammar",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "aec.grammaire.modaux",
+          "titre": "Modal verbs",
+          "niveau": "P"
+        },
+        {
+          "id": "aec.grammaire.passif",
+          "titre": "The passive voice",
+          "niveau": "P"
+        },
+        {
+          "id": "aec.grammaire.conditionnels",
+          "titre": "Conditionals",
+          "niveau": "P"
+        },
+        {
+          "id": "aec.grammaire.temps",
+          "titre": "Present perfect and simple past",
+          "niveau": "P"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Auxiliaire modal",
+          "en": "modal verb",
+          "es": "verbo modal"
+        },
+        {
+          "fr": "Base verbale",
+          "en": "bare infinitive",
+          "es": "infinitivo sin to"
+        },
+        {
+          "fr": "Voix passive",
+          "en": "passive voice",
+          "es": "voz pasiva"
+        },
+        {
+          "fr": "Complément d'agent",
+          "en": "agent (by-phrase)",
+          "es": "complemento agente"
+        },
+        {
+          "fr": "Proposition conditionnelle",
+          "en": "conditional clause / if-clause",
+          "es": "oración condicional"
+        },
+        {
+          "fr": "À moins que",
+          "en": "unless",
+          "es": "a menos que"
+        },
+        {
+          "fr": "Prétérit",
+          "en": "simple past",
+          "es": "pretérito (pasado simple)"
+        },
+        {
+          "fr": "Present perfect",
+          "en": "present perfect",
+          "es": "presente perfecto (pretérito perfecto compuesto)"
+        }
+      ],
+      "note": null
+    }
+  ]
+}
