@@ -563,7 +563,7 @@ function render() {
   if (r.startsWith('course-')) return viewCourse(v, r.slice(7));
   ({ dashboard: viewDashboard, courses: viewCourses, notes: viewNotes, planner: viewPlanner, tasks: viewTasks, revision: viewRevision, resources: viewResources, library: viewLibrary, preferences: viewPreferences }[r] || viewDashboard)(v);
 }
-addEventListener('hashchange', () => { UI.practice = null; render(); scrollTo(0, 0); });
+addEventListener('hashchange', () => { if (!UI.keepPractice) UI.practice = null; UI.keepPractice = false; render(); scrollTo(0, 0); });
 
 /* ---------- Shared components ---------- */
 function header(title, sub, extra = '') {
@@ -814,7 +814,7 @@ function practiceView(el, onExit) {
       const correct = q.choix.filter((c) => c.correct).map((c) => c.id);
       const ok = picked.length === correct.length && picked.every((x) => correct.includes(x));
       if (ok) P.good++;
-      el.querySelectorAll('[data-c]').forEach((l) => { const c = q.choix.find((x) => x.id === l.dataset.c); l.classList.add(c.correct ? 'good' : (picked.includes(c.id) ? 'bad' : '')); l.querySelector('.why').hidden = false; l.querySelector('input').disabled = true; });
+      el.querySelectorAll('[data-c]').forEach((l) => { const c = q.choix.find((x) => x.id === l.dataset.c); if (c.correct) l.classList.add('good'); else if (picked.includes(c.id)) l.classList.add('bad'); l.querySelector('.why').hidden = false; l.querySelector('input').disabled = true; });
       P.answered = true; $('#check').textContent = P.i + 1 < P.qs.length ? 'Next question' : 'See my score';
     };
     return;
@@ -955,7 +955,7 @@ async function viewRevision(v) {
   el.innerHTML = `<div class="card"><div class="card-head"><h3>${tool === 'quiz' ? `${allQ.length} questions` : `${allF.length} flashcards`} in ${esc(m.titre)}</h3><button class="btn primary" id="go-all" ${(tool === 'quiz' ? allQ : allF).length ? '' : 'disabled'}>${tool === 'quiz' ? 'Mixed quiz' : 'Review due cards'}</button></div>
     ${rows.map(({ c, n, due }) => `<div class="list-item"><div style="flex:1"><b>${esc(c.titre)}</b><div class="labels" style="margin-top:4px">${prio(c.priorite)}${tool === 'quiz' && S.state.quiz[c.id] ? `<span class="muted small">best ${S.state.quiz[c.id].best}%</span>` : ''}${tool === 'flash' ? `<span class="muted small">${due} due</span>` : ''}</div></div><button class="btn soft" data-go="${c.id}" ${n ? '' : 'disabled'}>${n} ${tool === 'quiz' ? 'questions' : 'cards'}</button></div>`).join('')}</div>`;
   $('#go-all').onclick = () => { if (tool === 'quiz') startQuiz(allQ, `all:${sel}`); else startFlash(allF, `all:${sel}`); render(); };
-  el.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => { UI.chap[sel] = b.dataset.go; UI.tab = 'revision'; const ch = data.chapitres[b.dataset.go]; if (tool === 'quiz') startQuiz(ch.questions, b.dataset.go); else startFlash(ch.flashcards, b.dataset.go); location.hash = `course-${sel}`; }));
+  el.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => { UI.chap[sel] = b.dataset.go; UI.tab = 'revision'; const ch = data.chapitres[b.dataset.go]; if (tool === 'quiz') startQuiz(ch.questions, b.dataset.go); else startFlash(ch.flashcards, b.dataset.go); UI.keepPractice = true; location.hash = `course-${sel}`; }));
 }
 function viewResources(v) {
   const all = Object.entries(IDX.sources);
