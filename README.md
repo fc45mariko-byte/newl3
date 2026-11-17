@@ -22,7 +22,8 @@ Le contenu pédagogique détaillé (fiches, QCM, exercices) reste dans le dépô
 | `rapports/COMPARAISON_DOCUMENTS.md` | Vos documents comparés à la reconstruction (généré) |
 | `rapports/FILE_RECHERCHE.md` | File d'attente : chapitres à rechercher, chapitres sans source, notices incomplètes (généré) |
 | `rapports/CONTRADICTIONS.md` | Désaccords entre sources, avec la position retenue |
-| `scripts/` | Générateur et validateur (Node ≥ 20, sans dépendance) |
+| `app/` | Application LEA·Study (une page HTML, sans compilation) et ses données générées `app/data/` |
+| `scripts/` | Générateur, validateur et construction des données de l'application (Node ≥ 20, sans dépendance) |
 
 ## Commandes
 
@@ -31,7 +32,8 @@ Le dépôt `cours` doit être cloné à côté de `newl3` (`../cours`). Sinon, p
 ```bash
 npm run valider   # contrôle les règles (refuse une source sans URL, un statut inconnu, un « vérifié » à une seule source…)
 npm run generer   # régénère cartes/ et rapports générés
-npm run check     # les deux
+npm run app       # régénère app/data/ pour l'application LEA·Study
+npm run check     # tout
 ```
 
 ## Étiquettes et statuts
@@ -48,3 +50,7 @@ npm run check     # les deux
 **Statuts de recherche :** Not researched → Research in progress → Reconstructed → Supported by university material → Verified against additional academic sources.
 
 Une carte de cursus est une approximation académique, pas le syllabus de l'enseignant.
+
+## Application LEA·Study
+
+`app/index.html` est publiée comme page privée sur claude.ai : https://claude.ai/artifact/LrG234xzZe2ZXtdLVQ8krS. Sur claude.ai, l'assistant interroge Claude et la progression (tâches, notes, objectifs, XP) est enregistrée dans le compte. Ouverte ailleurs (par exemple servie depuis `app/` par GitHub Pages), l'application fonctionne sans assistant et enregistre la progression dans le navigateur.

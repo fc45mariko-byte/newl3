@@ -6,7 +6,10 @@
   "scripts": {
     "generer": "node scripts/generer.mjs",
     "valider": "node scripts/valider.mjs",
-    "check": "node scripts/valider.mjs && node scripts/generer.mjs"
+    "check": "node scripts/valider.mjs && node scripts/generer.mjs && node scripts/construire-app.mjs",
+    "app": "node scripts/construire-app.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }
