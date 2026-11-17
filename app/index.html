@@ -94,17 +94,17 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: bala
   .nav#nav a { flex: 1 0 64px; flex-direction: column; gap: 2px; padding: 6px 4px; font-size: 10.5px; border-radius: 10px; }
   .main { padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
   .brand { font-size: 22px; padding: 0; }
-  .g-dash-mid, .g-2 { grid-template-columns: 1fr; }
+  .g-dash-mid, .g-2 { grid-template-columns: minmax(0, 1fr); }
   .fab { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); width: 52px; height: 52px; padding: 0; font-size: 0; }
   .fab::before { content: "✦"; font-size: 20px; }
   .drawer { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
   .chap-list { display: none !important; }
   .chap-select { display: block !important; }
-  .chap-nav { position: static; max-height: none; }
+  .chap-nav { position: static !important; max-height: none !important; }
   .notion > summary { flex-direction: column; align-items: flex-start; gap: 6px; }
   .top h1 { font-size: 30px; }
 }
-@media (max-width: 560px) { .g-dash-top, .g-dash-bot { grid-template-columns: 1fr; } .g-courses { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .course-card .name { font-size: 14px; } .form-row { grid-template-columns: 1fr; } .form-row .field { grid-column: auto !important; } .card { padding: 14px; } }
+@media (max-width: 560px) { .g-dash-top, .g-dash-bot { grid-template-columns: minmax(0, 1fr); } .g-courses { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .course-card .name { font-size: 14px; } .form-row { grid-template-columns: 1fr; } .form-row .field { grid-column: auto !important; } .card { padding: 14px; } }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--side); }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); padding: 7px 14px; border-radius: 999px; cursor: pointer; font-weight: 500; text-decoration: none; color: var(--ink); }
@@ -195,7 +195,8 @@ label.field { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px
 .tabs button { border: 0; background: transparent; padding: 10px 14px; cursor: pointer; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; white-space: nowrap; }
 .tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
 .course-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 18px; align-items: start; }
-@media (max-width: 900px) { .course-layout { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .course-layout { grid-template-columns: minmax(0, 1fr); } }
+.course-layout > *, #chap-body, #tab-body { min-width: 0; }
 .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 .chap-list { display: flex; flex-direction: column; gap: 2px; }
 .chap-nav { display: flex; flex-direction: column; gap: 2px; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; }
@@ -268,6 +269,119 @@ th { background: var(--surface-2); font-weight: 600; }
 .drawer.open { display: block; }
 .fab { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 19; border-radius: 999px; box-shadow: var(--shadow); }
 .toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 999px; z-index: 30; font-size: 13px; }
+/* Visuals */
+.vis { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.vis-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.vis-head h4 { margin: 0; font-family: var(--font-display); font-size: 16px; font-weight: 600; }
+.vis-note { font-size: 12px; color: var(--muted); }
+.flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: stretch; counter-reset: st; }
+.flow .st { flex: 1 1 150px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px 10px 38px; position: relative; font-size: 13px; min-width: 0; }
+.flow .st::before { counter-increment: st; content: counter(st); position: absolute; left: 10px; top: 10px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 11px; font-weight: 600; display: grid; place-items: center; }
+.flow .st:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 700; z-index: 1; }
+@media (max-width: 640px) { .flow { flex-direction: column; } .flow .st { flex: none; } .flow .st:not(:last-child)::after { content: "↓"; right: auto; left: 15px; top: auto; bottom: -15px; transform: none; } }
+.vs { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 8px; align-items: stretch; }
+.vs .side-a, .vs .side-b { border-radius: 12px; padding: 10px 12px; font-weight: 600; display: grid; place-items: center; text-align: center; }
+.vs .side-a { background: var(--accent-soft); }
+.vs .side-b { background: var(--gold-soft); }
+.vs .mid { align-self: center; font-family: var(--font-display); font-style: italic; color: var(--muted); }
+.vs .why { grid-column: 1 / -1; font-size: 13px; background: var(--surface-2); border-radius: 10px; padding: 8px 12px; }
+.timeline { position: relative; display: flex; flex-direction: column; gap: 10px; padding-left: 22px; }
+.timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--accent-soft); }
+.timeline .ev { position: relative; }
+.timeline .ev::before { content: ""; position: absolute; left: -20px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
+.timeline .yr { font-family: var(--font-display); font-weight: 600; color: var(--accent); }
+.wf { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; }
+.wf .r { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) auto; gap: 8px; align-items: center; }
+.wf .track { position: relative; height: 16px; }
+.wf .seg { position: absolute; top: 0; bottom: 0; border-radius: 4px; background: var(--accent-soft); }
+.wf .seg.tot { background: var(--accent); }
+.wf .seg.neg { background: var(--bad-soft); }
+.wf .v { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+/* Incoterms */
+.inco-pick { display: flex; flex-wrap: wrap; gap: 4px; }
+.inco-pick button { border: 1px solid var(--line); background: var(--surface-2); border-radius: 8px; padding: 4px 8px; font-weight: 600; font-size: 12.5px; cursor: pointer; color: var(--ink); }
+.inco-pick button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chain { display: grid; grid-template-columns: 86px repeat(9, minmax(0, 1fr)); gap: 3px; font-size: 11.5px; }
+.chain .lab { font-weight: 600; color: var(--muted); display: flex; align-items: center; }
+.chain .stn { text-align: center; line-height: 1.2; padding: 4px 1px; color: var(--ink); min-height: 40px; display: grid; place-items: end center; font-size: 11px; hyphens: manual; overflow-wrap: break-word; min-width: 0; }
+.chain .c, .chain-m .c { height: 22px; border-radius: 5px; display: grid; place-items: center; font-size: 10.5px; font-weight: 600; }
+.chain .s, .chain-m .s { background: var(--accent); color: var(--accent-ink); }
+.chain .b, .chain-m .b { background: var(--gold-soft); color: var(--warn); }
+.chain .pt, .chain-m .pt { border-left: 3px solid var(--ink); }
+.chain-m .pt { border-left: 0; border-top: 3px solid var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.facts div { background: var(--surface-2); border-radius: 10px; padding: 8px 10px; font-size: 12.5px; }
+.facts b { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.chain-m { display: none; grid-template-columns: minmax(0, 1fr) 64px 64px; gap: 4px 6px; font-size: 12.5px; align-items: center; }
+@media (max-width: 640px) { .chain { display: none; } .chain-m { display: grid; } }
+/* Generic boxes and arrows */
+.boxes { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; }
+.bx { flex: 1 1 140px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 13px; min-width: 0; }
+.bx b { display: block; font-family: var(--font-display); font-size: 15px; }
+.bx.a { background: var(--accent-soft); border-color: transparent; }
+.bx.g { background: var(--gold-soft); border-color: transparent; }
+.bx.o { background: var(--ok-soft); border-color: transparent; }
+.arrow-r { align-self: center; color: var(--accent); font-weight: 700; font-size: 18px; }
+@media (max-width: 640px) { .boxes.chainy { flex-direction: column; } .boxes.chainy .arrow-r { transform: rotate(90deg); align-self: center; } }
+.pyr { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.pyr div { background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; text-align: center; font-size: 13px; max-width: 100%; }
+.pyr div b { display: block; }
+.lanes { display: grid; grid-template-columns: 110px minmax(0, 1fr) 110px; gap: 8px; align-items: center; font-size: 13px; }
+.lanes .actor { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px 8px; text-align: center; font-weight: 600; grid-row: span 3; height: 100%; display: grid; place-items: center; }
+.lane { border-radius: 10px; padding: 6px 10px; display: flex; justify-content: space-between; gap: 8px; }
+.lane span { font-weight: 600; }
+@media (max-width: 520px) { .lanes { grid-template-columns: 1fr; } .lanes .actor { grid-row: auto; } }
+.steps-ctl { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.actors4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.actors4 .bx { text-align: center; }
+.actors4 .bx.on { outline: 3px solid var(--accent); }
+.step-now { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; font-size: 13.5px; }
+.bal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; border: 2px solid var(--ink); border-radius: 10px; overflow: hidden; font-size: 12.5px; }
+.bal .colh { text-align: center; font-weight: 700; padding: 6px; border-bottom: 2px solid var(--ink); background: var(--surface-2); }
+.bal .col { display: flex; flex-direction: column; }
+.bal .col + .col, .bal .colh + .colh { border-left: 2px solid var(--ink); }
+.bal .blk { padding: 6px 8px; border-bottom: 1px solid var(--surface); display: flex; flex-direction: column; justify-content: center; }
+.bal .blk span { color: var(--muted); font-size: 11.5px; }
+.taccs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tacc { font-size: 12.5px; }
+.tacc .t { text-align: center; font-weight: 600; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+.tacc .sides { display: grid; grid-template-columns: 1fr 1fr; min-height: 46px; }
+.tacc .sides > div { padding: 4px 6px; font-variant-numeric: tabular-nums; }
+.tacc .sides > div + div { border-left: 2px solid var(--ink); text-align: right; }
+.sliders { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.sliders label { font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
+.sliders input[type=range] { accent-color: var(--accent); width: 100%; }
+.sliders output { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.bars3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: end; height: 170px; }
+.bars3 .col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 4px; font-size: 12px; text-align: center; }
+.bars3 .bar-v { width: 60%; border-radius: 8px 8px 0 0; min-height: 2px; }
+.bars3 .neg { border-radius: 0 0 8px 8px; }
+.verdict { border-radius: 10px; padding: 10px 12px; font-size: 13px; }
+.verdict.ok { background: var(--ok-soft); } .verdict.warn { background: var(--warn-soft); } .verdict.bad { background: var(--bad-soft); }
+.dg { width: 100%; height: auto; display: block; }
+.dg text { fill: var(--ink); font: 13px var(--font-body); }
+.dg .m { fill: var(--muted); }
+.dg .grid { stroke: var(--line); }
+.dg .axis { stroke: var(--muted); }
+.dg .l1 { stroke: var(--accent); fill: none; stroke-width: 3; }
+.dg .l2 { stroke: var(--gold); fill: none; stroke-width: 3; }
+.dg .l3 { stroke: var(--muted); fill: none; stroke-width: 2; stroke-dasharray: 5 4; }
+.dg .pt { fill: var(--accent); }
+.dg .zone { fill: var(--accent-soft); opacity: .6; }
+.gantt { display: grid; grid-template-columns: minmax(110px, 1.3fr) minmax(0, 3fr); gap: 4px 10px; font-size: 12.5px; align-items: center; }
+.gantt .track { position: relative; height: 18px; background: var(--surface-2); border-radius: 5px; }
+.gantt .task { position: absolute; top: 2px; bottom: 2px; border-radius: 4px; background: var(--accent-soft); }
+.gantt .task.crit { background: var(--accent); }
+.gantt .ms { position: absolute; top: 1px; width: 14px; height: 14px; background: var(--gold); transform: translateX(-7px) rotate(45deg); }
+.gantt .scale { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+.matrix { position: relative; aspect-ratio: 16 / 10; max-width: 100%; border-left: 2px solid var(--muted); border-bottom: 2px solid var(--muted); margin: 6px 0 22px 22px; }
+.matrix .dot { position: absolute; transform: translate(-50%, 50%); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 999px; padding: 2px 8px; font-size: 11.5px; white-space: nowrap; }
+.matrix .ax-x { position: absolute; bottom: -22px; right: 0; font-size: 11.5px; color: var(--muted); }
+.matrix .ax-y { position: absolute; top: 0; left: -22px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 11.5px; color: var(--muted); }
+.vis-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 </style>
 
@@ -711,11 +825,11 @@ function renderBlocs(blocs) {
     const t = b.titre ? `<b>${esc(b.titre)}</b>` : '';
     switch (b.type) {
       case 'texte': return `<p>${esc(b.texte)}</p>`;
-      case 'etapes': return `${t}<ol>${b.etapes.map((x) => `<li>${esc(x)}</li>`).join('')}</ol>`;
+      case 'etapes': return visFlow(b);
       case 'liste': return `${t}<ul>${b.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
-      case 'tableau': return `${t}<div class="tbl"><table><thead><tr>${b.entetes.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${b.lignes.map((r) => `<tr>${r.map((x) => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+      case 'tableau': if (isFrise(b)) return visTimeline(b); return `${t}<div class="tbl"><table><thead><tr>${b.entetes.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${b.lignes.map((r) => `<tr>${r.map((x) => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
       case 'formule': return `${t}<div class="formula">${esc(b.formule)}</div>${b.legende ? `<div class="small muted">${esc(b.legende)}</div>` : ''}`;
-      case 'calcul': return `${t}<div class="tbl"><table><tbody>${b.lignes.map((l) => `<tr><td>${esc(l.libelle)}</td><td style="text-align:right;font-variant-numeric:tabular-nums">${esc(l.valeur)}</td></tr>`).join('')}</tbody></table></div>`;
+      case 'calcul': return visWaterfall(b) + `${b.titre && visWaterfall(b) ? '' : t}<div class="tbl"><table><tbody>${b.lignes.map((l) => `<tr><td>${esc(l.libelle)}</td><td style="text-align:right;font-variant-numeric:tabular-nums">${esc(l.valeur)}</td></tr>`).join('')}</tbody></table></div>`;
       case 'attention': return `<div class="callout">${esc(b.texte)}</div>`;
       default: return '';
     }
@@ -730,11 +844,12 @@ function renderNotion(n) {
   return `<details class="notion"><summary><h3>${esc(n.titre)}</h3><span class="labels">${lab}</span></summary><div class="content">
     ${n.question ? `<div class="q">${esc(n.question)}</div>` : ''}
     ${n.definition ? `<p><b>${esc(n.definition)}</b></p>` : ''}
+    ${NOTION_VIS[n.id] ? visBlock(...NOTION_VIS[n.id]) : ''}
     ${n.explication ? `<p>${esc(n.explication)}</p>` : ''}
     ${renderBlocs(n.fonctionnement)}
     ${n.termes?.length ? `<div class="tbl"><table><thead><tr><th>Français</th><th>English</th><th>Español</th><th>Definition</th></tr></thead><tbody>${n.termes.map((t) => `<tr><td>${esc(t.fr)}</td><td>${esc(t.en || '')}</td><td>${esc(t.es || '')}</td><td>${esc(t.definition)}</td></tr>`).join('')}</tbody></table></div>` : ''}
     ${n.exemple ? `<div class="callout info"><b>${n.exemple.fictif ? 'Example (fictional)' : 'Real example'}</b><br>${esc(n.exemple.texte)}${n.exemple.source ? ` <span class="muted small">— ${esc(n.exemple.source)}</span>` : ''}</div>` : ''}
-    ${n.confusions?.length ? `<div><b>Don't confuse</b><ul>${n.confusions.map((x) => `<li><b>${esc(x.a)}</b> / <b>${esc(x.b)}</b>: ${esc(x.explication)}</li>`).join('')}</ul></div>` : ''}
+    ${n.confusions?.length ? visConfusions(n.confusions) : ''}
     ${n.verification?.length ? `<div><b>Check yourself</b><ul>${n.verification.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
     ${n.aVerifier ? `<div class="callout small">To check: ${esc(n.aVerifier)}</div>` : ''}
     ${n.sources?.length ? `<div class="small"><b>Sources</b><ul>${n.sources.map(srcLine).join('')}</ul></div>` : ''}
@@ -746,12 +861,13 @@ function tabChapter(el, m, c, data) {
   const keys = ch?.notions?.filter((n) => n.definition).slice(0, 4) || [];
   el.innerHTML = chapterHead(m, c) +
     (keys.length ? `<div class="keys"><h3>${ICON.flower.replace('<svg', '<svg width="18" height="18"')} Key notions</h3><ul>${keys.map((n) => `<li><b>${esc(n.titre)}</b>: ${esc(n.definition)}</li>`).join('')}</ul></div>` : '') +
+    ((CHAP_VIS[c.id] || []).length ? `<div class="keys" style="background:var(--surface)"><h3>${ICON.spark.replace('<svg', '<svg width="18" height="18"')} Schéma${CHAP_VIS[c.id].length > 1 ? 's' : ''}</h3><div class="stack" style="margin-top:10px">${CHAP_VIS[c.id].map((x) => visBlock(...x)).join('')}</div></div>` : '') +
     (reco ? `<div class="card prose"><div class="labels" style="margin-bottom:8px">${labels(['RECONSTRUCTED COURSE'])}</div>${md(reco.corps)}</div>` : '') +
     (ch?.notions?.length ? `<div class="stack">${ch.notions.map(renderNotion).join('')}</div>` : '') +
     (!ch?.notions?.length && !reco ? `<div class="card"><h3>Planned content</h3><ul>${c.notions.map((n) => `<li>${esc(n.titre)}</li>`).join('')}</ul><p class="muted small">This chapter has no written notes yet (status: ${esc(c.statut)}). Ask the assistant to explain any of these points.</p></div>` : '') +
-    (c.prerequis.length ? `<div class="card small"><b>Prerequisites</b><div class="row" style="margin-top:6px">${c.prerequis.map((p) => { const mm = matiere(p.split('.')[0]); const pc = mm?.chapitres.find((x) => x.id === p); return pc ? `<a class="chip" href="#course-${mm.id}" data-goto="${p}">${esc(short(mm.titre))} · ${esc(pc.titre)}</a>` : ''; }).join('')}</div></div>` : '');
+    (c.prerequis.length ? `<div class="card small"><b>Prerequisites</b><div class="row" style="margin-top:6px">${c.prerequis.map((p) => { const mm = matiere(p.split('.')[0]); const pc = mm?.chapitres.find((x) => x.id === p); return pc ? `<a class="chip" style="white-space:normal" href="#course-${mm.id}" data-goto="${p}">${esc(short(mm.titre))} · ${esc(pc.titre)}</a>` : ''; }).join('')}</div></div>` : '');
   el.querySelectorAll('[data-goto]').forEach((a) => a.addEventListener('click', () => { UI.chap[a.dataset.goto.split('.')[0]] = a.dataset.goto; UI.tab = 'chapters'; }));
-  bindMarkDone(c);
+  mountVis(el); bindMarkDone(c);
 }
 function tabNotes(el, m, c) {
   const val = S.state.notes[c.id] || '';
@@ -780,6 +896,303 @@ function tabOverview(el, m, data) {
 function tabResources(el, m) {
   const ids = [...new Set([...(m.officiel?.sources || []), ...m.chapitres.flatMap((c) => c.sources)])];
   el.innerHTML = `<div class="card"><h3>Sources used for this course</h3><p class="muted small">P1 = University of Orléans · P2 = other French universities · P3 = academic, institutional and professional sources.</p><ul>${ids.map(srcLine).join('') || '<li class="muted">No source recorded yet.</li>'}</ul></div>`;
+}
+
+/* ---------- Visuals: diagrams built from the course content ---------- */
+const fmtN = (n, d = 0) => Number(n).toLocaleString('fr-FR', { maximumFractionDigits: d, minimumFractionDigits: d });
+const visFrame = (titre, prov, inner, note = '') => `<div class="vis"><div class="vis-head"><h4>${esc(titre)}</h4><span class="labels">${labels(prov)}</span></div>${inner}${note ? `<div class="vis-note">${note}</div>` : ''}</div>`;
+
+/* Automatic visuals from structured content */
+const ANNEE = /^\s*(1[5-9]|20)\d\d/;
+function isFrise(b) { return b.type === 'tableau' && b.lignes.length >= 3 && b.lignes.filter((l) => ANNEE.test(l[0])).length >= Math.ceil(b.lignes.length * 0.6); }
+function visFlow(b) { return `<div class="vis"><div class="vis-head"><h4>${esc(b.titre || 'Étapes')}</h4></div><div class="flow">${b.etapes.map((e) => `<div class="st">${esc(e)}</div>`).join('')}</div></div>`; }
+function visTimeline(b) {
+  return `<div class="vis"><div class="vis-head"><h4>${esc(b.titre || 'Chronologie')}</h4></div><div class="timeline">${b.lignes.map((l) => `<div class="ev"><span class="yr">${esc(l[0])}</span> — ${l.slice(1).map(esc).join(' · ')}</div>`).join('')}</div></div>`;
+}
+function parseMoney(s) { const m = String(s).replace(/ | /g, ' ').match(/(-|−)?\s*\d[\d ]*(,\d+)?/); if (!m) return null; return Number(m[0].replace(/[ −]/g, (c) => (c === '−' ? '-' : '')).replace(',', '.')); }
+function visWaterfall(b) {
+  const vals = b.lignes.map((l) => ({ l: l.libelle, s: l.valeur, v: parseMoney(l.valeur) }));
+  if (vals.some((x) => x.v === null) || vals.length < 3) return '';
+  const max = Math.max(...vals.map((x) => Math.abs(x.v))); if (!max) return '';
+  let run = 0;
+  const rows = vals.map((x, i) => {
+    const isTot = /total|=|prix|résultat|montant|coût de revient|valeur|net|ttc|cif|cip|dap|ddp/i.test(x.l) && i > 0 && Math.abs(Math.abs(x.v) - Math.abs(run)) < Math.max(1, Math.abs(run) * 0.02);
+    let left, width;
+    if (i === 0 || isTot) { left = 0; width = Math.abs(x.v) / max * 100; run = i === 0 ? x.v : run; }
+    else { const start = run; run += x.v; left = Math.min(start, run) / max * 100; width = Math.abs(x.v) / max * 100; }
+    return `<div class="r"><span>${esc(x.l)}</span><div class="track"><div class="seg ${i === 0 || isTot ? 'tot' : (x.v < 0 ? 'neg' : '')}" style="left:${Math.max(0, left)}%;width:${Math.max(.8, width)}%"></div></div><span class="v">${esc(x.s)}</span></div>`;
+  });
+  return `<div class="vis"><div class="vis-head"><h4>${esc(b.titre || 'Calcul')}</h4></div><div class="wf">${rows.join('')}</div></div>`;
+}
+function visConfusions(list) {
+  return list.map((c) => `<div class="vis"><div class="vis-head"><h4>Ne pas confondre</h4></div><div class="vs"><div class="side-a">${esc(c.a)}</div><div class="mid">vs</div><div class="side-b">${esc(c.b)}</div><div class="why">${esc(c.explication)}</div></div></div>`).join('');
+}
+
+/* Hand-drawn diagrams for key concepts */
+const INCO_ST = ['Locaux du vendeur', 'Chargement au départ', 'Pré-achemi\u00adnement', 'Remise au transporteur', 'À bord / chargé', 'Transport principal', 'Arrivée à destination', 'Déchar\u00adgement', 'Livraison à l\'acheteur'];
+const INCO_ST_LONG = ['Locaux du vendeur', 'Chargement au départ', 'Pré-acheminement', 'Remise au transporteur principal (terminal, quai, le long du navire)', 'Chargement à bord du navire ou sur le transport principal', 'Transport principal', 'Arrivée au lieu ou au port de destination convenu', 'Déchargement à destination', 'Acheminement jusqu\'à l\'acheteur'];
+const INCO = {
+  EXW: { r: 1, c: 1, exp: 'Acheteur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Le vendeur met la marchandise à disposition dans ses locaux, non chargée.' },
+  FCA: { r: 3, c: 3, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Livraison au transporteur choisi par l\'acheteur au lieu convenu. Si ce lieu est l\'usine du vendeur, le vendeur charge et le transfert a lieu chargé. Depuis 2020, l\'acheteur peut faire émettre un connaissement « à bord ».' },
+  FAS: { r: 4, c: 4, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Maritime et fluvial', note: 'Livraison le long du navire au port d\'embarquement.' },
+  FOB: { r: 5, c: 5, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Maritime et fluvial', note: 'Livraison à bord du navire au port d\'embarquement.' },
+  CFR: { r: 5, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Maritime et fluvial', note: 'Deux points critiques : le risque passe à bord au départ, mais le vendeur paie le fret jusqu\'au port de destination.' },
+  CIF: { r: 5, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Vendeur, au profit de l\'acheteur : minimum clauses C (ICC), 110 % du prix', mode: 'Maritime et fluvial', note: 'Comme CFR, plus l\'assurance. Le vendeur assure une marchandise qui voyage aux risques de l\'acheteur.' },
+  CPT: { r: 3, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Deux points critiques : le risque passe à la remise au premier transporteur, le vendeur paie le transport jusqu\'au lieu de destination.' },
+  CIP: { r: 3, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Vendeur, au profit de l\'acheteur : minimum clauses A (ICC), 110 % du prix', mode: 'Tous modes', note: 'Comme CPT, plus une assurance « tous risques » depuis 2020.' },
+  DAP: { r: 7, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Livraison au lieu de destination, sur le moyen de transport, prête à être déchargée.' },
+  DPU: { r: 8, c: 8, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Seule règle où le vendeur décharge à destination (ancien DAT).' },
+  DDP: { r: 7, c: 7, exp: 'Vendeur', imp: 'Vendeur (droits et taxes compris)', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Obligation maximale du vendeur : il dédouane à l\'import et paie les droits.' },
+};
+function incoHTML(rule) {
+  const R = INCO[rule];
+  const cell = (i, n, kind) => `<div class="c ${i < n ? 's' : 'b'} ${i === n ? 'pt' : ''}" title="${kind} : ${i < n ? 'vendeur' : 'acheteur'}">${i < n ? 'V' : 'A'}</div>`;
+  const desk = `<div class="chain" role="img" aria-label="${rule} : risques transférés à l'étape ${R.r + 1}, frais à l'étape ${R.c + 1}"><div></div>${INCO_ST.map((s, i) => `<div class="stn" title="${esc(INCO_ST_LONG[i])}">${s.replace(/\u00ad/g, '&shy;')}</div>`).join('')}<div class="lab">Risques</div>${INCO_ST.map((_, i) => cell(i, R.r, 'Risque')).join('')}<div class="lab">Frais</div>${INCO_ST.map((_, i) => cell(i, R.c, 'Frais')).join('')}</div>`;
+  const mob = `<div class="chain-m"><b>Étape</b><b>Risques</b><b>Frais</b>${INCO_ST_LONG.map((s, i) => `<span>${esc(s)}</span>${cell(i, R.r, 'Risque')}${cell(i, R.c, 'Frais')}`).join('')}</div>`;
+  return `<div class="inco-pick" role="group" aria-label="Choisir une règle">${Object.keys(INCO).map((k) => `<button type="button" data-inco="${k}" aria-pressed="${k === rule}">${k}</button>`).join('')}</div>
+    ${desk}${mob}
+    <div class="legend"><span><i style="background:var(--accent)"></i>V = à la charge du vendeur</span><span><i style="background:var(--gold-soft)"></i>A = à la charge de l'acheteur</span><span>Trait noir = point de transfert</span></div>
+    <div class="facts"><div><b>Dédouanement export</b>${esc(R.exp)}</div><div><b>Dédouanement import</b>${esc(R.imp)}</div><div><b>Assurance</b>${esc(R.ass)}</div><div><b>Modes</b>${esc(R.mode)}</div></div>
+    <div class="step-now">${esc(R.note)}</div>`;
+}
+const CREDOC = [
+  ['vendeur', 'acheteur', 'Contrat de vente : les parties conviennent d\'un paiement par crédit documentaire.'],
+  ['acheteur', 'emettrice', 'L\'acheteur (donneur d\'ordre) demande à sa banque d\'ouvrir le crédit.'],
+  ['emettrice', 'notificatrice', 'La banque émettrice ouvre le crédit et le transmet à une banque du pays du vendeur.'],
+  ['notificatrice', 'vendeur', 'La banque notificatrice notifie le crédit au vendeur (bénéficiaire) ; si elle le confirme, elle s\'engage aussi.'],
+  ['vendeur', 'acheteur', 'Le vendeur expédie la marchandise et obtient les documents (connaissement, facture, certificat…).'],
+  ['vendeur', 'notificatrice', 'Le vendeur remet les documents à la banque, dans les délais du crédit.'],
+  ['notificatrice', 'vendeur', 'La banque examine les documents (5 jours ouvrés au plus) ; s\'ils sont conformes, le vendeur est payé (ou le sera à l\'échéance).'],
+  ['notificatrice', 'emettrice', 'Les documents sont envoyés à la banque émettrice, qui rembourse la banque notificatrice.'],
+  ['emettrice', 'acheteur', 'La banque émettrice débite l\'acheteur et lui remet les documents.'],
+  ['acheteur', 'acheteur', 'Avec le connaissement, l\'acheteur retire la marchandise auprès du transporteur.'],
+];
+const ACTORS = { vendeur: 'Vendeur (bénéficiaire)', acheteur: 'Acheteur (donneur d\'ordre)', notificatrice: 'Banque notificatrice / confirmante (pays du vendeur)', emettrice: 'Banque émettrice (pays de l\'acheteur)' };
+function credocHTML(i) {
+  const [a, b, t] = CREDOC[i];
+  return `<div class="actors4">${['vendeur', 'acheteur', 'notificatrice', 'emettrice'].map((k) => `<div class="bx ${k === a ? 'a on' : k === b ? 'g on' : ''}">${esc(ACTORS[k])}</div>`).join('')}</div>
+  <div class="step-now"><b>Étape ${i + 1} / ${CREDOC.length} — ${esc(ACTORS[a].split(' (')[0])}${a !== b ? ` → ${esc(ACTORS[b].split(' (')[0])}` : ''}</b><br>${esc(t)}</div>
+  <div class="steps-ctl"><button class="btn" data-cd="-1" ${i === 0 ? 'disabled' : ''}>← Étape précédente</button><button class="btn primary" data-cd="1" ${i === CREDOC.length - 1 ? 'disabled' : ''}>Étape suivante →</button></div>`;
+}
+function eqHTML(v) {
+  const frng = v.rs - v.es, bfr = v.ace - v.de, tn = frng - bfr;
+  const max = Math.max(Math.abs(frng), Math.abs(bfr), Math.abs(tn), 1);
+  const bar = (x, cls) => `<div class="bar-v ${x < 0 ? 'neg' : ''}" style="height:${Math.abs(x) / max * 120}px;background:var(${x < 0 ? '--bad' : cls})"></div>`;
+  let verdict, k;
+  if (frng > 0 && bfr > 0 && tn >= 0) { verdict = 'Équilibre satisfaisant : le FRNG finance tout le BFR.'; k = 'ok'; }
+  else if (frng > 0 && bfr > 0) { verdict = 'Le FRNG ne couvre pas tout le BFR : dépendance aux concours bancaires, à surveiller.'; k = 'warn'; }
+  else if (frng > 0 && bfr <= 0) { verdict = 'Situation très confortable : excédent de ressources.'; k = 'ok'; }
+  else if (frng <= 0 && bfr < 0 && tn >= 0) { verdict = 'Le cycle d\'exploitation finance une partie des investissements (cas de la grande distribution).'; k = 'warn'; }
+  else if (frng <= 0 && bfr < 0) { verdict = 'Déséquilibre : des investissements sont financés à court terme.'; k = 'bad'; }
+  else { verdict = 'Situation très dangereuse : tout repose sur le crédit bancaire.'; k = 'bad'; }
+  return `<div class="sliders">${[['rs', 'Ressources stables'], ['es', 'Emplois stables'], ['ace', 'Stocks + créances d\'exploitation'], ['de', 'Dettes d\'exploitation']].map(([id, t]) => `<label>${t}<input type="range" min="0" max="1000" step="10" value="${v[id]}" data-eq="${id}"><output>${fmtN(v[id])} k€</output></label>`).join('')}</div>
+  <div class="bars3"><div class="col">${bar(frng, '--accent')}<b>FRNG</b><span>${fmtN(frng)} k€</span><span class="muted small">RS − ES</span></div><div class="col">${bar(bfr, '--gold')}<b>BFR</b><span>${fmtN(bfr)} k€</span><span class="muted small">ACE − DE</span></div><div class="col">${bar(tn, '--ok')}<b>Trésorerie nette</b><span>${fmtN(tn)} k€</span><span class="muted small">FRNG − BFR</span></div></div>
+  <div class="verdict ${k}">${verdict}</div>`;
+}
+function srHTML(v) {
+  const t = v.taux / 100, sr = v.cf / t, mcv = v.ca * t, res = mcv - v.cf, ms = v.ca - sr, pm = v.ca > 0 ? (sr / v.ca) * 12 : 0;
+  const W = 520, H = 250, L = 56, B = 30, xmax = Math.max(v.ca, sr) * 1.25 || 1, ymax = Math.max(xmax * t, v.cf) * 1.15 || 1;
+  const X = (x) => L + x / xmax * (W - L - 12), Y = (y) => H - B - y / ymax * (H - B - 12);
+  const ticks = [0, .25, .5, .75, 1].map((f) => f * xmax);
+  return `<div class="sliders">
+    <label>Charges fixes annuelles<input type="range" min="10" max="500" step="5" value="${v.cf}" data-sr="cf"><output>${fmtN(v.cf)} k€</output></label>
+    <label>Taux de marge sur coût variable<input type="range" min="5" max="80" step="1" value="${v.taux}" data-sr="taux"><output>${v.taux} %</output></label>
+    <label>Chiffre d'affaires prévu<input type="range" min="50" max="2000" step="10" value="${v.ca}" data-sr="ca"><output>${fmtN(v.ca)} k€</output></label></div>
+  <svg class="dg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Seuil de rentabilité ${fmtN(sr)} k€">
+    ${ticks.map((x) => `<line class="grid" x1="${X(x)}" x2="${X(x)}" y1="12" y2="${H - B}"/><text class="m" x="${X(x)}" y="${H - 10}" text-anchor="middle" font-size="11">${fmtN(x)}</text>`).join('')}
+    <line class="axis" x1="${L}" x2="${W - 12}" y1="${H - B}" y2="${H - B}"/><line class="axis" x1="${L}" x2="${L}" y1="12" y2="${H - B}"/>
+    <line class="l2" x1="${X(0)}" y1="${Y(v.cf)}" x2="${X(xmax)}" y2="${Y(v.cf)}"/><text x="${X(xmax) - 4}" y="${Y(v.cf) - 6}" text-anchor="end">Charges fixes</text>
+    <line class="l1" x1="${X(0)}" y1="${Y(0)}" x2="${X(xmax)}" y2="${Y(xmax * t)}"/><text x="${X(xmax) - 4}" y="${Y(xmax * t) + 16}" text-anchor="end">Marge sur coût variable</text>
+    <line class="l3" x1="${X(sr)}" x2="${X(sr)}" y1="${Y(v.cf)}" y2="${H - B}"/><circle class="pt" cx="${X(sr)}" cy="${Y(v.cf)}" r="6"/>
+    <text x="${X(sr) + 8}" y="${Y(v.cf) + 22}">Seuil : ${fmtN(sr)} k€</text>
+    <line class="l3" x1="${X(v.ca)}" x2="${X(v.ca)}" y1="20" y2="${H - B}"/><text class="m" x="${X(v.ca) + 4}" y="28">CA prévu</text>
+    <text class="m" x="${L - 6}" y="20" text-anchor="end" font-size="11">k€</text>
+  </svg>
+  <div class="facts"><div><b>Seuil de rentabilité</b>CF ÷ taux = ${fmtN(sr)} k€</div><div><b>Résultat prévu</b>${fmtN(res)} k€</div><div><b>Marge de sécurité</b>${fmtN(ms)} k€ (${v.ca ? fmtN(ms / v.ca * 100) : 0} % du CA)</div><div><b>Point mort</b>${pm <= 12 ? `${fmtN(pm, 1)} mois (activité régulière)` : 'non atteint dans l\'année'}</div></div>`;
+}
+const VIS = {
+  incoterms: {
+    titre: 'Incoterms® 2020 : qui supporte risques et frais, étape par étape', prov: ['UNIVERSITY MATERIAL', 'ACADEMIC RESEARCH'],
+    note: 'Prolonge les schémas FCA, FOB et CIF de votre enseignante à toutes les règles. Source : ICC, Incoterms® 2020. Choisissez une règle.',
+    html: (arg) => `<div data-inco-root>${incoHTML(arg || 'FCA')}</div>`,
+    bind: (el) => { el.addEventListener('click', (e) => { const b = e.target.closest('[data-inco]'); if (!b) return; const root = b.closest('[data-inco-root]'); root.innerHTML = incoHTML(b.dataset.inco); }); },
+  },
+  flux: {
+    titre: 'Les trois flux d\'une opération d\'export', prov: ['RECONSTRUCTED COURSE'],
+    html: () => `<div class="lanes"><div class="actor">Vendeur<br><span class="muted small">exportateur</span></div><div class="lane" style="background:var(--accent-soft)"><span>Flux physique</span>marchandise →</div><div class="actor">Acheteur<br><span class="muted small">importateur</span></div><div class="lane" style="background:var(--gold-soft)"><span>Flux documentaire</span>documents → (directement ou via les banques)</div><div class="lane" style="background:var(--ok-soft)"><span>Flux financier</span>← paiement</div></div>
+      <div class="boxes"><div class="bx"><b>Transport</b>transporteur, commissionnaire, transitaire</div><div class="bx"><b>Douane</b>déclarant, administrations export et import</div><div class="bx"><b>Banques</b>banque du vendeur, banque de l'acheteur</div><div class="bx"><b>Assurance</b>assureur transport, assureur-crédit</div></div>`,
+    note: 'Les trois flux sont décalés dans le temps et dans l\'espace : c\'est ce décalage qui crée les risques que les techniques du commerce international couvrent.',
+  },
+  credoc: {
+    titre: 'Le crédit documentaire, étape par étape', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'Régime : RUU 600 (ICC, 2007). Le crédit est autonome : la banque paie contre des documents conformes, sans regarder la marchandise.',
+    html: () => `<div data-cd-root data-i="0">${credocHTML(0)}</div>`,
+    bind: (el) => { el.addEventListener('click', (e) => { const b = e.target.closest('[data-cd]'); if (!b) return; const root = b.closest('[data-cd-root]'); const i = Math.max(0, Math.min(CREDOC.length - 1, Number(root.dataset.i) + Number(b.dataset.cd))); root.dataset.i = i; root.innerHTML = credocHTML(i); }); },
+  },
+  transport: {
+    titre: 'Poids réel ou volume : ce qui est facturé', prov: ['UNIVERSITY MATERIAL', 'RECONSTRUCTED COURSE'],
+    note: 'Règles utilisées dans les applications de transport de votre cours : en maritime conventionnel, 1 unité payante = 1 tonne ou 1 m³ (le plus élevé) ; en aérien, rapport 1/6 (1 m³ = 167 kg).',
+    html: () => `<div class="sliders"><label>Poids brut (kg)<input type="number" value="5000" min="0" data-tp="kg"></label><label>Volume (m³)<input type="number" value="6" min="0" step="0.1" data-tp="m3"></label></div><div data-tp-out></div>`,
+    bind: (el) => {
+      const upd = () => {
+        const kg = Number(el.querySelector('[data-tp="kg"]').value) || 0, m3 = Number(el.querySelector('[data-tp="m3"]').value) || 0;
+        const up = Math.max(kg / 1000, m3), vol = m3 * 1000 / 6;
+        el.querySelector('[data-tp-out]').innerHTML = `<div class="facts"><div><b>Maritime</b>${fmtN(up, 2)} UP facturées — ${kg / 1000 >= m3 ? 'le poids l\'emporte' : 'le volume l\'emporte'}</div><div><b>Aérien</b>Poids volumétrique ${fmtN(vol)} kg → poids taxable ${fmtN(Math.max(kg, vol))} kg</div></div>`;
+      };
+      el.querySelectorAll('[data-tp]').forEach((i) => i.addEventListener('input', upd)); upd();
+    },
+  },
+  assurance: {
+    titre: 'Calculer une prime d\'assurance CIF ou CIP', prov: ['UNIVERSITY MATERIAL'],
+    note: 'Formule de la fiche « Le calcul de l\'assurance transport » de votre enseignante : la prime porte sur la valeur CIF (ou CIP) majorée de 10 %, qui l\'inclut elle-même.',
+    html: () => `<div class="sliders"><label>Valeur CFR ou CPT (€)<input type="number" value="10000" min="0" data-as="v"></label><label>Taux d'assurance (%)<input type="number" value="0.6" min="0" step="0.05" data-as="t"></label></div><div data-as-out></div>`,
+    bind: (el) => {
+      const upd = () => {
+        const v = Number(el.querySelector('[data-as="v"]').value) || 0, t = Number(el.querySelector('[data-as="t"]').value) || 0;
+        const cif = v / (1 - 1.1 * t / 100), prime = cif - v;
+        el.querySelector('[data-as-out]').innerHTML = `<div class="flow"><div class="st">CFR / CPT = ${fmtN(v, 2)} €</div><div class="st">CIF = CFR ÷ [1 − (1,1 × ${fmtN(t, 2)} / 100)] = ${fmtN(cif, 2)} €</div><div class="st">Prime = 1,1 × CIF × ${fmtN(t, 2)} % = ${fmtN(prime, 2)} €</div></div>`;
+      };
+      el.querySelectorAll('[data-as]').forEach((i) => i.addEventListener('input', upd)); upd();
+    },
+  },
+  bilan: {
+    titre: 'Le bilan et le compte de résultat', prov: ['UNIVERSITY MATERIAL', 'RECONSTRUCTED COURSE'],
+    note: 'Montants fictifs, en k€. Le bilan est une photo du patrimoine à la clôture ; le compte de résultat est le film de l\'exercice. Le résultat apparaît dans les deux.',
+    html: () => {
+      const A = [['Actif immobilisé', 'incorporel, corporel, financier', 520], ['Stocks', 'marchandises, matières', 180], ['Créances', 'clients, autres', 210], ['Disponibilités', 'banque, caisse', 90]];
+      const P = [['Capitaux propres', 'capital, réserves, résultat 60', 470], ['Provisions', 'risques et charges', 40], ['Dettes financières', 'emprunts', 300], ['Dettes d\'exploitation', 'fournisseurs, fiscales et sociales', 190]];
+      const blk = (r, i, cls) => `<div class="blk" style="flex:${r[2]};min-height:${Math.max(34, r[2] / 4)}px;background:var(${cls[i % 2]})"><b>${esc(r[0])} · ${r[2]}</b><span>${esc(r[1])}</span></div>`;
+      return `<div class="grid g-2"><div><div class="bal"><div class="colh">ACTIF (emplois)</div><div class="colh">PASSIF (ressources)</div><div class="col">${A.map((r, i) => blk(r, i, ['--accent-soft', '--surface-2'])).join('')}</div><div class="col">${P.map((r, i) => blk(r, i, ['--gold-soft', '--surface-2'])).join('')}</div></div><p class="small muted" style="margin:6px 0 0">Total actif 1 000 = total passif 1 000</p></div>
+        <div><div class="bal"><div class="colh">CHARGES</div><div class="colh">PRODUITS</div><div class="col"><div class="blk" style="min-height:120px;background:var(--surface-2)"><b>Charges · 940</b><span>achats, charges externes, personnel, dotations, intérêts, impôt</span></div><div class="blk" style="min-height:30px;background:var(--ok-soft)"><b>Bénéfice · 60</b></div></div><div class="col"><div class="blk" style="min-height:150px;background:var(--gold-soft)"><b>Produits · 1 000</b><span>ventes, production, produits financiers</span></div></div></div><p class="small muted" style="margin:6px 0 0">Résultat = produits − charges</p></div></div>`;
+    },
+  },
+  partieDouble: {
+    titre: 'La partie double en comptes en T', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Exemple fictif : achat de marchandises 1 000 € HT, TVA 20 %, payé par virement. Chaque opération est inscrite au débit d\'un ou plusieurs comptes et au crédit d\'un ou plusieurs autres, pour le même total.',
+    html: () => `<div class="taccs">${[['607 Achats de marchandises', '1 000', ''], ['44566 TVA déductible', '200', ''], ['512 Banque', '', '1 200']].map(([t, d, c]) => `<div class="tacc"><div class="t">${t}</div><div class="sides"><div>${d ? `D ${d}` : ''}</div><div>${c ? `C ${c}` : ''}</div></div></div>`).join('')}</div><div class="facts"><div><b>Total débits</b>1 200</div><div><b>Total crédits</b>1 200</div><div><b>Règle</b>emploi = ressource : pas de débit sans crédit</div></div>`,
+  },
+  equilibre: {
+    titre: 'FRNG, BFR, trésorerie nette : jouez avec le bilan fonctionnel', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Montants fictifs. Trésorerie nette = FRNG − BFR = trésorerie active − trésorerie passive. Les six situations reprennent le tableau du cours.',
+    html: () => `<div data-eq-root>${eqHTML({ rs: 600, es: 450, ace: 380, de: 300 })}</div>`,
+    bind: (el) => { el.addEventListener('input', (e) => { const r = e.target.closest('[data-eq]'); if (!r) return; const root = r.closest('[data-eq-root]'); const v = {}; root.querySelectorAll('[data-eq]').forEach((i) => { v[i.dataset.eq] = Number(i.value); }); const focus = r.dataset.eq; root.innerHTML = eqHTML(v); root.querySelector(`[data-eq="${focus}"]`).focus(); }); },
+  },
+  seuil: {
+    titre: 'Le seuil de rentabilité', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Montants fictifs. Au seuil, la marge sur coût variable couvre exactement les charges fixes : le résultat est nul.',
+    html: () => `<div data-sr-root>${srHTML({ cf: 120, taux: 30, ca: 600 })}</div>`,
+    bind: (el) => { el.addEventListener('input', (e) => { const r = e.target.closest('[data-sr]'); if (!r) return; const root = r.closest('[data-sr-root]'); const v = {}; root.querySelectorAll('[data-sr]').forEach((i) => { v[i.dataset.sr] = Number(i.value); }); const f = r.dataset.sr; root.innerHTML = srHTML(v); root.querySelector(`[data-sr="${f}"]`).focus(); }); },
+  },
+  ricardo: {
+    titre: 'L\'avantage comparatif : l\'exemple de Ricardo (1817)', prov: ['ACADEMIC RESEARCH'],
+    note: 'Chiffres de D. Ricardo, Des principes de l\'économie politique et de l\'impôt, 1817, chap. 7 : heures de travail pour produire une unité. Le Portugal a un avantage absolu dans les deux biens, mais chaque pays gagne à se spécialiser là où son coût relatif est le plus bas.',
+    html: () => {
+      const d = [['Angleterre', 100, 120], ['Portugal', 90, 80]];
+      const bar = (v, c) => `<div style="height:14px;width:${v / 1.3}%;background:var(${c});border-radius:4px"></div>`;
+      return `<div class="stack">${d.map(([p, drap, vin]) => `<div><b>${p}</b><div class="wf"><div class="r"><span>Drap</span><div>${bar(drap, '--accent')}</div><span class="v">${drap} h</span></div><div class="r"><span>Vin</span><div>${bar(vin, '--gold')}</div><span class="v">${vin} h</span></div></div></div>`).join('')}</div>
+      <div class="facts"><div><b>Coût d'une unité de drap</b>Angleterre : 100/120 = 0,83 vin<br>Portugal : 90/80 = 1,13 vin</div><div><b>Spécialisation</b>Angleterre → drap<br>Portugal → vin</div><div><b>Gain</b>Échanger au prix intermédiaire, entre 0,83 et 1,13 unité de vin le drap, profite aux deux</div></div>`;
+    },
+  },
+  conflits: {
+    titre: 'Deux questions distinctes : quel tribunal ? quelle loi ?', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'Contrat entre parties de l\'UE (hors Danemark pour Rome I). Un tribunal français peut appliquer une loi étrangère : juridiction compétente et loi applicable se déterminent séparément.',
+    html: () => `<div class="grid g-2"><div class="stack"><div class="bx a"><b>1. Quel tribunal est compétent ?</b>Règlement Bruxelles I bis (UE n° 1215/2012)</div><div class="flow"><div class="st">Clause attributive de juridiction valable (art. 25) : elle s'impose</div><div class="st">Sinon : tribunal du domicile du défendeur (art. 4)</div><div class="st">Ou, en matière contractuelle, tribunal du lieu de livraison des marchandises (art. 7.1)</div></div></div>
+      <div class="stack"><div class="bx g"><b>2. Quelle loi s'applique au fond ?</b>Convention de Vienne (CVIM) si elle s'applique ; sinon règlement Rome I (CE n° 593/2008)</div><div class="flow"><div class="st">Loi choisie par les parties (art. 3)</div><div class="st">À défaut, pour une vente de marchandises : loi de la résidence habituelle du vendeur (art. 4.1.a)</div></div></div></div>`,
+  },
+  tribunauxUK: {
+    titre: 'Les juridictions civiles anglaises et américaines', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Repris du tableau du cours. La Supreme Court du Royaume-Uni siège depuis 2009 ; dans l\'État de New York, la « Supreme Court » est une juridiction de première instance.',
+    html: () => `<div class="grid g-2"><div><b>Angleterre et pays de Galles</b><div class="pyr" style="margin-top:8px"><div style="width:45%"><b>UK Supreme Court</b></div><div style="width:65%"><b>Court of Appeal</b>Civil Division</div><div style="width:85%"><b>High Court</b>King's Bench (dont Commercial Court), Chancery, Family</div><div style="width:100%"><b>County Courts</b>affaires courantes</div></div></div>
+      <div><b>États-Unis : deux ordres</b><div class="grid g-2" style="margin-top:8px;gap:8px"><div class="pyr"><div style="width:70%"><b>U.S. Supreme Court</b></div><div style="width:85%"><b>Courts of Appeals</b>circuits</div><div style="width:100%"><b>District Courts</b>fédéral</div></div><div class="pyr"><div style="width:70%"><b>Court of Appeals</b>NY</div><div style="width:85%"><b>Appellate Division</b></div><div style="width:100%"><b>Supreme Court</b>1re instance NY</div></div></div></div></div>`,
+  },
+  contrat: {
+    titre: 'Former un contrat en common law', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Une contre-offre rejette l\'offre initiale (Hyde v Wrench, 1840). Une acceptation par courrier prend effet à l\'envoi (postal rule, Adams v Lindsell, 1818).',
+    html: () => `<div class="boxes chainy"><div class="bx">Invitation to treat<br><span class="muted small">vitrine, catalogue, annonce</span></div><span class="arrow-r">→</span><div class="bx a"><b>Offer</b>proposition ferme et précise</div><span class="arrow-r">→</span><div class="bx a"><b>Acceptance</b>sans réserve (mirror image rule)</div><span class="arrow-r">→</span><div class="bx g"><b>Consideration</b>contrepartie de chaque partie</div><span class="arrow-r">→</span><div class="bx g"><b>Intention</b>to create legal relations</div><span class="arrow-r">→</span><div class="bx o"><b>Binding contract</b>si capacité et forme respectées</div></div><div class="callout small">Counter-offer → l'offre initiale tombe : on repart d'une nouvelle offre.</div>`,
+  },
+  gantt: {
+    titre: 'Diagramme de Gantt : création d\'une filiale à l\'étranger', prov: ['UNIVERSITY MATERIAL', 'RECONSTRUCTED COURSE'],
+    note: 'Tâches tirées de la check-list du projet de votre cours (avant, pendant, après la création). Durées et dépendances fictives. En couleur foncée, le chemin critique ; en losange, les jalons.',
+    html: () => {
+      const T = [['Veille et étude pays', 0, 3, 1], ['Étude de marché', 2, 4, 1], ['Diagnostic export (SWOT)', 5, 2, 1], ['Choix du mode de présence et de la structure juridique', 7, 2, 1], ['Préparer le financement', 7, 3, 0], ['◆ Jalon CC1 : présentation du lancement', 9, 0, 1], ['Statuts, capital, immatriculation', 9, 3, 1], ['Numéros fiscaux, banque, licences', 12, 2, 1], ['◆ Jalon CC2 : filiale créée', 14, 0, 1], ['Comptabilité, fiscalité, social, gouvernance', 14, 3, 0]];
+      const N = 17;
+      return `<div class="gantt"><div></div><div class="scale">${[0, 4, 8, 12, 16].map((w) => `<span>S${w + 1}</span>`).join('')}</div>${T.map(([t, s, d, c]) => `<div>${esc(t.replace('◆ ', ''))}</div><div class="track">${d ? `<div class="task ${c ? 'crit' : ''}" style="left:${s / N * 100}%;width:${d / N * 100}%"></div>` : `<div class="ms" style="left:${s / N * 100}%"></div>`}</div>`).join('')}</div>`;
+    },
+  },
+  qcd: {
+    titre: 'Le triangle qualité – coûts – délais', prov: ['UNIVERSITY MATERIAL', 'ACADEMIC RESEARCH'],
+    note: 'Cité dans votre cours d\'après « Oisen (1971) » : R. P. Olsen, Project Management Quarterly, 1971 ; expression « iron triangle » popularisée par R. Atkinson (1999). Modifier un sommet oblige à ajuster les deux autres.',
+    html: () => `<svg class="dg" viewBox="0 0 420 220" role="img" aria-label="Triangle qualité coûts délais"><polygon points="210,20 60,190 360,190" style="fill:var(--accent-soft);stroke:var(--accent);stroke-width:3"/><text x="210" y="14" text-anchor="middle" font-weight="600">Qualité</text><text x="52" y="210" text-anchor="middle" font-weight="600">Coûts</text><text x="368" y="210" text-anchor="middle" font-weight="600">Délais</text><text x="210" y="135" text-anchor="middle">Périmètre</text><text class="m" x="210" y="153" text-anchor="middle" font-size="11">du projet</text></svg>`,
+  },
+  presence: {
+    titre: 'Modes de présence : contrôle et engagement', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Positions indicatives : plus l\'entreprise engage de ressources à l\'étranger, plus elle contrôle sa politique commerciale et plus elle prend de risques.',
+    html: () => `<div class="matrix">${[['Export indirect', 8, 8], ['Agent commercial', 26, 26], ['Distributeur', 34, 18], ['Licence, franchise', 50, 40], ['Joint-venture', 66, 58], ['Succursale', 78, 78], ['Filiale', 88, 90]].map(([t, x, y]) => `<span class="dot" style="left:${x}%;bottom:${y}%">${t}</span>`).join('')}<span class="ax-x">Engagement de ressources et risque →</span><span class="ax-y">Contrôle →</span></div>`,
+  },
+  uppsala: {
+    titre: 'Le modèle d\'Uppsala : une internationalisation par étapes', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Johanson et Wiedersheim-Paul (1975), Johanson et Vahlne (1977) : l\'entreprise s\'engage progressivement et commence par les marchés psychologiquement proches.',
+    html: () => `<div class="boxes chainy"><div class="bx">Exportations irrégulières</div><span class="arrow-r">→</span><div class="bx">Export via un agent</div><span class="arrow-r">→</span><div class="bx a">Filiale commerciale</div><span class="arrow-r">→</span><div class="bx g">Filiale de production</div></div><div class="callout info small">Les « born global » contredisent ce schéma : elles visent plusieurs marchés dès leur création.</div>`,
+  },
+  segmentation: {
+    titre: 'Segmenter puis se positionner', prov: ['UNIVERSITY MATERIAL'],
+    note: 'Repris du chapitre VII « Segmentation et positionnement » de votre cours (I. Noël).',
+    html: () => `<div class="grid g-2"><div class="pyr"><div style="width:100%"><b>1. Macro-segmentation</b>choix des pays ou zones</div><div style="width:82%"><b>2. Micro-segmentation</b>géographiques, sociodémographiques, psychographiques, comportementaux</div><div style="width:64%"><b>3. Segments cross-culturels</b>mêmes attentes dans plusieurs pays</div></div>
+      <div><b>Le triangle d'or du positionnement</b><svg class="dg" viewBox="0 0 420 200" role="img" aria-label="Triangle d'or"><polygon points="210,30 70,175 350,175" style="fill:var(--gold-soft);stroke:var(--gold);stroke-width:3"/><text x="210" y="20" text-anchor="middle" font-weight="600">Attentes du public</text><text x="70" y="195" text-anchor="middle" font-weight="600">Atouts du produit</text><text x="350" y="195" text-anchor="middle" font-weight="600">Positionnement des concurrents</text><text x="210" y="130" text-anchor="middle">Positionnement</text></svg></div></div>`,
+  },
+  ukSystem: {
+    titre: 'The UK as a multi-level system of government', prov: ['UNIVERSITY MATERIAL'],
+    note: 'From the conclusion of your lesson plan « Understanding and reassessing the UK system of government ». The monarch is now King Charles III.',
+    html: () => `<div class="pyr">${[['Constitutional framework', 'uncodified: statutes, conventions, judicial decisions, principles'], ['Parliament', 'makes laws and scrutinises government'], ['Government', 'leadership commanding the confidence of the Commons'], ['Elections', 'First Past the Post for Westminster'], ['Political parties', 'organise competition, provide government and opposition'], ['Devolution', 'Scotland, Wales, Northern Ireland'], ['Local government', 'local authorities and mayors']].map(([t, d], i) => `<div style="width:${100 - i * 6}%"><b>Level ${i + 1} – ${t}</b>${d}</div>`).join('')}</div>`,
+  },
+  leiper: {
+    titre: 'Le système touristique de Leiper (1979)', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'N. Leiper, « The framework of tourism », Annals of Tourism Research, 1979. Le tout baigne dans un environnement économique, politique, technologique et social.',
+    html: () => `<div class="boxes chainy"><div class="bx a"><b>Région émettrice</b>départ et retour du touriste ; facteurs d'incitation (push) : revenus, congés, désir d'évasion</div><span class="arrow-r">⇄</span><div class="bx"><b>Région de transit</b>trajet, escales, transporteurs</div><span class="arrow-r">⇄</span><div class="bx g"><b>Région de destination</b>séjour ; facteurs d'attraction (pull) : climat, patrimoine, prix, accès</div></div><div class="callout info small">L'industrie touristique (voyagistes, transporteurs, hébergeurs, offices de tourisme) se répartit entre les trois régions.</div>`,
+  },
+  butler: {
+    titre: 'Le cycle de vie d\'une destination (Butler, 1980)', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'R. Butler, The Canadian Geographer, 1980. Courbe schématique : la durée de chaque phase varie selon les destinations.',
+    html: () => `<svg class="dg" viewBox="0 0 560 250" role="img" aria-label="Courbe de Butler"><line class="axis" x1="40" y1="220" x2="545" y2="220"/><line class="axis" x1="40" y1="220" x2="40" y2="15"/><text class="m" x="545" y="240" text-anchor="end" font-size="11">Temps</text><text class="m" x="46" y="20" font-size="11">Nombre de touristes</text>
+      <path class="l1" d="M40,212 C110,210 140,200 180,170 S260,70 330,60 S390,55 410,55"/><path class="l2" d="M410,55 C450,52 490,30 540,22"/><path class="l3" d="M410,55 C460,60 500,110 540,150"/>
+      ${[['Exploration', 70, 205], ['Implication', 140, 192], ['Développement', 220, 120], ['Consolidation', 320, 50], ['Stagnation', 400, 45]].map(([t, x, y]) => `<circle class="pt" cx="${x}" cy="${y + 8}" r="4"/><text x="${x}" y="${y - 2}" text-anchor="middle" font-size="12">${t}</text>`).join('')}
+      <text x="540" y="16" text-anchor="end" font-size="12">Rajeunissement</text><text x="540" y="168" text-anchor="end" font-size="12">Déclin</text></svg>`,
+  },
+  tourismeDef: {
+    titre: 'Qui est un visiteur ? Les formes de tourisme', prov: ['ACADEMIC RESEARCH'],
+    note: 'Nations unies et OMT, IRTS 2008, § 2.9, 2.13, 2.39 et 2.40.',
+    html: () => `<div class="grid g-2"><div class="pyr"><div style="width:100%"><b>Voyageurs</b>toute personne qui se déplace</div><div style="width:84%"><b>Visiteurs</b>hors environnement habituel, moins d'un an, pas pour être employé sur place</div><div class="grid g-2" style="width:84%;gap:6px;background:none;padding:0"><div style="background:var(--gold-soft);border-radius:10px;padding:8px"><b>Touriste</b>au moins une nuitée</div><div style="background:var(--ok-soft);border-radius:10px;padding:8px"><b>Excursionniste</b>visiteur de la journée</div></div></div>
+      <div class="stack"><div class="boxes"><div class="bx a"><b>Interne</b>résidents dans le pays</div><div class="bx g"><b>Récepteur</b>non-résidents dans le pays</div><div class="bx o"><b>Émetteur</b>résidents à l'étranger</div></div><div class="facts"><div><b>Intérieur</b>interne + récepteur</div><div><b>National</b>interne + émetteur</div><div><b>International</b>récepteur + émetteur</div></div></div></div>`,
+  },
+};
+const NOTION_VIS = {
+  'tci.incoterms.familles': ['incoterms', 'FCA'], 'tci.incoterms.transfert-risque': ['incoterms', 'FOB'], 'tci.incoterms.repartition-couts': ['incoterms', 'CFR'], 'tci.incoterms.dissociation-c': ['incoterms', 'CIF'],
+  'tci.incoterms.exw': ['incoterms', 'EXW'], 'tci.incoterms.fca': ['incoterms', 'FCA'], 'tci.incoterms.fas-fob': ['incoterms', 'FOB'], 'tci.incoterms.cfr-cif': ['incoterms', 'CIF'], 'tci.incoterms.cpt-cip': ['incoterms', 'CIP'],
+  'tci.incoterms.dap-dpu-ddp': ['incoterms', 'DAP'], 'tci.incoterms.dedouanement': ['incoterms', 'DDP'], 'tci.incoterms.assurance': ['assurance'], 'tci.incoterms.chargement-dechargement': ['incoterms', 'DPU'],
+  'tci.operation.flux': ['flux'], 'tci.operation.acteurs': ['flux'], 'tci.paiement.credit-documentaire': ['credoc'], 'tci.transport.aerien': ['transport'], 'tci.transport.fret-maritime': ['transport'], 'tci.assurance.transport': ['assurance'],
+  'cpt.mecanisme.bilan-resultat': ['bilan'], 'cpt.mecanisme.partie-double': ['partieDouble'], 'cpt.mecanisme.debit-credit': ['partieDouble'],
+  'gfi.equilibre.frng': ['equilibre'], 'gfi.equilibre.bfr': ['equilibre'], 'gfi.equilibre.tresorerie-nette': ['equilibre'], 'gfi.equilibre.situations': ['equilibre'], 'gfi.bilan-fonctionnel.reclassement': ['equilibre'],
+  'odg.couts.seuil': ['seuil'], 'odg.couts.mcv': ['seuil'], 'odg.couts.levier-operationnel': ['seuil'],
+  'eco.theories.avantage-comparatif': ['ricardo'], 'eco.theories.avantage-absolu': ['ricardo'],
+  'dai.conflits.loi-applicable': ['conflits'], 'dai.conflits.juridiction': ['conflits'], 'dai.conflits.distinction': ['conflits'],
+  'dcl.juridictions.angleterre': ['tribunauxUK'], 'dcl.juridictions.usa': ['tribunauxUK'], 'dcl.formation.offer': ['contrat'], 'dcl.formation.acceptance': ['contrat'], 'dcl.formation.consideration': ['contrat'],
+  'gdp.planification.gantt': ['gantt'], 'gdp.cadrage.projet': ['qcd'], 'ici.presence.choix': ['presence'], 'ici.diagnostic.uppsala': ['uppsala'], 'cvb.institutions.parlement': ['ukSystem'],
+};
+const CHAP_VIS = {
+  'tci.operation': [['flux']], 'tci.incoterms': [['incoterms', 'FCA']], 'tci.paiement': [['credoc']], 'tci.transport': [['transport']], 'tci.assurance': [['assurance']], 'tci.financement': [['credoc']],
+  'cpt.mecanisme': [['bilan'], ['partieDouble']], 'cpt.bilan-detaille': [['bilan']], 'cpt.synthese': [['bilan']], 'gfi.equilibre': [['equilibre']], 'gfi.bilan-fonctionnel': [['equilibre']],
+  'odg.couts': [['seuil']], 'eco.theories': [['ricardo']], 'dai.conflits': [['conflits']], 'dcl.juridictions': [['tribunauxUK']], 'dcl.formation': [['contrat']],
+  'gdp.planification': [['gantt']], 'gdp.projet-filiale': [['gantt']], 'gdp.cadrage': [['qcd']], 'ici.presence': [['presence']], 'ici.diagnostic': [['uppsala']], 'ici.segmentation': [['segmentation']],
+  'cvb.constitution': [['ukSystem']], 'cvb.institutions': [['ukSystem']], 'tou.definitions': [['tourismeDef']], 'tou.systeme': [['leiper']], 'tou.destination': [['butler']],
+};
+function visBlock(key, arg) { const v = VIS[key]; if (!v) return ''; return `<div data-vis="${key}">${visFrame(v.titre, v.prov, v.html(arg), v.note || '')}</div>`; }
+function mountVis(root) { root.querySelectorAll('[data-vis]').forEach((el) => { if (el.dataset.bound) return; el.dataset.bound = '1'; const v = VIS[el.dataset.vis]; if (v && v.bind) v.bind(el); }); }
+function visGallery() {
+  const where = {}; for (const [ch, list] of Object.entries(CHAP_VIS)) for (const [k] of list) (where[k] = where[k] || []).push(ch);
+  return Object.entries(VIS).map(([k, v]) => {
+    const ch = (where[k] || [])[0]; const m = ch ? matiere(ch.split('.')[0]) : null;
+    return `<a class="tool" href="${m ? `#course-${m.id}` : '#courses'}" data-vis-open="${ch || ''}" style="text-align:left;align-items:flex-start"><b style="font-size:14.5px">${esc(v.titre)}</b><span class="muted small">${m ? esc(short(m.titre)) : ''}</span><span class="labels">${labels(v.prov)}</span></a>`;
+  }).join('');
 }
 
 /* ---------- Practice: quiz, flashcards, exercises ---------- */
@@ -969,9 +1382,11 @@ function viewResources(v) {
 function viewLibrary(v) {
   const byM = {}; IDX.documents.forEach((d) => { (byM[d.matiere] = byM[d.matiere] || []).push(d); });
   v.innerHTML = header('Library', 'Your course documents, summaries and reconstructed courses') +
+    `<div class="card"><div class="card-head"><h2>${ICON.spark} Diagrams</h2><span class="muted small">${Object.keys(VIS).length} visual explanations</span></div><div class="vis-gallery">${visGallery()}</div><p class="muted small">Every chapter also turns its steps, timelines, calculations and « don't confuse » pairs into visuals automatically.</p></div>` +
     `<div class="card"><div class="card-head"><h2>${ICON.doc} Your course documents</h2>${labels(['UNIVERSITY MATERIAL'])}</div><p class="muted small">Documents you shared, checked against current sources. The files themselves stay with you.</p>${Object.entries(byM).map(([mid, ds]) => `<h3 style="margin-top:12px">${esc(subjectName(mid))}</h3>${ds.map((d) => `<div class="list-item"><div class="icon-tile">${ICON.doc}</div><div style="min-width:0"><b>${esc(d.fichier)}</b><div class="muted small">${esc(d.auteur)} · ${esc(d.nature)}</div>${d.ecarts.length ? `<div class="small" style="margin-top:4px"><span class="label p-IMPORTANT">${d.ecarts.length} point${d.ecarts.length > 1 ? 's' : ''} to check</span></div>` : ''}</div><a class="btn soft" href="#course-${mid}" data-ov="1">Open</a></div>`).join('')}`).join('')}</div>
     <div class="card"><div class="card-head"><h2>${ICON.summary} Course summaries</h2>${labels(['RECONSTRUCTED COURSE'])}</div><div class="grid g-courses">${IDX.matieres.map((m, i) => courseCard(m, i)).join('')}</div><p class="muted small">Open a course, then <b>Overview</b>, for its summary and the reconstructed Tourism course.</p></div>`;
   v.querySelectorAll('[data-ov], .course-card').forEach((a) => a.addEventListener('click', () => { UI.tab = 'overview'; }));
+  v.querySelectorAll('[data-vis-open]').forEach((a) => a.addEventListener('click', () => { const ch = a.dataset.visOpen; if (ch) { UI.chap[ch.split('.')[0]] = ch; UI.tab = 'chapters'; } }));
 }
 function viewPreferences(v) {
   v.innerHTML = header('Settings', '') + `<div class="grid g-2"><div class="card stack"><h3>Profile</h3><label class="field">First name<input type="text" id="p-nom" value="${esc(S.state.profil.nom)}"></label><label class="field">Current semester<select id="p-sem"><option ${S.state.profil.semestre === 'S5' ? 'selected' : ''}>S5</option><option ${S.state.profil.semestre === 'S6' ? 'selected' : ''}>S6</option></select></label>
