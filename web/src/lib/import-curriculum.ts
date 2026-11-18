@@ -18,6 +18,36 @@ export function loadCurriculum(): Curriculum {
   return JSON.parse(readFileSync(join(process.cwd(), 'data', 'curriculum.json'), 'utf8'));
 }
 
+
+// Row builders shared with sync-curriculum.ts. Course fields the student can edit (title, language, semesters,
+// category, teacher, description, exam status) are deliberately absent from courseContentFields.
+export const courseContentFields = (cur: Curriculum, c: any) => ({
+  missing: c.missing, researchStatus: c.researchStatus, uncertainties: c.uncertainties, bibliography: c.bibliography,
+  officialSourceKeys: c.officialSourceKeys, frameworks: c.frameworks, examSkills: c.examSkills,
+  materials: cur.documents.filter((d: any) => d.course === c.slug),
+});
+export const chapterFields = (ch: any, position: number) => ({
+  position, title: ch.title, priority: ch.priority, priorityReason: ch.priorityReason, researchStatus: ch.researchStatus,
+  provenance: ch.provenance, summary: ch.summary ?? null, note: ch.note ?? null, prerequisites: ch.prerequisites ?? [],
+  sourceKeys: ch.sourceKeys ?? [], materialKeys: ch.documents ?? [],
+});
+export const sectionRow = (chapterId: string, sec: any, position: number) => ({ chapterId, kind: sec.kind, position, title: sec.title, body: sec.body, provenance: sec.provenance, sourceKeys: sec.sourceKeys ?? [] });
+export const conceptRow = (userId: string, language: string, n: any) => ({
+  userId, slug: n.slug, term: n.term, language: language as 'fr' | 'en' | 'es',
+  translations: Object.fromEntries((n.terms?.[0] ? [['fr', n.terms[0].fr], ['en', n.terms[0].en], ['es', n.terms[0].es]] : []).filter(([, v]: any) => v)),
+  definition: n.definition ?? '', intuitive: n.intuitive ?? null, academic: n.academic ?? null, analytical: n.analytical ?? null,
+  example: n.example?.texte ?? null, examRelevance: n.question ?? null, level: n.level ?? null,
+  data: { blocks: n.blocks, confusions: n.confusions, counterExample: n.counterExample, example: n.example, verification: n.verification, terms: n.terms, stub: !!n.stub },
+  provenance: (n.stub ? [] : n.sourceKeys?.length ? ['ACADEMIC_RESEARCH', 'RECONSTRUCTED_EXPLANATION'] : ['RECONSTRUCTED_EXPLANATION']) as any[],
+  sourceKeys: n.sourceKeys ?? [], toCheck: n.toCheck ?? null,
+});
+export const questionRow = (chapterId: string, q: any, conceptId: string | null) => ({
+  chapterId, conceptId, key: q.key, type: q.type, difficulty: q.difficulty, topic: q.topic ?? '',
+  stem: q.stem, support: q.support ?? null, data: q.data, explanation: q.explanation ?? null, reference: q.concept ?? null,
+});
+export const flashcardRow = (chapterId: string, f: any) => ({ chapterId, key: f.key, kind: f.kind, front: f.front, back: f.back, extra: f.extra ?? {} });
+export const exerciseRow = (chapterId: string, e: any) => ({ chapterId, key: e.key, type: e.type, title: e.title, difficulty: e.difficulty, statement: e.statement, data: e.data, fictional: e.fictional, parts: e.parts });
+
 export async function importCurriculum(db: DB, userId: string, cur: Curriculum = loadCurriculum()) {
   return db.transaction(async (tx) => {
     const existing = new Set((await tx.select({ slug: s.courses.slug }).from(s.courses).where(eq(s.courses.userId, userId))).map((r) => r.slug));
@@ -50,37 +80,25 @@ export async function importCurriculum(db: DB, userId: string, cur: Curriculum =
       if (existing.has(c.slug)) continue;
       const [course] = await tx.insert(s.courses).values({
         userId, slug: c.slug, title: c.title, language: c.language, semesters: c.semesters, category: c.category, teacher: c.teacher,
-        officialDescription: c.officialDescription, outsideProgramme: c.outsideProgramme, missing: c.missing, researchStatus: c.researchStatus,
-        uncertainties: c.uncertainties, bibliography: c.bibliography, officialSourceKeys: c.officialSourceKeys, frameworks: c.frameworks,
-        examSkills: c.examSkills, materials: cur.documents.filter((d: any) => d.course === c.slug), position: c.position,
+        officialDescription: c.officialDescription, outsideProgramme: c.outsideProgramme,
+        position: c.position, ...courseContentFields(cur, c),
       }).returning({ id: s.courses.id });
       courseIdBySlug.set(c.slug, course.id);
-      const chapterRows = await tx.insert(s.chapters).values(c.chapters.map((ch: any, i: number) => ({
-        courseId: course.id, slug: ch.slug, position: i, title: ch.title, priority: ch.priority, priorityReason: ch.priorityReason,
-        researchStatus: ch.researchStatus, provenance: ch.provenance, summary: ch.summary ?? null, note: ch.note ?? null,
-        prerequisites: ch.prerequisites ?? [], sourceKeys: ch.sourceKeys ?? [], materialKeys: ch.documents ?? [],
-      }))).returning({ id: s.chapters.id, slug: s.chapters.slug });
+      const chapterRows = await tx.insert(s.chapters).values(c.chapters.map((ch: any, i: number) => ({ courseId: course.id, slug: ch.slug, ...chapterFields(ch, i) })))
+        .returning({ id: s.chapters.id, slug: s.chapters.slug });
       const chId = new Map(chapterRows.map((r) => [r.slug, r.id]));
       for (const ch of c.chapters) {
         const id = chId.get(ch.slug)!;
-        ch.sections.forEach((sec: any, i: number) => sectionRows.push({ chapterId: id, kind: sec.kind, position: i, title: sec.title, body: sec.body, provenance: sec.provenance, sourceKeys: sec.sourceKeys ?? [] }));
+        ch.sections.forEach((sec: any, i: number) => sectionRows.push(sectionRow(id, sec, i)));
         ch.notions.forEach((n: any, i: number) => {
-          conceptRows.push({
-            userId, slug: n.slug, term: n.term, language: c.language,
-            translations: Object.fromEntries((n.terms?.[0] ? [['fr', n.terms[0].fr], ['en', n.terms[0].en], ['es', n.terms[0].es]] : []).filter(([, v]: any) => v)),
-            definition: n.definition ?? '', intuitive: n.intuitive ?? null, academic: n.academic ?? null, analytical: n.analytical ?? null,
-            example: n.example?.texte ?? null, examRelevance: n.question ?? null, level: n.level ?? null,
-            data: { blocks: n.blocks, confusions: n.confusions, counterExample: n.counterExample, example: n.example, verification: n.verification, terms: n.terms, stub: !!n.stub },
-            provenance: n.stub ? [] : n.sourceKeys?.length ? ['ACADEMIC_RESEARCH', 'RECONSTRUCTED_EXPLANATION'] : ['RECONSTRUCTED_EXPLANATION'],
-            sourceKeys: n.sourceKeys ?? [], toCheck: n.toCheck ?? null,
-          });
+          conceptRows.push(conceptRow(userId, c.language, n));
           conceptChapterSpecs.push({ concept: n.slug, chapterId: id, position: i });
           for (const p of n.prerequisites ?? []) linkSpecs.push({ from: n.slug, to: p, relation: 'prerequisite' });
           for (const r of n.related ?? []) linkSpecs.push({ from: n.slug, to: r, relation: 'related' });
         });
         for (const q of ch.questions) questionSpecs.push({ chapterId: id, q });
-        for (const f of ch.flashcards) flashRows.push({ chapterId: id, key: f.key, kind: f.kind, front: f.front, back: f.back, extra: f.extra ?? {} });
-        for (const e of ch.exercises) exerciseRows.push({ chapterId: id, key: e.key, type: e.type, title: e.title, difficulty: e.difficulty, statement: e.statement, data: e.data, fictional: e.fictional, parts: e.parts });
+        for (const f of ch.flashcards) flashRows.push(flashcardRow(id, f));
+        for (const e of ch.exercises) exerciseRows.push(exerciseRow(id, e));
       }
     }
     for (const part of chunk(sectionRows)) await tx.insert(s.sections).values(part);
@@ -95,10 +113,7 @@ export async function importCurriculum(db: DB, userId: string, cur: Curriculum =
     const lkRows = linkSpecs.filter((l) => conceptIds.has(l.from) && conceptIds.has(l.to) && l.from !== l.to).map((l) => ({ fromId: conceptIds.get(l.from)!, toId: conceptIds.get(l.to)!, relation: l.relation }));
     for (const part of chunk(lkRows)) await tx.insert(s.conceptLinks).values(part).onConflictDoNothing();
 
-    const qRows = questionSpecs.map(({ chapterId, q }) => ({
-      chapterId, conceptId: conceptIds.get(q.concept) ?? null, key: q.key, type: q.type, difficulty: q.difficulty, topic: q.topic ?? '',
-      stem: q.stem, support: q.support ?? null, data: q.data, explanation: q.explanation ?? null, reference: q.concept ?? null,
-    }));
+    const qRows = questionSpecs.map(({ chapterId, q }) => questionRow(chapterId, q, conceptIds.get(q.concept) ?? null));
     for (const part of chunk(qRows)) await tx.insert(s.questions).values(part).onConflictDoNothing();
     for (const part of chunk(flashRows)) await tx.insert(s.flashcards).values(part).onConflictDoNothing();
     for (const part of chunk(exerciseRows)) await tx.insert(s.exercises).values(part).onConflictDoNothing();

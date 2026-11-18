@@ -136,7 +136,7 @@ for (const [pos, m] of catalogue.entries()) {
   if (existsSync(courseOverride)) {
     const o = read(courseOverride);
     const keep = (k: string[] = []) => k.filter((x: string) => sourceKeys.has(x));
-    chapters.splice(0, chapters.length, ...o.chapters.map((ch: any) => ({
+    const written = o.chapters.map((ch: any) => ({
       slug: ch.slug, title: ch.title, priority: ch.priority, priorityReason: ch.priorityReason, summary: ch.summary ?? null,
       researchStatus: ch.researchStatus, provenance: ch.provenance, note: ch.note ?? null, documents: ch.documents ?? [], sourceKeys: keep(ch.sourceKeys), prerequisites: ch.prerequisites ?? [],
       sections: ch.sections.map((x: any) => ({ ...x, sourceKeys: keep(x.sourceKeys) })),
@@ -145,7 +145,24 @@ for (const [pos, m] of catalogue.entries()) {
       questions: ch.questions.map((q: any) => ({ support: null, ...q })),
       flashcards: ch.concepts.map((n: any) => ({ key: `c.${n.slug}`, kind: 'concept', front: n.term, back: n.definition, extra: {} })),
       exercises: [],
-    })));
+    }));
+    if (o.merge) {
+      // Merge mode: written chapters replace the sections and add to the questions of generated chapters with the same slug;
+      // generated chapters that are not rewritten are kept. Order follows o.order, then the remaining chapters.
+      const gen = new Map<string, any>(chapters.map((c: any) => [c.slug, c]));
+      const merged = new Map<string, any>(chapters.map((c: any) => [c.slug, c]));
+      for (const w of written) {
+        const g = gen.get(w.slug);
+        if (!g) { merged.set(w.slug, w); continue; }
+        const own = new Set(w.notions.map((n: any) => n.slug));
+        merged.set(w.slug, { ...g, ...w,
+          sourceKeys: [...new Set([...(g.sourceKeys ?? []), ...w.sourceKeys])], documents: [...new Set([...(g.documents ?? []), ...w.documents])],
+          notions: [...w.notions, ...g.notions.filter((n: any) => !own.has(n.slug))],
+          questions: [...g.questions, ...w.questions], flashcards: [...g.flashcards, ...w.flashcards], exercises: g.exercises });
+      }
+      const order: string[] = o.order ?? written.map((w: any) => w.slug);
+      chapters.splice(0, chapters.length, ...order.map((k) => merged.get(k)).filter(Boolean), ...[...merged.values()].filter((c: any) => !order.includes(c.slug)));
+    } else chapters.splice(0, chapters.length, ...written);
     Object.assign(r, { officiel: { ...(r.officiel ?? {}), description: o.officialDescription ?? r.officiel?.description }, incertitudes: o.uncertainties ?? r.incertitudes });
     (m as any).langue = o.language; (m as any).completude = o.missing ? 'absente' : 'complete'; (m as any)._researchStatus = o.researchStatus;
   }

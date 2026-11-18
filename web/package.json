@@ -12,7 +12,8 @@
     "db:migrate": "tsx --env-file=.env scripts/migrate.ts",
     "db:seed": "tsx --env-file=.env scripts/seed.ts",
     "test": "vitest run",
-    "test:e2e": "playwright test --trace off"
+    "test:e2e": "playwright test --trace off",
+    "db:sync": "tsx --env-file=.env scripts/sync.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.10.0",

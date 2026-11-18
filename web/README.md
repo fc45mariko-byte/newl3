@@ -37,6 +37,22 @@ Any account created through **Sign up** receives the full curriculum (23 courses
 SEED_EMAIL=me@example.com SEED_PASSWORD='…' SEED_NAME='Prénom' SEED_UPLOADS_DIR=/path/to/files npm run db:seed
 ```
 
+When the curriculum changes (new course material, rewritten chapters), existing accounts are brought up to date with **Settings → Update course content**, or from the command line:
+
+```bash
+npm run db:sync                     # every account
+SYNC_EMAIL=me@example.com npm run db:sync
+```
+
+The update replaces generated content only: sections, concepts, questions, flashcards, exercises, chapter metadata, and the research fields of courses (status, uncertainties, materials).
+
+It never changes:
+- notes, documents, quiz answers, flashcard reviews, exercise attempts or reading progress;
+- events, tasks, or chapters the student added;
+- course fields the student can edit (title, language, semesters, category, teacher, description, exam status).
+
+Generated items removed from the curriculum are deleted only if they were never used.
+
 To regenerate `data/curriculum.json` from the `cours` repository and the research in `../recherche`:
 
 ```bash
@@ -60,9 +76,10 @@ src/app/(auth)        login, signup
 src/app/(app)         dashboard, courses, documents, knowledge, planner, tasks, revision, settings
 src/app/actions       server actions (all mutations, validated with zod, scoped to the signed-in user)
 src/app/api           assistant (streaming), document download
-src/lib               scoring, sm2, mastery, revision-plan, extract, documents, quiz, analytics, dates, import-curriculum
+src/lib               scoring, sm2, mastery, revision-plan, extract, documents, quiz, analytics, dates, import-curriculum, sync-curriculum
 src/components        UI (Shell, Markdown, Diagram, ConceptCard, quiz/, planner/, …)
-data/                 curriculum.json (generated), chapters/*.json (hand-written chapters), courses/*.json (course overrides)
+data/                 curriculum.json (generated), chapters/*.json (hand-written chapters), courses/*.json (course overrides;
+                      "merge": true keeps the generated chapters and questions and adds or rewrites the listed chapters)
 drizzle/              migrations
 tests/unit, tests/e2e
 ```
@@ -131,16 +148,17 @@ The main tables, all scoped by `user_id`:
   - Side panel with eight modes: Explain, Compare, Connect, Challenge, Research, Examine, Simplify, Deep dive.
   - Context comes from the current page: course, chapter sections, concepts, the student's notes and documents, and recent mistakes. It answers in the course's language.
   - Conversations are saved.
+- **Content updates.** Settings → *Update course content* (or `npm run db:sync`) applies a new curriculum to existing accounts without touching the student's work (see *Running it*).
 - **Layout.** Charcoal sidebar on desktop and bottom navigation on phones. No horizontal scrolling at phone width (tested).
 
 ## Tests
 
 ```bash
-npm test                     # Vitest: 35 unit tests
-npm run test:e2e             # Playwright: 15 tests (needs a database named in playwright.config.ts and `npm run build` first)
+npm test                     # Vitest: 35 unit tests + 3 integration tests (content sync, against leastudy_test)
+npm run test:e2e             # Playwright: 16 tests (needs a database named in playwright.config.ts and `npm run build` first)
 ```
 
-The e2e suite runs against the production build on port 3100, with a separate database (`leastudy_test`) and storage folder (`storage-test`). Last run: **15/15 passed**, with **35/35 unit tests passing**. The workflows covered:
+The e2e suite runs against the production build on port 3100, with a separate database (`leastudy_test`) and storage folder (`storage-test`). Last run: **16/16 passed**, and **38/38 Vitest tests passing**. The workflows covered:
 
 1. Sign-up imports the curriculum, and the dashboard reflects it.
 2. Every main navigation link opens a working page.
@@ -156,7 +174,8 @@ The e2e suite runs against the production build on port 3100, with a separate da
 12. Timed exam: no feedback before hand-in, unanswered questions count as 0.
 13. Flashcard grading schedules the card.
 14. Exercises are checked and the correction is shown.
-15. Phone: bottom navigation and no horizontal overflow on 12 pages, an interactive diagram, and the companion panel.
+15. Research course: the two interactive diagrams, and *Update course content* in Settings, after which the edited course details and the added chapter are still there.
+16. Phone: bottom navigation and no horizontal overflow on 14 pages, an interactive diagram, and the companion panel.
 
 The unit tests cover:
 
@@ -164,7 +183,8 @@ The unit tests cover:
 - SM-2 scheduling;
 - mastery and the revision planner;
 - document extraction (docx, pptx, txt, refusals);
-- dates and recurrence across daylight-saving changes.
+- dates and recurrence across daylight-saving changes;
+- content sync (integration): a new chapter is added and rewritten sections are replaced; the course title and teacher the student edited, notes, reading progress, a student-added chapter, an answered question and a reviewed card are all kept; an unused stale question is removed; a second run changes nothing.
 
 ## Known limitations and incomplete parts
 
@@ -172,6 +192,7 @@ The unit tests cover:
 - **Content depth varies.**
   - Only one chapter, *L'opération d'import-export* (`data/chapters/tci.operation.json`), is fully written in the ten-part architecture.
   - The Tourism course (`data/courses/tou.json`) is written from the student's notes and research.
+  - The research course (`red`) and internship course (`stg`) are written from the two TD handouts received on 18/11/2026 (`data/courses/red.json` and `stg.json`). Five chapters are new or rewritten; *Argumentation*, *Citer et référencer*, *Recherche de stage*, *La soutenance* and *Évaluation* remain reconstructed.
   - The other chapters come from the `cours` repository: notions, syntheses, glossaries, steps. Sections that do not exist yet are flagged as missing rather than invented.
 - `unpdf` declares Node ≥ 24. Extraction works on Node 22 in the tests, but Node 24 is the supported runtime.
 - Scanned PDFs (no text layer) are stored but not read: there is no OCR.

@@ -5,7 +5,7 @@ test('phone: bottom navigation, readable pages, no sideways scrolling', async ({
   await signup(page, 'Mobile');
   const nav = page.getByRole('navigation', { name: 'Main' });
   await expect(nav).toBeVisible();
-  for (const path of ['/', '/courses', '/courses/tci', '/courses/tci/chapters/tci.incoterms', '/courses/tou/chapters/tou.market', '/knowledge', '/knowledge/graph', '/planner', '/planner?view=month', '/tasks', '/revision', '/revision/flashcards']) {
+  for (const path of ['/', '/courses', '/courses/tci', '/courses/tci/chapters/tci.incoterms', '/courses/tou/chapters/tou.market', '/courses/red/chapters/red.question', '/courses/stg/chapters/stg.rapport', '/knowledge', '/knowledge/graph', '/planner', '/planner?view=month', '/tasks', '/revision', '/revision/flashcards']) {
     await page.goto(path);
     await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
     await noHorizontalOverflow(page);

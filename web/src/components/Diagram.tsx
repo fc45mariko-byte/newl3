@@ -166,6 +166,73 @@ function Butler() {
   );
 }
 
+
+const DEMARCHE: [string, string, string][] = [
+  ['Question', 'Comment les étudiants utilisent-ils les outils d’IA générative pour leurs travaux de traduction ?', 'Est-elle claire, précise, faisable, ouverte ?'],
+  ['Méthode', 'Questionnaire + entretiens', 'La méthode convient-elle au mot interrogatif de la question ?'],
+  ['Données', 'Réponses de 100 étudiants + 10 entretiens', 'Qui, combien, sur quelle période ?'],
+  ['Analyse', 'Analyse statistique + analyse thématique', 'Comment traiter les données, décidé avant de les recueillir ?'],
+  ['Résultats', 'Ce que l’analyse met en évidence (le support ne donne pas les résultats de l’exemple).', 'Distinguer les données, leur analyse et leur interprétation.'],
+  ['Conclusion', 'La réponse argumentée à la question de départ.', 'Répond-elle à la question posée, et seulement à elle ?'],
+];
+function Demarche() {
+  const [i, setI] = useState(0);
+  const [t, ex, check] = DEMARCHE[i];
+  return (
+    <Frame title="La démarche de recherche, étape par étape" prov={['UNIVERSITY_MATERIAL']} note="Chaîne et exemple « IA et traduction » du support de TD « Initiation à la recherche L3 LEA ». Les questions de contrôle sont reconstruites.">
+      <div role="radiogroup" aria-label="Étapes" className="flex flex-wrap items-center gap-1.5">
+        {DEMARCHE.map(([k], j) => (
+          <span key={k} className="flex items-center gap-1.5">
+            <button role="radio" aria-checked={i === j} onClick={() => setI(j)} className={`rounded-full px-3 py-1.5 text-sm border ${i === j ? 'bg-charcoal text-white border-charcoal' : j < i ? 'bg-sage-soft border-line' : 'bg-ivory border-line'}`}>{j + 1}. {k}</button>
+            {j < DEMARCHE.length - 1 && <span aria-hidden className="text-muted">→</span>}
+          </span>
+        ))}
+      </div>
+      <div className="grid sm:grid-cols-2 gap-2 text-sm">
+        <div className="rounded-xl bg-butter-soft p-3"><b className="block">{t} — dans l’exemple</b>{ex}</div>
+        <div className="rounded-xl bg-powder-soft p-3"><b className="block">À vérifier</b>{check}</div>
+      </div>
+    </Frame>
+  );
+}
+
+const DELIM: Record<string, { label: string; prov: string; steps: [string, string, string][] }> = {
+  support: { label: 'Exemple du support', prov: 'UNIVERSITY_MATERIAL', steps: [
+    ['Thème', 'Les langues dans l’entreprise', 'Le domaine général : impossible à traiter en entier.'],
+    ['Sujet', 'L’utilisation de l’anglais dans les entreprises françaises', 'Précision du thème : une langue, un pays.'],
+    ['Angle d’étude', 'L’utilisation de l’anglais dans la communication interne', 'L’objet de recherche : une situation de communication.'],
+    ['Question de recherche', 'Quels facteurs expliquent le recours à l’anglais dans la communication interne des entreprises françaises ?', 'Ce que l’on veut savoir : claire, précise, faisable, ouverte.'],
+  ] },
+  tourisme: { label: 'Exemple reconstruit : tourisme', prov: 'RECONSTRUCTED_EXPLANATION', steps: [
+    ['Thème', 'Le tourisme international', 'Tous les pays, tous les acteurs : trop vaste.'],
+    ['Sujet', 'L’accueil des touristes étrangers dans le Loiret', 'Un territoire, une clientèle.'],
+    ['Angle d’étude', 'L’offre en langues étrangères des offices de tourisme', 'Un acteur, un phénomène observable.'],
+    ['Question de recherche', 'Quelles langues les offices de tourisme du Loiret proposent-ils, et en fonction de quelles clientèles ?', 'Corpus (les sites) et données (fréquentation) identifiables.'],
+  ] },
+};
+function Delimitation() {
+  const [ex, setEx] = useState<keyof typeof DELIM>('support');
+  const [i, setI] = useState(3);
+  const d = DELIM[ex];
+  return (
+    <Frame title="La délimitation progressive d’un sujet" prov={[d.prov]} note="Quatre étapes du support de TD : thème → sujet (précision du thème) → angle d’étude (objet de recherche) → question de recherche.">
+      <div className="flex flex-wrap gap-1.5" role="radiogroup" aria-label="Exemple">
+        {Object.entries(DELIM).map(([k, v]) => <button key={k} role="radio" aria-checked={ex === k} onClick={() => setEx(k as keyof typeof DELIM)} className={`chip border ${ex === k ? 'bg-charcoal text-white border-charcoal' : 'bg-ivory border-line'}`}>{v.label}</button>)}
+      </div>
+      <ol className="list-none p-0 m-0 flex flex-col items-center gap-1.5">
+        {d.steps.map(([t, v], j) => (
+          <li key={t} style={{ width: `${100 - j * 12}%` }} className="min-w-0">
+            <button onClick={() => setI(j)} aria-pressed={i === j} className={`w-full text-left rounded-xl px-3 py-2 text-sm border ${i === j ? 'border-charcoal' : 'border-transparent'} ${['bg-rose-soft', 'bg-butter-soft', 'bg-powder-soft', 'bg-sage-soft'][j]}`}>
+              <b className="block text-xs uppercase tracking-wide">{j + 1}. {t}</b>{v}
+            </button>
+          </li>
+        ))}
+      </ol>
+      <p className="text-sm rounded-xl bg-ivory border border-line px-3 py-2"><b>{d.steps[i][0]} :</b> {d.steps[i][2]}</p>
+    </Frame>
+  );
+}
+
 export function Diagram({ name, arg }: { name: string; arg?: string }) {
   switch (name) {
     case 'flux': return <Flux />;
@@ -174,6 +241,8 @@ export function Diagram({ name, arg }: { name: string; arg?: string }) {
     case 'equilibre': return <Equilibre />;
     case 'leiper': return <Leiper />;
     case 'butler': return <Butler />;
+    case 'demarche': return <Demarche />;
+    case 'delimitation': return <Delimitation />;
     default: return <p className="text-sm text-coral-ink">Unknown diagram “{name}”.</p>;
   }
 }

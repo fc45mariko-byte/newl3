@@ -1,6 +1,7 @@
 import { requireUser } from '@/lib/auth';
 import { currentSemester } from '@/lib/queries';
 import { logout } from '@/app/actions/auth';
+import { UpdateContent } from '@/components/UpdateContent';
 export const metadata = { title: 'Settings' };
 export default async function Settings() {
   const u = await requireUser();
@@ -18,6 +19,11 @@ export default async function Settings() {
       <section className="card p-5 text-sm flex flex-col gap-2">
         <h2 className="font-serif text-xl">About the content</h2>
         <p>Labels tell you where every part comes from: <b>University material</b> (your documents), <b>Official source</b> and <b>Academic research</b> (cited sources), <b>Reconstructed explanation</b> (written to fill a gap, never your teacher’s course) and <b>Supplementary context</b>.</p>
+      </section>
+      <section className="card p-5 text-sm flex flex-col gap-2">
+        <h2 className="font-serif text-xl">Course content</h2>
+        <p>Loads the latest version of the courses (new chapters, rewritten sections, new questions). Your notes, documents, quiz answers, flashcard reviews, progress, planner and tasks are kept, and so are the course details you edited and the chapters you added.</p>
+        <UpdateContent />
       </section>
       <form action={logout}><button className="btn">Log out</button></form>
     </div>

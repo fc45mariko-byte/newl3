@@ -192,6 +192,27 @@ test('revision plan suggestion is added to the planner', async () => {
   await expect(page.getByRole('button', { name: /Study: /}).first()).toBeVisible();
 });
 
+test('research course: interactive diagrams and content update from the settings', async () => {
+  await page.goto('/courses/red/chapters/red.question');
+  await expect(page.getByRole('heading', { level: 1 })).toHaveText('Du thème à la question de recherche');
+  await expect(page.getByText('University material').first()).toBeVisible();
+  const fig = page.locator('figure', { hasText: 'La délimitation progressive' });
+  await fig.getByRole('button', { name: /2\. Sujet/ }).click();
+  await expect(fig).toContainText('Précision du thème : une langue, un pays.');
+  await fig.getByRole('radio', { name: 'Exemple reconstruit : tourisme' }).click();
+  await expect(fig).toContainText('Reconstructed explanation');
+  await page.goto('/courses/red/chapters/red.demarche');
+  const steps = page.locator('figure', { hasText: 'La démarche de recherche' });
+  await steps.getByRole('radio', { name: '3. Données' }).click();
+  await expect(steps).toContainText('Réponses de 100 étudiants + 10 entretiens');
+  await page.goto('/settings');
+  await page.getByRole('button', { name: 'Update course content' }).click();
+  await expect(page.locator('main [role=status]')).toContainText('Your notes, answers, reviews and documents were not changed', { timeout: 60_000 });
+  await page.goto('/courses/droit-europeen');
+  await expect(page.getByText('Teacher: J. Dupont')).toBeVisible();
+  await expect(page.locator('#chapters').getByRole('link', { name: 'Le marché intérieur' })).toBeVisible();
+});
+
 test('login again after logout keeps the data', async () => {
   await page.goto('/settings');
   await page.click('main button:has-text("Log out")');
