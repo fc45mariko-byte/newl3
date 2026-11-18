@@ -1,0 +1,241 @@
+{
+  "course": "tou",
+  "language": "en",
+  "missing": false,
+  "researchStatus": "university_material",
+  "officialDescription": "No official description: the course is absent from the university's S5 and S6 web pages. Its existence comes from your S5 timetable (« Intro international tourism », Monday 9:00-11:00, room 257) and its content from your own lecture notes.",
+  "uncertainties": [
+    "Teacher, ECTS, assessment method and exam date are unknown: none appears in your documents or on the university website.",
+    "Your notes record that lecture 4 (wine tourism) was missed: the wine-tourism part below relies on research, not on the lecture.",
+    "Your notes stop at the National Tourism Council in the chapter on actors: the rest of that chapter is reconstructed and must be compared with the lecture."
+  ],
+  "chapters": [
+    {
+      "slug": "tou.market",
+      "title": "The international tourism market and how it is measured",
+      "priority": "ESSENTIAL",
+      "priorityReason": "Opens your lecture notes (« The international market in France », UNWTO classification).",
+      "researchStatus": "verified",
+      "provenance": ["UNIVERSITY_MATERIAL", "OFFICIAL_SOURCE", "RECONSTRUCTED_EXPLANATION"],
+      "summary": "Before anyone can say that France is the world's first destination, someone has to decide who counts as a tourist.",
+      "sourceKeys": ["r.irts-2008", "r.untourism-glossaire", "r.untourism-2025", "r.untourism-barometre-2026-09"],
+      "sections": [
+        {
+          "kind": "opening", "title": "Counting people who do not stay", "provenance": "RECONSTRUCTED_EXPLANATION", "sourceKeys": [],
+          "body": "Every summer, a Belgian family drives through France to spend two weeks in Spain. They fill up with petrol near Lyon, sleep one night in a hotel near Montpellier and cross the border the next morning. Are they tourists in France? Do they count in the figures that make France the world's leading destination?\n\nThe question is less trivial than it looks. Tourism is not an industry in the usual sense: no factory produces it, and no single product defines it. It exists only through the people who travel and the money they spend. To compare countries, follow trends and design policies, statisticians had to agree on who counts, for how long, and for what reasons. This chapter starts there, because every figure in the rest of the course depends on these choices."
+        },
+        {
+          "kind": "explanation", "title": "What your lecture notes say", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "Your notes open with the international market in France and the way the World Tourism Organization (UNWTO, now UN Tourism) collects data on inbound tourism. Three indicators are listed:\n\n- **international tourist arrivals**;\n- **international tourism receipts** (*recettes*);\n- **international tourism exports** (*exportations*).\n\nThe notes then distinguish two categories of visitors: **tourists**, who spend at least one night in the place visited, and **excursionists**, who are day visitors. Tourist flows are measured by the number of arrivals at borders and by the number of overnight stays (*nuitées*)."
+        },
+        {
+          "kind": "explanation", "title": "The international definitions behind the figures", "provenance": "OFFICIAL_SOURCE", "sourceKeys": ["r.irts-2008", "r.untourism-glossaire"],
+          "body": "The definitions used by UN Tourism and by national statistical offices come from the *International Recommendations for Tourism Statistics 2008* (IRTS 2008), adopted by the United Nations.\n\nA **visitor** is a traveller taking a trip to a main destination outside his or her usual environment, for less than a year, for any main purpose (business, leisure or other personal purpose) other than to be employed by a resident entity in the place visited (§ 2.9). Tourism is the activity of visitors. A visitor is a **tourist** (or overnight visitor) if the trip includes an overnight stay, and a **same-day visitor** (or excursionist) otherwise (§ 2.13). The **usual environment** is the geographical area within which a person conducts his or her regular life routines (§ 2.21).\n\nThe recommendations then distinguish three basic forms of tourism for a given country (§ 2.39): **domestic** tourism (residents travelling within the country), **inbound** tourism (non-residents travelling in the country) and **outbound** tourism (residents travelling abroad). They combine into **internal** tourism (domestic + inbound), **national** tourism (domestic + outbound) and **international** tourism (inbound + outbound) (§ 2.40).\n\nBack to the Belgian family: during their night near Montpellier they are inbound tourists in France; had they crossed the country without stopping, they would have been same-day visitors. A seasonal worker hired by a French campsite is not a visitor at all, because he is employed by a resident entity."
+        },
+        {
+          "kind": "comparison", "title": "Arrivals are not money", "provenance": "RECONSTRUCTED_EXPLANATION", "sourceKeys": [],
+          "body": "Counting arrivals is like counting the people who enter a shop; measuring receipts is like reading the till. A country can be first for the first and not for the second: many visitors stay briefly, cross the country on the way elsewhere or spend little. This is why the notes list arrivals, receipts and exports separately, and why an exam answer that ranks countries must always say which indicator it uses."
+        },
+        {
+          "kind": "synthesis", "title": "Synthesis", "provenance": "RECONSTRUCTED_EXPLANATION", "sourceKeys": [],
+          "body": "Tourism statistics rest on a definition of the visitor: someone outside the usual environment, for less than a year, who is not employed on the spot. Visitors who stay at least one night are tourists; the others are excursionists. Countries are compared on arrivals, receipts and exports, which do not give the same rankings. You must be able to define each term, apply it to a concrete traveller and explain why a figure needs its indicator and its year."
+        }
+      ],
+      "concepts": [
+        { "slug": "tou.market.visitor", "term": "Visitor", "definition": "A traveller taking a trip to a main destination outside his or her usual environment, for less than a year, for any main purpose other than to be employed by a resident entity in the place visited (IRTS 2008, § 2.9).", "intuitive": "Anyone who goes somewhere unusual for a while and is not there to work for a local employer.", "examRelevance": "Is a seasonal worker employed by a French hotel a visitor? Justify with the definition.", "sourceKeys": ["r.irts-2008"], "terms": [{ "fr": "visiteur", "en": "visitor", "es": "visitante", "definition": "Voyageur hors de son environnement habituel, moins d'un an, non employé sur place." }] },
+        { "slug": "tou.market.tourist-excursionist", "term": "Tourist and excursionist", "definition": "A visitor is a tourist (overnight visitor) if the trip includes an overnight stay, and a same-day visitor (excursionist) otherwise (IRTS 2008, § 2.13).", "intuitive": "One night is the whole difference: sleep there and you are a tourist; go home the same day and you are an excursionist.", "examRelevance": "Classify three travellers and explain your reasoning.", "sourceKeys": ["r.irts-2008"], "terms": [{ "fr": "excursionniste", "en": "same-day visitor", "es": "excursionista", "definition": "Visiteur qui ne passe pas la nuit sur place." }] },
+        { "slug": "tou.market.forms", "term": "Forms of tourism", "definition": "Domestic, inbound and outbound tourism, combined into internal (domestic + inbound), national (domestic + outbound) and international (inbound + outbound) tourism (IRTS 2008, § 2.39-2.40).", "intuitive": "Look at the border and at where the traveller lives: who crosses it, and in which direction?", "examRelevance": "Which form of tourism does a French resident skiing in the Alps represent? And an American visiting Paris?", "sourceKeys": ["r.irts-2008"], "terms": [{ "fr": "tourisme récepteur", "en": "inbound tourism", "es": "turismo receptor", "definition": "Activités des visiteurs non résidents dans le pays." }] },
+        { "slug": "tou.market.indicators", "term": "Arrivals, receipts and overnight stays", "definition": "International tourist arrivals count trips; international tourism receipts measure what visitors spend; overnight stays count the nights spent in accommodation.", "intuitive": "People through the door, money in the till, nights in the beds.", "analytical": "Each indicator answers a different question: attractiveness, economic weight, pressure on accommodation. Rankings change with the indicator, which is why figures must always state it.", "sourceKeys": ["r.untourism-2025"] }
+      ],
+      "questions": [
+        { "key": "en.tou.market.1", "type": "single", "difficulty": 1, "topic": "comprendre", "concept": "tou.market.tourist-excursionist", "stem": "A Swiss couple visits the Christmas market in Strasbourg and drives back to Basel the same evening. How does UN Tourism classify them in France?",
+          "data": { "choices": [ { "id": "a", "text": "Same-day visitors (excursionists)", "correct": true, "explanation": "They are visitors (outside their usual environment, not employed on the spot) but spend no night in France." }, { "id": "b", "text": "Tourists", "correct": false, "explanation": "A tourist must stay at least one night in the place visited." }, { "id": "c", "text": "They are not counted as visitors", "correct": false, "explanation": "A day trip abroad for leisure is still a visit: they are visitors, of the same-day kind." } ] }, "explanation": "IRTS 2008, § 2.13: the overnight stay separates tourists from same-day visitors." },
+        { "key": "en.tou.market.2", "type": "true_false", "difficulty": 1, "topic": "comprendre", "concept": "tou.market.visitor", "stem": "A Spanish student hired for the summer by a French campsite is an inbound visitor in France.",
+          "data": { "choices": [ { "id": "a", "text": "True", "correct": false, "explanation": "The definition excludes travellers whose main purpose is to be employed by a resident entity in the place visited." }, { "id": "b", "text": "False", "correct": true, "explanation": "Being employed by a French campsite is precisely the case the definition excludes." } ] }, "explanation": "IRTS 2008, § 2.9." },
+        { "key": "en.tou.market.3", "type": "matching", "difficulty": 2, "topic": "distinguer", "concept": "tou.market.forms", "stem": "From France's point of view, match each trip with its form of tourism.",
+          "data": { "pairs": [ { "left": "A Lyon resident on holiday in Brittany", "right": "Domestic tourism" }, { "left": "A Japanese couple visiting the Loire châteaux", "right": "Inbound tourism" }, { "left": "A Parisian on a city break in Lisbon", "right": "Outbound tourism" } ] }, "explanation": "Domestic: residents within the country. Inbound: non-residents in the country. Outbound: residents abroad." },
+        { "key": "en.tou.market.4", "type": "multiple", "difficulty": 2, "topic": "memoriser", "concept": "tou.market.indicators", "stem": "Which indicators does your course list for the international tourism market?",
+          "data": { "choices": [ { "id": "a", "text": "International tourist arrivals", "correct": true, "explanation": "First indicator in your notes." }, { "id": "b", "text": "International tourism receipts", "correct": true, "explanation": "The money spent by international visitors." }, { "id": "c", "text": "International tourism exports", "correct": true, "explanation": "Receipts plus international passenger transport, in UN Tourism's accounts." }, { "id": "d", "text": "The number of hotels per inhabitant", "correct": false, "explanation": "Not an indicator in your notes: it describes supply, not flows." } ] }, "explanation": "Arrivals, receipts and exports measure different things: always state which one a ranking uses." }
+      ]
+    },
+    {
+      "slug": "tou.france",
+      "title": "France, the world's leading destination",
+      "priority": "ESSENTIAL",
+      "priorityReason": "Second part of your lecture notes.",
+      "researchStatus": "verified",
+      "provenance": ["UNIVERSITY_MATERIAL", "OFFICIAL_SOURCE"],
+      "summary": "First in the world for arrivals: what the figure measures, and what it hides.",
+      "sourceKeys": ["r.atout-france-2025", "r.untourism-2025"],
+      "sections": [
+        {
+          "kind": "explanation", "title": "What your lecture notes say", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "The notes present France as the world's leading destination, ahead of Spain and the United States, with 84.9 million international arrivals, about 9 % of the world total, and 114 million day trippers. Paris is described as the most visited city in the world in 2019, with 38 million tourists. Spain is second with 83.7 million arrivals and the United States third with 79.3 million, while France ranks third for receipts, behind the United States and Spain, with 56 billion dollars.\n\nInternational visitors come mainly from neighbouring European countries (Germany, the United Kingdom, Belgium and Luxembourg, Italy) and from the United States; Spanish (+64 %) and Canadian (+54 %) travellers are increasingly numerous compared with 2019, and Irish (+19 %) and South Korean (+16 %) travellers are returning. They are drawn first to cities (31 %), then to the coast, the mountains and the countryside. The most visited regions are Paris (20 % of arrivals), Provence-Alpes-Côte d'Azur, Rhône-Alpes and Midi-Pyrénées. Approved hotels concentrate in Île-de-France, PACA, Rhône-Alpes, Midi-Pyrénées and Alsace; camping and caravanning in Languedoc-Roussillon and Aquitaine. Purposes of travel: 52 % leisure and recreation, 23 % visiting friends and relatives, 19 % business, 8 % transit."
+        },
+        {
+          "kind": "explanation", "title": "The latest figures, and why they differ", "provenance": "OFFICIAL_SOURCE", "sourceKeys": ["r.atout-france-2025", "r.untourism-2025"],
+          "body": "The figures in the notes come from an earlier year than the latest data. According to Atout France, France received an estimated **102 million international tourists in 2025**, and international tourism receipts reached **€77.5 billion**, up 9 % on 2024. Worldwide, UN Tourism estimates about 1.52 billion international arrivals in 2025, up 4 %.\n\nThree points to keep in mind for an exam:\n\n1. Always give the **year** and the **source** of a figure: 84.9 million and 102 million are both correct, for different years.\n2. The percentages of purposes in the notes add up to 102 %: either a figure was rounded or noted down imprecisely. Check them against the lecture slides before quoting them.\n3. Region names in the notes (Rhône-Alpes, Midi-Pyrénées, Languedoc-Roussillon, Aquitaine) are the pre-2016 regions; since the 2016 reform they belong to Auvergne-Rhône-Alpes, Occitanie and Nouvelle-Aquitaine."
+        },
+        {
+          "kind": "synthesis", "title": "Synthesis", "provenance": "RECONSTRUCTED_EXPLANATION", "sourceKeys": [],
+          "body": "France is first in the world for international arrivals, but not for receipts: many visitors are neighbours on short stays or travellers in transit. Its visitors are mostly European, its flows concentrate on Paris and a few regions, and leisure is the main purpose. A good answer always dates its figures and names the indicator."
+        }
+      ],
+      "concepts": [
+        { "slug": "tou.france.first-destination", "term": "World's leading destination", "definition": "France ranks first in the world for international tourist arrivals: an estimated 102 million in 2025 (Atout France).", "intuitive": "Most people cross France's borders as visitors, more than any other country.", "analytical": "The title concerns arrivals, not receipts. Geography explains part of it: France is a crossroads between northern Europe and Spain, so many arrivals are short stays or transit.", "examRelevance": "Explain why France can be first for arrivals without being first for receipts.", "sourceKeys": ["r.atout-france-2025"] },
+        { "slug": "tou.france.source-markets", "term": "Source markets", "definition": "The countries international visitors come from. For France, mainly neighbouring European countries and the United States.", "intuitive": "Where the visitors live, not where they go.", "sourceKeys": [] }
+      ],
+      "questions": [
+        { "key": "en.tou.france.1", "type": "single", "difficulty": 2, "topic": "interpreter", "concept": "tou.france.first-destination", "stem": "Your notes give France 84.9 million arrivals; Atout France reports 102 million for 2025. What should you write in an exam?",
+          "data": { "choices": [ { "id": "a", "text": "Give the figure with its year and source", "correct": true, "explanation": "Both figures are correct for their year: a figure without its year is incomplete." }, { "id": "b", "text": "Average the two figures", "correct": false, "explanation": "Averaging figures from different years produces a number that measures nothing." }, { "id": "c", "text": "Use the lecture figure only, because it comes from the course", "correct": false, "explanation": "The lecture figure is useful, but it must be dated; you may add the latest one." } ] }, "explanation": "Statistics change every year: date and source them." },
+        { "key": "en.tou.france.2", "type": "short", "difficulty": 2, "topic": "comprendre", "concept": "tou.france.first-destination", "stem": "In two or three sentences, explain why France can be the world's first destination for arrivals but not for receipts.",
+          "data": { "rubric": [ "Distinguishes arrivals (number of trips) from receipts (spending)", "Gives a reason: many short stays, neighbouring visitors or transit", "Uses a dated figure or ranking correctly" ], "modelAnswer": "Arrivals count trips while receipts measure spending. France receives many visitors from neighbouring countries on short stays, and many travellers cross it on the way to Spain or Italy, so each arrival brings in less money than in a long-haul destination such as the United States. In the figures of your notes, France is first for arrivals but third for receipts." }, "explanation": "The ranking depends on the indicator." }
+      ]
+    },
+    {
+      "slug": "tou.types",
+      "title": "Types of tourism",
+      "priority": "ESSENTIAL",
+      "priorityReason": "Main part of your lecture notes (part IV and following).",
+      "researchStatus": "university_material",
+      "provenance": ["UNIVERSITY_MATERIAL", "ACADEMIC_RESEARCH", "RECONSTRUCTED_EXPLANATION"],
+      "summary": "Why people travel decides what a destination must offer, protect and regulate.",
+      "sourceKeys": [],
+      "sections": [
+        {
+          "kind": "explanation", "title": "Cultural tourism", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "Your notes define cultural tourism as travel focused on experiencing the culture, heritage (*patrimoine*) and lifestyle of a destination: historical sites, museums, art galleries, festivals.\n\n**Urban tourism** is mostly city breaks by young people living in cities, for short stays (a weekend), to escape the daily routine. In France it accounts for 30 % of nights booked and 40 % of tourism consumption, according to the notes. It relies on dense transport networks, leads hotel chains to build near congress venues and main roads, and causes problems: excessive tourism and congestion of urban space.\n\n**Historical monuments** are central to contemporary tourism. France has strict laws protecting historical heritage, born from the destructions of the French Revolution. To be listed, a monument must present a public interest (protection for future generations): castles, churches, statues, furniture, tapestries. Architects such as Viollet-le-Duc restored sites like Carcassonne and Vézelay. The modern framework is the law of 1913, amended in 1927 and 1985. A monument can be listed by ministerial order after consulting the commission and informing the owner; in urgent cases (major alteration, threat of destruction) without the owner's consent; owners can obtain financial help for maintenance."
+        },
+        {
+          "kind": "explanation", "title": "Checks on the heritage chronology", "provenance": "ACADEMIC_RESEARCH", "sourceKeys": [],
+          "body": "The notes date the Commission des monuments historiques to 1830. The usual chronology distinguishes the creation of the post of **Inspector General of Historic Monuments in 1830** (held by Prosper Mérimée from 1834) and the creation of the **Commission in 1837**. The founding statute of today's protection is the **law of 31 December 1913** on historic monuments. These dates should be checked against the Ministry of Culture's own pages before an exam; they are given here from general historical knowledge, not from a source read for this course."
+        },
+        {
+          "kind": "explanation", "title": "Sustainable tourism and eco-tourism", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "**Sustainable tourism** is described in the notes as environmentally responsible travel that protects the environment and supports local communities. Its first definition is attributed to the **Lanzarote Conference (Canary Islands, 1995)**, which sought a balance between tourism needs and local aspirations, preventive action, and the preservation of the environment and of the tourism product itself.\n\n**Eco-tourism** is a nature-based form whose main motivation is the observation and appreciation of nature and of the traditional cultures of natural areas. It overlaps with green and rural tourism and aims at conservation, education and local socio-economic benefits."
+        },
+        {
+          "kind": "explanation", "title": "Business tourism", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "Business tourism covers travel for professional purposes: conferences, trade fairs (*salons*), corporate meetings, summits. It is also called **MICE** (Meetings, Incentives, Conventions and Events). Meetings and congresses are not always directly profitable, but they have a strong tourist dimension because they rely heavily on accommodation."
+        },
+        {
+          "kind": "explanation", "title": "Wine and gastronomy tourism", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "Your notes record that this lecture (lecture 4) has to be caught up; what follows comes from the notes taken and must be completed.\n\nFrance is presented as a leader in **wine tourism**, which shares features with green and cultural tourism. Saint-Émilion (Gironde) is listed as a UNESCO World Heritage site. The notes mention 3 AOC areas in the Loiret; an AOC (*appellation d'origine contrôlée*) is a protected designation of origin. The figure « 850 000 hectares » for Saint-Émilion is very unlikely (the whole Bordeaux vineyard is of the order of a hundred thousand hectares): check it with the slides.\n\n**Gastronomy tourism** rests on the worldwide reputation of French cuisine and wines, on labels such as Michelin stars and Relais & Châteaux, and on food festivals (lemons in Menton, ham in Bayonne, melons in Cavaillon, foie gras in Sarlat). The **gastronomic meal of the French** was inscribed in 2010 on UNESCO's list of the Intangible Cultural Heritage of Humanity: a meal shared at important moments, with carefully chosen dishes and wines, a decorated table and strong social ties."
+        },
+        {
+          "kind": "explanation", "title": "Other types", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "The notes list **adventure tourism** (remote or exotic places, physically challenging activities, which raises the question of sustainability), **rural tourism** (a simpler, traditional way of life: farm stays, village tours, craft workshops, growing since the coronavirus crisis), **educational tourism** (languages, study abroad, workshops), **wellness tourism** (yoga retreats, spas, *cures thermales*), and seaside, mountain and ski, river, religious (the Way of Saint James) and industrial tourism (industrial heritage, such as Tate Modern).\n\nThe conclusion of the notes: each type answers different interests and motivations; the diversity of tourism in France explains its success, with a major impact of cultural and business tourism, and relies on a dense infrastructure network and job creation."
+        },
+        {
+          "kind": "synthesis", "title": "Synthesis", "provenance": "RECONSTRUCTED_EXPLANATION", "sourceKeys": [],
+          "body": "Types of tourism are defined by the purpose of travel, the destination and the activities. France's success comes from the range it offers: cities and monuments protected since 1913, coasts and mountains, business venues, wine and gastronomy recognised by UNESCO. Each type brings its own problem: congestion in cities, sustainability for adventure and nature tourism, dependence on accommodation for business tourism. For each type, be ready to give a definition, a French example and the issue it raises."
+        }
+      ],
+      "concepts": [
+        { "slug": "tou.types.cultural", "term": "Cultural tourism", "definition": "Travel focused on experiencing the culture, heritage and lifestyle of a destination: historical sites, museums, galleries, festivals.", "intuitive": "Travelling to see what people made and how they live.", "examRelevance": "Give two forms of cultural tourism in France and the problem each raises.", "sourceKeys": [] },
+        { "slug": "tou.types.sustainable", "term": "Sustainable tourism", "definition": "Environmentally responsible tourism that protects the environment and supports local communities; first defined at the Lanzarote Conference in 1995 (your notes).", "intuitive": "Tourism that the destination can still offer in twenty years.", "analytical": "The definition seeks a balance between visitors' needs and residents' aspirations: it is a political compromise as much as an environmental principle.", "sourceKeys": [] },
+        { "slug": "tou.types.mice", "term": "Business tourism (MICE)", "definition": "Travel for professional purposes: meetings, incentives, conventions and events.", "intuitive": "Trips your employer pays for.", "sourceKeys": [], "terms": [{ "fr": "tourisme d'affaires", "en": "business tourism", "es": "turismo de negocios", "definition": "Déplacements à but professionnel : congrès, salons, réunions." }] },
+        { "slug": "tou.types.heritage-protection", "term": "Protection of historical monuments", "definition": "French legal framework, founded on the law of 1913, under which a monument presenting a public interest can be listed by ministerial order, with obligations and financial help for its owner.", "intuitive": "The State can decide that a building matters to everyone, even if it belongs to someone.", "sourceKeys": [] }
+      ],
+      "questions": [
+        { "key": "en.tou.types.1", "type": "matching", "difficulty": 1, "topic": "memoriser", "concept": "tou.types.cultural", "stem": "Match each example with its type of tourism, as presented in your course.",
+          "data": { "pairs": [ { "left": "A weekend city break in Lyon", "right": "Urban tourism" }, { "left": "A trade fair in Paris", "right": "Business tourism" }, { "left": "A spa stay with a cure thermale", "right": "Wellness tourism" }, { "left": "A farm stay in the Auvergne", "right": "Rural tourism" } ] }, "explanation": "Types are defined by the purpose of travel and the activities involved." },
+        { "key": "en.tou.types.2", "type": "single", "difficulty": 1, "topic": "memoriser", "concept": "tou.types.sustainable", "stem": "Where was the first definition of sustainable tourism proposed, according to your notes?",
+          "data": { "choices": [ { "id": "a", "text": "At the Lanzarote Conference, Canary Islands, in 1995", "correct": true, "explanation": "This is the reference given in your notes." }, { "id": "b", "text": "At the Rio Earth Summit in 1992", "correct": false, "explanation": "Rio dealt with sustainable development in general, not the definition cited in your course." }, { "id": "c", "text": "In the IRTS 2008", "correct": false, "explanation": "The IRTS 2008 define statistical concepts (visitor, tourist), not sustainable tourism." } ] }, "explanation": "Lanzarote, 1995." },
+        { "key": "en.tou.types.3", "type": "true_false", "difficulty": 1, "topic": "memoriser", "concept": "tou.types.cultural", "stem": "The gastronomic meal of the French is inscribed on UNESCO's Intangible Cultural Heritage list.",
+          "data": { "choices": [ { "id": "a", "text": "True", "correct": true, "explanation": "It was inscribed in 2010." }, { "id": "b", "text": "False", "correct": false, "explanation": "It was inscribed in 2010, as your notes say." } ] }, "explanation": "UNESCO, 2010." },
+        { "key": "en.tou.types.4", "type": "scenario", "difficulty": 3, "topic": "analyser-cas", "concept": "tou.types.sustainable", "stem": "A small Loire village sees its visitor numbers triple after a château is featured in a popular series. Residents complain about traffic and rising rents. Using the types of tourism and the idea of sustainability from your course, analyse the situation and suggest two responses.",
+          "data": { "rubric": [ "Identifies cultural (heritage) tourism as the type involved", "Names the problem in the terms of the course: excessive tourism, congestion", "Uses the definition of sustainable tourism: balance between tourism needs and local aspirations", "Proposes two concrete, realistic responses (e.g. visitor management, transport, spreading flows over time or space)" ], "modelAnswer": "The village is facing a surge of cultural tourism centred on its château. The problems described, traffic and rising rents, are the effects of excessive tourism that the course associates with popular cultural sites. Sustainable tourism, as defined at Lanzarote in 1995, requires a balance between the needs of tourism and the aspirations of residents. Two responses: managing visitor flows (timed tickets, limited parking with shuttle buses from a nearby town) and spreading demand (promoting other sites of the area and off-season visits)." }, "explanation": "A good answer names the type, the problem and the principle before proposing measures." }
+      ]
+    },
+    {
+      "slug": "tou.actors",
+      "title": "Supporting the tourism industry: the actors",
+      "priority": "ESSENTIAL",
+      "priorityReason": "Last chapter of your lecture notes (« Supporting the tourism industry »).",
+      "researchStatus": "in_progress",
+      "provenance": ["UNIVERSITY_MATERIAL", "RECONSTRUCTED_EXPLANATION"],
+      "summary": "Who makes tourism possible in France: the State, private companies and the social economy.",
+      "sourceKeys": [],
+      "sections": [
+        {
+          "kind": "explanation", "title": "What your lecture notes say", "provenance": "UNIVERSITY_MATERIAL", "sourceKeys": [],
+          "body": "The chapter studies the case of France through three families of actors: **public**, **private**, and **social and non-profit**.\n\nAmong public actors, the **State** treats tourism as a fully recognised economic sector, a strategic pillar of the national economy with dedicated policy and funding. It coordinates the many public bodies and agencies of the sector and combines regulation and promotion (legislation, quality, standards).\n\nThe **National Tourism Council (CNT)** is an advisory body placed under the authority of the minister in charge of tourism. It brings together the sector's stakeholders to advise on tourism policy; the notes date it to 1910 and name the current minister, for SMEs, trade, crafts, tourism and purchasing power, a portfolio attached to the Ministry of the Economy. *Your notes stop here.*"
+        },
+        {
+          "kind": "explanation", "title": "To be completed after the lecture", "provenance": "RECONSTRUCTED_EXPLANATION", "sourceKeys": [],
+          "body": "The rest of the chapter is not in your notes. Following the outline the lecture announced, it most likely covers:\n\n- **other public actors**: the national tourism development agency (Atout France, which promotes France abroad), regional and departmental tourism bodies, and local tourist offices;\n- **private actors**: accommodation (hotels, campsites, rentals), carriers, tour operators and travel agencies, online booking platforms;\n- **social and non-profit actors**: social tourism associations and the organisations that help households go on holiday.\n\nThis list is a reconstruction from the outline, not the content of the lecture. Two points in the notes need checking: the minister's name is spelt « Serge Pepin » (the minister appointed in October 2025 for SMEs, trade, crafts, tourism and purchasing power is Serge Papin; check that he is still in office), and the date 1910, which may refer to the national tourism office created that year rather than to the council."
+        }
+      ],
+      "concepts": [
+        { "slug": "tou.actors.families", "term": "The three families of tourism actors", "definition": "Public actors (the State and its agencies, local authorities), private actors (companies of accommodation, transport, distribution) and social and non-profit actors (associations, social tourism).", "intuitive": "Who decides, who sells, and who helps people go who otherwise could not.", "sourceKeys": [] },
+        { "slug": "tou.actors.cnt", "term": "National Tourism Council (CNT)", "definition": "Advisory body placed under the minister in charge of tourism, bringing together the sector's stakeholders to advise on tourism policy (your notes).", "intuitive": "The room where the industry tells the minister what it thinks.", "sourceKeys": [] }
+      ],
+      "questions": [
+        { "key": "en.tou.actors.1", "type": "single", "difficulty": 1, "topic": "memoriser", "concept": "tou.actors.cnt", "stem": "What kind of body is the National Tourism Council, according to your notes?",
+          "data": { "choices": [ { "id": "a", "text": "An advisory body under the minister in charge of tourism", "correct": true, "explanation": "It advises on tourism policy and gathers the sector's stakeholders." }, { "id": "b", "text": "The agency that promotes France abroad", "correct": false, "explanation": "Promotion abroad is the role of the national tourism development agency, not of the advisory council." }, { "id": "c", "text": "A trade union of hotel owners", "correct": false, "explanation": "It is a public consultative body, not a union." } ] }, "explanation": "Your notes: « a consultative body placed under the authority of the minister in charge of the tourism »." }
+      ]
+    },
+    {
+      "slug": "tou.systeme",
+      "title": "The tourism system",
+      "priority": "IMPORTANT",
+      "priorityReason": "Classic framework of tourism studies; not in your notes so far.",
+      "researchStatus": "reconstructed",
+      "provenance": ["ACADEMIC_RESEARCH", "RECONSTRUCTED_EXPLANATION"],
+      "summary": "One trip, three regions: a model that organises everything else.",
+      "sourceKeys": ["r.leiper-1979", "r.cooper-hall-contemporary-tourism"],
+      "sections": [
+        {
+          "kind": "explanation", "title": "Leiper's model", "provenance": "ACADEMIC_RESEARCH", "sourceKeys": ["r.leiper-1979"],
+          "body": "Neil Leiper (1979) described tourism as a system of three geographical regions connected by the traveller's movement: the **generating region**, where the trip starts and ends; the **transit route region**; and the **destination region**. The tourism industry is spread across the three, and the whole sits within an economic, political, technological and social environment.\n\nThe model is often read with **push** factors (income, holidays, the desire to escape), attached to the generating region, and **pull** factors (climate, heritage, prices, accessibility), attached to the destination.\n\n```diagram\nleiper\n```\n\nApplied to your course: France is a destination region for German tourists, a transit region for the Belgian family driving to Spain, and a generating region for French residents travelling abroad."
+        }
+      ],
+      "concepts": [
+        { "slug": "tou.systeme.leiper", "term": "Tourism system (Leiper)", "definition": "Model describing tourism as three geographical regions — generating, transit route and destination — linked by the traveller, with the industry spread across them, within a wider environment (Leiper, 1979).", "intuitive": "Every trip has a starting point, a road and an end point; each has its own actors.", "sourceKeys": ["r.leiper-1979"] }
+      ],
+      "questions": [
+        { "key": "en.tou.systeme.1", "type": "ordering", "difficulty": 1, "topic": "comprendre", "concept": "tou.systeme.leiper", "stem": "Put the regions of Leiper's tourism system in the order a traveller goes through them on the outward journey.",
+          "data": { "items": [ "Generating region", "Transit route region", "Destination region" ] }, "explanation": "The trip starts and ends in the generating region; the transit route links it to the destination." }
+      ]
+    },
+    {
+      "slug": "tou.destination",
+      "title": "The destination life cycle",
+      "priority": "ADVANCED",
+      "priorityReason": "Deepens the analysis of destinations; not in your notes.",
+      "researchStatus": "reconstructed",
+      "provenance": ["ACADEMIC_RESEARCH"],
+      "summary": "Destinations are born, grow, saturate, and either reinvent themselves or decline.",
+      "sourceKeys": ["r.butler-1980"],
+      "sections": [
+        {
+          "kind": "explanation", "title": "Butler's tourism area life cycle", "provenance": "ACADEMIC_RESEARCH", "sourceKeys": ["r.butler-1980"],
+          "body": "Richard Butler (1980) proposed that a destination goes through stages: **exploration**, **involvement**, **development**, **consolidation**, **stagnation**, then either **decline** or **rejuvenation**. The model is descriptive: phases last very differently from one destination to another, and it does not predict when a destination will stagnate.\n\n```diagram\nbutler\n```\n\nIt links back to the types of tourism: the problems of excessive tourism described in your notes for cities are typical of the consolidation and stagnation stages."
+        }
+      ],
+      "concepts": [
+        { "slug": "tou.destination.talc", "term": "Tourism area life cycle", "definition": "Model in which a destination passes through exploration, involvement, development, consolidation and stagnation, followed by decline or rejuvenation (Butler, 1980).", "intuitive": "A destination ages like a product: discovery, success, saturation, then renewal or decline.", "sourceKeys": ["r.butler-1980"] }
+      ],
+      "questions": []
+    },
+    {
+      "slug": "tou.crises",
+      "title": "Crises and resilience",
+      "priority": "ADVANCED",
+      "priorityReason": "Current context; not in your notes.",
+      "researchStatus": "reconstructed",
+      "provenance": ["OFFICIAL_SOURCE"],
+      "summary": "Tourism is the first activity to stop in a crisis and among the slowest to recover.",
+      "sourceKeys": ["r.untourism-barometre-2026-09", "r.untourism-2025"],
+      "sections": [
+        {
+          "kind": "explanation", "title": "The latest data", "provenance": "OFFICIAL_SOURCE", "sourceKeys": ["r.untourism-barometre-2026-09"],
+          "body": "In the first half of 2026, international arrivals grew by only 0.4 % worldwide (about 690 million), according to UN Tourism's September 2026 barometer. The conflict in the Middle East, high oil prices and inflation weighed on travel: arrivals in the Middle East fell by 22 %, while Africa (+4 %) and Europe (+3 %) grew. Asia and the Pacific remained 11 % below 2019. UN Tourism lowered its forecast for 2026 to growth of 1 to 2 %.\n\nYour notes mention the coronavirus crisis as a driver of rural tourism: crises do not only reduce tourism, they also move it towards closer, less crowded destinations."
+        }
+      ],
+      "concepts": [],
+      "questions": []
+    }
+  ]
+}

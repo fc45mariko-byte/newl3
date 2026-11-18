@@ -324,6 +324,30 @@
       "acces": "extrait",
       "consulte": "2026-11-17",
       "pertinence": "Popularise l'expression « iron triangle » et propose d'autres critères de succès (« The Square Route »)."
+    },
+    {
+      "id": "r.ico-coffee",
+      "niveau": "P3",
+      "titre": "International Coffee Organization — statistiques du marché du café",
+      "auteur": "Organisation internationale du café (ICO)",
+      "date": "mise à jour régulière",
+      "url": "https://www.ico.org/",
+      "type": "Organisation intergouvernementale",
+      "acces": "reference",
+      "consulte": "2026-11-18",
+      "pertinence": "Production et exportations de café par pays, rang du Brésil comme premier producteur. Chiffres à relever sur le site avant de les citer."
+    },
+    {
+      "id": "r.taric",
+      "niveau": "P3",
+      "titre": "TARIC — Tarif intégré des Communautés européennes",
+      "auteur": "Commission européenne, DG Fiscalité et union douanière",
+      "date": "base mise à jour quotidiennement",
+      "url": "https://ec.europa.eu/taxation_customs/dds2/taric/taric_consultation.jsp",
+      "type": "Base de données officielle",
+      "acces": "reference",
+      "consulte": "2026-11-18",
+      "pertinence": "Droits de douane et mesures applicables par code de nomenclature, dont 0901 11 (café non torréfié, non décaféiné)."
     }
   ]
 }

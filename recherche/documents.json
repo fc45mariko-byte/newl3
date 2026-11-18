@@ -429,6 +429,51 @@
       "ecarts": [
         "L'en-tête porte la date du 08/09/2025 alors que le nom du fichier (070926) et le dossier renvoient à septembre 2026 : en-tête probablement non mis à jour."
       ]
+    },
+    {
+      "id": "doc.tou-notes",
+      "fichier": "ENGLISH.pdf",
+      "md5": "",
+      "recu": "2026-11-18",
+      "auteur": "Notes de cours prises par l'étudiante (Introduction to international tourism)",
+      "matiere": "tou",
+      "nature": "Notes de cours en anglais, 7 pages : les premiers cours d'Intro international tourism",
+      "plan": [
+        "Intro: the international market in France; UNWTO classification (arrivals, receipts, exports); tourists and excursionists; indicators",
+        "France, the world's leading destination: figures, origin markets, regions, accommodation, purposes of travel",
+        "Types of tourism: cultural (urban tourism, historical monuments and their protection), sustainable and eco-tourism, business tourism (MICE), wine and gastronomy tourism, adventure, rural, educational, wellness and others",
+        "Chapter: Supporting the tourism industry — public, private, social and non-profit actors (notes stop at the National Tourism Council)",
+        "[Cours 4 à rattraper : wine tourism]"
+      ],
+      "couvre": [],
+      "ajoute": [],
+      "ecarts": [
+        "The arrival figures in the notes (84.9 million, Spain 83.7 million, USA 79.3 million) do not match the latest data: France received an estimated 102 million international tourists in 2025 (Atout France). The notes probably reproduce older slides: check which year the teacher used.",
+        "« S-Emilion represented 850 000 hectares » is very unlikely: the whole Bordeaux vineyard covers roughly a hundred thousand hectares. Check the figure (possibly hectolitres, or another unit).",
+        "The minister named in the notes is spelt « Serge Pepin »; the minister appointed in October 2025 for SMEs, trade, crafts, tourism and purchasing power is Serge Papin. Check that he is still in office.",
+        "The notes date the Commission des monuments historiques to 1830; 1830 is the creation of the post of Inspector General of Historic Monuments, and the Commission itself dates from 1837. To verify against an official source.",
+        "Course language: the notes are in English and the timetable says « Intro international tourism »: the course is most likely taught in English."
+      ]
+    },
+    {
+      "id": "doc.aec-td-letters",
+      "fichier": "Td anglais économique et commercial.pdf",
+      "md5": "",
+      "recu": "2026-11-18",
+      "auteur": "Corrigé de TD (anglais économique et commercial)",
+      "matiere": "aec",
+      "nature": "TD de correspondance commerciale, 12 pages, avec traductions et corrections",
+      "plan": [
+        "Business Letters Part 1: layout, dates, opening and closing formulas (Yours sincerely / Yours faithfully…) and their French equivalents",
+        "Business Letters Part 2: formal and less formal registers; rewriting and correcting letters",
+        "Exercise 6: translating standard business phrases (enquiries, confirmations, reminders)",
+        "Cover letter phrases for a job application (marketing assistant)"
+      ],
+      "couvre": [
+        "aec.correspondance"
+      ],
+      "ajoute": [],
+      "ecarts": []
     }
   ]
 }
