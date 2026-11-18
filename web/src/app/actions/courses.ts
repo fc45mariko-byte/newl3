@@ -103,7 +103,7 @@ export async function uploadDocuments(slug: string, _: ActionState, form: FormDa
 export async function deleteDocument(slug: string, id: string) {
   const u = await requireUser();
   const [d] = await db.delete(s.documents).where(and(eq(s.documents.id, id), eq(s.documents.userId, u.id))).returning();
-  if (d) await unlink(d.storagePath).catch(() => undefined);
+  if (d && !d.storagePath.startsWith('db:')) await unlink(d.storagePath).catch(() => undefined); // older documents stored on disk
   revalidatePath(`/courses/${slug}/resources`);
 }
 

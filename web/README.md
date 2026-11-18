@@ -10,7 +10,7 @@ A study application for the L3 LEA *Affaires et commerce international* (Univers
 | Styling | Tailwind CSS 4 (`@theme` tokens in `src/app/globals.css`), DM Serif Display + Inter (self-hosted via Fontsource) |
 | Database | PostgreSQL 16, Drizzle ORM, SQL migrations in `drizzle/` |
 | Auth | Email + password (bcrypt), opaque session token in an httpOnly cookie, SHA-256 of the token stored in `sessions` |
-| Documents | `.pdf` (unpdf), `.docx` (mammoth), `.pptx` (JSZip: slides, titles, notes, tables), `.txt` / `.md` |
+| Documents | originals stored in PostgreSQL (`document_files`); `.pdf` (unpdf), `.docx` (mammoth), `.pptx` (JSZip: slides, titles, notes, tables), `.txt` / `.md` |
 | AI | `@anthropic-ai/sdk`, streaming Messages API; web search tool in *Research* mode |
 | Graph | d3-force |
 | Tests | Vitest (unit), Playwright (end-to-end, desktop + Pixel 7) |
@@ -24,7 +24,7 @@ cd web
 cp .env.example .env            # then edit DATABASE_URL etc.
 npm install
 createdb leastudy               # or any database named in DATABASE_URL
-npm run db:migrate              # applies drizzle/0000…0002
+npm run db:migrate              # applies drizzle/0000…0003
 npm run db:seed                 # optional: creates one account with the full curriculum
 npm run dev                     # http://localhost:3000
 # production
@@ -59,12 +59,30 @@ To regenerate `data/curriculum.json` from the `cours` repository and the researc
 COURS_DIR=../../cours npx tsx scripts/build-curriculum.ts
 ```
 
+### Putting it online (Render)
+
+`render.yaml`, at the repository root, describes the deployment: one Node web service (`web/`) and one PostgreSQL database, in Frankfurt.
+
+1. Create an account at render.com and connect GitHub.
+2. Choose **New → Blueprint**, then select the `newl3` repository and the branch that holds this code.
+3. Render asks for two values:
+   - `SIGNUP_CODE`: choose an invitation code; without it, anyone can create an account;
+   - `ANTHROPIC_API_KEY`: optional, it enables the companion.
+4. Render builds the app, runs the migrations at start and gives an address ending in `.onrender.com`. Open it, create your account with the code, and the curriculum is set up.
+
+Limits of the free plans (Render documentation, checked 18/11/2026):
+- the service sleeps after 15 minutes without visits, and the next visit takes a while to wake it;
+- **the free database expires 30 days after creation**, then is deleted after a 14-day grace period; to keep your data, move the database to a paid plan before then.
+
+Uploaded files are stored in the database, so they survive restarts on hosts without a persistent disk.
+
 ### Environment variables
 
 | Variable | Required | Meaning |
 |---|---|---|
 | `DATABASE_URL` | yes | `postgres://user:pass@host:5432/leastudy` |
-| `STORAGE_DIR` | no (default `./storage`) | Where uploaded originals are stored, one folder per user |
+| `SIGNUP_CODE` | recommended online | If set, creating an account requires this invitation code |
+| `STORAGE_DIR` | no | Only for documents uploaded before originals moved into the database (`document_files`) |
 | `ANTHROPIC_API_KEY` | for the companion | Without it, the companion panel says it is not configured and `/api/assistant` returns 503 |
 | `ANTHROPIC_MODEL` | no (default `claude-opus-5-5`) | Model used by the companion |
 | `COURS_DIR` | only for `build-curriculum.ts` | Path to the `cours` repository |
@@ -198,5 +216,6 @@ The unit tests cover:
 - Scanned PDFs (no text layer) are stored but not read: there is no OCR.
 - Documents whose filename does not match a course material (for example, the container-transport article) are not assigned to a course automatically.
 - The interface (navigation, buttons) is in English. Course content is in each course's language.
-- There is no deployment configuration, no password reset and no email verification.
+- A Render deployment file exists (`render.yaml`). It has been tested locally: a build without `.env`, migrations on an empty database, the invitation code, and an upload whose file is still there after a restart. It has not yet been deployed on Render itself.
+- There is no password reset and no email verification.
 - Recurrence is weekly only.

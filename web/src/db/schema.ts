@@ -1,7 +1,7 @@
 // Relational model of LEA Study. Every academic record belongs to a user through its course,
 // so one student's data never mixes with another's.
 import {
-  pgTable, pgEnum, text, integer, boolean, timestamp, jsonb, real, uuid, uniqueIndex, index, primaryKey, date,
+  pgTable, pgEnum, customType, text, integer, boolean, timestamp, jsonb, real, uuid, uniqueIndex, index, primaryKey, date,
 } from 'drizzle-orm/pg-core';
 
 export const languageEnum = pgEnum('language', ['fr', 'en', 'es']);
@@ -193,6 +193,13 @@ export const notes = pgTable('notes', {
   createdAt: now(),
   updatedAt: timestamp('updated_at', { withTimezone: true }).defaultNow().notNull(),
 }, (t) => [index('notes_user_idx').on(t.userId)]);
+
+// Original uploaded files, kept in the database so a host without a persistent disk loses nothing.
+const bytea = customType<{ data: Buffer; driverData: Buffer }>({ dataType: () => 'bytea' });
+export const documentFiles = pgTable('document_files', {
+  documentId: uuid('document_id').primaryKey().references(() => documents.id, { onDelete: 'cascade' }),
+  content: bytea('content').notNull(),
+});
 
 export const questions = pgTable('questions', {
   id: uuid('id').primaryKey().defaultRandom(),

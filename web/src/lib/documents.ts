@@ -1,12 +1,11 @@
 import { createHash } from 'node:crypto';
-import { mkdir, writeFile, readdir, readFile } from 'node:fs/promises';
-import { join, resolve, extname } from 'node:path';
+import { readdir, readFile } from 'node:fs/promises';
+import { join, extname } from 'node:path';
 import { and, eq } from 'drizzle-orm';
 import { db, schema } from '@/db';
 import { extract, kindFor, ExtractionError } from './extract';
 
 export const MAX_BYTES = 25 * 1024 * 1024;
-const storageRoot = () => resolve(process.env.STORAGE_DIR ?? './storage');
 
 const MIME: Record<string, string> = {
   pdf: 'application/pdf',
@@ -31,14 +30,15 @@ export async function saveDocument(userId: string, input: { filename: string; mi
     .from(schema.documents).where(and(eq(schema.documents.userId, userId), eq(schema.documents.sha256, sha256)));
   if (dup) return { id: dup.id, status: dup.status as 'extracted' | 'failed', duplicate: true, error: dup.error };
 
-  const dir = join(storageRoot(), userId);
-  await mkdir(dir, { recursive: true });
-  const storagePath = join(dir, `${sha256}${extname(input.filename).toLowerCase() || `.${kind}`}`);
-  await writeFile(storagePath, input.buffer);
-  const [doc] = await db.insert(schema.documents).values({
-    userId, courseId: input.courseId ?? null, chapterId: input.chapterId ?? null, filename: input.filename,
-    mime: MIME[kind] ?? input.mime, size: input.buffer.length, sha256, storagePath, status: 'pending', note: input.note ?? null,
-  }).returning({ id: schema.documents.id });
+  // The original goes into the database (document_files); storagePath only records where it is.
+  const doc = await db.transaction(async (tx) => {
+    const [d] = await tx.insert(schema.documents).values({
+      userId, courseId: input.courseId ?? null, chapterId: input.chapterId ?? null, filename: input.filename,
+      mime: MIME[kind] ?? input.mime, size: input.buffer.length, sha256, storagePath: `db:${sha256}${extname(input.filename).toLowerCase() || `.${kind}`}`, status: 'pending', note: input.note ?? null,
+    }).returning({ id: schema.documents.id });
+    await tx.insert(schema.documentFiles).values({ documentId: d.id, content: input.buffer });
+    return d;
+  });
   try {
     const out = await extract(input.buffer, kind);
     await db.update(schema.documents).set({ status: 'extracted', text: out.text, structure: out.structure }).where(eq(schema.documents.id, doc.id));
@@ -48,6 +48,14 @@ export async function saveDocument(userId: string, input: { filename: string; mi
     await db.update(schema.documents).set({ status: 'failed', error: message }).where(eq(schema.documents.id, doc.id));
     return { id: doc.id, status: 'failed', duplicate: false, error: message };
   }
+}
+
+/** The original bytes: from the database, or from disk for documents stored before files moved to the database. */
+export async function readOriginal(doc: { id: string; storagePath: string }): Promise<Buffer | null> {
+  const [f] = await db.select({ content: schema.documentFiles.content }).from(schema.documentFiles).where(eq(schema.documentFiles.documentId, doc.id));
+  if (f) return Buffer.from(f.content);
+  if (doc.storagePath.startsWith('db:')) return null;
+  return readFile(doc.storagePath).catch(() => null);
 }
 
 // Compact form: lower case, no accents, letters and digits only ("L'ASSURANCE" and "LASSURANCE" compare equal).

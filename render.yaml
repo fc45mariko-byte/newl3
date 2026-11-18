@@ -1,0 +1,34 @@
+# Render Blueprint for LEA·Study: one web service (Next.js) and one PostgreSQL database.
+# In Render: New → Blueprint → choose this repository and branch.
+services:
+  - type: web
+    name: lea-study
+    runtime: node
+    plan: free
+    region: frankfurt
+    rootDir: web
+    buildCommand: npm ci && npm run build
+    # The free plan has no pre-deploy step, so migrations run at start (they are idempotent).
+    startCommand: npm run db:migrate:deploy && npm start
+    healthCheckPath: /login
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: lea-study-db
+          property: connectionString
+      - key: NODE_VERSION
+        value: "22"
+      - key: ANTHROPIC_MODEL
+        value: claude-opus-5-5
+      - key: ANTHROPIC_API_KEY # optional: enables the study companion
+        sync: false
+      - key: SIGNUP_CODE # invitation code required to create an account
+        sync: false
+
+databases:
+  - name: lea-study-db
+    plan: free
+    region: frankfurt
+    databaseName: leastudy
+    user: leastudy
+    postgresMajorVersion: "16"

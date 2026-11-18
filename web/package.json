@@ -6,14 +6,15 @@
   "scripts": {
     "dev": "next dev -p 3000",
     "build": "next build",
-    "start": "next start -p 3000",
+    "start": "next start",
     "typecheck": "tsc --noEmit",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "tsx --env-file=.env scripts/migrate.ts",
+    "db:migrate": "node --env-file=.env scripts/migrate.mjs",
     "db:seed": "tsx --env-file=.env scripts/seed.ts",
     "test": "vitest run",
     "test:e2e": "playwright test --trace off",
-    "db:sync": "tsx --env-file=.env scripts/sync.ts"
+    "db:sync": "tsx --env-file=.env scripts/sync.ts",
+    "db:migrate:deploy": "node scripts/migrate.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.10.0",
@@ -45,5 +46,8 @@
     "tsx": "^4.23.15",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }

@@ -1,4 +1,5 @@
 'use server';
+import { timingSafeEqual } from 'node:crypto';
 import bcrypt from 'bcryptjs';
 import { eq } from 'drizzle-orm';
 import { redirect } from 'next/navigation';
@@ -15,7 +16,17 @@ const Signup = z.object({
   password: z.string().min(10, 'Use at least 10 characters.').max(200),
 });
 
+// When SIGNUP_CODE is set (public deployment), creating an account requires it.
+const codeMatches = (given: string) => {
+  const want = process.env.SIGNUP_CODE;
+  if (!want) return true;
+  const a = Buffer.from(given), b = Buffer.from(want);
+  return a.length === b.length && timingSafeEqual(a, b);
+};
+
 export async function signup(_: FormState, form: FormData): Promise<FormState> {
+  if (!codeMatches(String(form.get('code') ?? ''))) return { error: 'This invitation code is not valid.', fields: { name: String(form.get('name') ?? ''), email: String(form.get('email') ?? '') } };
+  form.delete('code');
   const parsed = Signup.safeParse(Object.fromEntries(form));
   if (!parsed.success) return { error: parsed.error.issues[0].message, fields: { name: String(form.get('name') ?? ''), email: String(form.get('email') ?? '') } };
   const { name, email, password } = parsed.data;
