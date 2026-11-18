@@ -1,0 +1,1473 @@
+<title>LEA·Study</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: cream sidebar + blush workspace of soft cards, as in the LEA·Study mockup; one-column stack under 900px. */
+:root {
+  --bg: #fbeef1;
+  --surface: #fff9f9;
+  --surface-2: #fdf3f5;
+  --side: #fbf1dc;
+  --ink: #4a2234;
+  --muted: #8a6573;
+  --line: #f0d8df;
+  --accent: #d0607f;
+  --accent-ink: #ffffff;
+  --accent-soft: #f7d5de;
+  --gold: #e3a845;
+  --gold-soft: #fbecc9;
+  --ok: #3f8f6b;
+  --ok-soft: #dcefe5;
+  --warn: #b7791f;
+  --warn-soft: #fbeccd;
+  --bad: #b8435a;
+  --bad-soft: #f8d9df;
+  --shadow: 0 1px 2px rgba(120, 50, 75, .06), 0 6px 20px rgba(120, 50, 75, .07);
+  --font-display: "Playfair Display", "Iowan Old Style", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r: 16px;
+  --r-sm: 10px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1d1318; --surface: #281b22; --surface-2: #2f2028; --side: #2a2119; --ink: #f6e5ec; --muted: #bea0ad;
+    --line: #3e2a34; --accent: #ef8eab; --accent-ink: #2a121c; --accent-soft: #4b2a38; --gold: #e9bd68; --gold-soft: #3f321c;
+    --ok: #7fcaa6; --ok-soft: #1f3a2e; --warn: #e7b765; --warn-soft: #3d311b; --bad: #f094a8; --bad-soft: #4a2530;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1d1318; --surface: #281b22; --surface-2: #2f2028; --side: #2a2119; --ink: #f6e5ec; --muted: #bea0ad;
+  --line: #3e2a34; --accent: #ef8eab; --accent-ink: #2a121c; --accent-soft: #4b2a38; --gold: #e9bd68; --gold-soft: #3f321c;
+  --ok: #7fcaa6; --ok-soft: #1f3a2e; --warn: #e7b765; --warn-soft: #3d311b; --bad: #f094a8; --bad-soft: #4a2530;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { height: 100%; }
+body { background: var(--bg); color: var(--ink); font: 14px/1.55 var(--font-body); }
+button, input, select, textarea { font: inherit; color: inherit; }
+a { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 600; text-wrap: balance; margin: 0; letter-spacing: -.01em; }
+.app { display: grid; grid-template-columns: 220px minmax(0, 1fr); min-height: 100%; background: linear-gradient(to right, var(--side) 220px, transparent 220px); }
+.side { background: var(--side); border-right: 1px solid var(--line); padding: 22px 14px; display: flex; flex-direction: column; gap: 18px; position: sticky; top: 0; height: 100vh; }
+.brand { font-family: var(--font-display); font-style: italic; font-size: 26px; font-weight: 600; padding: 0 10px; color: var(--ink); text-decoration: none; }
+.brand span { color: var(--accent); }
+.nav { display: flex; flex-direction: column; gap: 2px; }
+.nav a { display: flex; align-items: center; gap: 10px; padding: 8px 10px; border-radius: 10px; color: var(--ink); text-decoration: none; font-weight: 500; }
+.nav a:hover { background: var(--accent-soft); }
+.nav a[aria-current="page"] { background: var(--accent-soft); color: var(--accent); }
+.nav svg { width: 18px; height: 18px; flex: none; }
+.side .grow { flex: 1; }
+.main { padding-block: 26px 60px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); min-width: 0; }
+.main > .wrap { max-width: 1240px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; padding-inline: clamp(0px, 2vw, 18px); }
+.top { display: flex; flex-wrap: wrap; gap: 14px; align-items: flex-end; justify-content: space-between; }
+.top h1 { font-size: clamp(30px, 4vw, 42px); font-weight: 700; }
+.top .sub { font-family: var(--font-display); font-style: italic; font-size: 18px; color: var(--muted); }
+.top .sub b { color: var(--ink); font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 14px; font-weight: 500; font-size: 13px; white-space: nowrap; }
+.chip svg { width: 15px; height: 15px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); box-shadow: var(--shadow); padding: 18px; min-width: 0; }
+.card h2 { font-size: 20px; display: flex; align-items: center; gap: 8px; }
+.card h2 svg { width: 20px; height: 20px; color: var(--accent); }
+.card h3 { font-size: 16px; }
+.card-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 12px; flex-wrap: wrap; }
+.muted { color: var(--muted); }
+.small { font-size: 12.5px; }
+.grid { display: grid; gap: 18px; }
+.g-dash-top { grid-template-columns: 1.45fr .8fr .9fr 1fr; }
+.g-dash-mid { grid-template-columns: minmax(0, 3fr) minmax(0, 1fr); }
+.g-dash-bot { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (min-width: 1560px) { .g-dash-bot { grid-template-columns: 1.15fr 1fr 1.1fr 1fr; } }
+.g-courses { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
+.g-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@media (max-width: 1180px) { .g-dash-top { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) {
+  .app { grid-template-columns: 1fr; background: none; }
+  .side { position: sticky; top: env(safe-area-inset-top, 0px); height: auto; z-index: 5; flex-direction: row; align-items: center; justify-content: space-between; padding: 10px max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); border-right: 0; border-bottom: 1px solid var(--line); }
+  .side .grow { display: none; }
+  .side-foot a span { display: none; }
+  .nav#nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 15; flex-direction: row; gap: 0; overflow-x: auto; background: var(--side); border-top: 1px solid var(--line); padding: 4px max(8px, env(safe-area-inset-right, 0px)) calc(4px + env(safe-area-inset-bottom, 0px)) max(8px, env(safe-area-inset-left, 0px)); scrollbar-width: none; }
+  .nav#nav a { flex: 1 0 64px; flex-direction: column; gap: 2px; padding: 6px 4px; font-size: 10.5px; border-radius: 10px; }
+  .main { padding-bottom: calc(90px + env(safe-area-inset-bottom, 0px)); }
+  .brand { font-size: 22px; padding: 0; }
+  .g-dash-mid, .g-2 { grid-template-columns: minmax(0, 1fr); }
+  .fab { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); width: 52px; height: 52px; padding: 0; font-size: 0; }
+  .fab::before { content: "✦"; font-size: 20px; }
+  .drawer { bottom: calc(76px + env(safe-area-inset-bottom, 0px)); }
+  .chap-list { display: none !important; }
+  .chap-select { display: block !important; }
+  .chap-nav { position: static !important; max-height: none !important; }
+  .notion > summary { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .top h1 { font-size: 30px; }
+}
+@media (max-width: 560px) { .g-dash-top, .g-dash-bot { grid-template-columns: minmax(0, 1fr); } .g-courses { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; } .course-card .name { font-size: 14px; } .form-row { grid-template-columns: 1fr; } .form-row .field { grid-column: auto !important; } .card { padding: 14px; } }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--side); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; border: 1px solid var(--line); background: var(--surface); padding: 7px 14px; border-radius: 999px; cursor: pointer; font-weight: 500; text-decoration: none; color: var(--ink); }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.soft { background: var(--accent-soft); border-color: transparent; color: var(--accent); }
+.btn.ghost { background: transparent; border-color: transparent; color: var(--accent); padding-inline: 6px; }
+.btn[disabled] { opacity: .5; cursor: default; }
+.btn svg { width: 16px; height: 16px; }
+.seg { display: inline-flex; flex-wrap: wrap; max-width: 100%; background: var(--surface-2); border: 1px solid var(--line); border-radius: 999px; padding: 3px; gap: 2px; }
+.seg button { border: 0; background: transparent; padding: 5px 14px; border-radius: 999px; cursor: pointer; font-weight: 500; color: var(--muted); }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--accent); }
+input[type=text], input[type=date], input[type=time], input[type=number], select, textarea { background: var(--surface-2); border: 1px solid var(--line); border-radius: 10px; padding: 8px 10px; width: 100%; min-width: 0; }
+textarea { resize: vertical; min-height: 120px; line-height: 1.5; }
+label.field { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: var(--muted); font-weight: 500; }
+.form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; align-items: end; }
+
+/* Dashboard pieces */
+.goal { display: grid; grid-template-columns: 96px 1fr; gap: 14px; padding: 0; overflow: hidden; }
+.goal .art { background: var(--accent-soft); display: grid; place-items: center; }
+.goal .body { padding: 16px 16px 16px 0; }
+.check { display: flex; gap: 8px; align-items: flex-start; padding: 4px 0; cursor: pointer; }
+.check input { accent-color: var(--accent); margin-top: 3px; width: 15px; height: 15px; flex: none; }
+.check.done span { color: var(--muted); text-decoration: line-through; }
+.ring { display: grid; place-items: center; position: relative; }
+.ring svg { width: 120px; height: 120px; transform: rotate(-90deg); }
+.ring .val { position: absolute; font-family: var(--font-display); font-size: 28px; font-weight: 600; }
+.next-class { background: var(--gold-soft); border-color: transparent; }
+.next-class .what { font-weight: 600; font-size: 15px; margin-top: 8px; }
+.todo-list { display: flex; flex-direction: column; gap: 2px; max-height: 220px; overflow: auto; }
+.todo-add { display: flex; gap: 6px; margin-top: 10px; }
+.course-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; text-decoration: none; color: var(--ink); transition: transform .15s ease, box-shadow .15s ease; }
+.course-card:hover { transform: translateY(-2px); }
+.course-card .pic { aspect-ratio: 16 / 8; max-width: 100%; display: block; }
+.course-card .pic svg { width: 100%; height: 100%; display: block; }
+.course-card .info { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.course-card .name { font-family: var(--font-display); font-weight: 600; font-size: 16px; line-height: 1.25; }
+.bar { height: 6px; background: var(--surface-2); border-radius: 99px; overflow: hidden; flex: 1; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 99px; }
+.bar-row { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; margin-top: auto; }
+.list-item { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.list-item > * { min-width: 0; }
+.list-item:last-child { border-bottom: 0; }
+.icon-tile { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); flex: none; }
+.icon-tile svg { width: 18px; height: 18px; }
+.tools { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.tool { background: var(--surface-2); border: 1px solid var(--line); border-radius: 14px; padding: 14px 10px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 6px; cursor: pointer; color: var(--ink); text-decoration: none; }
+.tool:hover { border-color: var(--accent); }
+.tool svg { width: 30px; height: 30px; color: var(--accent); }
+.tool b { font-family: var(--font-display); font-size: 16px; }
+.journey { display: grid; grid-template-columns: minmax(120px, 1fr) minmax(0, 1.4fr); gap: 14px; }
+.journey .art { border-radius: 12px; overflow: hidden; min-height: 150px; }
+@media (max-width: 480px) { .journey { grid-template-columns: 1fr; } .journey .art { min-height: 120px; aspect-ratio: 2 / 1; } }
+.journey .art svg { width: 100%; height: 100%; display: block; }
+.badges { display: flex; gap: 8px; margin-top: 10px; }
+.badge { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--gold-soft); color: var(--warn); position: relative; }
+.badge.locked { background: var(--surface-2); color: var(--muted); opacity: .7; }
+.badge svg { width: 20px; height: 20px; }
+.quest { display: flex; align-items: center; gap: 8px; padding: 5px 0; font-size: 13px; }
+.quest .pts { margin-left: auto; color: var(--muted); font-variant-numeric: tabular-nums; }
+.quest .box { width: 16px; height: 16px; border-radius: 4px; border: 1.5px solid var(--line); display: grid; place-items: center; flex: none; }
+.quest.done .box { background: var(--gold); border-color: var(--gold); color: #fff; }
+
+/* Schedule */
+.week { min-width: 460px; display: grid; grid-template-columns: 44px repeat(5, minmax(0, 1fr)); font-size: 12px; overflow-x: auto; }
+.week .head { text-align: center; padding: 6px 0; font-weight: 600; color: var(--muted); }
+.week .head.today span { background: var(--accent-soft); color: var(--accent); border-radius: 8px; padding: 2px 8px; }
+.week .hours { position: relative; }
+.week .hours div { height: 40px; color: var(--muted); font-variant-numeric: tabular-nums; transform: translateY(-7px); }
+.week .col { position: relative; border-left: 1px dashed var(--line); min-height: 440px; }
+.slot { position: absolute; left: 4px; right: 4px; border-radius: 8px; padding: 4px 6px; font-size: 11.5px; line-height: 1.3; overflow: hidden; border: 1px solid transparent; }
+.slot b { display: block; font-weight: 600; }
+.slot.k0 { background: var(--accent-soft); color: var(--ink); }
+.slot.k1 { background: var(--gold-soft); color: var(--ink); }
+.slot.k2 { background: var(--ok-soft); color: var(--ink); }
+.slot.deadline { background: var(--bad-soft); border-color: var(--bad); }
+.slot button { all: unset; cursor: pointer; float: right; color: var(--muted); }
+.month { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; font-size: 12px; }
+.month .d { background: var(--surface-2); border-radius: 8px; min-height: 64px; padding: 4px 6px; }
+.month .d.out { opacity: .4; }
+.month .d.today { outline: 2px solid var(--accent); }
+.month .d i { display: block; font-style: normal; background: var(--bad-soft); border-radius: 4px; padding: 0 4px; margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* Course page */
+.banner { border-radius: var(--r); overflow: hidden; height: 150px; position: relative; }
+.banner svg { width: 100%; height: 100%; display: block; }
+.tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--line); overflow-x: auto; }
+.tabs button { border: 0; background: transparent; padding: 10px 14px; cursor: pointer; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.course-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 900px) { .course-layout { grid-template-columns: minmax(0, 1fr); } }
+.course-layout > *, #chap-body, #tab-body { min-width: 0; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.chap-list { display: flex; flex-direction: column; gap: 2px; }
+.chap-nav { display: flex; flex-direction: column; gap: 2px; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow: auto; }
+.chap-nav button { all: unset; box-sizing: border-box; display: grid; grid-template-columns: 26px 1fr; gap: 6px; padding: 8px 10px; border-radius: 10px; cursor: pointer; font-size: 13.5px; line-height: 1.35; }
+.chap-nav button:hover { background: var(--surface-2); }
+.chap-nav button[aria-current="true"] { background: var(--accent-soft); color: var(--accent); font-weight: 600; }
+.chap-nav .n { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12px; padding-top: 1px; }
+.chap-select { display: none; }
+.chap-nav .done-dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--ok); margin-left: 6px; vertical-align: middle; }
+.label { display: inline-flex; align-items: center; gap: 4px; font-size: 10.5px; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; border-radius: 6px; padding: 2px 7px; white-space: nowrap; }
+.l-univ { background: var(--ok-soft); color: var(--ok); }
+.l-acad { background: var(--accent-soft); color: var(--accent); }
+.l-reco { background: var(--gold-soft); color: var(--warn); }
+.l-supp { background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.p-ESSENTIAL { background: var(--bad-soft); color: var(--bad); }
+.p-IMPORTANT { background: var(--warn-soft); color: var(--warn); }
+.p-ADVANCED { background: var(--surface-2); color: var(--muted); border: 1px solid var(--line); }
+.st { font-size: 12px; color: var(--muted); display: inline-flex; align-items: center; gap: 6px; }
+.st::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--line); }
+.st.s4::before { background: var(--ok); } .st.s3::before { background: var(--ok); opacity: .6; } .st.s2::before { background: var(--gold); }
+.st.s1::before { background: var(--warn); } .st.s0::before { background: var(--bad); }
+.labels { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.keys { background: var(--gold-soft); border-radius: 14px; padding: 14px 16px; }
+.keys h3 { display: flex; gap: 8px; align-items: center; }
+.keys ul { margin: 8px 0 0; padding-left: 18px; }
+.keys li { margin: 4px 0; }
+.notion { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.notion > summary { list-style: none; cursor: pointer; padding: 14px 16px; display: flex; gap: 10px; align-items: baseline; justify-content: space-between; }
+.notion > summary::-webkit-details-marker { display: none; }
+.notion > summary h3 { font-size: 16.5px; }
+.notion[open] > summary { border-bottom: 1px solid var(--line); }
+.notion .content { padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; max-width: 78ch; }
+.notion .q { font-family: var(--font-display); font-style: italic; color: var(--muted); font-size: 15px; }
+.tbl { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: 13px; }
+th, td { border: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
+th { background: var(--surface-2); font-weight: 600; }
+.formula { font-family: ui-monospace, "SF Mono", Menlo, monospace; background: var(--surface-2); padding: 8px 12px; border-radius: 8px; overflow-x: auto; }
+.callout { border-radius: 10px; padding: 10px 12px; background: var(--warn-soft); }
+.callout.info { background: var(--surface-2); }
+.prose { max-width: 78ch; }
+.prose p { margin: .5em 0; }
+.prose ul, .prose ol { padding-left: 20px; }
+.prose h3 { margin-top: 14px; }
+.stack { display: flex; flex-direction: column; gap: 12px; }
+.row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.spread { justify-content: space-between; }
+
+/* Practice */
+.choice { display: flex; gap: 10px; align-items: flex-start; border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; cursor: pointer; background: var(--surface); }
+.choice input { accent-color: var(--accent); margin-top: 3px; }
+.choice.good { border-color: var(--ok); background: var(--ok-soft); }
+.choice.bad { border-color: var(--bad); background: var(--bad-soft); }
+.choice .why { font-size: 12.5px; color: var(--muted); margin-top: 4px; }
+.flash { min-height: 220px; display: flex; flex-direction: column; justify-content: center; gap: 12px; text-align: center; padding: 26px; background: var(--surface-2); border-radius: 18px; border: 1px solid var(--line); }
+.flash .q { font-family: var(--font-display); font-size: 20px; }
+.flash .a { text-align: left; }
+.score { font-family: var(--font-display); font-size: 40px; font-weight: 600; }
+.empty { text-align: center; padding: 30px 16px; color: var(--muted); }
+
+/* Assistant */
+.chat { display: flex; flex-direction: column; gap: 10px; max-height: 360px; overflow: auto; padding-right: 4px; }
+.msg { border-radius: 14px; padding: 10px 12px; max-width: 92%; font-size: 13.5px; }
+.msg.me { align-self: flex-end; background: var(--accent-soft); }
+.msg.ai { align-self: flex-start; background: var(--surface-2); border: 1px solid var(--line); }
+.msg.ai p { margin: .35em 0; }
+.chat-input { display: flex; gap: 8px; margin-top: 10px; }
+.chat-input input { border-radius: 999px; padding-inline: 14px; }
+.drawer { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); width: min(420px, calc(100vw - 32px)); z-index: 20; display: none; }
+.drawer.open { display: block; }
+.fab { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: calc(16px + env(safe-area-inset-bottom, 0px)); z-index: 19; border-radius: 999px; box-shadow: var(--shadow); }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(20px + env(safe-area-inset-bottom, 0px)); background: var(--ink); color: var(--bg); padding: 8px 16px; border-radius: 999px; z-index: 30; font-size: 13px; }
+/* Visuals */
+.vis { border: 1px solid var(--line); border-radius: 14px; background: var(--surface); padding: 14px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.vis-head { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+.vis-head h4 { margin: 0; font-family: var(--font-display); font-size: 16px; font-weight: 600; }
+.vis-note { font-size: 12px; color: var(--muted); }
+.flow { display: flex; flex-wrap: wrap; gap: 6px; align-items: stretch; counter-reset: st; }
+.flow .st { flex: 1 1 150px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px 10px 38px; position: relative; font-size: 13px; min-width: 0; }
+.flow .st::before { counter-increment: st; content: counter(st); position: absolute; left: 10px; top: 10px; width: 20px; height: 20px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-size: 11px; font-weight: 600; display: grid; place-items: center; }
+.flow .st:not(:last-child)::after { content: "→"; position: absolute; right: -10px; top: 50%; transform: translateY(-50%); color: var(--accent); font-weight: 700; z-index: 1; }
+@media (max-width: 640px) { .flow { flex-direction: column; } .flow .st { flex: none; } .flow .st:not(:last-child)::after { content: "↓"; right: auto; left: 15px; top: auto; bottom: -15px; transform: none; } }
+.vs { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); gap: 8px; align-items: stretch; }
+.vs .side-a, .vs .side-b { border-radius: 12px; padding: 10px 12px; font-weight: 600; display: grid; place-items: center; text-align: center; }
+.vs .side-a { background: var(--accent-soft); }
+.vs .side-b { background: var(--gold-soft); }
+.vs .mid { align-self: center; font-family: var(--font-display); font-style: italic; color: var(--muted); }
+.vs .why { grid-column: 1 / -1; font-size: 13px; background: var(--surface-2); border-radius: 10px; padding: 8px 12px; }
+.timeline { position: relative; display: flex; flex-direction: column; gap: 10px; padding-left: 22px; }
+.timeline::before { content: ""; position: absolute; left: 7px; top: 4px; bottom: 4px; width: 2px; background: var(--accent-soft); }
+.timeline .ev { position: relative; }
+.timeline .ev::before { content: ""; position: absolute; left: -20px; top: 5px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--surface); }
+.timeline .yr { font-family: var(--font-display); font-weight: 600; color: var(--accent); }
+.wf { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; }
+.wf .r { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 2fr) auto; gap: 8px; align-items: center; }
+.wf .track { position: relative; height: 16px; }
+.wf .seg { position: absolute; top: 0; bottom: 0; border-radius: 4px; background: var(--accent-soft); }
+.wf .seg.tot { background: var(--accent); }
+.wf .seg.neg { background: var(--bad-soft); }
+.wf .v { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
+/* Incoterms */
+.inco-pick { display: flex; flex-wrap: wrap; gap: 4px; }
+.inco-pick button { border: 1px solid var(--line); background: var(--surface-2); border-radius: 8px; padding: 4px 8px; font-weight: 600; font-size: 12.5px; cursor: pointer; color: var(--ink); }
+.inco-pick button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.chain { display: grid; grid-template-columns: 86px repeat(9, minmax(0, 1fr)); gap: 3px; font-size: 11.5px; }
+.chain .lab { font-weight: 600; color: var(--muted); display: flex; align-items: center; }
+.chain .stn { text-align: center; line-height: 1.2; padding: 4px 1px; color: var(--ink); min-height: 40px; display: grid; place-items: end center; font-size: 11px; hyphens: manual; overflow-wrap: break-word; min-width: 0; }
+.chain .c, .chain-m .c { height: 22px; border-radius: 5px; display: grid; place-items: center; font-size: 10.5px; font-weight: 600; }
+.chain .s, .chain-m .s { background: var(--accent); color: var(--accent-ink); }
+.chain .b, .chain-m .b { background: var(--gold-soft); color: var(--warn); }
+.chain .pt, .chain-m .pt { border-left: 3px solid var(--ink); }
+.chain-m .pt { border-left: 0; border-top: 3px solid var(--ink); }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--muted); }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 4px; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; }
+.facts div { background: var(--surface-2); border-radius: 10px; padding: 8px 10px; font-size: 12.5px; }
+.facts b { display: block; font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+.chain-m { display: none; grid-template-columns: minmax(0, 1fr) 64px 64px; gap: 4px 6px; font-size: 12.5px; align-items: center; }
+@media (max-width: 640px) { .chain { display: none; } .chain-m { display: grid; } }
+/* Generic boxes and arrows */
+.boxes { display: flex; flex-wrap: wrap; gap: 8px; align-items: stretch; }
+.bx { flex: 1 1 140px; background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font-size: 13px; min-width: 0; }
+.bx b { display: block; font-family: var(--font-display); font-size: 15px; }
+.bx.a { background: var(--accent-soft); border-color: transparent; }
+.bx.g { background: var(--gold-soft); border-color: transparent; }
+.bx.o { background: var(--ok-soft); border-color: transparent; }
+.arrow-r { align-self: center; color: var(--accent); font-weight: 700; font-size: 18px; }
+@media (max-width: 640px) { .boxes.chainy { flex-direction: column; } .boxes.chainy .arrow-r { transform: rotate(90deg); align-self: center; } }
+.pyr { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.pyr div { background: var(--accent-soft); border-radius: 10px; padding: 8px 12px; text-align: center; font-size: 13px; max-width: 100%; }
+.pyr div b { display: block; }
+.lanes { display: grid; grid-template-columns: 110px minmax(0, 1fr) 110px; gap: 8px; align-items: center; font-size: 13px; }
+.lanes .actor { background: var(--surface-2); border: 1px solid var(--line); border-radius: 12px; padding: 12px 8px; text-align: center; font-weight: 600; grid-row: span 3; height: 100%; display: grid; place-items: center; }
+.lane { border-radius: 10px; padding: 6px 10px; display: flex; justify-content: space-between; gap: 8px; }
+.lane span { font-weight: 600; }
+@media (max-width: 520px) { .lanes { grid-template-columns: 1fr; } .lanes .actor { grid-row: auto; } }
+.steps-ctl { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.actors4 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.actors4 .bx { text-align: center; }
+.actors4 .bx.on { outline: 3px solid var(--accent); }
+.step-now { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; font-size: 13.5px; }
+.bal { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0; border: 2px solid var(--ink); border-radius: 10px; overflow: hidden; font-size: 12.5px; }
+.bal .colh { text-align: center; font-weight: 700; padding: 6px; border-bottom: 2px solid var(--ink); background: var(--surface-2); }
+.bal .col { display: flex; flex-direction: column; }
+.bal .col + .col, .bal .colh + .colh { border-left: 2px solid var(--ink); }
+.bal .blk { padding: 6px 8px; border-bottom: 1px solid var(--surface); display: flex; flex-direction: column; justify-content: center; }
+.bal .blk span { color: var(--muted); font-size: 11.5px; }
+.taccs { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; }
+.tacc { font-size: 12.5px; }
+.tacc .t { text-align: center; font-weight: 600; border-bottom: 2px solid var(--ink); padding-bottom: 4px; }
+.tacc .sides { display: grid; grid-template-columns: 1fr 1fr; min-height: 46px; }
+.tacc .sides > div { padding: 4px 6px; font-variant-numeric: tabular-nums; }
+.tacc .sides > div + div { border-left: 2px solid var(--ink); text-align: right; }
+.sliders { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 10px; }
+.sliders label { font-size: 12px; color: var(--muted); display: flex; flex-direction: column; gap: 2px; }
+.sliders input[type=range] { accent-color: var(--accent); width: 100%; }
+.sliders output { color: var(--ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.bars3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: end; height: 170px; }
+.bars3 .col { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: 100%; gap: 4px; font-size: 12px; text-align: center; }
+.bars3 .bar-v { width: 60%; border-radius: 8px 8px 0 0; min-height: 2px; }
+.bars3 .neg { border-radius: 0 0 8px 8px; }
+.verdict { border-radius: 10px; padding: 10px 12px; font-size: 13px; }
+.verdict.ok { background: var(--ok-soft); } .verdict.warn { background: var(--warn-soft); } .verdict.bad { background: var(--bad-soft); }
+.dg { width: 100%; height: auto; display: block; }
+.dg text { fill: var(--ink); font: 13px var(--font-body); }
+.dg .m { fill: var(--muted); }
+.dg .grid { stroke: var(--line); }
+.dg .axis { stroke: var(--muted); }
+.dg .l1 { stroke: var(--accent); fill: none; stroke-width: 3; }
+.dg .l2 { stroke: var(--gold); fill: none; stroke-width: 3; }
+.dg .l3 { stroke: var(--muted); fill: none; stroke-width: 2; stroke-dasharray: 5 4; }
+.dg .pt { fill: var(--accent); }
+.dg .zone { fill: var(--accent-soft); opacity: .6; }
+.gantt { display: grid; grid-template-columns: minmax(110px, 1.3fr) minmax(0, 3fr); gap: 4px 10px; font-size: 12.5px; align-items: center; }
+.gantt .track { position: relative; height: 18px; background: var(--surface-2); border-radius: 5px; }
+.gantt .task { position: absolute; top: 2px; bottom: 2px; border-radius: 4px; background: var(--accent-soft); }
+.gantt .task.crit { background: var(--accent); }
+.gantt .ms { position: absolute; top: 1px; width: 14px; height: 14px; background: var(--gold); transform: translateX(-7px) rotate(45deg); }
+.gantt .scale { display: flex; justify-content: space-between; color: var(--muted); font-size: 11px; }
+.matrix { position: relative; aspect-ratio: 16 / 10; max-width: 100%; border-left: 2px solid var(--muted); border-bottom: 2px solid var(--muted); margin: 6px 0 22px 22px; }
+.matrix .dot { position: absolute; transform: translate(-50%, 50%); background: var(--accent-soft); border: 1px solid var(--accent); border-radius: 999px; padding: 2px 8px; font-size: 11.5px; white-space: nowrap; }
+.matrix .ax-x { position: absolute; bottom: -22px; right: 0; font-size: 11.5px; color: var(--muted); }
+.matrix .ax-y { position: absolute; top: 0; left: -22px; writing-mode: vertical-rl; transform: rotate(180deg); font-size: 11.5px; color: var(--muted); }
+.vis-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 10px; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+</style>
+
+<div class="app">
+  <aside class="side">
+    <a class="brand" href="#dashboard">LEA<span>·</span>Study</a>
+    <nav class="nav" id="nav"></nav>
+    <div class="grow"></div>
+    <div class="side-foot nav"><a href="#preferences" data-r="preferences"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg><span>Settings</span></a></div>
+  </aside>
+  <main class="main"><div class="wrap" id="view"><div class="empty">Loading your courses…</div></div></main>
+</div>
+<button class="btn primary fab" id="fab" type="button" hidden>✦ Ask the assistant</button>
+<div class="drawer" id="drawer"></div>
+
+<script>
+'use strict';
+/* ---------- Utilities ---------- */
+const $ = (s, r = document) => r.querySelector(s);
+const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const uid = () => Math.random().toString(36).slice(2, 10);
+const pad = (n) => String(n).padStart(2, '0');
+const iso = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+const today = () => iso(new Date());
+const parseISO = (s) => { const [y, m, d] = s.split('-').map(Number); return new Date(y, m - 1, d); };
+const addDays = (d, n) => { const x = new Date(d); x.setDate(x.getDate() + n); return x; };
+const mondayOf = (d) => addDays(d, -((d.getDay() + 6) % 7));
+const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+const fmtDay = (d) => `${DAYS[d.getDay()]}, ${MONTHS[d.getMonth()]} ${d.getDate()}`;
+const fmtLong = (d) => `${fmtDay(d)}, ${d.getFullYear()}`;
+const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+function toast(t) { const el = document.createElement('div'); el.className = 'toast'; el.textContent = t; document.body.appendChild(el); setTimeout(() => el.remove(), 2200); }
+
+/** Minimal Markdown: headings, bold, italics, code, lists, tables, paragraphs. Escapes first. */
+function md(src) {
+  const inline = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/(^|[^*])\*([^*\n]+)\*/g, '$1<i>$2</i>').replace(/`([^`]+)`/g, '<code>$1</code>');
+  const lines = String(src || '').split('\n'); let out = ''; let i = 0;
+  while (i < lines.length) {
+    const l = lines[i];
+    if (/^\s*\|/.test(l)) {
+      const rows = []; while (i < lines.length && /^\s*\|/.test(lines[i])) rows.push(lines[i++]);
+      const cells = (r) => r.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+      const body = rows.filter((r) => !/^\s*\|\s*:?-+/.test(r));
+      out += '<div class="tbl"><table><thead><tr>' + cells(body[0]).map((c) => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>' +
+        body.slice(1).map((r) => '<tr>' + cells(r).map((c) => `<td>${inline(c)}</td>`).join('') + '</tr>').join('') + '</tbody></table></div>';
+      continue;
+    }
+    if (/^#{1,6} /.test(l)) { out += `<h3>${inline(l.replace(/^#+ /, ''))}</h3>`; i++; continue; }
+    if (/^\s*([-*]|\d+\.) /.test(l)) {
+      const ordered = /^\s*\d+\./.test(l); const items = [];
+      while (i < lines.length && /^\s*([-*]|\d+\.) /.test(lines[i])) items.push(lines[i++].replace(/^\s*([-*]|\d+\.) /, ''));
+      out += `<${ordered ? 'ol' : 'ul'}>` + items.map((x) => `<li>${inline(x)}</li>`).join('') + `</${ordered ? 'ol' : 'ul'}>`;
+      continue;
+    }
+    if (/^>\s?/.test(l)) { out += `<div class="callout info">${inline(l.replace(/^>\s?/, ''))}</div>`; i++; continue; }
+    if (!l.trim()) { i++; continue; }
+    const para = []; while (i < lines.length && lines[i].trim() && !/^(#|\s*\||\s*[-*] |\s*\d+\. |>)/.test(lines[i])) para.push(lines[i++]);
+    out += `<p>${inline(para.join(' '))}</p>`;
+  }
+  return out;
+}
+
+/* ---------- Icons ---------- */
+const I = (p) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${p}</svg>`;
+const ICON = {
+  dashboard: I('<path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/>'),
+  courses: I('<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/>'),
+  notes: I('<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/>'),
+  planner: I('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),
+  tasks: I('<circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/>'),
+  revision: I('<path d="M4 5h11a3 3 0 0 1 3 3v12H7a3 3 0 0 1-3-3z"/><path d="M8 9h6M8 13h6"/>'),
+  resources: I('<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>'),
+  library: I('<path d="M5 4h4v16H5zM10 4h4v16h-4z"/><path d="M15.5 4.5l3.8-1 3.2 15.6-3.8.9z"/>'),
+  calendar: I('<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>'),
+  flower: I('<circle cx="12" cy="12" r="2.5"/><path d="M12 9.5C10 5 14 5 12 9.5M14.5 12c4.5-2 4.5 2 0 0M12 14.5c2 4.5-2 4.5 0 0M9.5 12C5 14 5 10 9.5 12"/>'),
+  heart: I('<path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/>'),
+  cards: I('<rect x="3" y="7" width="13" height="13" rx="2" transform="rotate(-8 9 13)"/><rect x="8" y="4" width="13" height="13" rx="2" transform="rotate(8 14 10)"/>'),
+  quiz: I('<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.1"/>'),
+  summary: I('<path d="M6 3h9l4 4v14H6z"/><path d="M9 11h7M9 14h7M9 17h4"/>'),
+  pencil: I('<path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M14 6l3 3"/>'),
+  game: I('<rect x="2" y="7" width="20" height="11" rx="5"/><path d="M7 11v3M5.5 12.5h3M15 12h.1M18 13.5h.1"/>'),
+  spark: I('<path d="M12 3l1.8 5.6L19.5 10l-5.7 1.6L12 17l-1.8-5.4L4.5 10l5.7-1.4z"/>'),
+  book: I('<path d="M4 5c3-1 6-1 8 1 2-2 5-2 8-1v14c-3-1-6-1-8 1-2-2-5-2-8-1z"/><path d="M12 6v14"/>'),
+  globe: I('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>'),
+  laurel: I('<path d="M12 21c-5-2-7-7-6-12M12 21c5-2 7-7 6-12"/><path d="M6 13c-2 0-3-1-3-2 2 0 3 1 3 2zM6.5 9C5 8 5 7 5.5 6c1 .5 1.5 2 1 3zM18 13c2 0 3-1 3-2-2 0-3 1-3 2zM17.5 9c1.5-1 1.5-2 1-3-1 .5-1.5 2-1 3z"/>'),
+  plane: I('<path d="M2.5 13.5l19-7-5 15-3.5-6.5z"/><path d="M13 15l8.5-8.5"/>'),
+  plus: I('<path d="M12 5v14M5 12h14"/>'),
+  arrow: I('<path d="M5 12h14M13 6l6 6-6 6"/>'),
+  back: I('<path d="M19 12H5M11 6l-6 6 6 6"/>'),
+  trash: I('<path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/>'),
+  send: I('<path d="M4 12l16-8-6 16-2-7z"/>'),
+  check: I('<path d="M5 12l5 5 9-10"/>'),
+  lock: I('<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>'),
+  doc: I('<path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5"/>'),
+  link: I('<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>'),
+};
+
+/* ---------- Illustrations (drawn, no external images) ---------- */
+const SCENES = { tci: 'port', mks: 'port', ici: 'globe', eco: 'globe', tou: 'coast', dai: 'columns', dcl: 'columns', cpt: 'coins', gfi: 'chart', odg: 'chart', gdp: 'chart', mgi: 'people', red: 'book', stg: 'book', aec: 'city', cea: 'city', tra: 'plane', eec: 'spain', tve: 'spain', cve: 'spain', cvl: 'hills', cvb: 'bigben', cva: 'city' };
+function scene(kind, seed = 0) {
+  const sky = ['#f7c9d4', '#fbe1c7', '#f3d0e6', '#fde2cf'][seed % 4];
+  const sun = '#fff1d6';
+  const ink = '#c7869b', ink2 = '#a86a82', sea = '#f1b6c7';
+  const base = `<defs><linearGradient id="g${seed}${kind}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${sky}"/><stop offset="1" stop-color="#fdf0f2"/></linearGradient></defs><rect width="320" height="160" fill="url(#g${seed}${kind})"/><circle cx="240" cy="62" r="26" fill="${sun}"/>`;
+  const shapes = {
+    port: `<rect x="0" y="118" width="320" height="42" fill="${sea}"/><path d="M40 118V40h6v78M46 44h60l-8 8H46M70 52v30" stroke="${ink2}" stroke-width="4" fill="none"/><path d="M120 118V50h5v68M125 54h52l-7 7h-45" stroke="${ink2}" stroke-width="4" fill="none"/><rect x="150" y="98" width="150" height="16" fill="${ink2}"/><g fill="${ink}"><rect x="160" y="84" width="22" height="14"/><rect x="184" y="84" width="22" height="14" fill="#e9a3b6"/><rect x="208" y="84" width="22" height="14"/><rect x="232" y="84" width="22" height="14" fill="#f0c58a"/><rect x="172" y="70" width="22" height="14" fill="#f0c58a"/><rect x="196" y="70" width="22" height="14"/></g>`,
+    globe: `<circle cx="150" cy="96" r="52" fill="#f6d7df" stroke="${ink2}" stroke-width="3"/><path d="M98 96h104M150 44c22 26 22 78 0 104M150 44c-22 26-22 78 0 104" stroke="${ink2}" stroke-width="2.5" fill="none"/><path d="M120 70c10 6 18 0 26 8s-6 16 4 22M162 110c8-6 18-2 22 4" stroke="${ink}" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M40 150c40-14 60-14 100 0" stroke="${ink}" stroke-width="3" fill="none"/>`,
+    coast: `<rect x="0" y="110" width="320" height="50" fill="${sea}"/><path d="M0 110c40-30 80-40 130-30s60 30 60 30z" fill="${ink}"/><g fill="#fff6ef"><rect x="30" y="80" width="18" height="16"/><rect x="52" y="74" width="16" height="22"/><rect x="72" y="84" width="18" height="12"/><rect x="94" y="78" width="16" height="18"/></g><g fill="${ink2}"><path d="M30 80l9-8 9 8zM52 74l8-7 8 7zM94 78l8-7 8 7z"/></g><path d="M200 128c20-4 40-4 60 0" stroke="#fff" stroke-width="2" fill="none"/>`,
+    columns: `<path d="M70 58l90-28 90 28z" fill="${ink}"/><rect x="70" y="58" width="180" height="8" fill="${ink2}"/><g fill="#f6dbe2" stroke="${ink2}" stroke-width="2"><rect x="84" y="66" width="16" height="64"/><rect x="122" y="66" width="16" height="64"/><rect x="182" y="66" width="16" height="64"/><rect x="220" y="66" width="16" height="64"/></g><rect x="62" y="130" width="196" height="10" fill="${ink2}"/><rect x="50" y="140" width="220" height="8" fill="${ink}"/>`,
+    coins: `<g fill="#f1c886" stroke="#c99447" stroke-width="2"><ellipse cx="90" cy="130" rx="34" ry="10"/><ellipse cx="90" cy="120" rx="34" ry="10"/><ellipse cx="90" cy="110" rx="34" ry="10"/><ellipse cx="90" cy="100" rx="34" ry="10"/><ellipse cx="150" cy="132" rx="34" ry="10"/><ellipse cx="150" cy="122" rx="34" ry="10"/></g><rect x="190" y="56" width="90" height="90" rx="8" fill="#fbf3ea" stroke="${ink2}" stroke-width="2"/><rect x="200" y="66" width="70" height="18" rx="3" fill="${ink}"/><g fill="${ink2}"><rect x="200" y="92" width="14" height="10" rx="2"/><rect x="220" y="92" width="14" height="10" rx="2"/><rect x="240" y="92" width="14" height="10" rx="2"/><rect x="200" y="108" width="14" height="10" rx="2"/><rect x="220" y="108" width="14" height="10" rx="2"/><rect x="240" y="108" width="14" height="10" rx="2"/><rect x="200" y="124" width="54" height="10" rx="2"/></g>`,
+    chart: `<rect x="40" y="40" width="240" height="104" rx="8" fill="#fff6f4" stroke="${ink2}" stroke-width="2"/><g fill="${ink}"><rect x="64" y="104" width="22" height="30"/><rect x="100" y="90" width="22" height="44"/><rect x="136" y="96" width="22" height="38"/><rect x="172" y="74" width="22" height="60"/><rect x="208" y="60" width="22" height="74" fill="#f0c58a"/></g><path d="M64 96l40-18 34 8 38-26 40-12" stroke="${ink2}" stroke-width="3" fill="none"/>`,
+    people: `<g fill="${ink}"><circle cx="110" cy="80" r="16"/><path d="M80 140c0-28 60-28 60 0z"/><circle cx="210" cy="80" r="16" fill="${ink2}"/><path d="M180 140c0-28 60-28 60 0z" fill="${ink2}"/></g><path d="M134 66h52a8 8 0 0 1 8 8v14a8 8 0 0 1-8 8h-30l-10 8v-8h-12a8 8 0 0 1-8-8V74a8 8 0 0 1 8-8z" fill="#fff6ef" stroke="${ink2}" stroke-width="2"/>`,
+    book: `<path d="M60 130c40-10 70-10 100 4 30-14 60-14 100-4V54c-40-10-70-10-100 4-30-14-60-14-100-4z" fill="#fff6ef" stroke="${ink2}" stroke-width="3"/><path d="M160 58v76" stroke="${ink2}" stroke-width="3"/><path d="M78 74h60M78 88h60M78 102h44M182 74h60M182 88h60M182 102h44" stroke="${ink}" stroke-width="3"/>`,
+    city: `<g fill="${ink}"><rect x="30" y="70" width="30" height="80"/><rect x="66" y="50" width="26" height="100"/><rect x="98" y="84" width="34" height="66"/><rect x="200" y="60" width="28" height="90"/><rect x="234" y="88" width="40" height="62"/></g><g fill="${ink2}"><rect x="138" y="40" width="28" height="110"/><path d="M138 40l14-16 14 16z"/><rect x="172" y="76" width="24" height="74"/></g><g fill="#fff3e3"><rect x="72" y="60" width="5" height="6"/><rect x="82" y="60" width="5" height="6"/><rect x="72" y="74" width="5" height="6"/><rect x="144" y="56" width="5" height="6"/><rect x="154" y="70" width="5" height="6"/><rect x="206" y="72" width="5" height="6"/></g>`,
+    plane: `<path d="M20 120c60-10 100 0 140-8s90-6 140 4" stroke="#fff" stroke-width="10" fill="none" opacity=".7"/><path d="M90 92l120-30c14-4 22 4 10 10L106 108z" fill="#fff6f4" stroke="${ink2}" stroke-width="2.5"/><path d="M150 76l-20-28h14l34 22zM152 100l-6 24h12l22-30z" fill="${ink}"/><path d="M98 96l-14-14h10l14 10z" fill="${ink}"/>`,
+    spain: `<g fill="${ink}"><rect x="96" y="60" width="128" height="86"/><rect x="80" y="40" width="26" height="106"/><rect x="214" y="40" width="26" height="106"/><path d="M80 40l13-18 13 18zM214 40l13-18 13 18z"/><path d="M130 60c0-26 60-26 60 0z"/></g><g fill="#fde8d3"><path d="M146 146v-34a14 14 0 0 1 28 0v34z"/><rect x="88" y="56" width="10" height="16" rx="5"/><rect x="222" y="56" width="10" height="16" rx="5"/><circle cx="160" cy="80" r="9"/></g>`,
+    hills: `<path d="M0 120c50-40 90-50 150-30s110 0 170-20v90H0z" fill="${ink}"/><g fill="#fde8d3"><rect x="30" y="102" width="12" height="10"/><rect x="48" y="96" width="14" height="12"/><rect x="70" y="92" width="12" height="12"/><rect x="90" y="96" width="12" height="10"/><rect x="190" y="88" width="14" height="12"/><rect x="214" y="84" width="12" height="12"/><rect x="240" y="80" width="14" height="10"/></g><g fill="${ink2}"><rect x="130" y="40" width="22" height="70"/><rect x="156" y="56" width="18" height="54"/></g>`,
+    bigben: `<rect x="140" y="30" width="34" height="120" fill="${ink2}"/><path d="M140 30l17-22 17 22z" fill="${ink}"/><circle cx="157" cy="58" r="11" fill="#fff6ef"/><path d="M157 51v7l5 3" stroke="${ink2}" stroke-width="2"/><rect x="40" y="96" width="100" height="54" fill="${ink}"/><rect x="174" y="100" width="120" height="50" fill="${ink}"/><g fill="#fde8d3"><rect x="52" y="108" width="6" height="12"/><rect x="70" y="108" width="6" height="12"/><rect x="88" y="108" width="6" height="12"/><rect x="190" y="112" width="6" height="12"/><rect x="210" y="112" width="6" height="12"/><rect x="230" y="112" width="6" height="12"/></g>`,
+    tree: `<rect x="0" y="120" width="320" height="40" fill="${sea}"/><path d="M90 150c4-30 0-50-10-70M90 120c10-10 20-12 34-12" stroke="${ink2}" stroke-width="7" fill="none"/><g fill="#f4a9bf"><circle cx="70" cy="70" r="26"/><circle cx="104" cy="58" r="28"/><circle cx="130" cy="80" r="22"/><circle cx="84" cy="94" r="18"/></g><g fill="#fff6ef" stroke="${ink2}" stroke-width="2"><path d="M200 140V90a26 26 0 0 1 52 0v50"/><path d="M212 140V96a14 14 0 0 1 28 0v44" fill="${sky}"/></g><path d="M180 146h96" stroke="${ink2}" stroke-width="4"/>`,
+  };
+  return `<svg viewBox="0 0 320 160" preserveAspectRatio="xMidYMid slice" role="img" aria-hidden="true">${base}${shapes[kind] || shapes.globe}</svg>`;
+}
+const flowerArt = `<svg viewBox="0 0 96 120" width="96" height="120" aria-hidden="true"><path d="M48 118V70" stroke="#c7869b" stroke-width="3"/><path d="M48 96c-14-2-20-10-20-18 10 0 18 6 20 18z" fill="#c9a0ad"/><g fill="#f4a9bf"><ellipse cx="48" cy="40" rx="12" ry="22"/><ellipse cx="48" cy="40" rx="12" ry="22" transform="rotate(60 48 52)"/><ellipse cx="48" cy="40" rx="12" ry="22" transform="rotate(-60 48 52)"/><ellipse cx="48" cy="40" rx="12" ry="22" transform="rotate(120 48 52)"/><ellipse cx="48" cy="40" rx="12" ry="22" transform="rotate(-120 48 52)"/><ellipse cx="48" cy="40" rx="12" ry="22" transform="rotate(180 48 52)"/></g><circle cx="48" cy="52" r="7" fill="#f0c58a"/></svg>`;
+
+/* ---------- Data ---------- */
+let IDX = null;
+const M = new Map();
+const matiere = (id) => IDX.matieres.find((m) => m.id === id);
+async function loadM(id) {
+  if (!M.has(id)) M.set(id, fetch(`data/m/${id}.json`).then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); }).catch((e) => { M.delete(id); throw e; }));
+  return M.get(id);
+}
+const STATUS_RANK = { 'Not researched': 0, 'Research in progress': 1, 'Reconstructed': 2, 'Supported by university material': 3, 'Verified against additional academic sources': 4 };
+const LABEL_CLASS = { 'UNIVERSITY MATERIAL': 'l-univ', 'ACADEMIC RESEARCH': 'l-acad', 'RECONSTRUCTED COURSE': 'l-reco', 'SUPPLEMENTARY KNOWLEDGE': 'l-supp' };
+const labels = (arr) => arr.map((l) => `<span class="label ${LABEL_CLASS[l]}">${esc(l)}</span>`).join('');
+const prio = (p) => `<span class="label p-${p}">${p}</span>`;
+const status = (s) => `<span class="st s${STATUS_RANK[s]}">${esc(s)}</span>`;
+const short = (t) => ({ 'Anglais économique et commercial': 'Anglais éco.', 'Comptabilité générale': 'Comptabilité', 'Thème et version espagnols': 'Thème esp.', 'Traduction anglaise : thème et version': 'Traduction', 'Introduction au tourisme international': 'Tourisme', 'Techniques du commerce international': 'TCI', 'Introduction au commerce international': 'Intro commerce int.' }[t] || t);
+
+/* ---------- State (claude.ai account when available, else this browser) ---------- */
+const LS_KEY = 'lea-study-state-v1';
+const DEFAULT_STATE = () => ({
+  v: 1,
+  profil: { nom: 'Fatima-Christine', semestre: 'S5' },
+  objectifs: [
+    { id: 'o1', texte: 'Understand each course', fait: false },
+    { id: 'o2', texte: 'Complete 3 revision rounds', fait: false },
+    { id: 'o3', texte: 'Pass all exams', fait: false },
+    { id: 'o4', texte: 'Prepare my Master / Erasmus', fait: false },
+  ],
+  taches: [
+    { id: 't1', texte: 'Civilisation britannique: read the Thatcher article and answer the questions', date: '2026-11-18', fait: false, matiere: 'cvb' },
+  ],
+  evenements: [],
+  chapitres: {},
+  quiz: {},
+  cartes: {},
+  notes: {},
+  xp: 0,
+  xpCles: [],
+  jours: [],
+});
+const S = { state: DEFAULT_STATE(), mode: 'browser', ref: null, timer: null, pending: false };
+try { const raw = localStorage.getItem(LS_KEY); if (raw) S.state = { ...DEFAULT_STATE(), ...JSON.parse(raw) }; } catch (e) { /* storage unavailable */ }
+function save() {
+  try { localStorage.setItem(LS_KEY, JSON.stringify(S.state)); } catch (e) { /* ignore */ }
+  if (!S.ref) return;
+  clearTimeout(S.timer);
+  S.timer = setTimeout(flush, 900);
+}
+async function flush() {
+  if (!S.ref || S.pending) { if (S.ref) S.timer = setTimeout(flush, 600); return; }
+  S.pending = true;
+  try { await S.ref.set(JSON.parse(JSON.stringify(S.state))); }
+  catch (e) {
+    if (e && e.code === 'invalid_argument') { S.ref = null; S.mode = 'browser'; toast('Your progress is saved in this browser only.'); }
+    else if (e && e.code === 'quota_exceeded') toast('Storage is full: delete some notes to keep saving.');
+  } finally { S.pending = false; }
+}
+async function connectStore() {
+  if (!window.claude || !window.claude.use) return;
+  try {
+    const [db, user] = await Promise.all([window.claude.use('db'), window.claude.use('user')]);
+    if (!db || !user) return;
+    const id = await user.id();
+    if (!id) return;
+    const ref = db.doc(`data/users/${id}/etat`);
+    const timeout = new Promise((r) => setTimeout(() => r('timeout'), 10000));
+    const snap = await Promise.race([ref.get(), timeout]);
+    if (snap === 'timeout') return;
+    if (snap.exists) S.state = { ...DEFAULT_STATE(), ...snap.data() };
+    S.ref = ref; S.mode = 'account';
+    try { localStorage.setItem(LS_KEY, JSON.stringify(S.state)); } catch (e) { /* ignore */ }
+    render();
+  } catch (e) { /* stay in browser mode */ }
+}
+
+/* ---------- XP, streaks, quests ---------- */
+function markActive() { const t = today(); if (!S.state.jours.includes(t)) { S.state.jours = [...S.state.jours, t].slice(-90); } }
+function streak() {
+  const set = new Set(S.state.jours); let n = 0; let d = new Date();
+  if (!set.has(iso(d))) d = addDays(d, -1);
+  while (set.has(iso(d))) { n++; d = addDays(d, -1); }
+  return n;
+}
+function gainXP(key, pts, why) {
+  if (S.state.xpCles.includes(key)) return false;
+  S.state.xpCles = [...S.state.xpCles, key].slice(-600);
+  S.state.xp += pts; markActive();
+  const s = streak();
+  if (s >= 3 && !S.state.xpCles.includes(`streak:${today()}`)) { S.state.xpCles.push(`streak:${today()}`); S.state.xp += 150; toast('+150 XP · 3-day streak'); }
+  else toast(`+${pts} XP · ${why}`);
+  save(); return true;
+}
+const level = () => 1 + Math.floor(S.state.xp / 200);
+function quests() {
+  const t = today();
+  const chap = Object.values(S.state.chapitres).some((c) => c.date === t);
+  const quiz = Object.values(S.state.quiz).some((q) => q.date === t && q.last >= 80);
+  return [
+    { t: 'Complete a chapter', pts: 50, done: chap },
+    { t: 'Get 80%+ on a quiz', pts: 100, done: quiz },
+    { t: 'Study 3 days in a row', pts: 150, done: streak() >= 3 },
+  ];
+}
+function badges() {
+  const langs = new Set(Object.keys(S.state.chapitres).map((c) => matiere(c.split('.')[0])?.langue).filter(Boolean));
+  return [
+    { icon: 'book', t: 'First chapter completed', on: Object.keys(S.state.chapitres).length > 0 },
+    { icon: 'globe', t: 'A chapter in French, English and Spanish', on: langs.size >= 3 },
+    { icon: 'laurel', t: 'A perfect quiz', on: Object.values(S.state.quiz).some((q) => q.best === 100) },
+    { icon: 'plane', t: '7-day streak', on: streak() >= 7 },
+  ];
+}
+
+/* ---------- Progress ---------- */
+function courseProgress(m) {
+  const ch = m.chapitres; if (!ch.length) return 0;
+  let pts = 0;
+  for (const c of ch) { if (S.state.chapitres[c.id]) pts += 1; else if (S.state.quiz[c.id]) pts += Math.min(.8, S.state.quiz[c.id].best / 125); }
+  return Math.round((pts / ch.length) * 100);
+}
+const semesterCourses = () => IDX.matieres.filter((m) => m.semestres.includes(S.state.profil.semestre) && !m.complement);
+function overall() { const cs = semesterCourses(); return cs.length ? Math.round(cs.reduce((a, m) => a + courseProgress(m), 0) / cs.length) : 0; }
+
+/* ---------- Schedule helpers ---------- */
+function weeklyClasses() {
+  return [
+    ...IDX.creneaux.map((c) => ({ ...c, fixe: true })),
+    ...S.state.evenements.filter((e) => e.type === 'cours'),
+  ];
+}
+function deadlines() {
+  return [
+    ...IDX.echeances.map((e) => ({ ...e, fixe: true })),
+    ...S.state.evenements.filter((e) => e.type === 'echeance' || e.type === 'evenement'),
+  ].sort((a, b) => (a.date + (a.debut || '')).localeCompare(b.date + (b.debut || '')));
+}
+function nextClass() {
+  const now = new Date(); let best = null;
+  for (const c of weeklyClasses()) {
+    for (let k = 0; k < 8; k++) {
+      const d = addDays(now, k);
+      if (d.getDay() !== c.jour) continue;
+      const [h, mi] = c.debut.split(':').map(Number);
+      const start = new Date(d.getFullYear(), d.getMonth(), d.getDate(), h, mi);
+      if (start > now) { if (!best || start < best.start) best = { c, start }; break; }
+    }
+  }
+  return best;
+}
+const subjectName = (id) => (id ? matiere(id)?.titre : '') || '';
+
+/* ---------- Router ---------- */
+const ROUTES = [
+  ['dashboard', 'Dashboard'], ['courses', 'Courses'], ['notes', 'Notes'], ['planner', 'Planner'],
+  ['tasks', 'Tasks'], ['revision', 'Revision'], ['resources', 'Resources'], ['library', 'Library'],
+];
+function route() { const h = location.hash.replace('#', ''); return h || 'dashboard'; }
+function renderNav() {
+  const r = route(); const base = r.startsWith('course-') ? 'courses' : r;
+  $('#nav').innerHTML = ROUTES.map(([k, t]) => `<a href="#${k}" data-r="${k}" ${base === k ? 'aria-current="page"' : ''}>${ICON[k]}<span>${t}</span></a>`).join('');
+  document.querySelectorAll('.side-foot a').forEach((a) => a.toggleAttribute('aria-current', r === 'preferences'));
+  if (r === 'preferences') document.querySelector('.side-foot a').setAttribute('aria-current', 'page');
+}
+const UI = { tab: 'chapters', chap: {}, plannerView: 'week', weekOffset: 0, todoTab: 'today', practice: null, resFilter: 'all', resQuery: '' };
+function render() {
+  if (!IDX) return;
+  renderNav();
+  const r = route(); const v = $('#view');
+  $('#fab').hidden = r === 'dashboard';
+  if (r.startsWith('course-')) return viewCourse(v, r.slice(7));
+  ({ dashboard: viewDashboard, courses: viewCourses, notes: viewNotes, planner: viewPlanner, tasks: viewTasks, revision: viewRevision, resources: viewResources, library: viewLibrary, preferences: viewPreferences }[r] || viewDashboard)(v);
+}
+addEventListener('hashchange', () => { if (!UI.keepPractice) UI.practice = null; UI.keepPractice = false; render(); scrollTo(0, 0); });
+
+/* ---------- Shared components ---------- */
+function header(title, sub, extra = '') {
+  return `<div class="top"><div><h1>${esc(title)}</h1>${sub ? `<div class="sub">${sub}</div>` : ''}</div><div class="chips"><span class="chip">L3 · LEA Commerce International</span><span class="chip">${ICON.calendar}${fmtLong(new Date())}</span>${extra}</div></div>`;
+}
+function greeting() { const h = new Date().getHours(); return h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'; }
+function courseCard(m, i) {
+  const p = courseProgress(m);
+  return `<a class="card course-card" href="#course-${m.id}"><div class="pic">${scene(SCENES[m.id], i)}</div><div class="info"><div class="name">${esc(m.titre)}</div><div class="bar-row"><div class="bar"><i style="width:${p}%"></i></div>${p}%</div></div></a>`;
+}
+function todoItem(t) {
+  return `<label class="check ${t.fait ? 'done' : ''}"><input type="checkbox" data-task="${t.id}" ${t.fait ? 'checked' : ''}><span>${esc(t.texte)}${t.date ? ` <span class="muted small">· ${fmtDay(parseISO(t.date))}</span>` : ''}</span></label>`;
+}
+function bindTasks(root) {
+  root.querySelectorAll('[data-task]').forEach((el) => el.addEventListener('change', () => {
+    const t = S.state.taches.find((x) => x.id === el.dataset.task); if (!t) return;
+    t.fait = el.checked; if (t.fait) gainXP(`task:${t.id}`, 10, 'Task done'); save(); render();
+  }));
+}
+function weekGrid(offset, compact) {
+  const mon = addDays(mondayOf(new Date()), offset * 7); const H0 = 8, H1 = compact ? 17 : 19, PX = 40;
+  const days = [0, 1, 2, 3, 4].map((i) => addDays(mon, i));
+  const classes = weeklyClasses(); const dl = deadlines();
+  let html = `<div class="week"><div></div>${days.map((d) => `<div class="head ${iso(d) === today() ? 'today' : ''}"><span>${DAYS[d.getDay()]} ${d.getDate()}</span></div>`).join('')}`;
+  html += `<div class="hours">${Array.from({ length: H1 - H0 }, (_, i) => `<div>${pad(H0 + i)}:00</div>`).join('')}</div>`;
+  for (const d of days) {
+    const items = [
+      ...classes.filter((c) => c.jour === d.getDay()).map((c) => ({ ...c, kind: 'class' })),
+      ...dl.filter((e) => e.date === iso(d)).map((e) => ({ ...e, debut: e.debut || '08:00', fin: e.fin || '09:00', kind: 'deadline' })),
+    ];
+    html += `<div class="col" style="min-height:${(H1 - H0) * PX}px">${items.map((it, k) => {
+      const [a, b] = it.debut.split(':').map(Number); const [c2, d2] = it.fin.split(':').map(Number);
+      const top = ((a + b / 60) - H0) * PX; const h = Math.max(30, ((c2 + d2 / 60) - (a + b / 60)) * PX);
+      if (top < 0 || top > (H1 - H0) * PX) return '';
+      const title = it.matiere ? short(subjectName(it.matiere)) : it.titre;
+      const del = !it.fixe ? `<button data-del-ev="${it.id}" aria-label="Delete">×</button>` : '';
+      return `<div class="slot ${it.kind === 'deadline' ? 'deadline' : 'k' + (k % 3)}" style="top:${top}px;height:${h}px" title="${esc(it.titre || title)}">${del}<b>${esc(title)}</b>${esc(it.debut)}–${esc(it.fin)}${it.lieu ? ` · ${esc(it.lieu)}` : ''}${it.kind === 'deadline' ? `<br>${esc(it.titre)}` : ''}</div>`;
+    }).join('')}</div>`;
+  }
+  return html + '</div>';
+}
+function bindDeleteEvents(root) {
+  root.querySelectorAll('[data-del-ev]').forEach((b) => b.addEventListener('click', () => {
+    S.state.evenements = S.state.evenements.filter((e) => e.id !== b.dataset.delEv); save(); render();
+  }));
+}
+
+/* ---------- Dashboard ---------- */
+function viewDashboard(v) {
+  const nc = nextClass(); const p = overall(); const C = 2 * Math.PI * 50;
+  const t = today(); const weekEnd = iso(addDays(new Date(), 7));
+  const tasks = S.state.taches.filter((x) => UI.todoTab === 'today' ? (!x.date || x.date <= t) : (!x.date || x.date <= weekEnd));
+  const up = deadlines().filter((e) => e.date >= t).slice(0, 3);
+  const cs = semesterCourses().slice(0, 6);
+  const q = quests(); const b = badges(); const lvlXP = S.state.xp % 200;
+  v.innerHTML = `
+  ${header('Dashboard', `${greeting()}, <b>${esc(S.state.profil.nom)}</b> ✦`)}
+  <div class="grid g-dash-top">
+    <div class="card goal"><div class="art">${flowerArt}</div><div class="body"><h3>This semester's goal</h3><div style="margin-top:6px">${S.state.objectifs.map((o) => `<label class="check ${o.fait ? 'done' : ''}"><input type="checkbox" data-goal="${o.id}" ${o.fait ? 'checked' : ''}><span>${esc(o.texte)}</span></label>`).join('')}</div></div></div>
+    <div class="card"><h3>Overall progress</h3><div class="ring"><svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent-soft)" stroke-width="10"/><circle cx="60" cy="60" r="50" fill="none" stroke="var(--accent)" stroke-width="10" stroke-linecap="round" stroke-dasharray="${C}" stroke-dashoffset="${C * (1 - p / 100)}"/></svg><div class="val">${p}%</div></div><div class="muted small" style="text-align:center">${esc(S.state.profil.semestre)} courses</div></div>
+    <div class="card next-class"><h3 class="row">${ICON.calendar.replace('<svg', '<svg width="18" height="18"')} Next class</h3>${nc ? `<div class="what">${esc(subjectName(nc.c.matiere) || nc.c.titre)}</div><div class="muted">${fmtDay(nc.start)} · ${esc(nc.c.debut)} – ${esc(nc.c.fin)}${nc.c.lieu ? ` · ${esc(nc.c.lieu)}` : ''}</div>` : `<p class="muted">No class in your timetable yet.</p>`}<p class="small muted" style="margin-bottom:0">Only Tourism has a confirmed slot. <a href="#planner">Add your other classes</a>.</p></div>
+    <div class="card"><div class="card-head"><h3 class="row">To-Do</h3><div class="seg"><button data-todo="today" aria-pressed="${UI.todoTab === 'today'}">Today</button><button data-todo="week" aria-pressed="${UI.todoTab === 'week'}">This week</button></div></div><div class="todo-list">${tasks.map(todoItem).join('') || '<p class="muted small">Nothing planned.</p>'}</div><form class="todo-add" id="quick-task"><input type="text" id="quick-task-input" placeholder="Add task" aria-label="New task"><button class="btn soft" type="submit">${ICON.plus}</button></form></div>
+  </div>
+  <div class="grid g-dash-mid">
+    <div class="card"><div class="card-head"><h2>${ICON.heart} My courses</h2><a class="btn ghost" href="#courses">View all ${ICON.arrow}</a></div><div class="grid g-courses">${cs.map(courseCard).join('')}</div></div>
+    <div class="card"><div class="card-head"><h2>${ICON.calendar} Upcoming</h2><a class="btn ghost" href="#planner" aria-label="Open planner">${ICON.arrow}</a></div>${up.map((e) => `<div class="list-item"><div class="icon-tile">${ICON.calendar}</div><div><b>${esc(e.titre)}</b><div class="muted small">${esc(short(subjectName(e.matiere)))} · ${fmtDay(parseISO(e.date))}</div></div></div>`).join('') || '<p class="muted small">No deadline recorded. Add exams and assignments in the planner.</p>'}</div>
+  </div>
+  <div class="grid g-dash-bot">
+    <div class="card"><div class="card-head"><h2>${ICON.planner} Class Schedule</h2><a class="btn ghost" href="#planner">Planner ${ICON.arrow}</a></div><div class="tbl">${weekGrid(0, true)}</div></div>
+    <div class="card"><h2 style="margin-bottom:12px">${ICON.cards} Study Tools</h2><div class="tools">
+      <a class="tool" href="#revision" data-tool="flash">${ICON.cards}<b>Flashcards</b><span class="muted small">Vocabulary, notions, formulas</span></a>
+      <a class="tool" href="#revision" data-tool="quiz">${ICON.quiz}<b>Quizzes</b><span class="muted small">Test your understanding</span></a>
+      <a class="tool" href="#library">${ICON.summary}<b>Summaries</b><span class="muted small">Key points of each course</span></a>
+      <a class="tool" href="#revision" data-tool="exo">${ICON.pencil}<b>Exercises</b><span class="muted small">With corrected answers</span></a></div></div>
+    <div class="card"><h2 style="margin-bottom:12px">${ICON.game} <i>Gamified Progress</i></h2><div class="journey"><div class="art">${scene('tree', 2)}</div><div><h3>Your journey – L3</h3><div class="muted small">Level ${level()} · ${S.state.xp.toLocaleString('en')} XP</div><div class="bar" style="margin:8px 0 10px"><i style="width:${lvlXP / 2}%"></i></div>${q.map((x) => `<div class="quest ${x.done ? 'done' : ''}"><span class="box">${x.done ? ICON.check.replace('<svg', '<svg width="12" height="12"') : ''}</span>${esc(x.t)}<span class="pts">+${x.pts} XP</span></div>`).join('')}</div></div><div class="badges">${b.map((x) => `<span class="badge ${x.on ? '' : 'locked'}" title="${esc(x.t)}${x.on ? '' : ' (locked)'}">${ICON[x.icon]}</span>`).join('')}</div></div>
+    <div class="card" id="assistant-card"></div>
+  </div>`;
+  v.querySelectorAll('[data-goal]').forEach((el) => el.addEventListener('change', () => { const o = S.state.objectifs.find((x) => x.id === el.dataset.goal); o.fait = el.checked; save(); render(); }));
+  v.querySelectorAll('[data-todo]').forEach((el) => el.addEventListener('click', () => { UI.todoTab = el.dataset.todo; render(); }));
+  v.querySelectorAll('[data-tool]').forEach((el) => el.addEventListener('click', () => { UI.revisionTool = el.dataset.tool; }));
+  $('#quick-task').addEventListener('submit', (e) => { e.preventDefault(); const val = $('#quick-task-input').value.trim(); if (!val) return; S.state.taches.unshift({ id: uid(), texte: val, date: today(), fait: false }); save(); render(); });
+  bindTasks(v); bindDeleteEvents(v);
+  mountAssistant($('#assistant-card'), true);
+}
+
+/* ---------- Courses ---------- */
+function viewCourses(v) {
+  const groups = [['S5', 'Semester 5'], ['S6', 'Semester 6'], ['', 'Outside the official programme']];
+  v.innerHTML = header('Courses', `${IDX.matieres.length} subjects · research maps ${esc(IDX.genereLe)}`) +
+    `<div class="callout small">${esc(IDX.maquette)}</div>` +
+    groups.map(([s, t]) => {
+      const list = IDX.matieres.filter((m) => s ? m.semestres.includes(s) && !m.complement : (m.complement || !m.semestres.length));
+      return list.length ? `<div class="card"><div class="card-head"><h2>${esc(t)}</h2><span class="muted small">${list.length} courses</span></div><div class="grid g-courses">${list.map((m, i) => courseCard(m, i)).join('')}</div></div>` : '';
+    }).join('');
+}
+
+async function viewCourse(v, id) {
+  const m = matiere(id); if (!m) { v.innerHTML = '<div class="empty">Course not found. <a href="#courses">Back to courses</a></div>'; return; }
+  window.__ctx = { matiere: id };
+  const tabs = [['overview', 'Overview'], ['chapters', 'Chapters'], ['notes', 'Notes'], ['resources', 'Resources'], ['exercises', 'Exercises'], ['revision', 'Revision']];
+  const chapId = UI.chap[id] || m.chapitres[0]?.id;
+  v.innerHTML = `<a class="btn ghost" href="#courses" style="align-self:flex-start">${ICON.back} Back to courses</a>
+    <div class="top"><div><h1>${esc(m.titre)}</h1><div class="sub">${esc(m.officiel?.semestres || '')}</div></div><div class="chips"><span class="chip">${esc({ fr: 'Taught in French', en: 'Taught in English', es: 'Taught in Spanish' }[m.langue] || '')}</span><span class="chip">${courseProgress(m)}% done</span></div></div>
+    <div class="banner">${scene(SCENES[id], 1)}</div>
+    <div class="tabs" role="tablist">${tabs.map(([k, t]) => `<button role="tab" data-tab="${k}" aria-selected="${UI.tab === k}">${t}</button>`).join('')}</div>
+    <div id="tab-body"><div class="empty">Loading…</div></div>`;
+  v.querySelectorAll('[data-tab]').forEach((b) => b.addEventListener('click', () => { UI.tab = b.dataset.tab; UI.practice = null; render(); }));
+  let data;
+  try { data = await loadM(id); } catch (e) { $('#tab-body').innerHTML = '<div class="empty">This course could not be loaded. Check your connection and reopen the page.</div>'; return; }
+  if (route() !== `course-${id}`) return;
+  const body = $('#tab-body');
+  const T = UI.tab;
+  if (T === 'overview') return tabOverview(body, m, data);
+  if (T === 'resources') return tabResources(body, m);
+  const nav = `<div class="card chap-nav" style="padding:10px"><div class="muted small" style="padding:4px 10px 8px;font-weight:600">Chapters</div><label class="chap-select field"><span class="sr">Chapter</span><select id="chap-select">${m.chapitres.map((c, i) => `<option value="${c.id}" ${c.id === chapId ? 'selected' : ''}>${pad(i + 1)} · ${esc(c.titre)}${S.state.chapitres[c.id] ? ' ✓' : ''}</option>`).join('')}</select></label><div class="chap-list">${m.chapitres.map((c, i) => `<button data-chap="${c.id}" aria-current="${c.id === chapId}"><span class="n">${pad(i + 1)}</span><span>${esc(c.titre)}${S.state.chapitres[c.id] ? '<span class="done-dot" title="Completed"></span>' : ''}</span></button>`).join('')}</div></div>`;
+  body.innerHTML = `<div class="course-layout">${nav}<div id="chap-body" class="stack"></div></div>`;
+  body.querySelectorAll('[data-chap]').forEach((b) => b.addEventListener('click', () => { UI.chap[id] = b.dataset.chap; UI.practice = null; render(); }));
+  $('#chap-select').addEventListener('change', (e) => { UI.chap[id] = e.target.value; UI.practice = null; render(); });
+  const c = m.chapitres.find((x) => x.id === chapId); window.__ctx.chapitre = chapId;
+  const cb = $('#chap-body');
+  if (T === 'chapters') return tabChapter(cb, m, c, data);
+  if (T === 'notes') return tabNotes(cb, m, c);
+  if (T === 'exercises') return tabExercises(cb, m, c, data);
+  if (T === 'revision') return tabRevision(cb, m, c, data);
+}
+
+function chapterHead(m, c) {
+  const docs = c.documents.map((d) => IDX.documents.find((x) => x.id === d)).filter(Boolean);
+  return `<div class="card"><div class="row spread"><div><div class="muted small">Chapter ${m.chapitres.indexOf(c) + 1}</div><h2 style="font-size:24px">${esc(c.titre)}</h2></div>
+    <button class="btn ${S.state.chapitres[c.id] ? 'soft' : 'primary'}" id="mark-done">${S.state.chapitres[c.id] ? `${ICON.check} Completed` : 'Mark as completed'}</button></div>
+    <div class="labels" style="margin-top:10px">${prio(c.priorite)} ${status(c.statut)} ${labels(c.provenance)}</div>
+    ${docs.length ? `<p class="small muted" style="margin:10px 0 0">From your course documents: ${docs.map((d) => esc(d.fichier)).join(' ; ')}</p>` : '<p class="small muted" style="margin:10px 0 0">No document from your teacher covers this chapter yet: its content is reconstructed.</p>'}
+    ${c.note ? `<p class="small callout" style="margin:10px 0 0">${esc(c.note)}</p>` : ''}</div>`;
+}
+function bindMarkDone(c) {
+  const b = $('#mark-done'); if (!b) return;
+  b.addEventListener('click', () => {
+    if (S.state.chapitres[c.id]) delete S.state.chapitres[c.id];
+    else { S.state.chapitres[c.id] = { date: today() }; gainXP(`chap:${c.id}`, 50, 'Chapter completed'); }
+    save(); render();
+  });
+}
+function renderBlocs(blocs) {
+  return (blocs || []).map((b) => {
+    const t = b.titre ? `<b>${esc(b.titre)}</b>` : '';
+    switch (b.type) {
+      case 'texte': return `<p>${esc(b.texte)}</p>`;
+      case 'etapes': return visFlow(b);
+      case 'liste': return `${t}<ul>${b.items.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>`;
+      case 'tableau': if (isFrise(b)) return visTimeline(b); return `${t}<div class="tbl"><table><thead><tr>${b.entetes.map((h) => `<th>${esc(h)}</th>`).join('')}</tr></thead><tbody>${b.lignes.map((r) => `<tr>${r.map((x) => `<td>${esc(x)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+      case 'formule': return `${t}<div class="formula">${esc(b.formule)}</div>${b.legende ? `<div class="small muted">${esc(b.legende)}</div>` : ''}`;
+      case 'calcul': return visWaterfall(b) + `${b.titre && visWaterfall(b) ? '' : t}<div class="tbl"><table><tbody>${b.lignes.map((l) => `<tr><td>${esc(l.libelle)}</td><td style="text-align:right;font-variant-numeric:tabular-nums">${esc(l.valeur)}</td></tr>`).join('')}</tbody></table></div>`;
+      case 'attention': return `<div class="callout">${esc(b.texte)}</div>`;
+      default: return '';
+    }
+  }).join('');
+}
+function srcLine(id) {
+  const s = IDX.sources[id]; if (!s) return '';
+  return `<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre)}</a>` : esc(s.titre)} — ${esc(s.auteur)}${s.date ? `, ${esc(s.date)}` : ''} <span class="muted small">(${esc(s.niveau)}${s.type ? ` · ${esc(s.type)}` : ''})</span></li>`;
+}
+function renderNotion(n) {
+  const lab = labels(n.sources?.length ? ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'] : ['RECONSTRUCTED COURSE']);
+  return `<details class="notion"><summary><h3>${esc(n.titre)}</h3><span class="labels">${lab}</span></summary><div class="content">
+    ${n.question ? `<div class="q">${esc(n.question)}</div>` : ''}
+    ${n.definition ? `<p><b>${esc(n.definition)}</b></p>` : ''}
+    ${NOTION_VIS[n.id] ? visBlock(...NOTION_VIS[n.id]) : ''}
+    ${n.explication ? `<p>${esc(n.explication)}</p>` : ''}
+    ${renderBlocs(n.fonctionnement)}
+    ${n.termes?.length ? `<div class="tbl"><table><thead><tr><th>Français</th><th>English</th><th>Español</th><th>Definition</th></tr></thead><tbody>${n.termes.map((t) => `<tr><td>${esc(t.fr)}</td><td>${esc(t.en || '')}</td><td>${esc(t.es || '')}</td><td>${esc(t.definition)}</td></tr>`).join('')}</tbody></table></div>` : ''}
+    ${n.exemple ? `<div class="callout info"><b>${n.exemple.fictif ? 'Example (fictional)' : 'Real example'}</b><br>${esc(n.exemple.texte)}${n.exemple.source ? ` <span class="muted small">— ${esc(n.exemple.source)}</span>` : ''}</div>` : ''}
+    ${n.confusions?.length ? visConfusions(n.confusions) : ''}
+    ${n.verification?.length ? `<div><b>Check yourself</b><ul>${n.verification.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}
+    ${n.aVerifier ? `<div class="callout small">To check: ${esc(n.aVerifier)}</div>` : ''}
+    ${n.sources?.length ? `<div class="small"><b>Sources</b><ul>${n.sources.map(srcLine).join('')}</ul></div>` : ''}
+  </div></details>`;
+}
+function tabChapter(el, m, c, data) {
+  const ch = data.chapitres[c.id];
+  const reco = data.notesReconstruites?.[c.id];
+  const keys = ch?.notions?.filter((n) => n.definition).slice(0, 4) || [];
+  el.innerHTML = chapterHead(m, c) +
+    (keys.length ? `<div class="keys"><h3>${ICON.flower.replace('<svg', '<svg width="18" height="18"')} Key notions</h3><ul>${keys.map((n) => `<li><b>${esc(n.titre)}</b>: ${esc(n.definition)}</li>`).join('')}</ul></div>` : '') +
+    ((CHAP_VIS[c.id] || []).length ? `<div class="keys" style="background:var(--surface)"><h3>${ICON.spark.replace('<svg', '<svg width="18" height="18"')} Schéma${CHAP_VIS[c.id].length > 1 ? 's' : ''}</h3><div class="stack" style="margin-top:10px">${CHAP_VIS[c.id].map((x) => visBlock(...x)).join('')}</div></div>` : '') +
+    (reco ? `<div class="card prose"><div class="labels" style="margin-bottom:8px">${labels(['RECONSTRUCTED COURSE'])}</div>${md(reco.corps)}</div>` : '') +
+    (ch?.notions?.length ? `<div class="stack">${ch.notions.map(renderNotion).join('')}</div>` : '') +
+    (!ch?.notions?.length && !reco ? `<div class="card"><h3>Planned content</h3><ul>${c.notions.map((n) => `<li>${esc(n.titre)}</li>`).join('')}</ul><p class="muted small">This chapter has no written notes yet (status: ${esc(c.statut)}). Ask the assistant to explain any of these points.</p></div>` : '') +
+    (c.prerequis.length ? `<div class="card small"><b>Prerequisites</b><div class="row" style="margin-top:6px">${c.prerequis.map((p) => { const mm = matiere(p.split('.')[0]); const pc = mm?.chapitres.find((x) => x.id === p); return pc ? `<a class="chip" style="white-space:normal" href="#course-${mm.id}" data-goto="${p}">${esc(short(mm.titre))} · ${esc(pc.titre)}</a>` : ''; }).join('')}</div></div>` : '');
+  el.querySelectorAll('[data-goto]').forEach((a) => a.addEventListener('click', () => { UI.chap[a.dataset.goto.split('.')[0]] = a.dataset.goto; UI.tab = 'chapters'; }));
+  mountVis(el); bindMarkDone(c);
+}
+function tabNotes(el, m, c) {
+  const val = S.state.notes[c.id] || '';
+  el.innerHTML = chapterHead(m, c) + `<div class="card"><h3>My notes</h3><p class="muted small">Saved ${S.mode === 'account' ? 'to your claude.ai account' : 'in this browser'} as you type.</p><textarea id="note-${c.id.replace(/\./g, '-')}" rows="14" placeholder="Write what you understood, questions for your teacher, examples from class…">${esc(val)}</textarea></div>`;
+  const ta = el.querySelector('textarea'); let tm;
+  ta.addEventListener('input', () => { clearTimeout(tm); tm = setTimeout(() => { if (ta.value.trim()) S.state.notes[c.id] = ta.value; else delete S.state.notes[c.id]; save(); }, 600); });
+  bindMarkDone(c);
+}
+function tabOverview(el, m, data) {
+  const o = m.officiel || {}; const docs = IDX.documents.filter((d) => d.matiere === m.id);
+  const st = {}; m.chapitres.forEach((c) => { st[c.statut] = (st[c.statut] || 0) + 1; });
+  const syn = data.synthese;
+  el.innerHTML = `<div class="grid g-2">
+    <div class="card stack"><div class="labels">${labels(['ACADEMIC RESEARCH'])}<span class="muted small">University of Orléans website (priority 1)</span></div>
+      <h3>What the university says</h3><p><b>Teacher:</b> ${esc(o.enseignant || '—')}</p><p>${esc(o.description || '')}</p>
+      ${o.bibliographie?.length ? `<div><b>Official reading list</b><ul>${o.bibliographie.map((b) => `<li>${esc(b)}</li>`).join('')}</ul></div>` : ''}</div>
+    <div class="card stack"><h3>Research status</h3>${Object.entries(st).sort((a, b) => STATUS_RANK[b[0]] - STATUS_RANK[a[0]]).map(([s, n]) => `<div class="row spread">${status(s)}<b>${n}</b></div>`).join('')}
+      <p class="muted small">A course map is an informed approximation, not your teacher's syllabus. Only items labelled UNIVERSITY MATERIAL come from your own course documents.</p>
+      ${m.incertitudes.length ? `<div><b>Open questions</b><ul class="small">${m.incertitudes.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}</div>
+  </div>
+  ${docs.length ? `<div class="card stack"><div class="labels">${labels(['UNIVERSITY MATERIAL'])}</div><h3>Your course documents</h3>${docs.map((d) => `<details class="notion"><summary><h3>${esc(d.fichier)}</h3><span class="muted small">${esc(d.auteur)}</span></summary><div class="content"><p>${esc(d.nature)}</p><ul>${d.plan.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>${d.ecarts.length ? `<div class="callout small"><b>Checked against current sources</b><ul>${d.ecarts.map((e) => `<li>${esc(e)}</li>`).join('')}</ul></div>` : ''}</div></details>`).join('')}</div>` : ''}
+  ${syn ? `<div class="card prose"><div class="labels" style="margin-bottom:6px">${labels(['RECONSTRUCTED COURSE'])}</div><h3>Summary</h3><p>${esc(syn.essentiel)}</p>${syn.chapitres.map((c) => `<h3>${esc(c.titre)}</h3><p><i>${esc(c.idee)}</i></p><ul>${c.points.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>`).join('')}${syn.parCoeur?.length ? `<h3>Learn by heart</h3><ul>${syn.parCoeur.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}${syn.pieges?.length ? `<h3>Traps</h3><ul>${syn.pieges.map((p) => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}</div>` : ''}
+  ${data.notesReconstruites?._intro ? `<div class="card prose"><div class="labels" style="margin-bottom:6px">${labels(['RECONSTRUCTED COURSE'])}</div><h3>${esc(data.notesReconstruites._intro.titre)}</h3>${md(data.notesReconstruites._intro.corps)}</div>` : ''}
+  <div class="grid g-2">${m.cadres.length ? `<div class="card"><h3>Frameworks and methods</h3><ul>${m.cadres.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}${m.competences.length ? `<div class="card"><h3>Exam skills</h3><ul>${m.competences.map((x) => `<li>${esc(x)}</li>`).join('')}</ul></div>` : ''}</div>`;
+}
+function tabResources(el, m) {
+  const ids = [...new Set([...(m.officiel?.sources || []), ...m.chapitres.flatMap((c) => c.sources)])];
+  el.innerHTML = `<div class="card"><h3>Sources used for this course</h3><p class="muted small">P1 = University of Orléans · P2 = other French universities · P3 = academic, institutional and professional sources.</p><ul>${ids.map(srcLine).join('') || '<li class="muted">No source recorded yet.</li>'}</ul></div>`;
+}
+
+/* ---------- Visuals: diagrams built from the course content ---------- */
+const fmtN = (n, d = 0) => Number(n).toLocaleString('fr-FR', { maximumFractionDigits: d, minimumFractionDigits: d });
+const visFrame = (titre, prov, inner, note = '') => `<div class="vis"><div class="vis-head"><h4>${esc(titre)}</h4><span class="labels">${labels(prov)}</span></div>${inner}${note ? `<div class="vis-note">${note}</div>` : ''}</div>`;
+
+/* Automatic visuals from structured content */
+const ANNEE = /^\s*(1[5-9]|20)\d\d/;
+function isFrise(b) { return b.type === 'tableau' && b.lignes.length >= 3 && b.lignes.filter((l) => ANNEE.test(l[0])).length >= Math.ceil(b.lignes.length * 0.6); }
+function visFlow(b) { return `<div class="vis"><div class="vis-head"><h4>${esc(b.titre || 'Étapes')}</h4></div><div class="flow">${b.etapes.map((e) => `<div class="st">${esc(e)}</div>`).join('')}</div></div>`; }
+function visTimeline(b) {
+  return `<div class="vis"><div class="vis-head"><h4>${esc(b.titre || 'Chronologie')}</h4></div><div class="timeline">${b.lignes.map((l) => `<div class="ev"><span class="yr">${esc(l[0])}</span> — ${l.slice(1).map(esc).join(' · ')}</div>`).join('')}</div></div>`;
+}
+function parseMoney(s) { const m = String(s).replace(/ | /g, ' ').match(/(-|−)?\s*\d[\d ]*(,\d+)?/); if (!m) return null; return Number(m[0].replace(/[ −]/g, (c) => (c === '−' ? '-' : '')).replace(',', '.')); }
+function visWaterfall(b) {
+  const vals = b.lignes.map((l) => ({ l: l.libelle, s: l.valeur, v: parseMoney(l.valeur) }));
+  if (vals.some((x) => x.v === null) || vals.length < 3) return '';
+  const max = Math.max(...vals.map((x) => Math.abs(x.v))); if (!max) return '';
+  let run = 0;
+  const rows = vals.map((x, i) => {
+    const isTot = /total|=|prix|résultat|montant|coût de revient|valeur|net|ttc|cif|cip|dap|ddp/i.test(x.l) && i > 0 && Math.abs(Math.abs(x.v) - Math.abs(run)) < Math.max(1, Math.abs(run) * 0.02);
+    let left, width;
+    if (i === 0 || isTot) { left = 0; width = Math.abs(x.v) / max * 100; run = i === 0 ? x.v : run; }
+    else { const start = run; run += x.v; left = Math.min(start, run) / max * 100; width = Math.abs(x.v) / max * 100; }
+    return `<div class="r"><span>${esc(x.l)}</span><div class="track"><div class="seg ${i === 0 || isTot ? 'tot' : (x.v < 0 ? 'neg' : '')}" style="left:${Math.max(0, left)}%;width:${Math.max(.8, width)}%"></div></div><span class="v">${esc(x.s)}</span></div>`;
+  });
+  return `<div class="vis"><div class="vis-head"><h4>${esc(b.titre || 'Calcul')}</h4></div><div class="wf">${rows.join('')}</div></div>`;
+}
+function visConfusions(list) {
+  return list.map((c) => `<div class="vis"><div class="vis-head"><h4>Ne pas confondre</h4></div><div class="vs"><div class="side-a">${esc(c.a)}</div><div class="mid">vs</div><div class="side-b">${esc(c.b)}</div><div class="why">${esc(c.explication)}</div></div></div>`).join('');
+}
+
+/* Hand-drawn diagrams for key concepts */
+const INCO_ST = ['Locaux du vendeur', 'Chargement au départ', 'Pré-achemi\u00adnement', 'Remise au transporteur', 'À bord / chargé', 'Transport principal', 'Arrivée à destination', 'Déchar\u00adgement', 'Livraison à l\'acheteur'];
+const INCO_ST_LONG = ['Locaux du vendeur', 'Chargement au départ', 'Pré-acheminement', 'Remise au transporteur principal (terminal, quai, le long du navire)', 'Chargement à bord du navire ou sur le transport principal', 'Transport principal', 'Arrivée au lieu ou au port de destination convenu', 'Déchargement à destination', 'Acheminement jusqu\'à l\'acheteur'];
+const INCO = {
+  EXW: { r: 1, c: 1, exp: 'Acheteur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Le vendeur met la marchandise à disposition dans ses locaux, non chargée.' },
+  FCA: { r: 3, c: 3, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Livraison au transporteur choisi par l\'acheteur au lieu convenu. Si ce lieu est l\'usine du vendeur, le vendeur charge et le transfert a lieu chargé. Depuis 2020, l\'acheteur peut faire émettre un connaissement « à bord ».' },
+  FAS: { r: 4, c: 4, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Maritime et fluvial', note: 'Livraison le long du navire au port d\'embarquement.' },
+  FOB: { r: 5, c: 5, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Maritime et fluvial', note: 'Livraison à bord du navire au port d\'embarquement.' },
+  CFR: { r: 5, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Maritime et fluvial', note: 'Deux points critiques : le risque passe à bord au départ, mais le vendeur paie le fret jusqu\'au port de destination.' },
+  CIF: { r: 5, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Vendeur, au profit de l\'acheteur : minimum clauses C (ICC), 110 % du prix', mode: 'Maritime et fluvial', note: 'Comme CFR, plus l\'assurance. Le vendeur assure une marchandise qui voyage aux risques de l\'acheteur.' },
+  CPT: { r: 3, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Deux points critiques : le risque passe à la remise au premier transporteur, le vendeur paie le transport jusqu\'au lieu de destination.' },
+  CIP: { r: 3, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Vendeur, au profit de l\'acheteur : minimum clauses A (ICC), 110 % du prix', mode: 'Tous modes', note: 'Comme CPT, plus une assurance « tous risques » depuis 2020.' },
+  DAP: { r: 7, c: 7, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Livraison au lieu de destination, sur le moyen de transport, prête à être déchargée.' },
+  DPU: { r: 8, c: 8, exp: 'Vendeur', imp: 'Acheteur', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Seule règle où le vendeur décharge à destination (ancien DAT).' },
+  DDP: { r: 7, c: 7, exp: 'Vendeur', imp: 'Vendeur (droits et taxes compris)', ass: 'Aucune obligation', mode: 'Tous modes', note: 'Obligation maximale du vendeur : il dédouane à l\'import et paie les droits.' },
+};
+function incoHTML(rule) {
+  const R = INCO[rule];
+  const cell = (i, n, kind) => `<div class="c ${i < n ? 's' : 'b'} ${i === n ? 'pt' : ''}" title="${kind} : ${i < n ? 'vendeur' : 'acheteur'}">${i < n ? 'V' : 'A'}</div>`;
+  const desk = `<div class="chain" role="img" aria-label="${rule} : risques transférés à l'étape ${R.r + 1}, frais à l'étape ${R.c + 1}"><div></div>${INCO_ST.map((s, i) => `<div class="stn" title="${esc(INCO_ST_LONG[i])}">${s.replace(/\u00ad/g, '&shy;')}</div>`).join('')}<div class="lab">Risques</div>${INCO_ST.map((_, i) => cell(i, R.r, 'Risque')).join('')}<div class="lab">Frais</div>${INCO_ST.map((_, i) => cell(i, R.c, 'Frais')).join('')}</div>`;
+  const mob = `<div class="chain-m"><b>Étape</b><b>Risques</b><b>Frais</b>${INCO_ST_LONG.map((s, i) => `<span>${esc(s)}</span>${cell(i, R.r, 'Risque')}${cell(i, R.c, 'Frais')}`).join('')}</div>`;
+  return `<div class="inco-pick" role="group" aria-label="Choisir une règle">${Object.keys(INCO).map((k) => `<button type="button" data-inco="${k}" aria-pressed="${k === rule}">${k}</button>`).join('')}</div>
+    ${desk}${mob}
+    <div class="legend"><span><i style="background:var(--accent)"></i>V = à la charge du vendeur</span><span><i style="background:var(--gold-soft)"></i>A = à la charge de l'acheteur</span><span>Trait noir = point de transfert</span></div>
+    <div class="facts"><div><b>Dédouanement export</b>${esc(R.exp)}</div><div><b>Dédouanement import</b>${esc(R.imp)}</div><div><b>Assurance</b>${esc(R.ass)}</div><div><b>Modes</b>${esc(R.mode)}</div></div>
+    <div class="step-now">${esc(R.note)}</div>`;
+}
+const CREDOC = [
+  ['vendeur', 'acheteur', 'Contrat de vente : les parties conviennent d\'un paiement par crédit documentaire.'],
+  ['acheteur', 'emettrice', 'L\'acheteur (donneur d\'ordre) demande à sa banque d\'ouvrir le crédit.'],
+  ['emettrice', 'notificatrice', 'La banque émettrice ouvre le crédit et le transmet à une banque du pays du vendeur.'],
+  ['notificatrice', 'vendeur', 'La banque notificatrice notifie le crédit au vendeur (bénéficiaire) ; si elle le confirme, elle s\'engage aussi.'],
+  ['vendeur', 'acheteur', 'Le vendeur expédie la marchandise et obtient les documents (connaissement, facture, certificat…).'],
+  ['vendeur', 'notificatrice', 'Le vendeur remet les documents à la banque, dans les délais du crédit.'],
+  ['notificatrice', 'vendeur', 'La banque examine les documents (5 jours ouvrés au plus) ; s\'ils sont conformes, le vendeur est payé (ou le sera à l\'échéance).'],
+  ['notificatrice', 'emettrice', 'Les documents sont envoyés à la banque émettrice, qui rembourse la banque notificatrice.'],
+  ['emettrice', 'acheteur', 'La banque émettrice débite l\'acheteur et lui remet les documents.'],
+  ['acheteur', 'acheteur', 'Avec le connaissement, l\'acheteur retire la marchandise auprès du transporteur.'],
+];
+const ACTORS = { vendeur: 'Vendeur (bénéficiaire)', acheteur: 'Acheteur (donneur d\'ordre)', notificatrice: 'Banque notificatrice / confirmante (pays du vendeur)', emettrice: 'Banque émettrice (pays de l\'acheteur)' };
+function credocHTML(i) {
+  const [a, b, t] = CREDOC[i];
+  return `<div class="actors4">${['vendeur', 'acheteur', 'notificatrice', 'emettrice'].map((k) => `<div class="bx ${k === a ? 'a on' : k === b ? 'g on' : ''}">${esc(ACTORS[k])}</div>`).join('')}</div>
+  <div class="step-now"><b>Étape ${i + 1} / ${CREDOC.length} — ${esc(ACTORS[a].split(' (')[0])}${a !== b ? ` → ${esc(ACTORS[b].split(' (')[0])}` : ''}</b><br>${esc(t)}</div>
+  <div class="steps-ctl"><button class="btn" data-cd="-1" ${i === 0 ? 'disabled' : ''}>← Étape précédente</button><button class="btn primary" data-cd="1" ${i === CREDOC.length - 1 ? 'disabled' : ''}>Étape suivante →</button></div>`;
+}
+function eqHTML(v) {
+  const frng = v.rs - v.es, bfr = v.ace - v.de, tn = frng - bfr;
+  const max = Math.max(Math.abs(frng), Math.abs(bfr), Math.abs(tn), 1);
+  const bar = (x, cls) => `<div class="bar-v ${x < 0 ? 'neg' : ''}" style="height:${Math.abs(x) / max * 120}px;background:var(${x < 0 ? '--bad' : cls})"></div>`;
+  let verdict, k;
+  if (frng > 0 && bfr > 0 && tn >= 0) { verdict = 'Équilibre satisfaisant : le FRNG finance tout le BFR.'; k = 'ok'; }
+  else if (frng > 0 && bfr > 0) { verdict = 'Le FRNG ne couvre pas tout le BFR : dépendance aux concours bancaires, à surveiller.'; k = 'warn'; }
+  else if (frng > 0 && bfr <= 0) { verdict = 'Situation très confortable : excédent de ressources.'; k = 'ok'; }
+  else if (frng <= 0 && bfr < 0 && tn >= 0) { verdict = 'Le cycle d\'exploitation finance une partie des investissements (cas de la grande distribution).'; k = 'warn'; }
+  else if (frng <= 0 && bfr < 0) { verdict = 'Déséquilibre : des investissements sont financés à court terme.'; k = 'bad'; }
+  else { verdict = 'Situation très dangereuse : tout repose sur le crédit bancaire.'; k = 'bad'; }
+  return `<div class="sliders">${[['rs', 'Ressources stables'], ['es', 'Emplois stables'], ['ace', 'Stocks + créances d\'exploitation'], ['de', 'Dettes d\'exploitation']].map(([id, t]) => `<label>${t}<input type="range" min="0" max="1000" step="10" value="${v[id]}" data-eq="${id}"><output>${fmtN(v[id])} k€</output></label>`).join('')}</div>
+  <div class="bars3"><div class="col">${bar(frng, '--accent')}<b>FRNG</b><span>${fmtN(frng)} k€</span><span class="muted small">RS − ES</span></div><div class="col">${bar(bfr, '--gold')}<b>BFR</b><span>${fmtN(bfr)} k€</span><span class="muted small">ACE − DE</span></div><div class="col">${bar(tn, '--ok')}<b>Trésorerie nette</b><span>${fmtN(tn)} k€</span><span class="muted small">FRNG − BFR</span></div></div>
+  <div class="verdict ${k}">${verdict}</div>`;
+}
+function srHTML(v) {
+  const t = v.taux / 100, sr = v.cf / t, mcv = v.ca * t, res = mcv - v.cf, ms = v.ca - sr, pm = v.ca > 0 ? (sr / v.ca) * 12 : 0;
+  const W = 520, H = 250, L = 56, B = 30, xmax = Math.max(v.ca, sr) * 1.25 || 1, ymax = Math.max(xmax * t, v.cf) * 1.15 || 1;
+  const X = (x) => L + x / xmax * (W - L - 12), Y = (y) => H - B - y / ymax * (H - B - 12);
+  const ticks = [0, .25, .5, .75, 1].map((f) => f * xmax);
+  return `<div class="sliders">
+    <label>Charges fixes annuelles<input type="range" min="10" max="500" step="5" value="${v.cf}" data-sr="cf"><output>${fmtN(v.cf)} k€</output></label>
+    <label>Taux de marge sur coût variable<input type="range" min="5" max="80" step="1" value="${v.taux}" data-sr="taux"><output>${v.taux} %</output></label>
+    <label>Chiffre d'affaires prévu<input type="range" min="50" max="2000" step="10" value="${v.ca}" data-sr="ca"><output>${fmtN(v.ca)} k€</output></label></div>
+  <svg class="dg" viewBox="0 0 ${W} ${H}" role="img" aria-label="Seuil de rentabilité ${fmtN(sr)} k€">
+    ${ticks.map((x) => `<line class="grid" x1="${X(x)}" x2="${X(x)}" y1="12" y2="${H - B}"/><text class="m" x="${X(x)}" y="${H - 10}" text-anchor="middle" font-size="11">${fmtN(x)}</text>`).join('')}
+    <line class="axis" x1="${L}" x2="${W - 12}" y1="${H - B}" y2="${H - B}"/><line class="axis" x1="${L}" x2="${L}" y1="12" y2="${H - B}"/>
+    <line class="l2" x1="${X(0)}" y1="${Y(v.cf)}" x2="${X(xmax)}" y2="${Y(v.cf)}"/><text x="${X(xmax) - 4}" y="${Y(v.cf) - 6}" text-anchor="end">Charges fixes</text>
+    <line class="l1" x1="${X(0)}" y1="${Y(0)}" x2="${X(xmax)}" y2="${Y(xmax * t)}"/><text x="${X(xmax) - 4}" y="${Y(xmax * t) + 16}" text-anchor="end">Marge sur coût variable</text>
+    <line class="l3" x1="${X(sr)}" x2="${X(sr)}" y1="${Y(v.cf)}" y2="${H - B}"/><circle class="pt" cx="${X(sr)}" cy="${Y(v.cf)}" r="6"/>
+    <text x="${X(sr) + 8}" y="${Y(v.cf) + 22}">Seuil : ${fmtN(sr)} k€</text>
+    <line class="l3" x1="${X(v.ca)}" x2="${X(v.ca)}" y1="20" y2="${H - B}"/><text class="m" x="${X(v.ca) + 4}" y="28">CA prévu</text>
+    <text class="m" x="${L - 6}" y="20" text-anchor="end" font-size="11">k€</text>
+  </svg>
+  <div class="facts"><div><b>Seuil de rentabilité</b>CF ÷ taux = ${fmtN(sr)} k€</div><div><b>Résultat prévu</b>${fmtN(res)} k€</div><div><b>Marge de sécurité</b>${fmtN(ms)} k€ (${v.ca ? fmtN(ms / v.ca * 100) : 0} % du CA)</div><div><b>Point mort</b>${pm <= 12 ? `${fmtN(pm, 1)} mois (activité régulière)` : 'non atteint dans l\'année'}</div></div>`;
+}
+const VIS = {
+  incoterms: {
+    titre: 'Incoterms® 2020 : qui supporte risques et frais, étape par étape', prov: ['UNIVERSITY MATERIAL', 'ACADEMIC RESEARCH'],
+    note: 'Prolonge les schémas FCA, FOB et CIF de votre enseignante à toutes les règles. Source : ICC, Incoterms® 2020. Choisissez une règle.',
+    html: (arg) => `<div data-inco-root>${incoHTML(arg || 'FCA')}</div>`,
+    bind: (el) => { el.addEventListener('click', (e) => { const b = e.target.closest('[data-inco]'); if (!b) return; const root = b.closest('[data-inco-root]'); root.innerHTML = incoHTML(b.dataset.inco); }); },
+  },
+  flux: {
+    titre: 'Les trois flux d\'une opération d\'export', prov: ['RECONSTRUCTED COURSE'],
+    html: () => `<div class="lanes"><div class="actor">Vendeur<br><span class="muted small">exportateur</span></div><div class="lane" style="background:var(--accent-soft)"><span>Flux physique</span>marchandise →</div><div class="actor">Acheteur<br><span class="muted small">importateur</span></div><div class="lane" style="background:var(--gold-soft)"><span>Flux documentaire</span>documents → (directement ou via les banques)</div><div class="lane" style="background:var(--ok-soft)"><span>Flux financier</span>← paiement</div></div>
+      <div class="boxes"><div class="bx"><b>Transport</b>transporteur, commissionnaire, transitaire</div><div class="bx"><b>Douane</b>déclarant, administrations export et import</div><div class="bx"><b>Banques</b>banque du vendeur, banque de l'acheteur</div><div class="bx"><b>Assurance</b>assureur transport, assureur-crédit</div></div>`,
+    note: 'Les trois flux sont décalés dans le temps et dans l\'espace : c\'est ce décalage qui crée les risques que les techniques du commerce international couvrent.',
+  },
+  credoc: {
+    titre: 'Le crédit documentaire, étape par étape', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'Régime : RUU 600 (ICC, 2007). Le crédit est autonome : la banque paie contre des documents conformes, sans regarder la marchandise.',
+    html: () => `<div data-cd-root data-i="0">${credocHTML(0)}</div>`,
+    bind: (el) => { el.addEventListener('click', (e) => { const b = e.target.closest('[data-cd]'); if (!b) return; const root = b.closest('[data-cd-root]'); const i = Math.max(0, Math.min(CREDOC.length - 1, Number(root.dataset.i) + Number(b.dataset.cd))); root.dataset.i = i; root.innerHTML = credocHTML(i); }); },
+  },
+  transport: {
+    titre: 'Poids réel ou volume : ce qui est facturé', prov: ['UNIVERSITY MATERIAL', 'RECONSTRUCTED COURSE'],
+    note: 'Règles utilisées dans les applications de transport de votre cours : en maritime conventionnel, 1 unité payante = 1 tonne ou 1 m³ (le plus élevé) ; en aérien, rapport 1/6 (1 m³ = 167 kg).',
+    html: () => `<div class="sliders"><label>Poids brut (kg)<input type="number" value="5000" min="0" data-tp="kg"></label><label>Volume (m³)<input type="number" value="6" min="0" step="0.1" data-tp="m3"></label></div><div data-tp-out></div>`,
+    bind: (el) => {
+      const upd = () => {
+        const kg = Number(el.querySelector('[data-tp="kg"]').value) || 0, m3 = Number(el.querySelector('[data-tp="m3"]').value) || 0;
+        const up = Math.max(kg / 1000, m3), vol = m3 * 1000 / 6;
+        el.querySelector('[data-tp-out]').innerHTML = `<div class="facts"><div><b>Maritime</b>${fmtN(up, 2)} UP facturées — ${kg / 1000 >= m3 ? 'le poids l\'emporte' : 'le volume l\'emporte'}</div><div><b>Aérien</b>Poids volumétrique ${fmtN(vol)} kg → poids taxable ${fmtN(Math.max(kg, vol))} kg</div></div>`;
+      };
+      el.querySelectorAll('[data-tp]').forEach((i) => i.addEventListener('input', upd)); upd();
+    },
+  },
+  assurance: {
+    titre: 'Calculer une prime d\'assurance CIF ou CIP', prov: ['UNIVERSITY MATERIAL'],
+    note: 'Formule de la fiche « Le calcul de l\'assurance transport » de votre enseignante : la prime porte sur la valeur CIF (ou CIP) majorée de 10 %, qui l\'inclut elle-même.',
+    html: () => `<div class="sliders"><label>Valeur CFR ou CPT (€)<input type="number" value="10000" min="0" data-as="v"></label><label>Taux d'assurance (%)<input type="number" value="0.6" min="0" step="0.05" data-as="t"></label></div><div data-as-out></div>`,
+    bind: (el) => {
+      const upd = () => {
+        const v = Number(el.querySelector('[data-as="v"]').value) || 0, t = Number(el.querySelector('[data-as="t"]').value) || 0;
+        const cif = v / (1 - 1.1 * t / 100), prime = cif - v;
+        el.querySelector('[data-as-out]').innerHTML = `<div class="flow"><div class="st">CFR / CPT = ${fmtN(v, 2)} €</div><div class="st">CIF = CFR ÷ [1 − (1,1 × ${fmtN(t, 2)} / 100)] = ${fmtN(cif, 2)} €</div><div class="st">Prime = 1,1 × CIF × ${fmtN(t, 2)} % = ${fmtN(prime, 2)} €</div></div>`;
+      };
+      el.querySelectorAll('[data-as]').forEach((i) => i.addEventListener('input', upd)); upd();
+    },
+  },
+  bilan: {
+    titre: 'Le bilan et le compte de résultat', prov: ['UNIVERSITY MATERIAL', 'RECONSTRUCTED COURSE'],
+    note: 'Montants fictifs, en k€. Le bilan est une photo du patrimoine à la clôture ; le compte de résultat est le film de l\'exercice. Le résultat apparaît dans les deux.',
+    html: () => {
+      const A = [['Actif immobilisé', 'incorporel, corporel, financier', 520], ['Stocks', 'marchandises, matières', 180], ['Créances', 'clients, autres', 210], ['Disponibilités', 'banque, caisse', 90]];
+      const P = [['Capitaux propres', 'capital, réserves, résultat 60', 470], ['Provisions', 'risques et charges', 40], ['Dettes financières', 'emprunts', 300], ['Dettes d\'exploitation', 'fournisseurs, fiscales et sociales', 190]];
+      const blk = (r, i, cls) => `<div class="blk" style="flex:${r[2]};min-height:${Math.max(34, r[2] / 4)}px;background:var(${cls[i % 2]})"><b>${esc(r[0])} · ${r[2]}</b><span>${esc(r[1])}</span></div>`;
+      return `<div class="grid g-2"><div><div class="bal"><div class="colh">ACTIF (emplois)</div><div class="colh">PASSIF (ressources)</div><div class="col">${A.map((r, i) => blk(r, i, ['--accent-soft', '--surface-2'])).join('')}</div><div class="col">${P.map((r, i) => blk(r, i, ['--gold-soft', '--surface-2'])).join('')}</div></div><p class="small muted" style="margin:6px 0 0">Total actif 1 000 = total passif 1 000</p></div>
+        <div><div class="bal"><div class="colh">CHARGES</div><div class="colh">PRODUITS</div><div class="col"><div class="blk" style="min-height:120px;background:var(--surface-2)"><b>Charges · 940</b><span>achats, charges externes, personnel, dotations, intérêts, impôt</span></div><div class="blk" style="min-height:30px;background:var(--ok-soft)"><b>Bénéfice · 60</b></div></div><div class="col"><div class="blk" style="min-height:150px;background:var(--gold-soft)"><b>Produits · 1 000</b><span>ventes, production, produits financiers</span></div></div></div><p class="small muted" style="margin:6px 0 0">Résultat = produits − charges</p></div></div>`;
+    },
+  },
+  partieDouble: {
+    titre: 'La partie double en comptes en T', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Exemple fictif : achat de marchandises 1 000 € HT, TVA 20 %, payé par virement. Chaque opération est inscrite au débit d\'un ou plusieurs comptes et au crédit d\'un ou plusieurs autres, pour le même total.',
+    html: () => `<div class="taccs">${[['607 Achats de marchandises', '1 000', ''], ['44566 TVA déductible', '200', ''], ['512 Banque', '', '1 200']].map(([t, d, c]) => `<div class="tacc"><div class="t">${t}</div><div class="sides"><div>${d ? `D ${d}` : ''}</div><div>${c ? `C ${c}` : ''}</div></div></div>`).join('')}</div><div class="facts"><div><b>Total débits</b>1 200</div><div><b>Total crédits</b>1 200</div><div><b>Règle</b>emploi = ressource : pas de débit sans crédit</div></div>`,
+  },
+  equilibre: {
+    titre: 'FRNG, BFR, trésorerie nette : jouez avec le bilan fonctionnel', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Montants fictifs. Trésorerie nette = FRNG − BFR = trésorerie active − trésorerie passive. Les six situations reprennent le tableau du cours.',
+    html: () => `<div data-eq-root>${eqHTML({ rs: 600, es: 450, ace: 380, de: 300 })}</div>`,
+    bind: (el) => { el.addEventListener('input', (e) => { const r = e.target.closest('[data-eq]'); if (!r) return; const root = r.closest('[data-eq-root]'); const v = {}; root.querySelectorAll('[data-eq]').forEach((i) => { v[i.dataset.eq] = Number(i.value); }); const focus = r.dataset.eq; root.innerHTML = eqHTML(v); root.querySelector(`[data-eq="${focus}"]`).focus(); }); },
+  },
+  seuil: {
+    titre: 'Le seuil de rentabilité', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Montants fictifs. Au seuil, la marge sur coût variable couvre exactement les charges fixes : le résultat est nul.',
+    html: () => `<div data-sr-root>${srHTML({ cf: 120, taux: 30, ca: 600 })}</div>`,
+    bind: (el) => { el.addEventListener('input', (e) => { const r = e.target.closest('[data-sr]'); if (!r) return; const root = r.closest('[data-sr-root]'); const v = {}; root.querySelectorAll('[data-sr]').forEach((i) => { v[i.dataset.sr] = Number(i.value); }); const f = r.dataset.sr; root.innerHTML = srHTML(v); root.querySelector(`[data-sr="${f}"]`).focus(); }); },
+  },
+  ricardo: {
+    titre: 'L\'avantage comparatif : l\'exemple de Ricardo (1817)', prov: ['ACADEMIC RESEARCH'],
+    note: 'Chiffres de D. Ricardo, Des principes de l\'économie politique et de l\'impôt, 1817, chap. 7 : heures de travail pour produire une unité. Le Portugal a un avantage absolu dans les deux biens, mais chaque pays gagne à se spécialiser là où son coût relatif est le plus bas.',
+    html: () => {
+      const d = [['Angleterre', 100, 120], ['Portugal', 90, 80]];
+      const bar = (v, c) => `<div style="height:14px;width:${v / 1.3}%;background:var(${c});border-radius:4px"></div>`;
+      return `<div class="stack">${d.map(([p, drap, vin]) => `<div><b>${p}</b><div class="wf"><div class="r"><span>Drap</span><div>${bar(drap, '--accent')}</div><span class="v">${drap} h</span></div><div class="r"><span>Vin</span><div>${bar(vin, '--gold')}</div><span class="v">${vin} h</span></div></div></div>`).join('')}</div>
+      <div class="facts"><div><b>Coût d'une unité de drap</b>Angleterre : 100/120 = 0,83 vin<br>Portugal : 90/80 = 1,13 vin</div><div><b>Spécialisation</b>Angleterre → drap<br>Portugal → vin</div><div><b>Gain</b>Échanger au prix intermédiaire, entre 0,83 et 1,13 unité de vin le drap, profite aux deux</div></div>`;
+    },
+  },
+  conflits: {
+    titre: 'Deux questions distinctes : quel tribunal ? quelle loi ?', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'Contrat entre parties de l\'UE (hors Danemark pour Rome I). Un tribunal français peut appliquer une loi étrangère : juridiction compétente et loi applicable se déterminent séparément.',
+    html: () => `<div class="grid g-2"><div class="stack"><div class="bx a"><b>1. Quel tribunal est compétent ?</b>Règlement Bruxelles I bis (UE n° 1215/2012)</div><div class="flow"><div class="st">Clause attributive de juridiction valable (art. 25) : elle s'impose</div><div class="st">Sinon : tribunal du domicile du défendeur (art. 4)</div><div class="st">Ou, en matière contractuelle, tribunal du lieu de livraison des marchandises (art. 7.1)</div></div></div>
+      <div class="stack"><div class="bx g"><b>2. Quelle loi s'applique au fond ?</b>Convention de Vienne (CVIM) si elle s'applique ; sinon règlement Rome I (CE n° 593/2008)</div><div class="flow"><div class="st">Loi choisie par les parties (art. 3)</div><div class="st">À défaut, pour une vente de marchandises : loi de la résidence habituelle du vendeur (art. 4.1.a)</div></div></div></div>`,
+  },
+  tribunauxUK: {
+    titre: 'Les juridictions civiles anglaises et américaines', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Repris du tableau du cours. La Supreme Court du Royaume-Uni siège depuis 2009 ; dans l\'État de New York, la « Supreme Court » est une juridiction de première instance.',
+    html: () => `<div class="grid g-2"><div><b>Angleterre et pays de Galles</b><div class="pyr" style="margin-top:8px"><div style="width:45%"><b>UK Supreme Court</b></div><div style="width:65%"><b>Court of Appeal</b>Civil Division</div><div style="width:85%"><b>High Court</b>King's Bench (dont Commercial Court), Chancery, Family</div><div style="width:100%"><b>County Courts</b>affaires courantes</div></div></div>
+      <div><b>États-Unis : deux ordres</b><div class="grid g-2" style="margin-top:8px;gap:8px"><div class="pyr"><div style="width:70%"><b>U.S. Supreme Court</b></div><div style="width:85%"><b>Courts of Appeals</b>circuits</div><div style="width:100%"><b>District Courts</b>fédéral</div></div><div class="pyr"><div style="width:70%"><b>Court of Appeals</b>NY</div><div style="width:85%"><b>Appellate Division</b></div><div style="width:100%"><b>Supreme Court</b>1re instance NY</div></div></div></div></div>`,
+  },
+  contrat: {
+    titre: 'Former un contrat en common law', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Une contre-offre rejette l\'offre initiale (Hyde v Wrench, 1840). Une acceptation par courrier prend effet à l\'envoi (postal rule, Adams v Lindsell, 1818).',
+    html: () => `<div class="boxes chainy"><div class="bx">Invitation to treat<br><span class="muted small">vitrine, catalogue, annonce</span></div><span class="arrow-r">→</span><div class="bx a"><b>Offer</b>proposition ferme et précise</div><span class="arrow-r">→</span><div class="bx a"><b>Acceptance</b>sans réserve (mirror image rule)</div><span class="arrow-r">→</span><div class="bx g"><b>Consideration</b>contrepartie de chaque partie</div><span class="arrow-r">→</span><div class="bx g"><b>Intention</b>to create legal relations</div><span class="arrow-r">→</span><div class="bx o"><b>Binding contract</b>si capacité et forme respectées</div></div><div class="callout small">Counter-offer → l'offre initiale tombe : on repart d'une nouvelle offre.</div>`,
+  },
+  gantt: {
+    titre: 'Diagramme de Gantt : création d\'une filiale à l\'étranger', prov: ['UNIVERSITY MATERIAL', 'RECONSTRUCTED COURSE'],
+    note: 'Tâches tirées de la check-list du projet de votre cours (avant, pendant, après la création). Durées et dépendances fictives. En couleur foncée, le chemin critique ; en losange, les jalons.',
+    html: () => {
+      const T = [['Veille et étude pays', 0, 3, 1], ['Étude de marché', 2, 4, 1], ['Diagnostic export (SWOT)', 5, 2, 1], ['Choix du mode de présence et de la structure juridique', 7, 2, 1], ['Préparer le financement', 7, 3, 0], ['◆ Jalon CC1 : présentation du lancement', 9, 0, 1], ['Statuts, capital, immatriculation', 9, 3, 1], ['Numéros fiscaux, banque, licences', 12, 2, 1], ['◆ Jalon CC2 : filiale créée', 14, 0, 1], ['Comptabilité, fiscalité, social, gouvernance', 14, 3, 0]];
+      const N = 17;
+      return `<div class="gantt"><div></div><div class="scale">${[0, 4, 8, 12, 16].map((w) => `<span>S${w + 1}</span>`).join('')}</div>${T.map(([t, s, d, c]) => `<div>${esc(t.replace('◆ ', ''))}</div><div class="track">${d ? `<div class="task ${c ? 'crit' : ''}" style="left:${s / N * 100}%;width:${d / N * 100}%"></div>` : `<div class="ms" style="left:${s / N * 100}%"></div>`}</div>`).join('')}</div>`;
+    },
+  },
+  qcd: {
+    titre: 'Le triangle qualité – coûts – délais', prov: ['UNIVERSITY MATERIAL', 'ACADEMIC RESEARCH'],
+    note: 'Cité dans votre cours d\'après « Oisen (1971) » : R. P. Olsen, Project Management Quarterly, 1971 ; expression « iron triangle » popularisée par R. Atkinson (1999). Modifier un sommet oblige à ajuster les deux autres.',
+    html: () => `<svg class="dg" viewBox="0 0 420 220" role="img" aria-label="Triangle qualité coûts délais"><polygon points="210,20 60,190 360,190" style="fill:var(--accent-soft);stroke:var(--accent);stroke-width:3"/><text x="210" y="14" text-anchor="middle" font-weight="600">Qualité</text><text x="52" y="210" text-anchor="middle" font-weight="600">Coûts</text><text x="368" y="210" text-anchor="middle" font-weight="600">Délais</text><text x="210" y="135" text-anchor="middle">Périmètre</text><text class="m" x="210" y="153" text-anchor="middle" font-size="11">du projet</text></svg>`,
+  },
+  presence: {
+    titre: 'Modes de présence : contrôle et engagement', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Positions indicatives : plus l\'entreprise engage de ressources à l\'étranger, plus elle contrôle sa politique commerciale et plus elle prend de risques.',
+    html: () => `<div class="matrix">${[['Export indirect', 8, 8], ['Agent commercial', 26, 26], ['Distributeur', 34, 18], ['Licence, franchise', 50, 40], ['Joint-venture', 66, 58], ['Succursale', 78, 78], ['Filiale', 88, 90]].map(([t, x, y]) => `<span class="dot" style="left:${x}%;bottom:${y}%">${t}</span>`).join('')}<span class="ax-x">Engagement de ressources et risque →</span><span class="ax-y">Contrôle →</span></div>`,
+  },
+  uppsala: {
+    titre: 'Le modèle d\'Uppsala : une internationalisation par étapes', prov: ['RECONSTRUCTED COURSE'],
+    note: 'Johanson et Wiedersheim-Paul (1975), Johanson et Vahlne (1977) : l\'entreprise s\'engage progressivement et commence par les marchés psychologiquement proches.',
+    html: () => `<div class="boxes chainy"><div class="bx">Exportations irrégulières</div><span class="arrow-r">→</span><div class="bx">Export via un agent</div><span class="arrow-r">→</span><div class="bx a">Filiale commerciale</div><span class="arrow-r">→</span><div class="bx g">Filiale de production</div></div><div class="callout info small">Les « born global » contredisent ce schéma : elles visent plusieurs marchés dès leur création.</div>`,
+  },
+  segmentation: {
+    titre: 'Segmenter puis se positionner', prov: ['UNIVERSITY MATERIAL'],
+    note: 'Repris du chapitre VII « Segmentation et positionnement » de votre cours (I. Noël).',
+    html: () => `<div class="grid g-2"><div class="pyr"><div style="width:100%"><b>1. Macro-segmentation</b>choix des pays ou zones</div><div style="width:82%"><b>2. Micro-segmentation</b>géographiques, sociodémographiques, psychographiques, comportementaux</div><div style="width:64%"><b>3. Segments cross-culturels</b>mêmes attentes dans plusieurs pays</div></div>
+      <div><b>Le triangle d'or du positionnement</b><svg class="dg" viewBox="0 0 420 200" role="img" aria-label="Triangle d'or"><polygon points="210,30 70,175 350,175" style="fill:var(--gold-soft);stroke:var(--gold);stroke-width:3"/><text x="210" y="20" text-anchor="middle" font-weight="600">Attentes du public</text><text x="70" y="195" text-anchor="middle" font-weight="600">Atouts du produit</text><text x="350" y="195" text-anchor="middle" font-weight="600">Positionnement des concurrents</text><text x="210" y="130" text-anchor="middle">Positionnement</text></svg></div></div>`,
+  },
+  ukSystem: {
+    titre: 'The UK as a multi-level system of government', prov: ['UNIVERSITY MATERIAL'],
+    note: 'From the conclusion of your lesson plan « Understanding and reassessing the UK system of government ». The monarch is now King Charles III.',
+    html: () => `<div class="pyr">${[['Constitutional framework', 'uncodified: statutes, conventions, judicial decisions, principles'], ['Parliament', 'makes laws and scrutinises government'], ['Government', 'leadership commanding the confidence of the Commons'], ['Elections', 'First Past the Post for Westminster'], ['Political parties', 'organise competition, provide government and opposition'], ['Devolution', 'Scotland, Wales, Northern Ireland'], ['Local government', 'local authorities and mayors']].map(([t, d], i) => `<div style="width:${100 - i * 6}%"><b>Level ${i + 1} – ${t}</b>${d}</div>`).join('')}</div>`,
+  },
+  leiper: {
+    titre: 'Le système touristique de Leiper (1979)', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'N. Leiper, « The framework of tourism », Annals of Tourism Research, 1979. Le tout baigne dans un environnement économique, politique, technologique et social.',
+    html: () => `<div class="boxes chainy"><div class="bx a"><b>Région émettrice</b>départ et retour du touriste ; facteurs d'incitation (push) : revenus, congés, désir d'évasion</div><span class="arrow-r">⇄</span><div class="bx"><b>Région de transit</b>trajet, escales, transporteurs</div><span class="arrow-r">⇄</span><div class="bx g"><b>Région de destination</b>séjour ; facteurs d'attraction (pull) : climat, patrimoine, prix, accès</div></div><div class="callout info small">L'industrie touristique (voyagistes, transporteurs, hébergeurs, offices de tourisme) se répartit entre les trois régions.</div>`,
+  },
+  butler: {
+    titre: 'Le cycle de vie d\'une destination (Butler, 1980)', prov: ['ACADEMIC RESEARCH', 'RECONSTRUCTED COURSE'],
+    note: 'R. Butler, The Canadian Geographer, 1980. Courbe schématique : la durée de chaque phase varie selon les destinations.',
+    html: () => `<svg class="dg" viewBox="0 0 560 250" role="img" aria-label="Courbe de Butler"><line class="axis" x1="40" y1="220" x2="545" y2="220"/><line class="axis" x1="40" y1="220" x2="40" y2="15"/><text class="m" x="545" y="240" text-anchor="end" font-size="11">Temps</text><text class="m" x="46" y="20" font-size="11">Nombre de touristes</text>
+      <path class="l1" d="M40,212 C110,210 140,200 180,170 S260,70 330,60 S390,55 410,55"/><path class="l2" d="M410,55 C450,52 490,30 540,22"/><path class="l3" d="M410,55 C460,60 500,110 540,150"/>
+      ${[['Exploration', 70, 205], ['Implication', 140, 192], ['Développement', 220, 120], ['Consolidation', 320, 50], ['Stagnation', 400, 45]].map(([t, x, y]) => `<circle class="pt" cx="${x}" cy="${y + 8}" r="4"/><text x="${x}" y="${y - 2}" text-anchor="middle" font-size="12">${t}</text>`).join('')}
+      <text x="540" y="16" text-anchor="end" font-size="12">Rajeunissement</text><text x="540" y="168" text-anchor="end" font-size="12">Déclin</text></svg>`,
+  },
+  tourismeDef: {
+    titre: 'Qui est un visiteur ? Les formes de tourisme', prov: ['ACADEMIC RESEARCH'],
+    note: 'Nations unies et OMT, IRTS 2008, § 2.9, 2.13, 2.39 et 2.40.',
+    html: () => `<div class="grid g-2"><div class="pyr"><div style="width:100%"><b>Voyageurs</b>toute personne qui se déplace</div><div style="width:84%"><b>Visiteurs</b>hors environnement habituel, moins d'un an, pas pour être employé sur place</div><div class="grid g-2" style="width:84%;gap:6px;background:none;padding:0"><div style="background:var(--gold-soft);border-radius:10px;padding:8px"><b>Touriste</b>au moins une nuitée</div><div style="background:var(--ok-soft);border-radius:10px;padding:8px"><b>Excursionniste</b>visiteur de la journée</div></div></div>
+      <div class="stack"><div class="boxes"><div class="bx a"><b>Interne</b>résidents dans le pays</div><div class="bx g"><b>Récepteur</b>non-résidents dans le pays</div><div class="bx o"><b>Émetteur</b>résidents à l'étranger</div></div><div class="facts"><div><b>Intérieur</b>interne + récepteur</div><div><b>National</b>interne + émetteur</div><div><b>International</b>récepteur + émetteur</div></div></div></div>`,
+  },
+};
+const NOTION_VIS = {
+  'tci.incoterms.familles': ['incoterms', 'FCA'], 'tci.incoterms.transfert-risque': ['incoterms', 'FOB'], 'tci.incoterms.repartition-couts': ['incoterms', 'CFR'], 'tci.incoterms.dissociation-c': ['incoterms', 'CIF'],
+  'tci.incoterms.exw': ['incoterms', 'EXW'], 'tci.incoterms.fca': ['incoterms', 'FCA'], 'tci.incoterms.fas-fob': ['incoterms', 'FOB'], 'tci.incoterms.cfr-cif': ['incoterms', 'CIF'], 'tci.incoterms.cpt-cip': ['incoterms', 'CIP'],
+  'tci.incoterms.dap-dpu-ddp': ['incoterms', 'DAP'], 'tci.incoterms.dedouanement': ['incoterms', 'DDP'], 'tci.incoterms.assurance': ['assurance'], 'tci.incoterms.chargement-dechargement': ['incoterms', 'DPU'],
+  'tci.operation.flux': ['flux'], 'tci.operation.acteurs': ['flux'], 'tci.paiement.credit-documentaire': ['credoc'], 'tci.transport.aerien': ['transport'], 'tci.transport.fret-maritime': ['transport'], 'tci.assurance.transport': ['assurance'],
+  'cpt.mecanisme.bilan-resultat': ['bilan'], 'cpt.mecanisme.partie-double': ['partieDouble'], 'cpt.mecanisme.debit-credit': ['partieDouble'],
+  'gfi.equilibre.frng': ['equilibre'], 'gfi.equilibre.bfr': ['equilibre'], 'gfi.equilibre.tresorerie-nette': ['equilibre'], 'gfi.equilibre.situations': ['equilibre'], 'gfi.bilan-fonctionnel.reclassement': ['equilibre'],
+  'odg.couts.seuil': ['seuil'], 'odg.couts.mcv': ['seuil'], 'odg.couts.levier-operationnel': ['seuil'],
+  'eco.theories.avantage-comparatif': ['ricardo'], 'eco.theories.avantage-absolu': ['ricardo'],
+  'dai.conflits.loi-applicable': ['conflits'], 'dai.conflits.juridiction': ['conflits'], 'dai.conflits.distinction': ['conflits'],
+  'dcl.juridictions.angleterre': ['tribunauxUK'], 'dcl.juridictions.usa': ['tribunauxUK'], 'dcl.formation.offer': ['contrat'], 'dcl.formation.acceptance': ['contrat'], 'dcl.formation.consideration': ['contrat'],
+  'gdp.planification.gantt': ['gantt'], 'gdp.cadrage.projet': ['qcd'], 'ici.presence.choix': ['presence'], 'ici.diagnostic.uppsala': ['uppsala'], 'cvb.institutions.parlement': ['ukSystem'],
+};
+const CHAP_VIS = {
+  'tci.operation': [['flux']], 'tci.incoterms': [['incoterms', 'FCA']], 'tci.paiement': [['credoc']], 'tci.transport': [['transport']], 'tci.assurance': [['assurance']], 'tci.financement': [['credoc']],
+  'cpt.mecanisme': [['bilan'], ['partieDouble']], 'cpt.bilan-detaille': [['bilan']], 'cpt.synthese': [['bilan']], 'gfi.equilibre': [['equilibre']], 'gfi.bilan-fonctionnel': [['equilibre']],
+  'odg.couts': [['seuil']], 'eco.theories': [['ricardo']], 'dai.conflits': [['conflits']], 'dcl.juridictions': [['tribunauxUK']], 'dcl.formation': [['contrat']],
+  'gdp.planification': [['gantt']], 'gdp.projet-filiale': [['gantt']], 'gdp.cadrage': [['qcd']], 'ici.presence': [['presence']], 'ici.diagnostic': [['uppsala']], 'ici.segmentation': [['segmentation']],
+  'cvb.constitution': [['ukSystem']], 'cvb.institutions': [['ukSystem']], 'tou.definitions': [['tourismeDef']], 'tou.systeme': [['leiper']], 'tou.destination': [['butler']],
+};
+function visBlock(key, arg) { const v = VIS[key]; if (!v) return ''; return `<div data-vis="${key}">${visFrame(v.titre, v.prov, v.html(arg), v.note || '')}</div>`; }
+function mountVis(root) { root.querySelectorAll('[data-vis]').forEach((el) => { if (el.dataset.bound) return; el.dataset.bound = '1'; const v = VIS[el.dataset.vis]; if (v && v.bind) v.bind(el); }); }
+function visGallery() {
+  const where = {}; for (const [ch, list] of Object.entries(CHAP_VIS)) for (const [k] of list) (where[k] = where[k] || []).push(ch);
+  return Object.entries(VIS).map(([k, v]) => {
+    const ch = (where[k] || [])[0]; const m = ch ? matiere(ch.split('.')[0]) : null;
+    return `<a class="tool" href="${m ? `#course-${m.id}` : '#courses'}" data-vis-open="${ch || ''}" style="text-align:left;align-items:flex-start"><b style="font-size:14.5px">${esc(v.titre)}</b><span class="muted small">${m ? esc(short(m.titre)) : ''}</span><span class="labels">${labels(v.prov)}</span></a>`;
+  }).join('');
+}
+
+/* ---------- Practice: quiz, flashcards, exercises ---------- */
+function startQuiz(questions, key) { UI.practice = { kind: 'quiz', key, qs: shuffle(questions).slice(0, 10), i: 0, good: 0, answered: false }; }
+function startFlash(cards, key) {
+  const t = today();
+  const due = cards.filter((f) => !S.state.cartes[f.id] || S.state.cartes[f.id].next <= t);
+  UI.practice = { kind: 'flash', key, cards: shuffle(due.length ? due : cards), i: 0, shown: false };
+}
+function practiceView(el, onExit) {
+  const P = UI.practice;
+  if (P.kind === 'quiz') {
+    if (P.i >= P.qs.length) {
+      const pct = Math.round((P.good / P.qs.length) * 100);
+      const prev = S.state.quiz[P.key] || { best: 0, n: 0 };
+      S.state.quiz[P.key] = { best: Math.max(prev.best, pct), last: pct, n: prev.n + 1, date: today() };
+      markActive();
+      if (pct >= 80) gainXP(`quiz:${P.key}:${today()}`, 100, 'Quiz 80%+'); else save();
+      el.innerHTML = `<div class="card stack" style="text-align:center"><div class="score">${pct}%</div><p>${P.good} correct out of ${P.qs.length}. Best score on this chapter: ${S.state.quiz[P.key].best}%.</p><div class="row" style="justify-content:center"><button class="btn primary" id="again">Try again</button><button class="btn" id="exit">Done</button></div></div>`;
+      $('#again').onclick = () => { startQuiz(P.qs, P.key); practiceView(el, onExit); }; $('#exit').onclick = onExit; return;
+    }
+    const q = P.qs[P.i]; const multi = q.format === 'multiple';
+    el.innerHTML = `<div class="card stack"><div class="row spread"><span class="muted small">Question ${P.i + 1} / ${P.qs.length}</span><button class="btn ghost" id="exit">Stop</button></div>
+      ${q.support?.texte ? `<div class="callout info">${esc(q.support.texte)}</div>` : ''}${q.support?.entetes ? renderBlocs([{ type: 'tableau', entetes: q.support.entetes, lignes: q.support.lignes }]) : ''}
+      <h3>${esc(q.enonce)}</h3>${multi ? '<span class="muted small">Several answers possible.</span>' : ''}
+      <div class="stack" id="choices">${q.choix.map((c) => `<label class="choice" data-c="${c.id}"><input type="${multi ? 'checkbox' : 'radio'}" name="q" value="${c.id}"><div><div>${esc(c.texte)}</div><div class="why" hidden>${esc(c.explication)}</div></div></label>`).join('')}</div>
+      <div class="row"><button class="btn primary" id="check">Check</button></div></div>`;
+    $('#exit').onclick = onExit;
+    $('#check').onclick = () => {
+      if (P.answered) { P.i++; P.answered = false; return practiceView(el, onExit); }
+      const picked = [...el.querySelectorAll('input:checked')].map((x) => x.value); if (!picked.length) return;
+      const correct = q.choix.filter((c) => c.correct).map((c) => c.id);
+      const ok = picked.length === correct.length && picked.every((x) => correct.includes(x));
+      if (ok) P.good++;
+      el.querySelectorAll('[data-c]').forEach((l) => { const c = q.choix.find((x) => x.id === l.dataset.c); if (c.correct) l.classList.add('good'); else if (picked.includes(c.id)) l.classList.add('bad'); l.querySelector('.why').hidden = false; l.querySelector('input').disabled = true; });
+      P.answered = true; $('#check').textContent = P.i + 1 < P.qs.length ? 'Next question' : 'See my score';
+    };
+    return;
+  }
+  if (P.kind === 'flash') {
+    if (P.i >= P.cards.length) { el.innerHTML = `<div class="card empty"><p>Session finished: ${P.cards.length} cards reviewed.</p><button class="btn primary" id="exit">Done</button></div>`; $('#exit').onclick = onExit; return; }
+    const f = P.cards[P.i];
+    el.innerHTML = `<div class="card stack"><div class="row spread"><span class="muted small">Card ${P.i + 1} / ${P.cards.length}</span><button class="btn ghost" id="exit">Stop</button></div>
+      <div class="flash"><div class="q">${esc(f.question)}</div>${P.shown ? `<div class="a prose"><p>${esc(f.reponse)}</p>${f.indispensables?.length ? `<b>Must include</b><ul>${f.indispensables.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}${f.erreurs?.length ? `<b>Common mistakes</b><ul>${f.erreurs.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}</div>` : ''}</div>
+      <div class="row" style="justify-content:center">${P.shown ? '<button class="btn" id="again">Review again</button><button class="btn primary" id="knew">I knew it</button>' : '<button class="btn primary" id="show">Show answer</button>'}</div></div>`;
+    $('#exit').onclick = onExit;
+    if (!P.shown) { $('#show').onclick = () => { P.shown = true; practiceView(el, onExit); }; return; }
+    const grade = (knew) => {
+      const cur = S.state.cartes[f.id] || { box: 0 }; const box = knew ? Math.min(cur.box + 1, 5) : 0;
+      S.state.cartes[f.id] = { box, next: iso(addDays(new Date(), [1, 2, 4, 8, 16, 32][box])) };
+      gainXP(`flash:${f.id}:${today()}`, 5, 'Flashcard reviewed'); save(); P.i++; P.shown = false; practiceView(el, onExit);
+    };
+    $('#knew').onclick = () => grade(true); $('#again').onclick = () => grade(false);
+  }
+}
+function tabRevision(el, m, c, data) {
+  const ch = data.chapitres[c.id] || { questions: [], flashcards: [] };
+  if (UI.practice && UI.practice.key === c.id) return practiceView(el, () => { UI.practice = null; render(); });
+  const q = S.state.quiz[c.id]; const due = (ch.flashcards || []).filter((f) => !S.state.cartes[f.id] || S.state.cartes[f.id].next <= today()).length;
+  el.innerHTML = chapterHead(m, c) + `<div class="grid g-2">
+    <div class="card stack"><h3 class="row">${ICON.quiz.replace('<svg', '<svg width="20" height="20"')} Quiz</h3><p class="muted">${ch.questions.length} questions on this chapter.${q ? ` Best score: ${q.best}% (${q.n} attempt${q.n > 1 ? 's' : ''}).` : ''}</p><button class="btn primary" id="go-quiz" ${ch.questions.length ? '' : 'disabled'}>Start a 10-question quiz</button></div>
+    <div class="card stack"><h3 class="row">${ICON.cards.replace('<svg', '<svg width="20" height="20"')} Flashcards</h3><p class="muted">${(ch.flashcards || []).length} cards · ${due} due today (spaced repetition).</p><button class="btn primary" id="go-flash" ${(ch.flashcards || []).length ? '' : 'disabled'}>Review cards</button></div></div>
+    ${!ch.questions.length && !(ch.flashcards || []).length ? '<p class="muted small">No practice material for this chapter yet. Use the assistant\'s “Quiz me” button.</p>' : ''}`;
+  bindMarkDone(c);
+  const g1 = $('#go-quiz'), g2 = $('#go-flash');
+  if (g1) g1.onclick = () => { startQuiz(ch.questions, c.id); render(); };
+  if (g2) g2.onclick = () => { startFlash(ch.flashcards, c.id); render(); };
+}
+function exerciseHTML(x) {
+  return `<details class="notion"><summary><h3>${esc(x.titre)}</h3><span class="labels"><span class="label l-supp">${esc(x.type)} · level ${x.niveau}</span>${x.fictif ? '<span class="label l-supp">fictional data</span>' : ''}</span></summary><div class="content">
+    <p>${esc(x.enonce)}</p>${x.donnees ? renderBlocs([{ type: 'tableau', entetes: x.donnees.entetes, lignes: x.donnees.lignes }]) : ''}
+    ${x.questions.map((sq, i) => {
+      const r = sq.reponse; let input = '';
+      if (r.type === 'nombre') input = `<div class="row"><input type="number" step="any" id="ans-${esc(sq.id)}" style="max-width:200px" aria-label="Your answer">${r.unite ? `<span class="muted">${esc(r.unite)}</span>` : ''}<button class="btn" data-num="${esc(sq.id)}" data-val="${r.valeur}" data-tol="${r.tolerance ?? 0.01}">Check</button><span data-res="${esc(sq.id)}"></span></div>`;
+      if (r.type === 'choix') input = `<div class="stack">${r.options.map((o, k) => `<label class="choice"><input type="radio" name="ch-${esc(sq.id)}" value="${k}" data-correct="${r.correcte}"><div>${esc(o)}</div></label>`).join('')}</div>`;
+      return `<div class="stack"><b>${i + 1}. ${esc(sq.consigne)}</b>${input}<details><summary class="btn soft" style="width:max-content">Show the correction</summary><div class="prose">${r.type === 'ecriture' ? `<div class="tbl"><table><thead><tr><th>Account</th><th>Label</th><th>Debit</th><th>Credit</th></tr></thead><tbody>${r.lignes.map((l) => `<tr><td>${esc(l.compte)}</td><td>${esc(l.libelle || '')}</td><td>${l.debit ?? ''}</td><td>${l.credit ?? ''}</td></tr>`).join('')}</tbody></table></div>` : ''}${r.type === 'libre' ? `<p>${esc(r.corrige)}</p><b>Criteria</b><ul>${r.criteres.map((c) => `<li>${esc(c)}</li>`).join('')}</ul>` : ''}<ul>${sq.correction.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>${sq.erreurs?.length ? `<b>Common mistakes</b><ul>${sq.erreurs.map((l) => `<li>${esc(l)}</li>`).join('')}</ul>` : ''}</div></details></div>`;
+    }).join('')}
+  </div></details>`;
+}
+function bindExercises(el) {
+  el.querySelectorAll('[data-num]').forEach((b) => b.addEventListener('click', () => {
+    const inp = document.getElementById('ans-' + b.dataset.num); const v = parseFloat(String(inp.value).replace(',', '.'));
+    const ok = Math.abs(v - Number(b.dataset.val)) <= Math.max(Number(b.dataset.tol), Math.abs(Number(b.dataset.val)) * 0.001);
+    el.querySelector(`[data-res="${CSS.escape(b.dataset.num)}"]`).innerHTML = ok ? '<span class="label l-univ">Correct</span>' : '<span class="label p-ESSENTIAL">Not yet</span>';
+    if (ok) gainXP(`exo:${b.dataset.num}`, 20, 'Exercise solved');
+  }));
+  el.querySelectorAll('input[data-correct]').forEach((r) => r.addEventListener('change', () => {
+    const l = r.closest('.choice'); l.classList.add(r.value === r.dataset.correct ? 'good' : 'bad');
+  }));
+}
+function tabExercises(el, m, c, data) {
+  const ex = data.chapitres[c.id]?.exercices || [];
+  el.innerHTML = chapterHead(m, c) + (ex.length ? `<div class="stack">${ex.map(exerciseHTML).join('')}</div>` : '<div class="card empty">No exercise for this chapter yet. Try another chapter or the Revision tab.</div>');
+  bindExercises(el); bindMarkDone(c);
+}
+
+/* ---------- Other pages ---------- */
+function viewNotes(v) {
+  const entries = Object.entries(S.state.notes).filter(([, t]) => t && t.trim());
+  v.innerHTML = header('Notes', 'Everything you wrote, by course') + (entries.length ? entries.map(([cid, t]) => {
+    const m = matiere(cid.split('.')[0]); const c = m?.chapitres.find((x) => x.id === cid);
+    return `<div class="card"><div class="card-head"><div><div class="muted small">${esc(m?.titre || '')}</div><h3>${esc(c?.titre || cid)}</h3></div><a class="btn soft" href="#course-${m?.id}" data-open-note="${cid}">Edit</a></div><div class="prose" style="white-space:pre-wrap">${esc(t)}</div></div>`;
+  }).join('') : `<div class="card empty"><p>No notes yet.</p><p class="small">Open a course, choose a chapter, then the <b>Notes</b> tab.</p><a class="btn primary" href="#courses">Open my courses</a></div>`);
+  v.querySelectorAll('[data-open-note]').forEach((a) => a.addEventListener('click', () => { const id = a.dataset.openNote; UI.chap[id.split('.')[0]] = id; UI.tab = 'notes'; }));
+}
+function viewPlanner(v) {
+  const opts = IDX.matieres.map((m) => `<option value="${m.id}">${esc(m.titre)}</option>`).join('');
+  const mon = addDays(mondayOf(new Date()), UI.weekOffset * 7);
+  let body = '';
+  if (UI.plannerView === 'week') body = `<div class="row spread" style="margin-bottom:10px"><button class="btn" id="prev">←</button><b>${MONTHS[mon.getMonth()]} ${mon.getDate()} – ${MONTHS[addDays(mon, 4).getMonth()]} ${addDays(mon, 4).getDate()}</b><button class="btn" id="next">→</button></div><div class="tbl">${weekGrid(UI.weekOffset, false)}</div>`;
+  if (UI.plannerView === 'month') {
+    const ref = new Date(); ref.setMonth(ref.getMonth() + UI.weekOffset); const first = new Date(ref.getFullYear(), ref.getMonth(), 1); const start = mondayOf(first);
+    const dl = deadlines();
+    body = `<div class="row spread" style="margin-bottom:10px"><button class="btn" id="prev">←</button><b>${MONTHS[ref.getMonth()]} ${ref.getFullYear()}</b><button class="btn" id="next">→</button></div><div class="month">${['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((d) => `<div class="muted small" style="text-align:center">${d}</div>`).join('')}${Array.from({ length: 42 }, (_, i) => { const d = addDays(start, i); const ev = dl.filter((e) => e.date === iso(d)); const cl = weeklyClasses().filter((c) => c.jour === d.getDay()); return `<div class="d ${d.getMonth() !== ref.getMonth() ? 'out' : ''} ${iso(d) === today() ? 'today' : ''}"><b>${d.getDate()}</b>${cl.map((c) => `<div class="small muted">${esc(short(subjectName(c.matiere)) || c.titre)}</div>`).join('')}${ev.map((e) => `<i title="${esc(e.titre)}">${esc(e.titre)}</i>`).join('')}</div>`; }).join('')}</div>`;
+  }
+  if (UI.plannerView === 'semester') {
+    const dl = deadlines(); const by = {};
+    dl.forEach((e) => { const k = e.date.slice(0, 7); (by[k] = by[k] || []).push(e); });
+    body = Object.keys(by).sort().map((k) => `<h3 style="margin-top:12px">${MONTHS[Number(k.slice(5)) - 1]} ${k.slice(0, 4)}</h3>${by[k].map((e) => `<div class="list-item"><div class="icon-tile">${ICON.calendar}</div><div><b>${esc(e.titre)}</b><div class="muted small">${esc(subjectName(e.matiere))} · ${fmtDay(parseISO(e.date))}</div></div>${e.fixe ? '' : `<button class="btn ghost" data-del-ev="${e.id}" aria-label="Delete">${ICON.trash}</button>`}</div>`).join('')}`).join('') || '<p class="muted">No deadline recorded.</p>';
+  }
+  v.innerHTML = header('Planner', 'Classes, assignments and exams') + `<div class="card"><div class="card-head"><h2>${ICON.planner} Class Schedule & Planner</h2><div class="seg">${['week', 'month', 'semester'].map((k) => `<button data-pv="${k}" aria-pressed="${UI.plannerView === k}">${k[0].toUpperCase() + k.slice(1)}</button>`).join('')}</div></div>${body}</div>
+  <div class="card"><h3>Add to my planner</h3><p class="muted small">Your university timetable is only partly known here: Tourism (Monday 9:00–11:00, room 257) is the only confirmed slot. Add your other classes once; they repeat every week.</p>
+  <form id="ev-form" class="stack"><div class="form-row">
+    <label class="field">Type<select id="ev-type"><option value="cours">Weekly class</option><option value="echeance">Assignment or exam</option><option value="evenement">Other event</option></select></label>
+    <label class="field">Course<select id="ev-mat"><option value="">—</option>${opts}</select></label>
+    <label class="field">Title<input type="text" id="ev-titre" placeholder="e.g. Partiel, TD, oral"></label>
+    <label class="field" id="ev-day-wrap">Day<select id="ev-jour"><option value="1">Monday</option><option value="2">Tuesday</option><option value="3">Wednesday</option><option value="4">Thursday</option><option value="5">Friday</option></select></label>
+    <label class="field" id="ev-date-wrap" hidden>Date<input type="date" id="ev-date" value="${today()}"></label>
+    <label class="field">Start<input type="time" id="ev-debut" value="10:00"></label>
+    <label class="field">End<input type="time" id="ev-fin" value="12:00"></label>
+    <label class="field">Room<input type="text" id="ev-lieu" placeholder="optional"></label>
+  </div><div><button class="btn primary" type="submit">${ICON.plus} Add</button></div></form></div>`;
+  v.querySelectorAll('[data-pv]').forEach((b) => b.addEventListener('click', () => { UI.plannerView = b.dataset.pv; UI.weekOffset = 0; render(); }));
+  const p = $('#prev'), n = $('#next'); if (p) p.onclick = () => { UI.weekOffset--; render(); }; if (n) n.onclick = () => { UI.weekOffset++; render(); };
+  const type = $('#ev-type'); type.onchange = () => { $('#ev-day-wrap').hidden = type.value !== 'cours'; $('#ev-date-wrap').hidden = type.value === 'cours'; };
+  $('#ev-form').addEventListener('submit', (e) => {
+    e.preventDefault(); const t = type.value; const mat = $('#ev-mat').value; const titre = $('#ev-titre').value.trim() || (mat ? subjectName(mat) : '');
+    if (!titre) { toast('Choose a course or write a title.'); return; }
+    const ev = { id: uid(), type: t, matiere: mat || null, titre, debut: $('#ev-debut').value, fin: $('#ev-fin').value, lieu: $('#ev-lieu').value.trim() };
+    if (t === 'cours') ev.jour = Number($('#ev-jour').value); else ev.date = $('#ev-date').value;
+    S.state.evenements.push(ev); save(); toast('Added to your planner'); render();
+  });
+  bindDeleteEvents(v);
+}
+function viewTasks(v) {
+  const open = S.state.taches.filter((t) => !t.fait).sort((a, b) => (a.date || '9').localeCompare(b.date || '9'));
+  const done = S.state.taches.filter((t) => t.fait);
+  const opts = IDX.matieres.map((m) => `<option value="${m.id}">${esc(m.titre)}</option>`).join('');
+  v.innerHTML = header('Tasks', `${open.length} to do · ${done.length} done`) + `<div class="card"><form id="task-form" class="form-row"><label class="field" style="grid-column:1 / -1">Task<input type="text" id="task-text" placeholder="e.g. Translate 10 sentences — Espagnol"></label><label class="field">Due<input type="date" id="task-date" value="${today()}"></label><label class="field">Course<select id="task-mat"><option value="">—</option>${opts}</select></label><button class="btn primary" type="submit">${ICON.plus} Add task</button></form></div>
+  <div class="card"><h3>To do</h3>${open.map((t) => `<div class="list-item">${todoItem(t)}${t.matiere ? `<span class="chip small" style="white-space:normal">${esc(short(subjectName(t.matiere)))}</span>` : ''}<button class="btn ghost" data-del-task="${t.id}" aria-label="Delete" style="margin-left:auto">${ICON.trash}</button></div>`).join('') || '<p class="muted">Nothing left. Well done.</p>'}</div>
+  ${done.length ? `<div class="card"><h3>Done</h3>${done.map((t) => `<div class="list-item">${todoItem(t)}<button class="btn ghost" data-del-task="${t.id}" aria-label="Delete" style="margin-left:auto">${ICON.trash}</button></div>`).join('')}</div>` : ''}`;
+  $('#task-form').addEventListener('submit', (e) => { e.preventDefault(); const t = $('#task-text').value.trim(); if (!t) return; S.state.taches.push({ id: uid(), texte: t, date: $('#task-date').value, matiere: $('#task-mat').value || null, fait: false }); save(); render(); });
+  v.querySelectorAll('[data-del-task]').forEach((b) => b.addEventListener('click', () => { S.state.taches = S.state.taches.filter((t) => t.id !== b.dataset.delTask); save(); render(); }));
+  bindTasks(v);
+}
+async function viewRevision(v) {
+  const sel = UI.revM || semesterCourses()[0]?.id || IDX.matieres[0].id; UI.revM = sel;
+  const tool = UI.revisionTool || 'quiz';
+  v.innerHTML = header('Revision', 'Quizzes, flashcards and exercises across your courses') + `<div class="card"><div class="row spread"><label class="field" style="min-width:260px">Course<select id="rev-m">${IDX.matieres.map((m) => `<option value="${m.id}" ${m.id === sel ? 'selected' : ''}>${esc(m.titre)}</option>`).join('')}</select></label><div class="seg">${[['quiz', 'Quizzes'], ['flash', 'Flashcards'], ['exo', 'Exercises']].map(([k, t]) => `<button data-rt="${k}" aria-pressed="${tool === k}">${t}</button>`).join('')}</div></div></div><div id="rev-body"><div class="empty">Loading…</div></div>`;
+  $('#rev-m').onchange = (e) => { UI.revM = e.target.value; UI.practice = null; render(); };
+  v.querySelectorAll('[data-rt]').forEach((b) => b.addEventListener('click', () => { UI.revisionTool = b.dataset.rt; UI.practice = null; render(); }));
+  let data; try { data = await loadM(sel); } catch (e) { $('#rev-body').innerHTML = '<div class="empty">This course could not be loaded.</div>'; return; }
+  if (route() !== 'revision') return;
+  const el = $('#rev-body'); const m = matiere(sel);
+  if (UI.practice && UI.practice.key.startsWith('all:')) return practiceView(el, () => { UI.practice = null; render(); });
+  const allQ = Object.values(data.chapitres).flatMap((c) => c.questions || []);
+  const allF = Object.values(data.chapitres).flatMap((c) => c.flashcards || []);
+  if (tool === 'exo') {
+    const ex = Object.values(data.chapitres).flatMap((c) => c.exercices || []);
+    el.innerHTML = ex.length ? `<div class="stack">${ex.map(exerciseHTML).join('')}</div>` : '<div class="card empty">No exercise for this course yet.</div>'; bindExercises(el); return;
+  }
+  const rows = m.chapitres.map((c) => { const ch = data.chapitres[c.id]; const n = tool === 'quiz' ? (ch?.questions?.length || 0) : (ch?.flashcards?.length || 0); const due = tool === 'flash' ? (ch?.flashcards || []).filter((f) => !S.state.cartes[f.id] || S.state.cartes[f.id].next <= today()).length : 0; return { c, n, due }; });
+  el.innerHTML = `<div class="card"><div class="card-head"><h3>${tool === 'quiz' ? `${allQ.length} questions` : `${allF.length} flashcards`} in ${esc(m.titre)}</h3><button class="btn primary" id="go-all" ${(tool === 'quiz' ? allQ : allF).length ? '' : 'disabled'}>${tool === 'quiz' ? 'Mixed quiz' : 'Review due cards'}</button></div>
+    ${rows.map(({ c, n, due }) => `<div class="list-item"><div style="flex:1"><b>${esc(c.titre)}</b><div class="labels" style="margin-top:4px">${prio(c.priorite)}${tool === 'quiz' && S.state.quiz[c.id] ? `<span class="muted small">best ${S.state.quiz[c.id].best}%</span>` : ''}${tool === 'flash' ? `<span class="muted small">${due} due</span>` : ''}</div></div><button class="btn soft" data-go="${c.id}" ${n ? '' : 'disabled'}>${n} ${tool === 'quiz' ? 'questions' : 'cards'}</button></div>`).join('')}</div>`;
+  $('#go-all').onclick = () => { if (tool === 'quiz') startQuiz(allQ, `all:${sel}`); else startFlash(allF, `all:${sel}`); render(); };
+  el.querySelectorAll('[data-go]').forEach((b) => b.addEventListener('click', () => { UI.chap[sel] = b.dataset.go; UI.tab = 'revision'; const ch = data.chapitres[b.dataset.go]; if (tool === 'quiz') startQuiz(ch.questions, b.dataset.go); else startFlash(ch.flashcards, b.dataset.go); UI.keepPractice = true; location.hash = `course-${sel}`; }));
+}
+function viewResources(v) {
+  const all = Object.entries(IDX.sources);
+  const q = UI.resQuery.toLowerCase(); const f = UI.resFilter;
+  const list = all.filter(([, s]) => (f === 'all' || s.niveau === f) && (!q || `${s.titre} ${s.auteur} ${s.pertinence}`.toLowerCase().includes(q)));
+  v.innerHTML = header('Resources', `${all.length} sources gathered by the research engine`) + `<div class="card"><div class="row spread"><div class="seg">${[['all', 'All'], ['P1', 'University of Orléans'], ['P2', 'Other universities'], ['P3', 'Academic & institutional']].map(([k, t]) => `<button data-rf="${k}" aria-pressed="${f === k}">${t}</button>`).join('')}</div><input type="text" id="res-q" value="${esc(UI.resQuery)}" placeholder="Search sources" style="max-width:280px" aria-label="Search sources"></div></div>
+  <div class="card">${list.map(([, s]) => `<div class="list-item"><div class="icon-tile">${ICON.link}</div><div style="min-width:0"><b>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.titre)}</a>` : esc(s.titre)}</b><div class="muted small">${esc(s.auteur)}${s.date ? ` · ${esc(s.date)}` : ''} · ${esc(s.niveau)}${s.type ? ` · ${esc(s.type)}` : ''} · ${{ lu: 'read', extrait: 'excerpt only', reference: 'cited, not opened' }[s.acces] || ''}</div><div class="small">${esc(s.pertinence)}</div></div></div>`).join('') || '<p class="muted">No source matches.</p>'}</div>`;
+  v.querySelectorAll('[data-rf]').forEach((b) => b.addEventListener('click', () => { UI.resFilter = b.dataset.rf; render(); }));
+  const inp = $('#res-q'); inp.addEventListener('input', () => { UI.resQuery = inp.value; clearTimeout(inp._t); inp._t = setTimeout(() => { render(); const i2 = $('#res-q'); i2.focus(); i2.setSelectionRange(i2.value.length, i2.value.length); }, 250); });
+}
+function viewLibrary(v) {
+  const byM = {}; IDX.documents.forEach((d) => { (byM[d.matiere] = byM[d.matiere] || []).push(d); });
+  v.innerHTML = header('Library', 'Your course documents, summaries and reconstructed courses') +
+    `<div class="card"><div class="card-head"><h2>${ICON.spark} Diagrams</h2><span class="muted small">${Object.keys(VIS).length} visual explanations</span></div><div class="vis-gallery">${visGallery()}</div><p class="muted small">Every chapter also turns its steps, timelines, calculations and « don't confuse » pairs into visuals automatically.</p></div>` +
+    `<div class="card"><div class="card-head"><h2>${ICON.doc} Your course documents</h2>${labels(['UNIVERSITY MATERIAL'])}</div><p class="muted small">Documents you shared, checked against current sources. The files themselves stay with you.</p>${Object.entries(byM).map(([mid, ds]) => `<h3 style="margin-top:12px">${esc(subjectName(mid))}</h3>${ds.map((d) => `<div class="list-item"><div class="icon-tile">${ICON.doc}</div><div style="min-width:0"><b>${esc(d.fichier)}</b><div class="muted small">${esc(d.auteur)} · ${esc(d.nature)}</div>${d.ecarts.length ? `<div class="small" style="margin-top:4px"><span class="label p-IMPORTANT">${d.ecarts.length} point${d.ecarts.length > 1 ? 's' : ''} to check</span></div>` : ''}</div><a class="btn soft" href="#course-${mid}" data-ov="1">Open</a></div>`).join('')}`).join('')}</div>
+    <div class="card"><div class="card-head"><h2>${ICON.summary} Course summaries</h2>${labels(['RECONSTRUCTED COURSE'])}</div><div class="grid g-courses">${IDX.matieres.map((m, i) => courseCard(m, i)).join('')}</div><p class="muted small">Open a course, then <b>Overview</b>, for its summary and the reconstructed Tourism course.</p></div>`;
+  v.querySelectorAll('[data-ov], .course-card').forEach((a) => a.addEventListener('click', () => { UI.tab = 'overview'; }));
+  v.querySelectorAll('[data-vis-open]').forEach((a) => a.addEventListener('click', () => { const ch = a.dataset.visOpen; if (ch) { UI.chap[ch.split('.')[0]] = ch; UI.tab = 'chapters'; } }));
+}
+function viewPreferences(v) {
+  v.innerHTML = header('Settings', '') + `<div class="grid g-2"><div class="card stack"><h3>Profile</h3><label class="field">First name<input type="text" id="p-nom" value="${esc(S.state.profil.nom)}"></label><label class="field">Current semester<select id="p-sem"><option ${S.state.profil.semestre === 'S5' ? 'selected' : ''}>S5</option><option ${S.state.profil.semestre === 'S6' ? 'selected' : ''}>S6</option></select></label>
+    <h3>Semester goals</h3>${S.state.objectifs.map((o) => `<div class="row"><input type="text" value="${esc(o.texte)}" data-goal-text="${o.id}" aria-label="Goal" style="flex:1"><button class="btn ghost" data-goal-del="${o.id}" aria-label="Delete">${ICON.trash}</button></div>`).join('')}<button class="btn soft" id="goal-add" style="align-self:flex-start">${ICON.plus} Add a goal</button></div>
+    <div class="card stack"><h3>Where your progress is saved</h3><p>${S.mode === 'account' ? 'In your claude.ai account: your tasks, notes and progress follow you on every device where you open this page.' : 'In this browser only. Open the page on claude.ai while signed in to keep your progress across devices.'}</p>
+    <h3>About the content</h3><p class="small">Course maps generated on ${esc(IDX.genereLe)} from the <i>cours</i> repository and the newl3 research engine. Labels: <span class="label l-univ">UNIVERSITY MATERIAL</span> your documents · <span class="label l-acad">ACADEMIC RESEARCH</span> cited sources · <span class="label l-reco">RECONSTRUCTED COURSE</span> written to fill gaps · <span class="label l-supp">SUPPLEMENTARY KNOWLEDGE</span> beyond the programme.</p>
+    <h3>Reset</h3><p class="small muted">Erases your tasks, notes, goals and XP.</p><div class="row"><button class="btn" id="reset">Reset my data</button><span id="reset-confirm" hidden><button class="btn primary" id="reset-yes">Yes, erase everything</button></span></div></div></div>`;
+  $('#p-nom').addEventListener('change', (e) => { S.state.profil.nom = e.target.value.trim() || 'student'; save(); toast('Saved'); });
+  $('#p-sem').addEventListener('change', (e) => { S.state.profil.semestre = e.target.value; save(); toast('Saved'); });
+  v.querySelectorAll('[data-goal-text]').forEach((i) => i.addEventListener('change', () => { const o = S.state.objectifs.find((x) => x.id === i.dataset.goalText); o.texte = i.value; save(); }));
+  v.querySelectorAll('[data-goal-del]').forEach((b) => b.addEventListener('click', () => { S.state.objectifs = S.state.objectifs.filter((o) => o.id !== b.dataset.goalDel); save(); render(); }));
+  $('#goal-add').onclick = () => { S.state.objectifs.push({ id: uid(), texte: 'New goal', fait: false }); save(); render(); };
+  $('#reset').onclick = () => { $('#reset-confirm').hidden = false; };
+  $('#reset-yes').onclick = () => { S.state = DEFAULT_STATE(); save(); toast('Your data was reset'); render(); };
+}
+
+/* ---------- AI Study Assistant ---------- */
+const CHAT = { msgs: [], busy: false, ctrl: null, sample: undefined };
+async function getSample() {
+  if (CHAT.sample !== undefined) return CHAT.sample;
+  try { CHAT.sample = window.claude && window.claude.use ? await window.claude.use('sample') : null; } catch (e) { CHAT.sample = null; }
+  return CHAT.sample;
+}
+async function contextText() {
+  const ctx = window.__ctx || {}; const m = ctx.matiere ? matiere(ctx.matiere) : null;
+  if (!m) return `Courses this semester: ${semesterCourses().map((x) => x.titre).join('; ')}.`;
+  let t = `Current course: ${m.titre} (language of instruction: ${m.langue}). Chapters: ${m.chapitres.map((c) => c.titre).join('; ')}.`;
+  if (m.officiel?.description) t += `\nOfficial description: ${m.officiel.description}`;
+  const c = m.chapitres.find((x) => x.id === ctx.chapitre);
+  if (c) {
+    t += `\nCurrent chapter: ${c.titre} (research status: ${c.statut}; provenance: ${c.provenance.join(', ')}).`;
+    try {
+      const d = await loadM(m.id); const ch = d.chapitres[c.id];
+      if (ch) t += '\nChapter notes:\n' + ch.notions.map((n) => `- ${n.titre}: ${n.definition || ''} ${n.explication || ''}`).join('\n').slice(0, 7000);
+      const reco = d.notesReconstruites?.[c.id]; if (reco) t += '\nReconstructed notes:\n' + reco.corps.slice(0, 5000);
+    } catch (e) { /* no notes */ }
+  }
+  return t;
+}
+const SYSTEM = `You are the study assistant of LEA·Study, for a third-year LEA (English-Spanish, international business) student at the Université d'Orléans. Answer in the language the student writes in. Be clear and concrete, at French L3 level, with short paragraphs or lists. When the course notes below cover the question, base your answer on them. When you add knowledge that is not in the notes, say so in one short line ("Not in your notes:"). Never invent references, figures, dates or teacher instructions; if unsure, say what should be checked. Do not present reconstructed material as the teacher's course.`;
+function mountAssistant(el, compact) {
+  if (!el) return;
+  const msgs = CHAT.msgs.slice(compact ? -4 : -20);
+  el.innerHTML = `<div class="card-head"><h2>${ICON.spark} AI Study Assistant</h2>${compact ? '' : '<button class="btn ghost" id="chat-close" aria-label="Close">×</button>'}</div>
+    <div class="chat" id="chat-log">${msgs.length ? msgs.map((x) => `<div class="msg ${x.role === 'user' ? 'me' : 'ai'}">${x.role === 'user' ? esc(x.content) : md(x.content)}</div>`).join('') : `<div class="msg ai"><p>Ask me to explain a notion, give an example, summarise a chapter or quiz you. ${window.__ctx?.matiere ? `I can see your current course: <b>${esc(subjectName(window.__ctx.matiere))}</b>.` : 'Open a course to give me its notes.'}</p></div>`}</div>
+    <div class="row" style="margin-top:8px">${[['Simplify', 'Explain that again more simply.'], ['Give an example', 'Give me a concrete example related to international business.'], ['Make a summary', 'Make a summary of the current chapter in 6 bullet points.'], ['Quiz me', 'Ask me 3 exam-style questions on the current chapter, one at a time, and wait for my answer.']].map(([t, p]) => `<button class="btn soft small" data-quick="${esc(p)}">${t}</button>`).join('')}</div>
+    <form class="chat-input" id="chat-form"><input type="text" id="chat-text" placeholder="Ask anything about your courses…" aria-label="Your question"><button class="btn primary" type="submit" aria-label="Send">${ICON.send}</button></form>
+    <p class="small muted" id="chat-note" hidden></p>`;
+  const log = $('#chat-log', el); log.scrollTop = log.scrollHeight;
+  const send = async (text) => {
+    if (!text || CHAT.busy) return;
+    const s = await getSample();
+    if (!s) { const n = $('#chat-note', el); n.hidden = false; n.textContent = 'The assistant works when this page is opened on claude.ai. Here you can still study with the course notes, quizzes and flashcards.'; return; }
+    CHAT.msgs.push({ role: 'user', content: text }); CHAT.msgs.push({ role: 'assistant', content: 'Thinking…' }); CHAT.busy = true; mountAssistant(el, compact);
+    const ctx = await contextText();
+    const history = CHAT.msgs.slice(0, -1).slice(-12).map((m2) => ({ role: m2.role, content: m2.content }));
+    history[0] = { role: 'user', content: `${SYSTEM}\n\nContext:\n${ctx}\n\nStudent: ${history[0].content}` };
+    if (history[0].role !== 'user') history.shift();
+    const live = CHAT.msgs[CHAT.msgs.length - 1];
+    try {
+      const r = await s(history, { cache: false, onText: ({ text: t2 }) => { live.content = t2; const last = $('#chat-log', el)?.lastElementChild; if (last) { last.innerHTML = md(t2); $('#chat-log', el).scrollTop = 1e9; } } });
+      live.content = r.text || live.content; markActive(); save();
+    } catch (e) {
+      live.content = e && e.code === 'not_granted' ? 'The assistant needs your permission to use Claude. Allow it from the page permissions to use it.' : e && e.code === 'rate_limited' ? 'Too many questions in a short time. Wait a minute, then ask again.' : (e && e.text) || 'The assistant could not answer. Try again in a moment.';
+    } finally { CHAT.busy = false; mountAssistant(el, compact); }
+  };
+  $('#chat-form', el).addEventListener('submit', (e) => { e.preventDefault(); const i = $('#chat-text', el); const t = i.value.trim(); i.value = ''; send(t); });
+  el.querySelectorAll('[data-quick]').forEach((b) => b.addEventListener('click', () => send(b.dataset.quick)));
+  const close = $('#chat-close', el); if (close) close.onclick = () => { $('#drawer').classList.remove('open'); $('#fab').hidden = false; };
+}
+$('#fab').addEventListener('click', () => { const d = $('#drawer'); d.innerHTML = '<div class="card" id="drawer-card"></div>'; d.classList.add('open'); $('#fab').hidden = true; mountAssistant($('#drawer-card'), false); });
+
+/* ---------- Boot ---------- */
+(async function boot() {
+  renderNav();
+  try {
+    const r = await fetch('data/index.json'); if (!r.ok) throw new Error(r.status);
+    IDX = await r.json();
+  } catch (e) { $('#view').innerHTML = '<div class="card empty">The course data could not be loaded. Reload the page; if it persists, the data files are missing next to this page.</div>'; return; }
+  window.__ctx = {};
+  render();
+  connectStore();
+})();
+</script>

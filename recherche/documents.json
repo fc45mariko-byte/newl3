@@ -1,0 +1,552 @@
+{
+ "_lisezmoi": "Documents de cours fournis par l'étudiante (matériel universitaire, étiquette UNIVERSITY MATERIAL). Les doublons exacts (même empreinte MD5) sont regroupés. « couvre » liste les chapitres de la carte qu'un document appuie ; « ajoute » liste les chapitres créés parce que le document traite un sujet absent de la reconstruction ; « ecarts » liste les points où le document contredit ou précède l'état actuel des sources.",
+ "documents": [
+  {
+   "id": "doc.cpt-ch1",
+   "fichier": "CM Compta CH1.pptx",
+   "md5": "a5efb862042f31a78a5c5b4a31e56d74",
+   "recu": "2026-11-17",
+   "auteur": "Izabela Jankiewicz-Anker",
+   "matiere": "cpt",
+   "nature": "Diaporama de cours magistral, bloc 1 « À quoi la comptabilité sert-elle ? » (33 diapositives)",
+   "plan": [
+    "Introduction à la gestion d'entreprises : 5 modules (Comptabilité générale L3/S1, Gestion financière L3/S2, Outils de gestion L3/S2, Gestion et analyse financière M1/S2, International Accounting System M2/S1)",
+    "1.1 Le système d'information comptable (SIC) : structure, quatre fonctions, documents de synthèse",
+    "1.2 Les progiciels de gestion intégrés (PGI) et la sécurité d'accès",
+    "1.3 La comptabilité, fondement du système de gestion : partie double, flux physiques et financiers",
+    "1.4 Les documents comptables : journal, grand livre, balance ; exercice ; trois obligations du Code de commerce",
+    "1.5 Les principes comptables",
+    "1.6 Le plan comptable général et les classes de comptes"
+   ],
+   "couvre": [
+    "cpt.cadre",
+    "cpt.mecanisme"
+   ],
+   "ajoute": [
+    "cpt.sic"
+   ],
+   "ecarts": [
+    "La diapositive 1.6 abrège le plan comptable général en « PGE » ; le sigle usuel est PCG.",
+    "La diapositive 30 dit que le PCG regroupe les comptes en 7 classes. Les classes 1 à 7 sont celles de la comptabilité générale ; le PCG prévoit aussi une classe 8 de comptes spéciaux. À présenter comme une simplification."
+   ]
+  },
+  {
+   "id": "doc.cpt-bloc3",
+   "fichier": "Compta Bloc 3.pptx",
+   "md5": "2bccc9ad9b9767e25ee4be4166608c36",
+   "recu": "2026-11-17",
+   "auteur": "Izabela Jankiewicz-Anker",
+   "matiere": "cpt",
+   "nature": "Diaporama de cours magistral, bloc 3 « Bilan détaillé » (99 diapositives)",
+   "plan": [
+    "3.1 Actif : actif immobilisé (incorporel, corporel, financier) et actif circulant ; comptes de régularisation d'actif",
+    "3.2 Passif : capitaux propres, autres fonds propres, provisions pour risques et charges, dettes, comptes de régularisation",
+    "3.3 L'amortissement : trois conceptions, règles, linéaire, dégressif, dérogatoire",
+    "3.4 La provision : différences avec l'amortissement, trois types",
+    "3.5 L'évaluation des stocks : inventaire physique ou permanent ; CMUP, FIFO, LIFO, coût de remplacement",
+    "3.6 La consolidation : intégration globale, intégration proportionnelle, mise en équivalence",
+    "3.7 L'affectation du résultat",
+    "3.8 Les engagements hors bilan",
+    "3.9 Les normes IAS/IFRS",
+    "Compte de résultat : exploitation, financier, exceptionnel ; participation ; impôt sur les bénéfices"
+   ],
+   "couvre": [
+    "cpt.investissements",
+    "cpt.inventaire",
+    "cpt.synthese"
+   ],
+   "ajoute": [
+    "cpt.bilan-detaille",
+    "cpt.groupes-normes"
+   ],
+   "ecarts": [
+    "Frais d'établissement (diapositives 11-13) et « charges à répartir sur plusieurs exercices » (diapositive 35) : depuis le règlement ANC 2022-06 (exercices ouverts à compter du 1er janvier 2025), les frais d'établissement figurent dans un poste dédié hors actif immobilisé, et le poste « charges à répartir » devient « frais d'émission des emprunts ». Sources : r.anc-2022-06, r.hoche-2025.",
+    "Résultat exceptionnel (diapositive 98) : la définition du support (pénalités, créances irrécouvrables, cessions) correspond à l'ancien PCG. Depuis 2025, seuls les produits et charges liés à un événement majeur et inhabituel y figurent. Sources : r.anc-2022-06, r.hoche-2025, r.bma-2025.",
+    "« Autres produits comprennent les transferts de charges » (diapositive 91) : la technique du transfert de charges est supprimée par ANC 2022-06.",
+    "Charges constatées d'avance présentées en comptes de régularisation (diapositive 34) : les nouveaux modèles de bilan les placent dans la rubrique « Créances ».",
+    "Intégration proportionnelle (diapositive 72) : selon des sources secondaires, le règlement ANC 2020-01 la supprime pour les coentreprises (mise en équivalence). Non vérifié dans le texte de l'ANC : à confirmer avant de l'enseigner comme règle actuelle.",
+    "« Taxes professionnelles » (diapositive 95) : la taxe professionnelle a été supprimée en 2010 et remplacée par la contribution économique territoriale (CFE + CVAE). Connaissance générale ; la CVAE est elle-même en cours de suppression progressive : calendrier à vérifier.",
+    "« Provisions pour dépréciation » : le vocabulaire actuel du PCG parle de « dépréciations » (comptes 29, 39, 49, 59) depuis 2005. Connaissance générale, à vérifier dans le PCG en vigueur.",
+    "« IAS/IFRS : International Financial Reporting Statements » (diapositive 81) : le sigle IFRS signifie International Financial Reporting Standards.",
+    "Diapositives 78 et 79 identiques (la quatrième catégorie d'engagements hors bilan annoncée n'apparaît pas)."
+   ]
+  },
+  {
+   "id": "doc.gdp-pptx",
+   "fichier": "Gestion du projet.pptx",
+   "md5": "9425fce5132122cdc9b415fd2c292efa",
+   "recu": "2026-11-17",
+   "doublons": 4,
+   "auteur": "Izabela Jankiewicz-Anker",
+   "matiere": "gdp",
+   "nature": "Diaporama de cours, L3 (35 diapositives)",
+   "plan": [
+    "01 Définir le projet : définitions, trois types de projets, éléments constitutifs, pilotage, indicateurs de suivi, triangle qualité-coûts-délais, communication de projet, note de cadrage",
+    "02 Acteurs et organisation d'un projet : parties prenantes, rôles, équipe projet, tableaux de répartition",
+    "03 Planifier le projet",
+    "04 Outils de planification : diagramme de Gantt (axes, barres, dépendances, jalons)",
+    "05 La gestion des documents (annoncée dans le plan, absente des diapositives reçues)",
+    "Évaluation : CC1 = présentation orale avec diaporama des étapes 1 à 3 du lancement d'un projet d'internationalisation ; grille 65 % contenu, 35 % forme"
+   ],
+   "couvre": [
+    "gdp.cadrage",
+    "gdp.organisation",
+    "gdp.planification",
+    "gdp.pilotage"
+   ],
+   "ajoute": [
+    "gdp.documents",
+    "gdp.projet-filiale"
+   ],
+   "ecarts": [
+    "Le triangle qualité-coûts-délais est attribué à « Oisen (1971) ». Vérifié : il s'agit de Richard Paul Olsen, « Can project management be defined? », Project Management Quarterly, vol. 2, n° 1, 1971, p. 12-14 (bibliothèque du PMI). L'orthographe « Oisen » vient de l'article de R. Atkinson (International Journal of Project Management, 17(6), 1999, p. 337-342), qui popularise l'expression « iron triangle ». Attribution correcte ; orthographe à rectifier en « Olsen ».",
+    "Le CC1 indique « point d'étape vendredi 2 octobre » et « 1er jalon à partir du 3 octobre ». En 2026, le 2 octobre est un vendredi : cohérent.",
+    "La partie 05 « gestion des documents » est annoncée mais aucune diapositive ne la traite."
+   ]
+  },
+  {
+   "id": "doc.gdp-docx",
+   "fichier": "Gestion de projet.docx",
+   "md5": "9f36d525802d93e5db3a9492646da96c",
+   "recu": "2026-11-17",
+   "auteur": "non indiqué (cours de gestion de projet)",
+   "matiere": "gdp",
+   "nature": "Sujet du projet : création d'une filiale à l'étranger, avec la check-list de création et le découpage CC1 / CC2",
+   "plan": [
+    "Avant la création (CC1) : veille internationale, SIM, marketing stratégique, politiques de produit, prix et distribution, segmentation, étude pays, étude de marché, étude de la demande et de l'offre, SWOT, stratégie d'internationalisation, mode de présence, outils de prospection, choix de la structure juridique, financement",
+    "Pendant la création (CC2) : statuts, dépôt du capital, immatriculation, numéros fiscaux, compte bancaire, licences",
+    "Après la création : comptabilité, obligations fiscales, flux intragroupe, conformité sociale, calendrier de gouvernance"
+   ],
+   "couvre": [
+    "gdp.cadrage"
+   ],
+   "ajoute": [
+    "gdp.projet-filiale"
+   ],
+   "prerequis_transversaux": [
+    "ici.diagnostic",
+    "ici.information",
+    "ici.risque",
+    "ici.presence",
+    "ici.prospection",
+    "ici.mix",
+    "mks.marketing",
+    "tci.financement",
+    "cpt.groupes-normes"
+   ],
+   "ecarts": [],
+   "doublons": 2
+  },
+  {
+   "id": "doc.financement-intl",
+   "fichier": "Financement de l'international.pptx",
+   "md5": "9da79bbfdbd4c02c2d39e06893af425a",
+   "recu": "2026-11-17",
+   "doublons": 4,
+   "auteur": "non indiqué",
+   "matiere": "tci",
+   "matiere_incertaine": "Le fichier ne nomme ni la matière ni l'enseignant. Il est rattaché provisoirement à TCI (techniques de paiement) ; il sert aussi l'étape « préparer le financement » du projet de gestion de projet. À confirmer.",
+   "nature": "Diaporama court (7 diapositives) : quatre catégories d'instruments de financement de l'international",
+   "plan": [
+    "1. Financements à court terme : préfinancement export, MCNE, affacturage international, avance en devises",
+    "2. Techniques bancaires liées aux paiements : crédit documentaire (escomptable), lettre de crédit stand-by",
+    "3. Financements à moyen et long terme : crédit fournisseur, crédit acheteur",
+    "4. Aides et garanties publiques : assurance prospection, garantie de projets à l'international (Bpifrance)"
+   ],
+   "couvre": [
+    "tci.paiement"
+   ],
+   "ajoute": [
+    "tci.financement"
+   ],
+   "ecarts": [
+    "Diapositive 4 : « engagement d'une banque d'importer à payer » ; il faut lire « banque de l'importateur » (banque émettrice).",
+    "Garantie de projets à l'international : « jusqu'à 50 % des apports » est confirmé (r.bpifrance-gpi), avec un plafond de risque de 1,5 M€ que le support ne mentionne pas.",
+    "Assurance prospection : le support dit que l'entreprise est « dispensée de rembourser une grande partie » en cas d'échec ; les sources indiquent un remboursement minimum forfaitaire de 30 % de l'avance (r.bpifrance-assurance-prospection). Cohérent, mais le taux d'avance (50 % ou 65 %) varie selon les sources."
+   ]
+  },
+  {
+   "id": "doc.incoterms-schemas",
+   "fichier": "FCA - pdf.pdf, FOB - pdf.pdf, CIF - pdf.pdf",
+   "md5": "FCA 9abe466134a7536d59d226a67e08d738 ; FOB a58b5b712499139247940734866b3c4c (2 exemplaires) ; CIF 7a04bb7fa59fc5e4077e4e182948d7a1 (2 exemplaires)",
+   "recu": "2026-11-17",
+   "auteur": "Isabelle Noël (métadonnées des PDF, créés en 2016 et 2018)",
+   "matiere": "tci",
+   "nature": "Trois schémas d'une page : point de transfert des risques et point de transfert des frais pour FCA (lieu de départ), FOB (port d'embarquement) et CIF (port de destination, frais + assurance)",
+   "plan": [
+    "FCA : risques et frais transférés au lieu de remise au transporteur au départ",
+    "FOB : risques et frais transférés à bord du navire au port d'embarquement",
+    "CIF : risques transférés à bord au départ ; frais de transport et d'assurance payés jusqu'au port de destination (règle des deux points critiques)"
+   ],
+   "couvre": [
+    "tci.incoterms"
+   ],
+   "ajoute": [],
+   "ecarts": [
+    "Schémas créés en 2016-2018, avant Incoterms® 2020. Le contenu représenté reste conforme aux règles 2020 pour ces trois termes. Rappel 2020 non visible sur les schémas : en CIF, l'assurance minimale reste en clauses C ; FCA permet désormais de demander un connaissement « à bord ».",
+    "La bibliographie officielle de TCI (S5) cite encore « Incoterms 2010 » ; la version en vigueur est Incoterms® 2020."
+   ]
+  },
+  {
+   "id": "doc.cvb-plan-lecture-1",
+   "fichier": "PLAN LECTURE 1 THE BRITISH SYSTEM OF GOVERNMENT.docx",
+   "md5": "2db5fa8e3dc5a70153db70c27768140e",
+   "recu": "2026-11-17",
+   "auteur": "non indiqué (enseignante de civilisation britannique)",
+   "matiere": "cvb",
+   "nature": "Plan détaillé de révision du système politique britannique (cours de L2) avec une problématique et deux articles d'août 2026 à lire",
+   "plan": [
+    "Problématique : How democratic is the British system of government?",
+    "I. The UK Constitution: written, unwritten or uncodified? (conventions, principes, avantages et inconvénients)",
+    "Principes : État unitaire, monarchie constitutionnelle, souveraineté parlementaire, démocratie représentative, rule of law (Dicey), dévolution",
+    "II. Parliamentary sovereignty et ses limites (référendums, droit de l'UE, dévolution, peuple)",
+    "III. Parliament : House of Commons, House of Lords et légitimité démocratique",
+    "IV. General elections : avantages et inconvénients du First Past the Post",
+    "V. Political parties",
+    "VI. Devolution : Écosse, pays de Galles, Irlande du Nord",
+    "VII. Local government",
+    "Conclusion : le Royaume-Uni comme système de gouvernement à plusieurs niveaux",
+    "Lectures : Guardian (2 août 2026), Burnham et la constitution écrite ; Telegraph (9 août 2026), Sumption contre"
+   ],
+   "couvre": [
+    "cvb.institutions"
+   ],
+   "ajoute": [
+    "cvb.constitution"
+   ],
+   "ecarts": [
+    "« The Queen reigns but does not rule » : le souverain est le roi Charles III depuis septembre 2022 ; la formule doit devenir « the monarch » ou « the King ».",
+    "Le document présente Andy Burnham comme nouveau Premier ministre : confirmé par plusieurs sources d'août 2026 (r.guardian-burnham-2026, r.conversation-burnham-2026).",
+    "Le document renvoie à « British Politics page 179 » sans auteur ni édition : référence à identifier (probablement un manuel de L2)."
+   ]
+  },
+  {
+   "id": "doc.cvb-devoir-18-11",
+   "fichier": "homework for wednesday 18th November.docx",
+   "md5": "8929a64124a2ee0417cfa25d5304d8db",
+   "recu": "2026-11-17",
+   "auteur": "non indiqué (enseignante de civilisation britannique)",
+   "matiere": "cvb",
+   "nature": "Consigne de devoir pour le mercredi 18 novembre 2026",
+   "plan": [
+    "Lire l'article « April 1979: Thatcher outlines her radical ideology » (The Guardian, Jason Rodrigues, 17 avril 2013) et répondre aux questions (questions non jointes)",
+    "Annonce d'un cours détaillé sur la politique économique, à venir sur Celene"
+   ],
+   "couvre": [
+    "cvb.thatcher"
+   ],
+   "ajoute": [],
+   "ecarts": [
+    "Les questions du devoir et l'article ne sont pas dans le fichier : ils sont dans « le second document du lot », non transmis."
+   ]
+  },
+  {
+   "id": "doc.tci-transport-app",
+   "fichier": "LE TRANSPORT INTERNATIONAL - Applications - pdf.pdf",
+   "md5": "ec0192223daf89a8a47556de93f6a9e8",
+   "recu": "2026-11-17",
+   "auteur": "Isabelle Noël",
+   "matiere": "tci",
+   "nature": "Série de 11 applications chiffrées de TCI 1 (6 pages, fichier créé le 17/11/2026)",
+   "plan": [
+    "APP 1 : choix de l'unité payante (poids ou volume)",
+    "APP 2 : coût complet d'un transport maritime avec BAF et CAF",
+    "APP 3 KERVAN : fret conventionnel, B/L, déchargement, assurance sur CIF + 10 %, conversion USD",
+    "APP 4 ASCO : conteneur 20' FCL/FCL, CSC, THC, traction, prix CIF Anvers et DAP Juziers",
+    "APP 5 et 6 : tarif aérien par tranches, règle du « payant pour », tarification ULD",
+    "APP 7 : aérien Paris-Dubaï, poids taxable, commission d'agent",
+    "APP 8 SENAC : import aérien depuis les États-Unis, zones, coefficient d'aéroport, surcharges, prix DAP Guer",
+    "APP 9 PRINTCOM : cotation CIP New York, frais de pré-acheminement et taxes aériennes",
+    "APP 10 TRANSFIX : comparer aérien et groupage maritime (CIP/CIF Qingdao) sous contrainte de prix et de délai",
+    "APP 11 GAUVIL : 5 conteneurs 45' HC, coût DAP Baltimore, clé de répartition et facture pro forma"
+   ],
+   "couvre": [
+    "tci.transport",
+    "tci.incoterms",
+    "tci.operation",
+    "tci.assurance"
+   ],
+   "ajoute": [],
+   "ecarts": [
+    "APP 10 : ISPS et SOLAS VGM apparaissent dans la cotation ; ces deux notions ne figurent pas dans le catalogue de cours : à ajouter au chapitre transport.",
+    "APP 11 : la « CAF » de 26 % est le Currency Adjustment Factor (surcharge monétaire), à ne pas confondre avec le prix CAF (coût, assurance, fret = CIF)."
+   ]
+  },
+  {
+   "id": "doc.tci-assurance-formule",
+   "fichier": "LE CALCUL DE L'ASSURANCE TRANSPORT - pdf.pdf",
+   "md5": "6f55ad1f96a050984a1c9480d49d277e",
+   "recu": "2026-11-17",
+   "auteur": "Isabelle Noël",
+   "matiere": "tci",
+   "nature": "Fiche formule (1 page, 2016)",
+   "plan": [
+    "EXW, FOB, FCA, CFR, CPT : appliquer le taux d'assurance au montant",
+    "CIF ou CIP + 10 % : CIF (ou CIP) = CFR (ou CPT) ÷ [1 − (1,1 × taux / 100)]"
+   ],
+   "couvre": [
+    "tci.assurance",
+    "tci.incoterms"
+   ],
+   "ajoute": [],
+   "ecarts": []
+  },
+  {
+   "id": "doc.tci-packing-list",
+   "fichier": "EXEMPLE DE PACKING LIST - pdf.pdf",
+   "md5": "73e88b5ada5f327cf50eb0557f4fd322",
+   "recu": "2026-11-17",
+   "auteur": "Isabelle Noël",
+   "matiere": "tci",
+   "nature": "Modèle de liste de colisage (1 page, 2018 ; contenu sous forme d'image)",
+   "plan": [
+    "Exemple de liste de colisage"
+   ],
+   "couvre": [
+    "tci.documents"
+   ],
+   "ajoute": [],
+   "ecarts": []
+  },
+  {
+   "id": "doc.tci-conteneur",
+   "fichier": "Le conteneur a révolutionné l'économie mondiale - pdf.pdf",
+   "md5": "275199936d80365f4f3c07231c1cbada",
+   "recu": "2026-11-17",
+   "auteur": "Article de Jean-Pierre Robin (13/11/2011), mis en page par Isabelle Noël",
+   "matiere": "tci",
+   "nature": "Article de presse (2 pages) sur le livre de Marc Levinson, The Box",
+   "plan": [
+    "Apparition du conteneur en 1956",
+    "Standardisation, intermodalité route-rail-mer",
+    "Classement des ports à conteneurs (données de 2011)"
+   ],
+   "couvre": [
+    "tci.transport"
+   ],
+   "ajoute": [],
+   "ecarts": [
+    "Article de 2011 : le classement des ports et la part du conteneur sont datés. Le classement actuel des ports doit être vérifié (par exemple dans la Review of Maritime Transport de la CNUCED) avant d'être cité."
+   ]
+  },
+  {
+   "id": "doc.ici-ch7",
+   "fichier": "CHAPITRE VII - Segmentation et positionnement - Celene - pdf.pdf",
+   "md5": "650ab6de8199bfa66ea64704314dad97",
+   "recu": "2026-11-17",
+   "auteur": "Isabelle Noël",
+   "matiere": "ici",
+   "nature": "Plan à compléter du chapitre VII d'Introduction au commerce international (4 pages, octobre 2026). Plusieurs rubriques sont des titres sans contenu, à remplir en cours.",
+   "plan": [
+    "I. Définition, intérêts et limites de la segmentation",
+    "II. Démarche : macro-segmentation, micro-segmentation (critères géographiques, sociodémographiques, psychographiques, comportementaux), segments cross-culturels ; conditions d'efficacité (pertinent, substantiel, accessible, mesurable, stable) ; méthodes (20/80 et ABC, RFM, associations, corrélation)",
+    "III. Spécificités internationales : facteurs de standardisation ; critères généraux et spécifiques",
+    "IV. Stratégies : marketing indifférencié, différencié, concentré, adapté",
+    "V. Positionnement : définition ; six qualités",
+    "VI. Identification et différenciation ; triangle d'or ; cartes perceptuelles",
+    "VII. Positionnement international standardisé ou adapté ; matrice de planification internationale (Quelch et Hoff, 1986)"
+   ],
+   "couvre": [
+    "ici.mix"
+   ],
+   "ajoute": [
+    "ici.segmentation"
+   ],
+   "ecarts": [
+    "Le chapitre est numéroté VII : les chapitres I à VI d'ICI n'ont pas été reçus. La numérotation laisse supposer un cours d'au moins sept chapitres, alors que la carte reconstruite en compte six : le découpage réel est inconnu.",
+    "Les rubriques « principe, intérêt, limite » des cartes perceptuelles et les méthodes de segmentation sont vides : elles seront remplies en cours ; à défaut, à compléter par la recherche (ACADEMIC RESEARCH). Non fait à ce jour."
+   ]
+  },
+  {
+   "id": "doc.tve-dossier-theme-s5",
+   "fichier": "2026-dossier-theme-LEA_L3-S5.pdf",
+   "md5": "8a55fc6542a0427abe17a3c52233a6d6",
+   "recu": "2026-11-17",
+   "doublons": 2,
+   "auteur": "non indiqué (Université d'Orléans, UFR LLSH)",
+   "matiere": "tve",
+   "nature": "Dossier de thème espagnol L3 S5, code LAL5J2C1, année 2026-2027 (16 pages)",
+   "plan": [
+    "I. Para empezar : lexique du commerce mondial, chiffres et pourcentages ; constructions crecer un / en un %, estabilizarse en, caer al",
+    "II. Dialogues professionnels à traduire (rencontre, se présenter, présenter quelqu'un, préparer une réunion), tirés de S. Grillo et I. Collado Rojas, L'espagnol professionnel au quotidien, Ellipses, 2020",
+    "Textes 1 à 8 : projet professionnel (Onisep), expatriation (Capital, 2023), producteurs de pruneaux et climat (France Info, 29/08/2026), Cheverny (Châteaux de la Loire), viticulture, pédagogie Montessori, commerce mondial (Le Figaro, 2023 ; vie-publique.fr)",
+    "Bibliographie : manuels de thème, grammaires espagnole et française, vocabulaire"
+   ],
+   "couvre": [
+    "tve.contrastes",
+    "tve.lexico",
+    "tve.metodo"
+   ],
+   "ajoute": [
+    "tve.chiffres"
+   ],
+   "ecarts": [
+    "Code LAL5J2C1 et « Année 2026-2027 » : la page officielle S5 donne des codes LLA5… pour le thème (LLA5J4C1). La maquette en vigueur en 2026-2027 n'est donc probablement pas celle décrite sur le site."
+   ]
+  },
+  {
+   "id": "doc.tve-texto2",
+   "fichier": "210926-TEXTO 2 p 7-theme-sem5-LEA-propuesta trad.pdf",
+   "md5": "edecd9f38e4b142089ff026a1f4817f0",
+   "recu": "2026-11-17",
+   "doublons": 2,
+   "auteur": "non indiqué",
+   "matiere": "tve",
+   "nature": "Proposition de traduction du texte 2 du dossier (expatriation), séance du 21/09/2026 (3 pages)",
+   "plan": [
+    "Traduction phrase à phrase avec variantes acceptées (barres obliques)"
+   ],
+   "couvre": [
+    "tve.pratique-corrigee"
+   ],
+   "ajoute": [
+    "tve.pratique-corrigee"
+   ],
+   "ecarts": [
+    "L'en-tête indique « Thème espagnol 2026, semestre 6 » alors que le nom du fichier et le dossier relèvent du semestre 5."
+   ]
+  },
+  {
+   "id": "doc.tve-td1",
+   "fichier": "070926-TD-1.pdf",
+   "md5": "4aecd84309441ef25a665381f620da37",
+   "recu": "2026-11-17",
+   "auteur": "non indiqué",
+   "matiere": "tve",
+   "nature": "Corrigé du TD 1 (4 pages) : dialogues professionnels du dossier, français et espagnol",
+   "plan": [
+    "Rencontre formelle",
+    "Se présenter",
+    "Présenter quelqu'un",
+    "Préparer une réunion"
+   ],
+   "couvre": [
+    "tve.lexico"
+   ],
+   "ajoute": [
+    "tve.pratique-corrigee"
+   ],
+   "ecarts": [
+    "L'en-tête porte la date du 08/09/2025 alors que le nom du fichier (070926) et le dossier renvoient à septembre 2026 : en-tête probablement non mis à jour."
+   ]
+  },
+  {
+   "id": "doc.tou-notes",
+   "fichier": "ENGLISH.pdf",
+   "md5": "",
+   "recu": "2026-11-18",
+   "auteur": "Notes de cours prises par l'étudiante (Introduction to international tourism)",
+   "matiere": "tou",
+   "nature": "Notes de cours en anglais, 7 pages : les premiers cours d'Intro international tourism",
+   "plan": [
+    "Intro: the international market in France; UNWTO classification (arrivals, receipts, exports); tourists and excursionists; indicators",
+    "France, the world's leading destination: figures, origin markets, regions, accommodation, purposes of travel",
+    "Types of tourism: cultural (urban tourism, historical monuments and their protection), sustainable and eco-tourism, business tourism (MICE), wine and gastronomy tourism, adventure, rural, educational, wellness and others",
+    "Chapter: Supporting the tourism industry — public, private, social and non-profit actors (notes stop at the National Tourism Council)",
+    "[Cours 4 à rattraper : wine tourism]"
+   ],
+   "couvre": [],
+   "ajoute": [],
+   "ecarts": [
+    "The arrival figures in the notes (84.9 million, Spain 83.7 million, USA 79.3 million) do not match the latest data: France received an estimated 102 million international tourists in 2025 (Atout France). The notes probably reproduce older slides: check which year the teacher used.",
+    "« S-Emilion represented 850 000 hectares » is very unlikely: the whole Bordeaux vineyard covers roughly a hundred thousand hectares. Check the figure (possibly hectolitres, or another unit).",
+    "The minister named in the notes is spelt « Serge Pepin »; the minister appointed in October 2025 for SMEs, trade, crafts, tourism and purchasing power is Serge Papin. Check that he is still in office.",
+    "The notes date the Commission des monuments historiques to 1830; 1830 is the creation of the post of Inspector General of Historic Monuments, and the Commission itself dates from 1837. To verify against an official source.",
+    "Course language: the notes are in English and the timetable says « Intro international tourism »: the course is most likely taught in English."
+   ]
+  },
+  {
+   "id": "doc.aec-td-letters",
+   "fichier": "Td anglais économique et commercial.pdf",
+   "md5": "",
+   "recu": "2026-11-18",
+   "auteur": "Corrigé de TD (anglais économique et commercial)",
+   "matiere": "aec",
+   "nature": "TD de correspondance commerciale, 12 pages, avec traductions et corrections",
+   "plan": [
+    "Business Letters Part 1: layout, dates, opening and closing formulas (Yours sincerely / Yours faithfully…) and their French equivalents",
+    "Business Letters Part 2: formal and less formal registers; rewriting and correcting letters",
+    "Exercise 6: translating standard business phrases (enquiries, confirmations, reminders)",
+    "Cover letter phrases for a job application (marketing assistant)"
+   ],
+   "couvre": [
+    "aec.correspondance"
+   ],
+   "ajoute": [],
+   "ecarts": []
+  },
+  {
+   "id": "doc.red-initiation",
+   "fichier": "Initiation_a_la_recherche_L3_LEA.pdf",
+   "md5": "a66b2c87e56d53313a86d23e7b883668",
+   "recu": "2026-11-18",
+   "auteur": "Support de TD, Université d'Orléans, L3 LEA (auteur non indiqué ; métadonnées : « Admin »)",
+   "matiere": "red",
+   "nature": "Diaporama de TD, 54 diapositives, avec activités et exercices",
+   "plan": [
+    "Objectifs : distinguer recherche d'information et recherche scientifique ; vocabulaire ; de l'observation à la question ; évaluer une question",
+    "Huit situations à classer (recherche d'information / scientifique / les deux / ni l'une ni l'autre)",
+    "Les 5 éléments : question, méthode, données, analyse, réponse argumentée ; exemple IA et traduction",
+    "Recherche documentaire ≠ recherche scientifique ; ce que peut faire un étudiant-chercheur",
+    "Vocabulaire de base (objet, question, problématique, hypothèse, méthode, corpus, terrain, données, résultats, bibliographie)",
+    "Délimitation progressive : thème → sujet → angle d'étude → question de recherche (exemple de l'anglais en entreprise)",
+    "Critères d'une bonne question : claire, précise, faisable, ouverte",
+    "Question de recherche ≠ problématique ; hypothèses H1-H3 ; rôle des hypothèses",
+    "Sources : 5 critères de fiabilité, outils (Google Scholar, HAL, OpenEdition, Cairn.info), lecture rapide, fiche de relevé",
+    "Méthodes : questionnaire, entretiens, analyse de corpus, observation, analyse documentaire, analyse comparative"
+   ],
+   "couvre": [
+    "red.demarche",
+    "red.question",
+    "red.problematique",
+    "red.sources",
+    "red.methodes"
+   ],
+   "ajoute": [
+    "red.demarche",
+    "red.question",
+    "red.problematique",
+    "red.methodes"
+   ],
+   "ecarts": [
+    "La diapositive sur les hypothèses semble traduite automatiquement (« peut être prouvée tort », « Avance des connaissances ») : le sens (réfutabilité) est clair, la formulation ne doit pas être reprise telle quelle.",
+    "Les huit situations et le tableau « opinion → question » n'ont pas de corrigé dans le support : les réponses de l'application sont reconstruites."
+   ]
+  },
+  {
+   "id": "doc.stg-td",
+   "fichier": "présentation du stage.pdf",
+   "md5": "652f8766994cb69e163c3082f9828dd7",
+   "recu": "2026-11-18",
+   "auteur": "Support de TD « Stage et initiation à la recherche », Université d'Orléans, L3 LEA (métadonnées : Camille Letang)",
+   "matiere": "stg",
+   "nature": "Diaporama de TD, 39 diapositives",
+   "plan": [
+    "Programme du TD : 10 séances (6 × 1 h puis 4 × 1 h 30)",
+    "Objectifs du stage (6 semaines minimum), enjeux pour l'étudiant et motivations des employeurs",
+    "Trois contenus : observation, action professionnelle (ou remplacement), mission",
+    "Thème lié aux enseignements de la licence, choisi d'un commun accord",
+    "Rédaction : problématique et plan validés par le tuteur avant rédaction ; interdiction du plagiat et de toute utilisation de l'IA",
+    "Le rapport n'est pas un mémoire ; exemple de l'office de tourisme ; carnet de bord ; plan en 2 ou 3 parties",
+    "Forme : Arial 10 ou Times 12, interligne 1,5, justifié, paginé ; papier 80-90 g/m² ; reliure ; page de garde",
+    "Construction : remerciements, sommaire, note de synthèse obligatoire, introduction, développement, conclusion, annexes, bibliographie",
+    "Volume 25-30 pages hors annexes ; langue du rapport et de la soutenance",
+    "Évaluation : 5 critères ; un compte rendu d'activités ne vaut pas 10",
+    "Erreurs à éviter ; « Et si… » (pas de mission précise, plusieurs missions, pas de thème)"
+   ],
+   "couvre": [
+    "stg.cadre",
+    "stg.problematique",
+    "stg.rapport",
+    "stg.evaluation"
+   ],
+   "ajoute": [
+    "stg.problematique"
+   ],
+   "ecarts": [
+    "Le support écrit « interligne 1,5 cm » : un interligne se règle normalement en multiple (1,5) et non en centimètres. À faire confirmer par le tuteur.",
+    "Le support interdit « toute utilisation, même partielle, de l'intelligence artificielle » dans la rédaction ; cette règle ne figurait pas dans le livret 2021-2022 utilisé jusqu'ici."
+   ]
+  }
+ ]
+}

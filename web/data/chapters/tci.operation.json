@@ -1,0 +1,142 @@
+{
+  "chapter": "tci.operation",
+  "summary": "Ce que devient un contrat de vente quand l'acheteur et le vendeur sont séparés par un océan, deux monnaies, deux droits et deux administrations douanières.",
+  "sections": [
+    {
+      "kind": "opening",
+      "title": "Un sac de café entre Santos et Le Havre",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": ["r.ico-coffee"],
+      "body": "Une maison de torréfaction normande décide d'acheter vingt tonnes de café vert à un exportateur de l'État de São Paulo. Au téléphone, l'affaire paraît simple : une variété, une qualité, un prix, une date. Pourtant, entre l'instant où les deux parties se mettent d'accord et celui où les sacs arrivent dans l'entrepôt de Rouen, la marchandise va changer plusieurs fois de mains sans changer de propriétaire, traverser l'Atlantique sous la garde d'un armateur que ni l'un ni l'autre n'a rencontré, passer devant deux administrations douanières et donner lieu à un paiement en dollars qu'aucune des deux banques ne libérera sans avoir vu des documents précis.\n\nC'est là toute la question de ce chapitre. Dans une vente entre voisins, on livre et on paie presque en même temps : la confiance se vérifie sur place. Dans une vente internationale, la distance sépare ce qui, d'ordinaire, est réuni. Le vendeur hésite à expédier une marchandise qu'il ne pourra plus récupérer si l'acheteur ne paie pas ; l'acheteur hésite à payer une marchandise qu'il n'a pas vue. Toute la technique du commerce international, des Incoterms au crédit documentaire, peut se lire comme une réponse à ce face-à-face sans contact.\n\nLe café n'est pas choisi au hasard. Le Brésil en est, de loin, le premier producteur mondial, et la place du café dans son histoire économique est telle qu'on parlait, sous la Première République (1889-1930), d'une politique du « café au lait », alliance des planteurs de São Paulo et des éleveurs du Minas Gerais. Le produit porte donc avec lui une histoire longue du commerce mondial. Il offre aussi un exemple très concret d'opération d'importation."
+    },
+    {
+      "kind": "big_picture",
+      "title": "Où se situe ce chapitre",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": ["r.orleans-l3-s5"],
+      "body": "Ce chapitre ouvre le cours de techniques du commerce international parce qu'il pose le cadre que tous les autres précisent. La page officielle de l'EC, au semestre 5, annonce quatre blocs : Incoterms, logistique, moyens de paiement et gestion documentaire. Chacun répond à l'une des questions que soulève l'opération décrite ici.\n\n- **Qui supporte le risque et les frais, et jusqu'où ?** C'est l'objet des Incoterms® 2020, au chapitre suivant.\n- **Comment la marchandise voyage-t-elle, à quel prix, sous quelle responsabilité ?** C'est le chapitre sur le transport international.\n- **Quels papiers prouvent l'expédition, la valeur et l'origine ?** C'est le chapitre sur les documents.\n- **Comment le vendeur est-il sûr d'être payé et l'acheteur d'être livré ?** Ce sont les chapitres sur les paiements, le risque de change et l'assurance.\n- **Que se passe-t-il à la frontière ?** Le semestre 6 y consacre son programme : douane et échanges intracommunautaires.\n\nIl faut donc lire ce chapitre comme une carte : il ne donne pas encore toutes les règles, mais il montre où chacune intervient."
+    },
+    {
+      "kind": "explanation",
+      "title": "Trois flux décalés et une chaîne d'intermédiaires",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": ["src.icc-incoterms-2020", "src.icc-ucp600", "r.taric"],
+      "body": "### Le contrat de vente au centre\n\nTout commence par un contrat de vente, généralement précédé d'une offre et, souvent, d'une **facture pro forma**. Ce document ressemble à une facture mais n'en est pas une au sens comptable : c'est une offre chiffrée, présentée sous la forme de la facture future, qui permet à l'acheteur d'obtenir un financement, une licence d'importation ou l'ouverture d'un crédit documentaire. Le contrat fixe la désignation précise de la marchandise (pour le café : origine, variété, calibre, nombre de défauts tolérés, récolte), le prix et sa monnaie, la règle Incoterms avec son lieu, la date de livraison et la technique de paiement.\n\nSur les marchés du café, le prix se forme le plus souvent en dollars, par référence au contrat à terme sur l'arabica coté à New York (le « Coffee C ») auquel s'ajoute une prime ou une décote selon l'origine et la qualité. Pour notre torréfacteur, qui vend son café en euros à des épiceries fines, cela crée d'emblée un risque de change : entre la signature et le paiement, le dollar peut monter.\n\n### Trois flux qui ne vont pas au même rythme\n\nUne fois le contrat signé, trois mouvements se mettent en route.\n\n**Le flux physique** est celui de la marchandise : sacs de jute ou conteneur garni d'une doublure, camion jusqu'au port de Santos, embarquement, traversée, déchargement au Havre, dédouanement, camion jusqu'à l'entrepôt. Il dure plusieurs semaines.\n\n**Le flux documentaire** accompagne et représente la marchandise : facture commerciale, liste de colisage, connaissement maritime, certificat d'origine, certificats de qualité ou d'inspection, police ou certificat d'assurance. Le connaissement a une propriété remarquable : il représente la marchandise elle-même. Qui le détient peut en réclamer la livraison au port d'arrivée. Les documents voyagent donc souvent plus vite que les sacs, par la voie bancaire ou par courrier express.\n\n**Le flux financier** est le paiement. Il peut précéder l'expédition (acompte), l'accompagner (paiement contre documents) ou la suivre (paiement à 60 ou 90 jours). C'est le choix de ce moment qui répartit le risque entre les parties.\n\nLe point essentiel est que **ces trois flux sont décalés dans le temps et dans l'espace**. Ce décalage crée les risques : risque de non-paiement pour le vendeur, risque de non-livraison ou de non-conformité pour l'acheteur, risque de change, risque de transport. Chaque technique étudiée dans le cours sert à maîtriser l'un de ces décalages.\n\n### Les intermédiaires et leurs contrats\n\nNi l'exportateur ni le torréfacteur ne possèdent de navire, de licence de déclarant en douane ou d'agrément bancaire. Ils s'entourent donc d'intermédiaires, et chacun est lié par **son propre contrat**, ce qui détermine sa responsabilité.\n\n- Le **transporteur** (ici un armateur, par exemple une compagnie de lignes régulières) déplace la marchandise en vertu du contrat de transport, matérialisé par le connaissement.\n- Le **commissionnaire de transport** organise de bout en bout un transport qu'il fait exécuter par d'autres, en son nom ; il garantit le résultat et répond de ses substitués.\n- Le **transitaire** est un mandataire : il accomplit des opérations ponctuelles (réservation, formalités) au nom et pour le compte de son client, et ne répond que de sa faute prouvée.\n- Le **représentant en douane** dépose la déclaration en douane.\n- Les **banques** exécutent les paiements et, dans le crédit documentaire, prennent un engagement propre envers le vendeur.\n- L'**assureur** couvre les dommages à la marchandise pendant le transport.\n- Les **administrations douanières** du Brésil et de l'Union européenne contrôlent, classent et taxent.\n\n### À la frontière européenne\n\nÀ l'arrivée, la marchandise doit être classée dans la nomenclature douanière. Le café vert, non torréfié et non décaféiné, relève de la sous-position **0901 11** du Système harmonisé. Le tarif extérieur commun de l'Union fixe le droit de douane applicable, et la base de calcul est la valeur en douane (en principe la valeur transactionnelle, ajustée des frais de transport et d'assurance jusqu'à la frontière de l'Union). S'y ajoute la TVA à l'importation, calculée sur la valeur en douane augmentée des droits. Les taux exacts doivent être vérifiés dans la base TARIC de la Commission européenne au moment de l'opération : un tarif douanier se consulte, il ne s'apprend pas par cœur.\n\nLe café est aussi concerné par le règlement européen (UE) 2023/1115 sur les produits sans déforestation, qui impose aux opérateurs de prouver que la marchandise ne provient pas de terres déboisées après 2020. Son entrée en application a été repoussée à plusieurs reprises : avant de l'invoquer dans une copie, vérifiez le calendrier en vigueur."
+    },
+    {
+      "kind": "key_concepts",
+      "title": "Les notions à maîtriser",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": [],
+      "body": "Les quatre notions ci-dessous sont développées chacune à trois niveaux : une explication intuitive, la définition académique et sa portée analytique. Ouvrez-les une par une : chacune renvoie aux chapitres où elle sera reprise."
+    },
+    {
+      "kind": "comparison",
+      "title": "Comprendre par comparaison",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": [],
+      "body": "**Une vente à distance ordinaire, en plus long.** Commander un livre en ligne mobilise déjà un vendeur, un transporteur, une banque et un document de suivi. Ce qui change à l'international, ce n'est pas la nature des acteurs, c'est que chaque maillon franchit un système juridique, une monnaie et une administration différents. Le décalage entre livraison et paiement, qui dure trois jours pour un livre, dure ici deux mois, et il porte sur des montants qui justifient des garanties bancaires.\n\n**Le connaissement et le ticket de vestiaire.** Celui qui confie son manteau reçoit un ticket : le ticket, pas le visage, donne droit au manteau. Le connaissement négociable fonctionne de la même manière, à l'échelle d'une cargaison : celui qui le présente au port d'arrivée retire la marchandise. C'est pour cette raison que les banques peuvent conserver le connaissement tant que l'acheteur n'a pas payé : elles tiennent la marchandise sans jamais la toucher.\n\n**Commissionnaire et transitaire : l'entrepreneur général et l'architecte mandaté.** L'entrepreneur général qui construit votre maison répond de ses sous-traitants ; il vous doit un résultat. Le mandataire qui dépose un permis en votre nom vous doit seulement de bien faire ce que vous lui avez demandé. La différence de responsabilité entre commissionnaire de transport et transitaire suit exactement cette ligne.\n\n**Hier et aujourd'hui.** Au XIXe siècle, le café brésilien voyageait en sacs dans les cales de navires à voile, et le négoce du Havre reposait sur des courtiers et des échantillons. Le conteneur, apparu en 1956, a changé l'échelle et la vitesse, mais pas la structure de l'opération : un vendeur, un acheteur, une marchandise, des documents et un paiement, toujours décalés."
+    },
+    {
+      "kind": "visual",
+      "title": "Voir l'opération",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": [],
+      "body": "```diagram\nflux\n```\n\nLe schéma montre les trois flux entre les deux parties. La chronologie type d'une exportation, dans la fiche « Flux physique, documentaire et financier », donne l'ordre des étapes ; une question de mise en ordre la reprend dans les quiz."
+    },
+    {
+      "kind": "application",
+      "title": "Étude de cas : le contrat de la Maison Lebrun",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": [],
+      "body": "*Cas fictif : la société, les montants et les dates sont inventés pour l'exercice.*\n\nLa Maison Lebrun, torréfacteur à Rouen, achète 20 tonnes de café vert arabica à un exportateur de Santos, au prix de 4,10 USD la livre, FOB Santos, Incoterms® 2020. Paiement par crédit documentaire irrévocable, réalisable à vue. Embarquement prévu en mars.\n\n1. **Qui organise et paie le transport maritime ?** En FOB, l'acheteur. La Maison Lebrun doit donc réserver le fret, directement ou par un commissionnaire, et assurer la marchandise si elle le souhaite : aucune règle ne l'y oblige en FOB.\n2. **À partir de quand le risque lui appartient-il ?** Dès que la marchandise est à bord du navire à Santos. Une avarie pendant la traversée est donc à sa charge, d'où l'intérêt de l'assurance.\n3. **Quel document la banque examinera-t-elle en priorité ?** Le connaissement « à bord », net de réserves, conforme aux conditions du crédit (port d'embarquement, date, description), avec la facture commerciale et les autres documents exigés.\n4. **Quels risques restent ouverts ?** Le risque de change sur le dollar, puisque la Maison Lebrun encaisse ses ventes en euros ; et le risque de qualité, que le crédit documentaire ne couvre pas, puisque la banque paie contre des documents conformes sans examiner les grains. Un certificat de qualité émis par un tiers peut être ajouté aux documents exigés.\n\nRefaites le calcul de la valeur de la commande : 20 tonnes représentent environ 44 092 livres (1 kg = 2,2046 lb), soit environ 180 779 USD."
+    },
+    {
+      "kind": "synthesis",
+      "title": "Synthèse",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": [],
+      "body": "Une opération d'import-export est un contrat de vente qui doit s'exécuter à distance. Cette distance sépare trois flux, la marchandise, les documents et l'argent, qui ne voyagent ni au même moment ni par le même chemin. Le décalage entre eux crée des risques que chaque partie cherche à reporter sur l'autre ou sur un tiers : c'est la fonction des Incoterms (risques et frais du transport), des techniques de paiement (risque de non-paiement), de l'assurance (risque de dommage) et des couvertures de change (risque monétaire).\n\nAutour du vendeur et de l'acheteur, chaque intermédiaire intervient en vertu de son propre contrat, et sa responsabilité dépend de ce contrat : le commissionnaire garantit un résultat, le transitaire exécute un mandat. Les documents, enfin, ne sont pas de la paperasse : le connaissement représente la marchandise, la facture fonde la douane et la comptabilité, et dans un crédit documentaire la banque ne paie que sur leur conformité.\n\nÀ l'examen, vous devez être capable de décrire une opération complète, de nommer chaque acteur avec son rôle et son contrat, d'expliquer pourquoi les flux sont décalés et quel risque naît de chaque décalage."
+    },
+    {
+      "kind": "exam",
+      "title": "Préparation à l'examen",
+      "provenance": "RECONSTRUCTED_EXPLANATION",
+      "sourceKeys": [],
+      "body": "**Question type 1.** *Expliquez pourquoi une vente internationale crée des risques qu'une vente nationale ne crée pas.*\n\nRéponse attendue : la distance décale les trois flux (physique, documentaire, financier) ; ce décalage expose le vendeur au non-paiement et l'acheteur à la non-livraison ou à la non-conformité ; s'y ajoutent le risque de change (monnaies différentes), le risque de transport (longue durée, ruptures de charge) et le risque pays (décision d'un État). Chaque risque appelle une technique : Incoterms, paiement, assurance, couverture.\n\n**Question type 2.** *Distinguez le commissionnaire de transport du transitaire.*\n\nRéponse attendue : le commissionnaire organise de bout en bout, en son nom, un transport exécuté par d'autres ; il est tenu d'une obligation de résultat et répond de ses substitués. Le transitaire est un mandataire pour des opérations ponctuelles ; il ne répond que de sa faute prouvée.\n\n**Erreurs fréquentes**\n\n- Confondre la facture pro forma, qui est une offre, avec la facture commerciale, qui constate la vente.\n- Croire que le transfert des risques entraîne le transfert de propriété : les Incoterms ne règlent pas la propriété.\n- Oublier que, dans un crédit documentaire, la banque paie sur documents et non sur marchandise."
+    },
+    {
+      "kind": "further",
+      "title": "Pour aller plus loin",
+      "provenance": "SUPPLEMENTARY_CONTEXT",
+      "sourceKeys": ["r.orleans-l3-s5", "r.ico-coffee", "r.taric"],
+      "body": "- **Ouvrage de la bibliographie officielle :** *Exporter*, 26e édition, Foucher : la partie consacrée au déroulement d'une opération.\n- **Données :** le site de l'Organisation internationale du café publie les statistiques de production et d'exportation par pays.\n- **Tarif douanier :** la base TARIC de la Commission européenne, pour vérifier le droit et les mesures applicables au code 0901 11.\n- **Lien avec d'autres cours :** le décalage entre livraison et paiement réapparaît en comptabilité (créances clients, écarts de change) et en gestion financière (besoin en fonds de roulement). L'histoire du café brésilien éclaire le cours de civilisation latino-américaine."
+    }
+  ],
+  "concepts": {
+    "tci.operation.acteurs": {
+      "analytical": "La multiplicité des acteurs n'est pas un accident : chaque intermédiaire existe parce qu'il réduit un coût de transaction (information, garantie, savoir-faire réglementaire). Le droit répartit les responsabilités selon le contrat de chacun, ce qui explique qu'en cas de dommage la première question soit toujours : qui était lié à qui, et par quel contrat ?"
+    },
+    "tci.operation.flux": {
+      "analytical": "Le décalage des flux est la matrice du cours entier. On peut lire chaque technique comme une manière de rapprocher artificiellement deux flux : le crédit documentaire lie le paiement au flux documentaire, l'assurance compense une rupture du flux physique, la couverture de change neutralise l'écart entre la monnaie du contrat et celle du vendeur ou de l'acheteur."
+    },
+    "tci.operation.offre-export": {
+      "analytical": "La pro forma est un document d'anticipation : elle permet aux tiers (banque, administration) d'agir avant que la vente existe. C'est pourquoi sa cohérence avec la facture définitive compte autant : un écart entre les deux peut bloquer un crédit documentaire."
+    },
+    "tci.operation.facture-commerciale": {
+      "analytical": "La facture est le document le plus réutilisé de l'opération : la comptabilité y lit la créance, la douane la valeur, la banque la conformité au crédit. Une même erreur s'y propage donc dans trois systèmes à la fois."
+    }
+  },
+  "questions": [
+    {
+      "key": "x.tci.operation.matching-actors",
+      "type": "matching",
+      "difficulty": 1,
+      "topic": "distinguer",
+      "concept": "tci.operation.acteurs",
+      "stem": "Associez chaque acteur au contrat qui le lie à son client.",
+      "data": { "pairs": [
+        { "left": "Transporteur", "right": "Contrat de transport" },
+        { "left": "Commissionnaire de transport", "right": "Contrat de commission de transport" },
+        { "left": "Transitaire", "right": "Mandat" },
+        { "left": "Assureur", "right": "Police d'assurance" }
+      ] },
+      "explanation": "Chaque intermédiaire répond selon son propre contrat : c'est ce contrat qui fixe l'étendue de sa responsabilité."
+    },
+    {
+      "key": "x.tci.operation.short-proforma",
+      "type": "short",
+      "difficulty": 2,
+      "topic": "comprendre",
+      "concept": "tci.operation.offre-export",
+      "stem": "En une ou deux phrases : à quoi sert une facture pro forma pour l'acheteur, et pourquoi n'est-elle pas une facture comptable ?",
+      "data": {
+        "rubric": [
+          "Dit qu'elle présente l'offre chiffrée sous la forme de la facture future",
+          "Cite au moins un usage : financement, licence d'importation ou ouverture d'un crédit documentaire",
+          "Explique qu'elle ne constate pas une vente réalisée et ne s'enregistre donc pas en comptabilité"
+        ],
+        "modelAnswer": "La facture pro forma est une offre chiffrée présentée sous la forme de la facture future : elle permet à l'acheteur d'obtenir un financement, une licence d'importation ou l'ouverture d'un crédit documentaire. Elle ne constate aucune vente réalisée et n'est donc pas un document comptable."
+      },
+      "explanation": "La pro forma anticipe la vente ; la facture commerciale la constate."
+    },
+    {
+      "key": "x.tci.operation.scenario-lebrun",
+      "type": "scenario",
+      "difficulty": 3,
+      "topic": "analyser-cas",
+      "concept": "tci.operation.flux",
+      "stem": "La Maison Lebrun achète du café vert FOB Santos, payable par crédit documentaire à vue. À l'arrivée au Havre, un tiers des sacs sont humides. La banque avait payé l'exportateur sur présentation d'un connaissement net et d'une facture conformes. Expliquez qui supporte le dommage et quels recours restent à l'acheteur.",
+      "data": {
+        "rubric": [
+          "Rappelle qu'en FOB le risque passe à l'acheteur une fois la marchandise à bord à Santos",
+          "Explique que la banque a eu raison de payer : elle paie sur documents conformes, sans examiner la marchandise (autonomie du crédit)",
+          "Indique que l'acheteur supporte le dommage, sauf assurance souscrite pour le transport",
+          "Cite au moins un recours : assurance transport, action contre le transporteur (réserves à la livraison), ou action contre le vendeur si le défaut existait avant l'embarquement"
+        ],
+        "modelAnswer": "En FOB, le risque est passé à la Maison Lebrun lorsque les sacs ont été mis à bord à Santos : une avarie survenue pendant la traversée est donc à sa charge. La banque a payé à bon droit, car dans un crédit documentaire elle ne paie que sur la conformité des documents, et le connaissement était net. L'acheteur doit se tourner vers son assureur s'il a assuré la marchandise, faire des réserves précises au transporteur à la livraison pour préserver son recours contre lui, et n'agir contre le vendeur que s'il prouve que l'humidité existait avant l'embarquement."
+      },
+      "explanation": "Le cas combine trois règles : le transfert des risques (Incoterms), l'autonomie du crédit documentaire et la responsabilité du transporteur."
+    }
+  ]
+}

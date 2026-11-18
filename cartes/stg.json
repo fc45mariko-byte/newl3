@@ -1,0 +1,325 @@
+{
+  "id": "stg",
+  "titre": "Stage et rapport de stage",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6JS02, 8 ECTS, coefficient 6)",
+    "enseignant": "Aline Henninger et Mayumi Shimosakai",
+    "description": "Aucun descriptif sur la page officielle.",
+    "bibliographie": [],
+    "sources": [
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [],
+  "competences_examen": [
+    "Rédiger un rapport de stage conforme au livret",
+    "Soutenir oralement"
+  ],
+  "incertitudes": [
+    "Règles tirées du livret 2021-2022 ; un livret plus récent existe en ligne et doit être consulté."
+  ],
+  "chapitres": [
+    {
+      "id": "stg.cadre",
+      "titre": "Cadre du stage",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "stg.cadre.objectifs",
+          "titre": "Objectifs et types de stage",
+          "niveau": "F"
+        },
+        {
+          "id": "stg.cadre.convention",
+          "titre": "Convention, gratification, assurance",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage",
+        "src.orleans-s6",
+        "src.code-education"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Stage",
+          "en": "internship / work placement",
+          "es": "prácticas (en empresa)"
+        },
+        {
+          "fr": "Maître de stage",
+          "en": "workplace supervisor / internship supervisor",
+          "es": "tutor de empresa"
+        },
+        {
+          "fr": "Enseignant-tuteur",
+          "en": "academic supervisor",
+          "es": "tutor académico"
+        },
+        {
+          "fr": "Stage filé",
+          "en": "part-time placement spread over the year",
+          "es": "prácticas a tiempo parcial durante el curso"
+        },
+        {
+          "fr": "Convention de stage",
+          "en": "internship agreement",
+          "es": "convenio de prácticas"
+        },
+        {
+          "fr": "Gratification",
+          "en": "internship stipend / allowance",
+          "es": "remuneración / bolsa de prácticas"
+        },
+        {
+          "fr": "Responsabilité civile",
+          "en": "third-party liability insurance",
+          "es": "seguro de responsabilidad civil"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "stg.recherche",
+      "titre": "Recherche de stage",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "stg.recherche.candidature",
+          "titre": "CV et lettre de motivation",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Curriculum vitae (CV)",
+          "en": "CV (UK) / résumé (US)",
+          "es": "currículum (vítae) / CV"
+        },
+        {
+          "fr": "Lettre de motivation",
+          "en": "cover letter / covering letter",
+          "es": "carta de presentación / de motivación"
+        },
+        {
+          "fr": "Candidature spontanée",
+          "en": "speculative / unsolicited application",
+          "es": "candidatura espontánea"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "stg.rapport",
+      "titre": "Le rapport",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "stg.rapport.problematique",
+          "titre": "Problématique de gestion ou de langues",
+          "niveau": "F"
+        },
+        {
+          "id": "stg.rapport.structure",
+          "titre": "Structure du rapport",
+          "niveau": "F"
+        },
+        {
+          "id": "stg.rapport.note-synthese",
+          "titre": "Note de synthèse",
+          "niveau": "F"
+        },
+        {
+          "id": "stg.rapport.forme",
+          "titre": "Forme du rapport",
+          "niveau": "F"
+        },
+        {
+          "id": "stg.rapport.erreurs",
+          "titre": "Erreurs courantes",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "stg.cadre"
+      ],
+      "terminologie": [
+        {
+          "fr": "Problématique",
+          "en": "research question / central issue",
+          "es": "problemática / pregunta central"
+        },
+        {
+          "fr": "Carnet de bord",
+          "en": "logbook / work diary",
+          "es": "cuaderno de bitácora / diario de prácticas"
+        },
+        {
+          "fr": "Préconisation",
+          "en": "recommendation",
+          "es": "recomendación"
+        },
+        {
+          "fr": "Rapport de stage",
+          "en": "internship report",
+          "es": "memoria / informe de prácticas"
+        },
+        {
+          "fr": "Sommaire",
+          "en": "table of contents",
+          "es": "índice / sumario"
+        },
+        {
+          "fr": "Annexe",
+          "en": "appendix",
+          "es": "anexo"
+        },
+        {
+          "fr": "Note de synthèse",
+          "en": "executive summary",
+          "es": "resumen ejecutivo"
+        },
+        {
+          "fr": "Note de bas de page",
+          "en": "footnote",
+          "es": "nota a pie de página"
+        },
+        {
+          "fr": "Bibliographie",
+          "en": "bibliography / references",
+          "es": "bibliografía"
+        },
+        {
+          "fr": "Plagiat",
+          "en": "plagiarism",
+          "es": "plagio"
+        },
+        {
+          "fr": "Regard critique",
+          "en": "critical perspective",
+          "es": "mirada crítica"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "stg.soutenance",
+      "titre": "La soutenance",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "stg.soutenance.preparation",
+          "titre": "Préparer la soutenance",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "stg.rapport"
+      ],
+      "terminologie": [
+        {
+          "fr": "Soutenance",
+          "en": "oral defence / viva",
+          "es": "defensa oral / exposición"
+        },
+        {
+          "fr": "Support de présentation",
+          "en": "slide deck / visual aid",
+          "es": "presentación / apoyo visual"
+        },
+        {
+          "fr": "Jury",
+          "en": "examining panel / board of examiners",
+          "es": "tribunal"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "stg.evaluation",
+      "titre": "Évaluation",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "stg.evaluation.bareme",
+          "titre": "Barème",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.orleans-stage"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "stg.rapport",
+        "stg.soutenance"
+      ],
+      "terminologie": [
+        {
+          "fr": "Compensation",
+          "en": "compensation (averaging of marks)",
+          "es": "compensación de notas"
+        },
+        {
+          "fr": "Grille d'évaluation",
+          "en": "assessment grid / rubric",
+          "es": "rúbrica / ficha de evaluación"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

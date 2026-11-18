@@ -1,0 +1,950 @@
+{
+  "id": "cpt",
+  "titre": "Comptabilité générale",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J6A, CM 15 h + TD 15 h, 3 ECTS)",
+    "enseignant": "Isabelle Noël selon la page officielle ; Izabela Jankiewicz-Anker selon les supports de cours et Celene",
+    "description": "Principes comptables, opérations courantes, opérations d'inventaire.",
+    "bibliographie": [
+      "G. Langlois et M. Friédérich, Introduction à la comptabilité, Foucher"
+    ],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "Plan comptable général (règlement ANC 2014-03 modifié par ANC 2022-06)",
+    "Code de commerce",
+    "IAS/IFRS"
+  ],
+  "competences_examen": [
+    "Passer les écritures courantes (achats, ventes, TVA, règlements)",
+    "Établir un plan d'amortissement",
+    "Passer les écritures d'inventaire",
+    "Établir un bilan et un compte de résultat",
+    "Expliquer les principes comptables"
+  ],
+  "incertitudes": [
+    "Contradiction sur l'enseignant (page officielle contre supports) : les supports reçus font foi pour le contenu.",
+    "Le bloc 2 n'a pas été reçu : son contenu est inconnu (probablement le compte de résultat ou les opérations courantes).",
+    "Les supports suivent l'ancien PCG sur plusieurs points ; l'examen peut suivre le support plutôt que la réglementation 2025 : à clarifier avec l'enseignante."
+  ],
+  "chapitres": [
+    {
+      "id": "cpt.cadre",
+      "titre": "Cadre comptable",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.cadre.role",
+          "titre": "Rôle et utilisateurs de la comptabilité",
+          "niveau": "P"
+        },
+        {
+          "id": "cpt.cadre.principes",
+          "titre": "Principes comptables (prudence, permanence, image fidèle…)",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.cadre.pcg",
+          "titre": "Le PCG et les classes de comptes",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.cpt-ch1"
+      ],
+      "sources": [
+        "src.code-commerce",
+        "src.pcg"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Comptes annuels",
+          "en": "annual financial statements",
+          "es": "cuentas anuales"
+        },
+        {
+          "fr": "Exercice comptable",
+          "en": "financial year",
+          "es": "ejercicio contable"
+        },
+        {
+          "fr": "Image fidèle",
+          "en": "true and fair view",
+          "es": "imagen fiel"
+        },
+        {
+          "fr": "Principe de prudence",
+          "en": "prudence principle",
+          "es": "principio de prudencia"
+        },
+        {
+          "fr": "Plan comptable général (PCG)",
+          "en": "French general chart of accounts",
+          "es": "Plan General de Contabilidad (PGC, en Espagne)"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.mecanisme",
+      "titre": "Mécanismes comptables",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.mecanisme.bilan-resultat",
+          "titre": "Bilan et compte de résultat : structure",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.mecanisme.partie-double",
+          "titre": "La partie double",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.mecanisme.debit-credit",
+          "titre": "Le fonctionnement débit / crédit des comptes",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.mecanisme.journal",
+          "titre": "Le journal",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.mecanisme.grand-livre",
+          "titre": "Le grand livre",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.mecanisme.balance",
+          "titre": "La balance",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.cpt-ch1"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.cadre"
+      ],
+      "terminologie": [
+        {
+          "fr": "Actif",
+          "en": "assets",
+          "es": "activo"
+        },
+        {
+          "fr": "Passif",
+          "en": "liabilities and equity",
+          "es": "pasivo y patrimonio neto"
+        },
+        {
+          "fr": "Capitaux propres",
+          "en": "equity",
+          "es": "patrimonio neto"
+        },
+        {
+          "fr": "Débit",
+          "en": "debit",
+          "es": "debe"
+        },
+        {
+          "fr": "Crédit",
+          "en": "credit",
+          "es": "haber"
+        },
+        {
+          "fr": "Solde",
+          "en": "balance",
+          "es": "saldo"
+        },
+        {
+          "fr": "Pièce justificative",
+          "en": "supporting document",
+          "es": "justificante"
+        },
+        {
+          "fr": "Contre-passation",
+          "en": "reversing entry",
+          "es": "contraasiento"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.tva",
+      "titre": "La TVA",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.tva.mecanisme",
+          "titre": "Mécanisme de la TVA, taux",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.tva.ecritures",
+          "titre": "Écritures de TVA collectée et déductible",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.tva.declaration",
+          "titre": "Liquidation de la TVA à décaisser",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.cgi",
+        "src.directive-tva",
+        "src.pcg"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.mecanisme"
+      ],
+      "terminologie": [
+        {
+          "fr": "Taxe sur la valeur ajoutée (TVA)",
+          "en": "value added tax (VAT)",
+          "es": "impuesto sobre el valor añadido (IVA)"
+        },
+        {
+          "fr": "Hors taxes (HT)",
+          "en": "net of tax / excluding VAT",
+          "es": "sin IVA / base imponible"
+        },
+        {
+          "fr": "Toutes taxes comprises (TTC)",
+          "en": "gross / including VAT",
+          "es": "IVA incluido"
+        },
+        {
+          "fr": "Assujetti",
+          "en": "taxable person",
+          "es": "sujeto pasivo"
+        },
+        {
+          "fr": "TVA collectée",
+          "en": "output VAT",
+          "es": "IVA repercutido"
+        },
+        {
+          "fr": "TVA déductible",
+          "en": "input VAT",
+          "es": "IVA soportado"
+        },
+        {
+          "fr": "TVA à décaisser",
+          "en": "VAT payable",
+          "es": "IVA a ingresar"
+        },
+        {
+          "fr": "Crédit de TVA",
+          "en": "VAT credit",
+          "es": "IVA a compensar / a devolver"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.achats-ventes",
+      "titre": "Achats et ventes",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.achats-ventes.factures",
+          "titre": "Facture d'achat et de vente",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.achats-ventes.reductions",
+          "titre": "Réductions commerciales (RRR) et financières (escompte)",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.achats-ventes.frais-accessoires",
+          "titre": "Frais accessoires, ports, emballages",
+          "niveau": "A"
+        },
+        {
+          "id": "cpt.achats-ventes.avoirs",
+          "titre": "Avoirs",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.achats-ventes.international",
+          "titre": "Achats et ventes à l'international, TVA intracommunautaire",
+          "niveau": "A"
+        },
+        {
+          "id": "cpt.achats-ventes.devises",
+          "titre": "Opérations en devises et écarts de change",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.pcg",
+        "src.cgi",
+        "src.directive-tva",
+        "src.douane-fr",
+        "src.anc-2015-05"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.tva",
+        "tci.intra-ue",
+        "tci.change"
+      ],
+      "terminologie": [
+        {
+          "fr": "Facture",
+          "en": "invoice",
+          "es": "factura"
+        },
+        {
+          "fr": "Pièce justificative",
+          "en": "supporting document",
+          "es": "justificante"
+        },
+        {
+          "fr": "Journal des ventes",
+          "en": "sales journal",
+          "es": "diario de ventas"
+        },
+        {
+          "fr": "Rabais",
+          "en": "allowance (price reduction for defects)",
+          "es": "rebaja"
+        },
+        {
+          "fr": "Remise",
+          "en": "trade discount",
+          "es": "descuento comercial"
+        },
+        {
+          "fr": "Ristourne",
+          "en": "volume rebate",
+          "es": "rappel / bonificación por volumen"
+        },
+        {
+          "fr": "Escompte de règlement",
+          "en": "cash / early payment discount",
+          "es": "descuento por pronto pago"
+        },
+        {
+          "fr": "Frais de port",
+          "en": "carriage / shipping costs",
+          "es": "portes / gastos de envío"
+        },
+        {
+          "fr": "Emballage consigné",
+          "en": "returnable packaging (deposit)",
+          "es": "envase retornable (en depósito)"
+        },
+        {
+          "fr": "Avoir",
+          "en": "credit note",
+          "es": "factura rectificativa / nota de abono"
+        },
+        {
+          "fr": "Retour de marchandises",
+          "en": "sales / purchase return",
+          "es": "devolución de mercancías"
+        },
+        {
+          "fr": "Livraison intracommunautaire",
+          "en": "intra-Community supply",
+          "es": "entrega intracomunitaria"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.tresorerie",
+      "titre": "Trésorerie",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.tresorerie.reglements",
+          "titre": "Règlements : virement, chèque, espèces",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.tresorerie.effets",
+          "titre": "Effets de commerce",
+          "niveau": "A"
+        },
+        {
+          "id": "cpt.tresorerie.rapprochement",
+          "titre": "Rapprochement bancaire",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.pcg",
+        "src.code-commerce"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.achats-ventes",
+        "cpt.mecanisme"
+      ],
+      "terminologie": [
+        {
+          "fr": "Règlement",
+          "en": "payment / settlement",
+          "es": "pago / liquidación"
+        },
+        {
+          "fr": "Virement",
+          "en": "bank transfer / wire transfer",
+          "es": "transferencia bancaria"
+        },
+        {
+          "fr": "Caisse",
+          "en": "petty cash / cash in hand",
+          "es": "caja"
+        },
+        {
+          "fr": "Lettre de change",
+          "en": "bill of exchange / draft",
+          "es": "letra de cambio"
+        },
+        {
+          "fr": "Billet à ordre",
+          "en": "promissory note",
+          "es": "pagaré"
+        },
+        {
+          "fr": "Escompte bancaire",
+          "en": "discounting",
+          "es": "descuento bancario"
+        },
+        {
+          "fr": "Agios",
+          "en": "bank charges and interest",
+          "es": "gastos e intereses bancarios"
+        },
+        {
+          "fr": "Rapprochement bancaire",
+          "en": "bank reconciliation",
+          "es": "conciliación bancaria"
+        },
+        {
+          "fr": "Relevé bancaire",
+          "en": "bank statement",
+          "es": "extracto bancario"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.personnel",
+      "titre": "Charges de personnel",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.personnel.paie",
+          "titre": "Brut, net, cotisations : écritures 421 / 431 / 641 / 645",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.pcg"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.mecanisme"
+      ],
+      "terminologie": [
+        {
+          "fr": "Salaire brut",
+          "en": "gross salary / gross pay",
+          "es": "salario bruto"
+        },
+        {
+          "fr": "Salaire net",
+          "en": "net pay / take-home pay",
+          "es": "salario neto / líquido"
+        },
+        {
+          "fr": "Cotisations patronales",
+          "en": "employer's social security contributions",
+          "es": "cotizaciones a cargo de la empresa"
+        },
+        {
+          "fr": "Bulletin de paie",
+          "en": "payslip",
+          "es": "nómina"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.investissements",
+      "titre": "Investissements et amortissements",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.investissements.immobilisations",
+          "titre": "Acquisition d'immobilisations",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.investissements.amortissement-lineaire",
+          "titre": "Amortissement linéaire, plan d'amortissement",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.investissements.amortissement-degressif",
+          "titre": "Amortissement dégressif",
+          "niveau": "A"
+        },
+        {
+          "id": "cpt.investissements.cessions",
+          "titre": "Cession d'immobilisations",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.cpt-bloc3"
+      ],
+      "sources": [
+        "src.pcg",
+        "src.cgi",
+        "src.anc-2022-06"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.tva",
+        "cpt.cadre"
+      ],
+      "terminologie": [
+        {
+          "fr": "Immobilisation",
+          "en": "fixed asset / non-current asset",
+          "es": "inmovilizado"
+        },
+        {
+          "fr": "Coût d'acquisition",
+          "en": "acquisition cost",
+          "es": "precio de adquisición"
+        },
+        {
+          "fr": "Immobilisation incorporelle",
+          "en": "intangible asset",
+          "es": "inmovilizado intangible"
+        },
+        {
+          "fr": "Amortissement",
+          "en": "depreciation (tangible) / amortisation (intangible)",
+          "es": "amortización"
+        },
+        {
+          "fr": "Valeur nette comptable (VNC)",
+          "en": "net book value / carrying amount",
+          "es": "valor neto contable"
+        },
+        {
+          "fr": "Plan d'amortissement",
+          "en": "depreciation schedule",
+          "es": "cuadro de amortización"
+        },
+        {
+          "fr": "Amortissement dégressif",
+          "en": "declining balance depreciation",
+          "es": "amortización degresiva"
+        },
+        {
+          "fr": "Amortissement dérogatoire",
+          "en": "excess tax depreciation",
+          "es": "amortización fiscal excedentaria (libertad de amortización)"
+        },
+        {
+          "fr": "Cession",
+          "en": "disposal",
+          "es": "enajenación / venta de inmovilizado"
+        },
+        {
+          "fr": "Plus-value de cession",
+          "en": "gain on disposal",
+          "es": "beneficio por enajenación"
+        },
+        {
+          "fr": "Moins-value de cession",
+          "en": "loss on disposal",
+          "es": "pérdida por enajenación"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.inventaire",
+      "titre": "Travaux d'inventaire",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.inventaire.stocks",
+          "titre": "Variation de stocks",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.inventaire.depreciations",
+          "titre": "Dépréciations (créances, stocks)",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.inventaire.provisions",
+          "titre": "Provisions pour risques et charges",
+          "niveau": "A"
+        },
+        {
+          "id": "cpt.inventaire.regularisations",
+          "titre": "Charges et produits constatés d'avance, factures à recevoir ou à établir",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.cpt-bloc3"
+      ],
+      "sources": [
+        "src.pcg",
+        "src.code-commerce"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.achats-ventes",
+        "cpt.cadre",
+        "cpt.tva"
+      ],
+      "terminologie": [
+        {
+          "fr": "Stock initial / final",
+          "en": "opening / closing inventory",
+          "es": "existencias iniciales / finales"
+        },
+        {
+          "fr": "Inventaire",
+          "en": "stocktaking / physical inventory",
+          "es": "inventario"
+        },
+        {
+          "fr": "Coût des marchandises vendues",
+          "en": "cost of goods sold (COGS)",
+          "es": "coste de las mercancías vendidas"
+        },
+        {
+          "fr": "Dépréciation",
+          "en": "impairment / write-down",
+          "es": "deterioro de valor"
+        },
+        {
+          "fr": "Créance douteuse",
+          "en": "doubtful debt",
+          "es": "crédito dudoso"
+        },
+        {
+          "fr": "Créance irrécouvrable",
+          "en": "bad debt",
+          "es": "crédito incobrable"
+        },
+        {
+          "fr": "Provision pour risques et charges",
+          "en": "provision (liability)",
+          "es": "provisión para riesgos y gastos"
+        },
+        {
+          "fr": "Reprise sur provision",
+          "en": "reversal of provision",
+          "es": "reversión / exceso de provisión"
+        },
+        {
+          "fr": "Litige",
+          "en": "litigation / dispute",
+          "es": "litigio"
+        },
+        {
+          "fr": "Charges constatées d'avance",
+          "en": "prepaid expenses / prepayments",
+          "es": "gastos anticipados"
+        },
+        {
+          "fr": "Produits constatés d'avance",
+          "en": "deferred income",
+          "es": "ingresos anticipados"
+        },
+        {
+          "fr": "Charges à payer",
+          "en": "accrued expenses / accruals",
+          "es": "gastos devengados pendientes de pago"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.synthese",
+      "titre": "Documents de synthèse",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cpt.synthese.compte-resultat",
+          "titre": "Établir le compte de résultat",
+          "niveau": "F"
+        },
+        {
+          "id": "cpt.synthese.bilan",
+          "titre": "Établir le bilan",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.cpt-bloc3"
+      ],
+      "sources": [
+        "src.pcg",
+        "src.anc-2022-06",
+        "src.code-commerce"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.mecanisme",
+        "cpt.inventaire",
+        "cpt.investissements"
+      ],
+      "terminologie": [
+        {
+          "fr": "Compte de résultat",
+          "en": "income statement / profit and loss account",
+          "es": "cuenta de pérdidas y ganancias"
+        },
+        {
+          "fr": "Résultat d'exploitation",
+          "en": "operating profit / operating income",
+          "es": "resultado de explotación"
+        },
+        {
+          "fr": "Résultat net",
+          "en": "net profit / net income",
+          "es": "resultado neto / del ejercicio"
+        },
+        {
+          "fr": "Bilan",
+          "en": "balance sheet / statement of financial position",
+          "es": "balance (de situación)"
+        },
+        {
+          "fr": "Actif immobilisé",
+          "en": "non-current assets / fixed assets",
+          "es": "activo no corriente / inmovilizado"
+        },
+        {
+          "fr": "Actif circulant",
+          "en": "current assets",
+          "es": "activo corriente"
+        },
+        {
+          "fr": "Disponibilités",
+          "en": "cash and cash equivalents",
+          "es": "tesorería / efectivo"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cpt.sic",
+      "titre": "Le système d'information comptable et les PGI",
+      "priorite": "IMPORTANT",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Structure et fonctions du SIC",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Progiciels de gestion intégrés et droits d'accès",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Flux physiques et flux financiers",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.cpt-ch1"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    },
+    {
+      "id": "cpt.bilan-detaille",
+      "titre": "Le bilan détaillé : postes d'actif et de passif",
+      "priorite": "ESSENTIAL",
+      "statut": "Verified against additional academic sources",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Actif immobilisé incorporel, corporel, financier",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Actif circulant et comptes de régularisation",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Capitaux propres, réserves, subventions d'investissement",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Provisions pour risques et charges, dettes",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Affectation du résultat",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Engagements hors bilan",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.cpt-bloc3"
+      ],
+      "sources": [
+        "r.anc-2022-06",
+        "r.hoche-2025"
+      ],
+      "verifie_par": [
+        "r.anc-2022-06",
+        "r.hoche-2025",
+        "r.bma-2025"
+      ],
+      "prerequis": [],
+      "terminologie": [],
+      "note": "Plusieurs présentations du support sont antérieures au règlement ANC 2022-06 : voir les écarts dans recherche/documents.json."
+    },
+    {
+      "id": "cpt.groupes-normes",
+      "titre": "Groupes, consolidation et normes IFRS",
+      "priorite": "ADVANCED",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Comptes consolidés : intégration globale, mise en équivalence (intégration proportionnelle : à vérifier)",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Normes IAS/IFRS obligatoires depuis 2005 pour les groupes cotés de l'UE",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.cpt-bloc3"
+      ],
+      "sources": [
+        "r.anc-2020-01"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    }
+  ]
+}

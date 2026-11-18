@@ -1,0 +1,624 @@
+{
+ "course": "stg",
+ "language": "fr",
+ "missing": false,
+ "researchStatus": "university_material",
+ "merge": true,
+ "order": [
+  "stg.cadre",
+  "stg.recherche",
+  "stg.problematique",
+  "stg.rapport",
+  "stg.soutenance",
+  "stg.evaluation"
+ ],
+ "officialDescription": "Aucun descriptif sur la page officielle.",
+ "uncertainties": [
+  "Règles administratives (210 h, convention, gratification, étranger), soutenance et barème tirés du livret 2021-2022 : le support de TD 2026-2027 ne les traite pas. Consulter le livret en vigueur.",
+  "Le support écrit « interligne 1,5 cm » : un interligne se règle normalement en multiple (1,5). À faire confirmer par le tuteur.",
+  "Règle nouvelle par rapport au livret 2021-2022 : toute utilisation, même partielle, de l'intelligence artificielle dans la rédaction est interdite.",
+  "Le support ne donne ni la date limite de remise du rapport ni les dates de soutenance.",
+  "La durée « 6 semaines minimum » du support est cohérente avec les 210 heures du livret."
+ ],
+ "chapters": [
+  {
+   "slug": "stg.cadre",
+   "title": "Cadre du stage",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Ouvre le support de TD « Stage et initiation à la recherche » ; règles administratives tirées du livret de stage.",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "Le stage de L3 (6 semaines minimum) n'est pas une simple expérience de travail : il doit répondre à une problématique de gestion ou de langues liée au cursus LEA.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.stg-td"
+   ],
+   "prerequisites": [],
+   "sections": [
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support de TD",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "**Programme du TD.** Dix séances : les six premières d'une heure, les quatre dernières d'1 h 30. Au programme :\n\n- le stage en licence : recherche de stage, objectifs et attentes, votre rôle ;\n- le rapport de stage : critères, méthodologie de recherche et de rédaction ;\n- la découverte de la démarche scientifique et des exercices d'initiation à la recherche ;\n- un accompagnement individualisé, selon les besoins et le temps disponible.\n\n**Objectifs du stage.** Le stage fait partie intégrante de vos études et doit répondre aux exigences d'une licence. Il vous met en situation dans l'organisme d'accueil pendant **6 semaines minimum**. C'est l'occasion de mener une réflexion sur les missions confiées, en lien avec le cursus LEA. Le stage et le rapport sont donc centrés sur la recherche de la ou des réponses efficaces à une **problématique de gestion ou de langues**.\n\n**Le stage dans votre projet professionnel.** C'est à vous de définir les connaissances que vous voulez acquérir et les compétences que vous pouvez offrir à l'organisation. Faites donc un bilan de vos connaissances et compétences : c'est ce qui fait du stage un élément clé du CV.\n\n**Les enjeux pour vous**, selon le support :\n\n- démystifier et découvrir le monde du travail ;\n- connaître les relations humaines dans l'organisation ;\n- vous constituer un réseau ;\n- vous initier à la négociation d'un stage, d'une mission, d'une indemnité ;\n- exprimer vos aptitudes personnelles ;\n- appliquer vos savoirs ;\n- découvrir et développer vos compétences.\n\n**Les motivations des employeurs :**\n\n- sélectionner de nouvelles recrues (le stage comme pré-recrutement) ;\n- apporter des idées nouvelles, « un œil neuf » ;\n- accomplir des missions utiles mais non prioritaires (études, audit) ;\n- réaliser des travaux à traiter rapidement.\n\n**Le thème du stage** doit être en rapport avec les enseignements de la licence : langues vivantes, communication, marketing, comptabilité-gestion, techniques du commerce international, connaissances juridiques. Les tâches possibles sont précisées en entretien avec les responsables de l'organisme ; cette discussion permet d'écarter les missions trop légères pour votre niveau. Le choix définitif du thème se fait d'un commun accord entre vous, votre enseignant-tuteur et la direction du parcours, sur la base des propositions de l'organisme."
+    },
+    {
+     "kind": "comparison",
+     "title": "Trois contenus de stage",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "Le support distingue trois contenus. Un même stage peut passer par les trois.\n\n| Contenu | En quoi il consiste | Ce qu'en dit le support |\n|---|---|---|\n| **Observation** | être attentif à un aspect de l'organisme et rendre compte de vos conclusions | Envisageable en licence, à condition de trouver un point d'analyse ; insuffisant en master. |\n| **Action professionnelle** | participer au travail finalisé d'une équipe : salon, prospection, suivi des opérations à l'international, traduction de documents export, administration export, plannings d'expédition | Évaluée sur le respect des délais et la qualité des analyses ; intérêt : une intégration complète dans l'équipe. |\n| **Remplacement** (variante de l'action) | occuper le poste d'une personne absente | Souvent des tâches peu qualifiées qui réduisent l'intérêt du stage ; acceptable en licence, à éviter en master. |\n| **Mission** | répondre à une demande précise de l'organisme, hors du quotidien, sur un besoin ponctuel ; résultat souvent remis sous forme de rapport | Vous êtes responsable de la mission : un tremplin professionnel. Exemples : plan de prospection export, diagnostic stratégique, viabilité d'un projet, recherche de nouveaux transporteurs. |"
+    },
+    {
+     "kind": "explanation",
+     "title": "Les règles administratives (livret de stage)",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Ces règles viennent du livret de stage 2021-2022 ; le support de TD 2026-2027 ne les reprend pas. Vérifiez-les dans le livret en vigueur.\n\n- 210 heures : 6 semaines de 35 h, ou « filé » sur l'année, de septembre au 30 juin ; 8 ECTS. C'est cohérent avec les « 6 semaines minimum » du support.\n- Le stage ne peut commencer qu'après la signature de la convention par toutes les parties.\n- Démarches : fiche de renseignement signée (organisme et tuteur) et attestation de responsabilité civile, puis BSIP, puis convention signée par tous, le directeur de l'UFR en dernier.\n- Gratification obligatoire au-delà de 2 mois (308 heures) dans le même organisme : au minimum 15 % du plafond horaire de la sécurité sociale.\n- Stage à l'étranger : convention traduite, assurance rapatriement, visa, formalités accidents du travail trois semaines avant le départ ; aides possibles : Erasmus+, Mobi-Centre."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "- Stage de 6 semaines minimum (210 h dans le livret), centré sur une problématique de gestion ou de langues.\n- Trois contenus : observation, action professionnelle (dont le remplacement), mission ; la mission est la plus formatrice.\n- Thème lié aux enseignements LEA, choisi d'un commun accord entre vous, le tuteur et la direction du parcours.\n- Rien ne commence avant la signature de la convention.\n\n- 210 h = 6 semaines × 35 h\n- Gratification obligatoire si > 2 mois, soit > 308 h"
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Durée et crédits du stage de L3 ?**\n\n6 semaines minimum selon le support ; 210 heures (6 × 35 h ou filé) et 8 ECTS selon le livret.\n\n**Peut-on commencer avant la signature de la convention ?**\n\nNon : sans convention signée, pas de statut de stagiaire ni de couverture.\n\n**Pourquoi la mission est-elle le contenu le plus formateur ?**\n\nElle répond à une demande précise dont vous êtes responsable, et fournit directement une question à traiter dans le rapport.\n\n**Confusions fréquentes**\n\n- **Convention de stage** / **Attestation de stage** : la convention est signée avant le début et autorise le stage ; l'attestation, remise à la fin, récapitule durée et gratification.\n- **Exécuter des tâches** / **Résoudre une problématique** : le rapport montre l'analyse d'un problème et des propositions, pas un récit jour après jour."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "stg.cadre.contenus",
+     "term": "Contenus de stage",
+     "definition": "Observation, action professionnelle (ou remplacement) et mission : les trois contenus de stage distingués par le support de TD.",
+     "intuitive": "Regarder, faire avec une équipe, ou se voir confier un projet à soi.",
+     "analytical": "Le contenu conditionne le rapport : une observation exige de trouver un point d'analyse ; une action professionnelle se juge sur les délais et la qualité des analyses ; une mission fournit directement une question à laquelle répondre.",
+     "examRelevance": "Pour un stage donné, identifiez le contenu et dites quelle problématique il permet.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "stg.cadre.q-contenus",
+     "type": "matching",
+     "difficulty": 2,
+     "topic": "distinguer",
+     "concept": "stg.cadre.contenus",
+     "stem": "Associez chaque situation au contenu de stage décrit par le support.",
+     "data": {
+      "pairs": [
+       {
+        "left": "Rendre compte de l'organisation du service export après l'avoir étudiée",
+        "right": "Observation"
+       },
+       {
+        "left": "Participer avec l'équipe à l'organisation d'un salon",
+        "right": "Action professionnelle"
+       },
+       {
+        "left": "Occuper le poste d'une assistante en congé",
+        "right": "Remplacement"
+       },
+       {
+        "left": "Établir un plan de prospection export demandé par la direction",
+        "right": "Mission"
+       }
+      ]
+     },
+     "explanation": "Trois contenus (le remplacement étant une variante de l'action professionnelle)."
+    },
+    {
+     "key": "stg.cadre.q-duree",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "stg.cadre.contenus",
+     "stem": "Quelle durée minimale le support de TD fixe-t-il pour le stage ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "6 semaines",
+        "correct": true,
+        "explanation": "« Une durée de 6 semaines minimum »."
+       },
+       {
+        "id": "b",
+        "text": "2 mois",
+        "correct": false,
+        "explanation": "C'est le seuil de la gratification obligatoire (livret)."
+       },
+       {
+        "id": "c",
+        "text": "3 semaines",
+        "correct": false,
+        "explanation": "Trop court."
+       }
+      ]
+     },
+     "explanation": "Cohérent avec les 210 heures du livret (6 × 35 h)."
+    },
+    {
+     "key": "stg.cadre.q-theme",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "stg.cadre.contenus",
+     "stem": "Qui fixe le thème définitif du stage ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "L'étudiant, l'enseignant-tuteur et la direction du parcours, d'un commun accord",
+        "correct": true,
+        "explanation": "Sur la base des propositions de l'organisme."
+       },
+       {
+        "id": "b",
+        "text": "L'organisme d'accueil seul",
+        "correct": false,
+        "explanation": "Il propose ; le choix est commun."
+       },
+       {
+        "id": "c",
+        "text": "L'étudiant seul",
+        "correct": false,
+        "explanation": "Le tuteur et la direction du parcours valident."
+       }
+      ]
+     },
+     "explanation": "Support de TD, diapositive sur le thème du stage."
+    },
+    {
+     "key": "stg.cadre.q-employeur",
+     "type": "multiple",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "stg.cadre.contenus",
+     "stem": "Quelles motivations des employeurs le support cite-t-il ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Pré-recruter",
+        "correct": true,
+        "explanation": "Le stage comme sélection de nouvelles recrues."
+       },
+       {
+        "id": "b",
+        "text": "Bénéficier d'un œil neuf",
+        "correct": true,
+        "explanation": "Apporter de nouvelles idées."
+       },
+       {
+        "id": "c",
+        "text": "Accomplir des missions utiles mais non prioritaires",
+        "correct": true,
+        "explanation": "Études, audit."
+       },
+       {
+        "id": "d",
+        "text": "Remplacer durablement un salarié à moindre coût",
+        "correct": false,
+        "explanation": "Ce n'est pas cité, et le remplacement est présenté comme peu formateur."
+       }
+      ]
+     },
+     "explanation": "Le support cite aussi les travaux à traiter rapidement."
+    }
+   ]
+  },
+  {
+   "slug": "stg.problematique",
+   "title": "De la mission à la problématique",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Exigence centrale du support de TD : le rapport doit être centré sur une problématique validée par le tuteur avant la rédaction.",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "Le rapport ne raconte pas le stage : il pose une question concrète issue des missions et y répond par une analyse et des propositions.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.stg-td"
+   ],
+   "prerequisites": [
+    "red.question",
+    "stg.cadre"
+   ],
+   "sections": [
+    {
+     "kind": "opening",
+     "title": "Un office de tourisme, pas des prospectus",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "Votre support prend l'exemple d'un stage dans un office de tourisme, en prévenant d'emblée : il faut bannir les stages qui consisteraient principalement à distribuer des prospectus.\n\n- **Sujet (ou thème) du stage** : le développement de l'activité touristique d'un territoire.\n- **Missions** : améliorer la visibilité de l'office de tourisme (traduction de sites, utilisation des réseaux sociaux, etc.).\n- **Problématique** : comment développer et promouvoir l'attractivité touristique d'un territoire en exploitant efficacement les ressources disponibles telles que les outils de communication numériques ?\n\nLes trois niveaux ne se confondent pas. Le thème situe le stage ; les missions disent ce que vous avez fait ; la problématique dit à quelle question votre rapport répond."
+    },
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "**Une problématique obligatoire.** Le rapport doit être centré sur une problématique principale choisie par vous en accord avec le tuteur universitaire. La problématique et le plan détaillé doivent être soumis au tuteur pour validation **avant** d'entamer la rédaction.\n\n**Une question concrète.** Le stage vous conduit à aider l'organisation à répondre à une question concrète : optimiser l'organisation, développer une activité, analyser des situations ou des processus. Exemples du support : comment augmenter le chiffre d'affaires, se développer sur un nouveau marché, analyser la concurrence, lancer un nouveau produit, réorganiser une boutique ?\n\n**Une démarche analytique.** Vous devez élaborer et proposer des solutions en vous appuyant sur vos connaissances théoriques et/ou empiriques, référencées en note de bas de page et dans la bibliographie.\n\n**Ce que la réponse à la problématique permet de montrer :**\n\n- que vous avez saisi le fonctionnement et les enjeux de l'organisation ;\n- vos missions, sous forme d'analyse et non d'énumération (leur intérêt, la manière de les mener, la méthodologie, les outils) ;\n- votre esprit critique ;\n- vos initiatives ;\n- vos propositions.\n\n**Le carnet de bord.** Le stage est un processus d'apprentissage. Tenez pendant toute sa durée un carnet de bord : notez chaque jour vos impressions sur l'organisation, ses rôles et les missions des personnes qui la composent. Il vous aidera à restituer les faits dans leur contexte, avec une attitude proche de celle d'un chercheur en sciences sociales ou d'un consultant en organisation.\n\n**Lien avec l'initiation à la recherche.** L'objectif du TD est d'apprendre ce qu'est une problématique de recherche : comment une question devient un objet de recherche, comment s'organise le travail de terrain, comment construire une réponse argumentée et structurée à partir des observations ou des données collectées pendant le stage."
+    },
+    {
+     "kind": "comparison",
+     "title": "Et si… les trois cas difficiles",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "| Situation | Conseil du support |\n|---|---|\n| **Pas de mission précise** | Vous pouvez quand même montrer vos qualités descriptives, analytiques et critiques. Quel regard portez-vous sur le poste occupé ? Comment vous êtes-vous intégrée ? La méthode de travail retenue était-elle la seule envisageable ? Quelles autres méthodes auraient été possibles, et avec quelles implications pour l'organisation ? |\n| **Plusieurs tâches ou missions** | Faites des arbitrages : relisez les objectifs initiaux et exposez la ou les missions significatives. Présentez les autres dans l'introduction et justifiez votre choix. |\n| **Pas de thème** | C'est le signe d'une vision pas assez globale, ou d'une réflexion insuffisante sur les conséquences de votre mission. Prenez du recul et contactez votre enseignant-tuteur pour dégager une problématique pertinente. |"
+    },
+    {
+     "kind": "application",
+     "title": "Exemple reconstruit : un stage en administration des ventes export",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Situation **fictive**. Stage de 8 semaines dans une PME du Loiret qui exporte du matériel agricole vers l'Espagne et le Maroc.\n\n| Niveau | Proposition |\n|---|---|\n| Thème | L'administration des ventes à l'export |\n| Missions | Préparer les documents d'expédition ; traduire des fiches produits en espagnol ; relancer les clients pour les impayés |\n| Mission retenue | Le suivi des documents d'expédition (les deux autres sont citées en introduction) |\n| Observation du carnet de bord | Trois expéditions sur dix ont été retardées à la douane marocaine pendant le stage |\n| Problématique | Comment la PME peut-elle réduire les retards de dédouanement de ses expéditions vers le Maroc ? |\n| Démarche | Relevé des retards et de leurs causes ; entretiens avec le transitaire et l'assistante export ; comparaison avec les exigences documentaires du pays |\n| Propositions | Une liste de contrôle des documents par destination ; le choix d'un Incoterm adapté ; un calendrier de préparation |\n\nLe lien avec le cours de techniques du commerce international est direct : documents, Incoterms, dédouanement."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "- Thème ≠ missions ≠ problématique.\n- Problématique et plan détaillé sont validés par le tuteur avant la rédaction.\n- La problématique part d'une question concrète de l'organisation et aboutit à des propositions argumentées.\n- Le carnet de bord, tenu chaque jour, fournit la matière de l'analyse.\n- Sans mission précise, avec trop de missions ou sans thème : analyser, choisir, demander l'aide du tuteur."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**À quel moment la problématique doit-elle être validée ?**\n\nAvant d'entamer la rédaction, avec le plan détaillé, par le tuteur universitaire.\n\n**Quelle est la différence entre le thème et la problématique dans l'exemple de l'office de tourisme ?**\n\nLe thème est le développement de l'activité touristique d'un territoire ; la problématique demande comment développer et promouvoir son attractivité en exploitant efficacement les outils de communication numériques.\n\n**À quoi sert le carnet de bord ?**\n\nÀ noter chaque jour impressions et observations pour restituer ensuite les faits dans leur contexte et les analyser.\n\n**Confusions fréquentes**\n\n- **Liste des missions** / **Problématique** : énumérer ce que l'on a fait ne pose aucune question.\n- **Problématique de stage** / **Problématique de recherche** : même logique (une question ouverte qui révèle un enjeu), mais celle du stage débouche sur des propositions utilisables par l'organisme."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "stg.problematique.problematique-stage",
+     "term": "Problématique du rapport de stage",
+     "definition": "Question principale, choisie par l'étudiant en accord avec le tuteur, issue des missions et à laquelle le rapport répond par une analyse et des propositions concrètes (support de TD).",
+     "intuitive": "La question que pose votre stage et à laquelle votre rapport répond.",
+     "analytical": "Elle articule théorie et terrain : les connaissances du cursus (référencées) servent à analyser une situation réelle et à justifier des propositions. C'est elle qui sépare le rapport du compte rendu d'activités.",
+     "examRelevance": "Distinguez thème, missions et problématique pour un stage donné.",
+     "sourceKeys": [],
+     "related": [
+      "red.problematique.problematique"
+     ]
+    },
+    {
+     "slug": "stg.problematique.carnet",
+     "term": "Carnet de bord",
+     "definition": "Journal tenu quotidiennement pendant tout le stage, où l'on note ses impressions sur l'organisation, ses rôles et les missions des personnes (support de TD).",
+     "intuitive": "Un cahier où l'on écrit chaque jour ce que l'on a vu et compris.",
+     "analytical": "Il constitue les données de terrain du rapport : sans traces datées, on reconstruit après coup, et l'analyse devient un récit.",
+     "examRelevance": "Expliquez en quoi le carnet de bord rapproche le stagiaire d'un chercheur en sciences sociales.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "stg.problematique.q1",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "distinguer",
+     "concept": "stg.problematique.problematique-stage",
+     "stem": "Dans l'exemple de l'office de tourisme, laquelle de ces formulations est la problématique ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Comment développer et promouvoir l'attractivité touristique d'un territoire en exploitant efficacement les outils de communication numériques ?",
+        "correct": true,
+        "explanation": "Problématique donnée par le support."
+       },
+       {
+        "id": "b",
+        "text": "Le développement de l'activité touristique d'un territoire",
+        "correct": false,
+        "explanation": "C'est le sujet (thème)."
+       },
+       {
+        "id": "c",
+        "text": "Traduction de sites et utilisation des réseaux sociaux",
+        "correct": false,
+        "explanation": "Ce sont les missions."
+       }
+      ]
+     },
+     "explanation": "Thème, missions, problématique : trois niveaux distincts."
+    },
+    {
+     "key": "stg.problematique.q2",
+     "type": "true_false",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "stg.problematique.problematique-stage",
+     "stem": "La problématique et le plan détaillé doivent être validés par le tuteur universitaire avant de commencer la rédaction.",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Vrai",
+        "correct": true,
+        "explanation": "C'est une obligation du support."
+       },
+       {
+        "id": "b",
+        "text": "Faux",
+        "correct": false,
+        "explanation": "Le support l'impose explicitement."
+       }
+      ]
+     },
+     "explanation": "« Cette problématique ainsi que le plan détaillé doivent impérativement être soumis au tuteur universitaire pour validation avant d'entamer la rédaction. »"
+    },
+    {
+     "key": "stg.problematique.q3",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "appliquer",
+     "concept": "stg.problematique.problematique-stage",
+     "stem": "Vous avez effectué quatre missions très différentes. Que conseille le support ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Exposer la ou les missions significatives et justifier ce choix dans l'introduction",
+        "correct": true,
+        "explanation": "Il faut opérer des arbitrages."
+       },
+       {
+        "id": "b",
+        "text": "Consacrer une partie à chaque mission",
+        "correct": false,
+        "explanation": "Cela produit une énumération."
+       },
+       {
+        "id": "c",
+        "text": "N'en mentionner aucune pour se concentrer sur l'entreprise",
+        "correct": false,
+        "explanation": "La présentation de l'organisation ne doit pas être le cœur du rapport."
+       }
+      ]
+     },
+     "explanation": "Cas « Et si… vous avez réalisé plusieurs tâches ou missions »."
+    },
+    {
+     "key": "stg.problematique.q4",
+     "type": "scenario",
+     "difficulty": 3,
+     "topic": "analyser-cas",
+     "concept": "stg.problematique.problematique-stage",
+     "stem": "Stage dans un hôtel de Tours : accueil de la clientèle étrangère et mise à jour de la page Booking en anglais et en espagnol. Proposez un thème, une problématique et deux propositions que le rapport pourrait formuler.",
+     "data": {
+      "rubric": [
+       "Un thème distinct de la problématique",
+       "Une problématique ouverte, concrète, liée aux missions",
+       "Deux propositions réalistes, utilisables par l'hôtel",
+       "Mobilise des connaissances du cursus (langues, marketing)"
+      ],
+      "modelAnswer": "Thème : l'accueil de la clientèle internationale dans l'hôtellerie indépendante. Problématique : comment un hôtel indépendant peut-il améliorer la conversion de sa clientèle hispanophone par sa présence en ligne multilingue ? Propositions : traduire et adapter culturellement les descriptions et les réponses aux avis en espagnol ; suivre chaque mois la part des réservations par pays pour mesurer l'effet."
+     },
+     "explanation": "La problématique transforme les missions en question."
+    }
+   ]
+  },
+  {
+   "slug": "stg.rapport",
+   "title": "Le rapport",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Règles de rédaction du support de TD 2026-2027, complétées par le livret de stage.",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "Le rapport répond à une problématique par une démonstration en deux ou trois parties appuyée sur des faits et des références, résumée dans une note de synthèse obligatoire, et rédigée strictement seul.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.stg-td"
+   ],
+   "prerequisites": [],
+   "sections": [
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "**Avertissement.** La rédaction est un travail strictement personnel. Tout plagiat et **toute utilisation, même partielle, de l'intelligence artificielle** sont strictement interdits et font l'objet d'une démarche disciplinaire qui peut compromettre la poursuite de vos études.\n\n**Le rapport n'est pas un mémoire.** Il est directement lié à une ou plusieurs missions effectuées dans l'organisation. La présentation de l'organisation ne doit en aucun cas être le cœur du rapport : elle reste succincte, dans l'introduction. L'historique, les activités et l'organigramme peuvent aller en annexe s'ils sont nécessaires à la compréhension de la problématique.\n\n**Une synthèse de vos analyses.** Vous présentez et expliquez vos missions, exposez la méthodologie, décrivez et appréciez vos résultats, en répondant toujours à la problématique de départ. Pas de simple énumération.\n\n**Penser l'organisation du rapport dès le début du stage**, sans se laisser emporter par l'action : une analyse fine et une prise de distance doivent toujours être présentes. Le rapport se prépare en dehors des heures de travail, et un exemplaire est remis au maître de stage **avant** d'être rendu à l'université.\n\n**Le plan.** Énumérez au brouillon vos activités principales pour ordonner vos idées. La problématique qui en découle guide toute la rédaction. Les éléments sont rassemblés en **deux ou trois parties** principales. Toutes les tâches ne méritent pas de figurer : celles qui ne sont pas liées à la problématique ne demandent pas de longs développements.\n\n**La forme.**\n\n- Rapport dactylographié, police standard : **Arial 10** ou **Times New Roman 12**.\n- Interligne 1,5 (le support écrit « 1,5 cm »), texte justifié, pagination obligatoire.\n- Notes de bas de page, références, tableaux et graphiques selon les normes scientifiques.\n- Couleur possible pour souligner le plan, des logos, des graphiques, sans en abuser.\n- Ponctuation, orthographe et grammaire irréprochables ; termes professionnels appropriés.\n- Papier blanc de 80 ou 90 g/m² (90 g/m² pour le recto-verso, s'il n'est pas déconseillé) ; reliure selon le nombre de pages (agrafes, peigne, baguette).\n\n**La page de garde** comporte : Université d'Orléans – UFR Lettres, Langues et Sciences Humaines – Département des Langues Étrangères Appliquées ; votre nom ; le titre du rapport ; l'organisme d'accueil ; le diplôme préparé ; l'année de promotion ; la période de stage ; les noms des responsables de stage (université et organisme) ; les logos de l'université et de la faculté.\n\n**La construction.**\n\n1. **Remerciements** : quelques lignes au plus.\n2. **Sommaire** paginé, avec des titres précis.\n3. **Note de synthèse** d'une page, avant l'introduction, qui décrit la problématique et les résultats : **obligatoire**.\n4. **Introduction** : l'organisation (ce qu'elle est et fait, le service et son rôle), la mission en bref, le plan et la problématique. À rédiger, comme la conclusion, après le corps du rapport.\n5. **Développement** : une argumentation qui convainc du bien-fondé de votre analyse ; c'est là que vous répondez à la problématique. Schémas, graphiques et encadrés sont possibles.\n6. **Conclusion** : résumé de la démonstration, rappel des questions et de la manière dont vous y avez répondu.\n7. **Annexes** : documents réunis ou réalisés pendant le stage, utiles à la compréhension (l'accord de l'organisme est souvent requis).\n8. **Bibliographie** par ordre alphabétique des auteurs.\n\n**Présentation des références.**\n\n- Ouvrage : nom de l'auteur, initiale du prénom, titre, lieu d'édition, éditeur, année, éventuellement pages.\n- Article : nom de l'auteur, initiale du prénom, date, « titre de l'article », titre de la revue, numéro, première et dernière pages.\n\nVos sources ne peuvent en aucun cas se limiter à des sites Internet.\n\n**Volume** : 25 à 30 pages dactylographiées hors annexes. Mieux vaut 20 pages intéressantes que 40 pages sans profondeur. Pour un problème de longueur, approfondissez la discussion, développez la méthode, confrontez les cours à votre expérience, expliquez les difficultés rencontrées.\n\n**Langue** : le rapport et la soutenance peuvent être en français, en anglais ou en langue B. Si le stage a eu lieu à l'étranger, la note de synthèse doit être rédigée en anglais ou en langue B."
+    },
+    {
+     "kind": "comparison",
+     "title": "Les erreurs à éviter",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "| Erreur | Ce que cela donne |\n|---|---|\n| Sous-estimer le travail accompli | Une simple narration ; la mission et votre implication ne sont pas mises en valeur. |\n| Surestimer la mission | Vous vous présentez comme un sauveur. |\n| Une collection de documents internes | Des éléments d'intranet ou des rapports internes repris sans citation ni analyse : c'est du plagiat, aux conséquences sévères. |\n| Tout s'est passé pour le mieux | Aucun recul, aucune difficulté analysée. |\n| Utiliser l'IA (par exemple ChatGPT) | Strictement interdit. |"
+    },
+    {
+     "kind": "explanation",
+     "title": "Compléments du livret de stage",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Règles tirées du livret 2021-2022, cohérentes avec le support :\n\n- **Note de synthèse** : contexte, problème, démarche, résultats chiffrés, propositions ; elle n'annonce pas le plan.\n- **Tout référencer**, y compris les informations de sources internes ; pour un site, l'adresse et la date de consultation.\n- **Confidentialité** : anonymiser avec le maître de stage, couverture blanche (rapport « aveugle »), signaler au tuteur et au bureau des stages.\n- **Plan à proscrire** : « L'entreprise / Mes missions / Mes apports ». C'est un compte rendu, qui « ne saurait valoir la note moyenne de 10 »."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "- Rédaction strictement personnelle : plagiat et toute utilisation de l'IA sont interdits.\n- Le rapport n'est pas un mémoire : une analyse des missions qui répond à une problématique, en deux ou trois parties.\n- Ordre : page de garde, remerciements, sommaire, note de synthèse (obligatoire), introduction, développement, conclusion, annexes, bibliographie.\n- 25 à 30 pages hors annexes ; Arial 10 ou Times New Roman 12, interligne 1,5, justifié, paginé.\n- Un exemplaire est remis au maître de stage avant l'université.\n- Stage à l'étranger : note de synthèse en anglais ou en langue B."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Donnez la liste ordonnée des éléments du rapport.**\n\nPage de garde, remerciements, sommaire, note de synthèse, introduction, développement, conclusion, annexes, bibliographie.\n\n**Quelles règles de forme ?**\n\nArial 10 ou Times New Roman 12, interligne 1,5, texte justifié, pagination obligatoire.\n\n**Dans quelle langue écrire la note de synthèse après un stage à l'étranger ?**\n\nEn anglais ou en langue B.\n\n**Que contient la page de garde ?**\n\nUniversité, UFR et département ; nom ; titre ; organisme d'accueil ; diplôme ; année de promotion ; période ; responsables de stage ; logos.\n\n**Confusions fréquentes**\n\n- **Rapport de stage** / **Mémoire** : le rapport est lié aux missions et débouche sur des propositions.\n- **Note de synthèse** / **Introduction** : la note donne problématique et résultats ; l'introduction présente l'organisation, la mission, la problématique et le plan."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "stg.rapport.note-synthese",
+     "term": "Note de synthèse",
+     "definition": "Page obligatoire placée avant l'introduction, qui décrit de façon synthétique la problématique posée et les résultats obtenus (support de TD).",
+     "intuitive": "Le rapport en une page, pour un lecteur pressé.",
+     "analytical": "Elle se rédige à la fin et donne les résultats, ce qui la distingue de l'introduction (qui annonce la démarche). Après un stage à l'étranger, elle est en anglais ou en langue B : c'est aussi une preuve de compétence linguistique.",
+     "examRelevance": "Quelle différence entre la note de synthèse et l'introduction ?",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "stg.rapport.q-ordre",
+     "type": "ordering",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "stg.rapport.note-synthese",
+     "stem": "Remettez dans l'ordre les éléments du rapport de stage.",
+     "data": {
+      "items": [
+       "Page de garde",
+       "Remerciements",
+       "Sommaire",
+       "Note de synthèse",
+       "Introduction",
+       "Développement",
+       "Conclusion",
+       "Annexes",
+       "Bibliographie"
+      ]
+     },
+     "explanation": "Construction du rapport selon le support."
+    },
+    {
+     "key": "stg.rapport.q-ia",
+     "type": "true_false",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "stg.rapport.note-synthese",
+     "stem": "Le support autorise l'intelligence artificielle pour reformuler des passages, à condition de le signaler.",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Vrai",
+        "correct": false,
+        "explanation": "Le support l'interdit."
+       },
+       {
+        "id": "b",
+        "text": "Faux",
+        "correct": true,
+        "explanation": "« Tout plagiat et toute utilisation, même partielle, de l'intelligence artificielle sont strictement interdits. »"
+       }
+      ]
+     },
+     "explanation": "Avertissement du support : démarche disciplinaire possible."
+    },
+    {
+     "key": "stg.rapport.q-langue",
+     "type": "single",
+     "difficulty": 2,
+     "topic": "memoriser",
+     "concept": "stg.rapport.note-synthese",
+     "stem": "Vous avez fait votre stage à Valence (Espagne). Dans quelle langue devez-vous rédiger la note de synthèse ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "En anglais ou en langue B",
+        "correct": true,
+        "explanation": "Obligatoire pour un stage à l'étranger."
+       },
+       {
+        "id": "b",
+        "text": "En français obligatoirement",
+        "correct": false,
+        "explanation": "Le français reste possible pour le reste du rapport, pas pour cette note."
+       },
+       {
+        "id": "c",
+        "text": "Dans la langue de votre choix",
+        "correct": false,
+        "explanation": "C'est le cas du rapport, pas de la note après un stage à l'étranger."
+       }
+      ]
+     },
+     "explanation": "Règle sur la langue du rapport."
+    },
+    {
+     "key": "stg.rapport.q-orga",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "stg.rapport.note-synthese",
+     "stem": "Où doit figurer la présentation détaillée de l'organisme (historique, organigramme) ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "En annexe, si elle est utile à la compréhension de la problématique",
+        "correct": true,
+        "explanation": "L'introduction n'en donne qu'une présentation succincte."
+       },
+       {
+        "id": "b",
+        "text": "Dans la première partie du développement",
+        "correct": false,
+        "explanation": "Elle ne doit pas être le cœur du rapport."
+       },
+       {
+        "id": "c",
+        "text": "Dans la note de synthèse",
+        "correct": false,
+        "explanation": "La note porte sur la problématique et les résultats."
+       }
+      ]
+     },
+     "explanation": "« Le rapport n'est pas un mémoire »."
+    },
+    {
+     "key": "stg.rapport.q-ref",
+     "type": "single",
+     "difficulty": 2,
+     "topic": "appliquer",
+     "concept": "stg.rapport.note-synthese",
+     "stem": "Quelle référence d'article respecte l'ordre donné par le support ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Dupont, M., 2024, « L'anglais en entreprise », Revue X, n° 12, p. 45-60",
+        "correct": true,
+        "explanation": "Nom, initiale, date, titre de l'article, revue, numéro, pages."
+       },
+       {
+        "id": "b",
+        "text": "« L'anglais en entreprise », Dupont Marie, Revue X",
+        "correct": false,
+        "explanation": "Ordre incorrect, date et pages manquantes."
+       },
+       {
+        "id": "c",
+        "text": "Revue X, 2024, Dupont",
+        "correct": false,
+        "explanation": "Il manque le titre de l'article et les pages."
+       }
+      ]
+     },
+     "explanation": "Règles de présentation des références du support (exemple fictif)."
+    }
+   ]
+  }
+ ]
+}

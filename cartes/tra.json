@@ -1,0 +1,327 @@
+{
+  "id": "tra",
+  "titre": "Traduction anglaise : thème et version",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J10, TD 24 h, 3 ECTS)",
+    "enseignant": "Alice Michel",
+    "description": "Traduction d'articles de presse dans les deux sens.",
+    "bibliographie": [],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "Procédés de Vinay et Darbelnet"
+  ],
+  "competences_examen": [
+    "Traduire un article de presse en temps limité",
+    "Justifier un choix de traduction"
+  ],
+  "incertitudes": [],
+  "chapitres": [
+    {
+      "id": "tra.procedes",
+      "titre": "Procédés de traduction",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tra.procedes.directs",
+          "titre": "Procédés directs : emprunt, calque, traduction littérale",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.procedes.obliques",
+          "titre": "Procédés obliques : transposition, modulation, équivalence, adaptation",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.vinay-darbelnet"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Emprunt",
+          "en": "borrowing / loan word",
+          "es": "préstamo"
+        },
+        {
+          "fr": "Calque",
+          "en": "calque / loan translation",
+          "es": "calco"
+        },
+        {
+          "fr": "Anglicisme",
+          "en": "anglicism",
+          "es": "anglicismo"
+        },
+        {
+          "fr": "Transposition",
+          "en": "transposition",
+          "es": "transposición"
+        },
+        {
+          "fr": "Modulation",
+          "en": "modulation",
+          "es": "modulación"
+        },
+        {
+          "fr": "Équivalence",
+          "en": "equivalence",
+          "es": "equivalencia"
+        },
+        {
+          "fr": "Adaptation",
+          "en": "adaptation",
+          "es": "adaptación"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tra.contrastes",
+      "titre": "Contrastes français / anglais",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tra.contrastes.nominalisation",
+          "titre": "Nominalisation et verbalisation",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.contrastes.temps-aspect",
+          "titre": "Temps et aspects",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.contrastes.articles",
+          "titre": "Articles et déterminants",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.contrastes.ing",
+          "titre": "Les formes en -ing",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.contrastes.passif",
+          "titre": "Le passif",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.contrastes.prepositions",
+          "titre": "Prépositions et particules",
+          "niveau": "A"
+        },
+        {
+          "id": "tra.contrastes.ordre",
+          "titre": "Ordre des mots, chassé-croisé",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.chuquet-paillard",
+        "src.vinay-darbelnet"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tra.procedes",
+        "aec.grammaire"
+      ],
+      "terminologie": [
+        {
+          "fr": "Nominalisation",
+          "en": "nominalisation",
+          "es": "nominalización"
+        },
+        {
+          "fr": "Nom composé",
+          "en": "compound noun",
+          "es": "sustantivo compuesto"
+        },
+        {
+          "fr": "Aspect progressif",
+          "en": "progressive / continuous aspect",
+          "es": "aspecto progresivo"
+        },
+        {
+          "fr": "Aspect parfait",
+          "en": "perfect aspect",
+          "es": "aspecto perfectivo"
+        },
+        {
+          "fr": "Article défini / indéfini",
+          "en": "definite / indefinite article",
+          "es": "artículo determinado / indeterminado"
+        },
+        {
+          "fr": "Nom indénombrable",
+          "en": "uncountable noun",
+          "es": "sustantivo incontable"
+        },
+        {
+          "fr": "Article zéro",
+          "en": "zero article",
+          "es": "artículo cero"
+        },
+        {
+          "fr": "Gérondif (anglais)",
+          "en": "gerund",
+          "es": "gerundio inglés (forma -ing nominal)"
+        },
+        {
+          "fr": "Participe présent",
+          "en": "present participle",
+          "es": "participio presente / gerundio"
+        },
+        {
+          "fr": "Tournure pronominale à sens passif",
+          "en": "pronominal passive",
+          "es": "pasiva refleja"
+        },
+        {
+          "fr": "Pronom indéfini « on »",
+          "en": "indefinite pronoun « on » (one, we, they, people)",
+          "es": "sujeto impersonal (se, uno)"
+        },
+        {
+          "fr": "Verbe à particule",
+          "en": "phrasal verb",
+          "es": "verbo frasal / con partícula"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tra.pratique",
+      "titre": "Pratique et méthode",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tra.pratique.version",
+          "titre": "La version",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.pratique.theme",
+          "titre": "Le thème",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.pratique.titres-presse",
+          "titre": "Titres de presse",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.pratique.faux-amis",
+          "titre": "Faux amis",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.pratique.nombres",
+          "titre": "Nombres",
+          "niveau": "F"
+        },
+        {
+          "id": "tra.pratique.methode",
+          "titre": "Méthode d'épreuve",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "tra.procedes",
+        "tra.contrastes",
+        "aec.lexique"
+      ],
+      "terminologie": [
+        {
+          "fr": "Version",
+          "en": "translation into one's native language",
+          "es": "traducción directa / versión"
+        },
+        {
+          "fr": "Contresens",
+          "en": "mistranslation (opposite meaning)",
+          "es": "contrasentido"
+        },
+        {
+          "fr": "Faux sens",
+          "en": "inaccurate translation",
+          "es": "falso sentido"
+        },
+        {
+          "fr": "Thème",
+          "en": "translation into a foreign language (prose translation)",
+          "es": "traducción inversa / tema"
+        },
+        {
+          "fr": "Idiomatique",
+          "en": "idiomatic",
+          "es": "idiomático"
+        },
+        {
+          "fr": "Titre",
+          "en": "headline",
+          "es": "titular"
+        },
+        {
+          "fr": "Hausse",
+          "en": "hike (headline)",
+          "es": "subida / alza"
+        },
+        {
+          "fr": "Enquête",
+          "en": "probe (headline)",
+          "es": "investigación"
+        },
+        {
+          "fr": "Querelle, conflit",
+          "en": "row (headline)",
+          "es": "disputa / conflicto"
+        },
+        {
+          "fr": "Faux ami partiel",
+          "en": "partial false friend",
+          "es": "falso amigo parcial"
+        },
+        {
+          "fr": "Déception",
+          "en": "disappointment",
+          "es": "decepción"
+        },
+        {
+          "fr": "Séparateur décimal",
+          "en": "decimal point",
+          "es": "separador decimal (coma en España)"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

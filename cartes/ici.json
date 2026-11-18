@@ -1,0 +1,615 @@
+{
+  "id": "ici",
+  "titre": "Introduction au commerce international",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J7B, CM 20 h, 3 ECTS)",
+    "enseignant": "Isabelle Noël",
+    "description": "Démarche marketing, diagnostic et prospection des marchés étrangers.",
+    "bibliographie": [
+      "Exporter, 26e édition, Foucher",
+      "Charlot et al., Études, veille et prospection"
+    ],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "SWOT",
+    "Modèle d'Uppsala et distance psychique",
+    "Born global",
+    "Standardisation / adaptation",
+    "Escalade des prix export"
+  ],
+  "competences_examen": [
+    "Réaliser un diagnostic export",
+    "Construire une grille de sélection des marchés",
+    "Choisir et justifier un mode de présence",
+    "Proposer un plan de prospection"
+  ],
+  "incertitudes": [
+    "Le rapport de complétude de cours disait qu'aucun descriptif officiel n'existait : la page S5 en donne un (consultée le 2026-11-17).",
+    "Le chapitre reçu est numéroté VII : le cours a au moins sept chapitres, la carte reconstruite en avait six. L'ordre réel des chapitres I à VI est inconnu."
+  ],
+  "chapitres": [
+    {
+      "id": "ici.diagnostic",
+      "titre": "Diagnostic et sélection des marchés",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "ici.diagnostic.interne",
+          "titre": "Diagnostic export interne",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.diagnostic.swot",
+          "titre": "SWOT et facteurs clés de succès",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.diagnostic.selection-marches",
+          "titre": "Sélection des marchés : critères, grille de notation",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.diagnostic.uppsala",
+          "titre": "Modèle d'Uppsala et distance psychique",
+          "niveau": "A"
+        },
+        {
+          "id": "ici.diagnostic.born-global",
+          "titre": "Les « born global »",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.johanson-vahlne",
+        "src.knight-cavusgil"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "ici.information"
+      ],
+      "terminologie": [
+        {
+          "fr": "Diagnostic export",
+          "en": "export readiness assessment / export audit",
+          "es": "diagnóstico exportador"
+        },
+        {
+          "fr": "Avantage concurrentiel",
+          "en": "competitive advantage",
+          "es": "ventaja competitiva"
+        },
+        {
+          "fr": "Matrice SWOT",
+          "en": "SWOT analysis",
+          "es": "análisis DAFO (FODA en Amérique latine)"
+        },
+        {
+          "fr": "Facteur clé de succès",
+          "en": "key success factor",
+          "es": "factor clave de éxito"
+        },
+        {
+          "fr": "Grille multicritère",
+          "en": "weighted scoring matrix",
+          "es": "matriz de selección ponderada"
+        },
+        {
+          "fr": "Marché cible",
+          "en": "target market",
+          "es": "mercado objetivo"
+        },
+        {
+          "fr": "Distance psychique",
+          "en": "psychic distance",
+          "es": "distancia psíquica"
+        },
+        {
+          "fr": "Chaîne d'établissement",
+          "en": "establishment chain",
+          "es": "cadena de establecimiento"
+        },
+        {
+          "fr": "Born global",
+          "en": "born global firm / international new venture",
+          "es": "empresa nacida global (born global)"
+        },
+        {
+          "fr": "Marché de niche",
+          "en": "niche market",
+          "es": "nicho de mercado"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "ici.information",
+      "titre": "Information sur les marchés",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "ici.information.sources",
+          "titre": "Sources d'information sur les marchés ; acteurs publics d'appui à l'export",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.information.etude-marche",
+          "titre": "Étude de marché documentaire et terrain",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.team-france-export",
+        "src.douane-fr"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Veille",
+          "en": "market intelligence / monitoring",
+          "es": "vigilancia / inteligencia de mercado"
+        },
+        {
+          "fr": "Appui à l'export",
+          "en": "export support / export promotion",
+          "es": "apoyo a la exportación"
+        },
+        {
+          "fr": "Assurance prospection",
+          "en": "market development insurance",
+          "es": "seguro de prospección"
+        },
+        {
+          "fr": "Étude documentaire",
+          "en": "desk research / secondary research",
+          "es": "investigación documental / de gabinete"
+        },
+        {
+          "fr": "Étude terrain",
+          "en": "field research / primary research",
+          "es": "investigación de campo"
+        },
+        {
+          "fr": "Analyse PESTEL",
+          "en": "PESTEL analysis",
+          "es": "análisis PESTEL"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "ici.risque",
+      "titre": "Risque pays",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "ici.risque.risque-pays",
+          "titre": "Risque pays : politique, économique, de transfert",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.risque.notation",
+          "titre": "Les classements de risque pays (lecture)",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.ocde-risque-pays"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Risque pays",
+          "en": "country risk",
+          "es": "riesgo país"
+        },
+        {
+          "fr": "Risque de non-transfert",
+          "en": "transfer risk",
+          "es": "riesgo de transferencia"
+        },
+        {
+          "fr": "Embargo",
+          "en": "embargo",
+          "es": "embargo"
+        },
+        {
+          "fr": "Notation souveraine",
+          "en": "sovereign credit rating",
+          "es": "calificación soberana"
+        },
+        {
+          "fr": "Assureur-crédit",
+          "en": "credit insurer",
+          "es": "aseguradora de crédito"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "ici.presence",
+      "titre": "Modes de présence à l'international",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "ici.presence.export-indirect",
+          "titre": "Export indirect",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.export-direct",
+          "titre": "Export direct",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.agent-commercial",
+          "titre": "Agent commercial",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.distributeur",
+          "titre": "Distributeur et concessionnaire",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.licence-franchise",
+          "titre": "Licence et franchise",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.joint-venture",
+          "titre": "Joint-venture",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.filiale",
+          "titre": "Filiale et succursale",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.presence.choix",
+          "titre": "Arbitrage contrôle / engagement / risque",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.directive-agents",
+        "src.code-commerce"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Export indirect",
+          "en": "indirect exporting",
+          "es": "exportación indirecta"
+        },
+        {
+          "fr": "Portage",
+          "en": "piggyback exporting",
+          "es": "exportación en piggyback / portage"
+        },
+        {
+          "fr": "Société de commerce international",
+          "en": "export trading company",
+          "es": "empresa de comercio internacional / trading"
+        },
+        {
+          "fr": "Export direct",
+          "en": "direct exporting",
+          "es": "exportación directa"
+        },
+        {
+          "fr": "Administration des ventes (ADV)",
+          "en": "sales administration / order processing",
+          "es": "administración de ventas"
+        },
+        {
+          "fr": "Agent commercial",
+          "en": "commercial agent / sales agent",
+          "es": "agente comercial"
+        },
+        {
+          "fr": "Commission",
+          "en": "commission",
+          "es": "comisión"
+        },
+        {
+          "fr": "Clause de ducroire",
+          "en": "del credere clause",
+          "es": "cláusula del credere"
+        },
+        {
+          "fr": "Distributeur / importateur",
+          "en": "distributor / importer",
+          "es": "distribuidor / importador"
+        },
+        {
+          "fr": "Concession exclusive",
+          "en": "exclusive distribution agreement",
+          "es": "contrato de concesión / distribución exclusiva"
+        },
+        {
+          "fr": "Prix de revente imposé",
+          "en": "resale price maintenance (RPM)",
+          "es": "precio de reventa impuesto"
+        },
+        {
+          "fr": "Licence",
+          "en": "licence (UK) / license (US) / licensing",
+          "es": "licencia"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "ici.prospection",
+      "titre": "Prospection",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "ici.prospection.outils",
+          "titre": "Salons, missions, VIE, prospection digitale",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.prospection.plan",
+          "titre": "Plan de prospection",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.team-france-export"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "ici.information",
+        "ici.diagnostic"
+      ],
+      "terminologie": [
+        {
+          "fr": "Salon professionnel",
+          "en": "trade fair / trade show",
+          "es": "feria comercial"
+        },
+        {
+          "fr": "Volontariat international en entreprise (VIE)",
+          "en": "international volunteer programme in business (V.I.E.)",
+          "es": "voluntariado internacional en empresa (VIE)"
+        },
+        {
+          "fr": "Prospect",
+          "en": "prospect / lead",
+          "es": "cliente potencial / prospecto"
+        },
+        {
+          "fr": "Plan de prospection",
+          "en": "prospecting plan / business development plan",
+          "es": "plan de prospección"
+        },
+        {
+          "fr": "Gestion de la relation client (GRC)",
+          "en": "customer relationship management (CRM)",
+          "es": "gestión de la relación con el cliente (CRM)"
+        },
+        {
+          "fr": "Retour sur investissement",
+          "en": "return on investment (ROI)",
+          "es": "retorno de la inversión"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "ici.mix",
+      "titre": "Marketing mix international",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "ici.mix.standardisation-adaptation",
+          "titre": "Standardisation ou adaptation",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.mix.produit",
+          "titre": "Produit et normes",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.mix.prix-export",
+          "titre": "Prix export : escalade des prix",
+          "niveau": "A"
+        },
+        {
+          "id": "ici.mix.distribution",
+          "titre": "Canaux de distribution",
+          "niveau": "F"
+        },
+        {
+          "id": "ici.mix.communication",
+          "titre": "Communication internationale",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.ici-ch7"
+      ],
+      "sources": [
+        "src.levitt"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "ici.information",
+        "tci.incoterms",
+        "ici.presence"
+      ],
+      "terminologie": [
+        {
+          "fr": "Standardisation",
+          "en": "standardisation",
+          "es": "estandarización"
+        },
+        {
+          "fr": "Adaptation",
+          "en": "adaptation / localisation",
+          "es": "adaptación"
+        },
+        {
+          "fr": "Glocalisation",
+          "en": "glocalisation (think global, act local)",
+          "es": "glocalización"
+        },
+        {
+          "fr": "Marketing mix (4P)",
+          "en": "marketing mix (product, price, place, promotion)",
+          "es": "marketing mix (producto, precio, distribución, comunicación)"
+        },
+        {
+          "fr": "Marquage CE",
+          "en": "CE marking",
+          "es": "marcado CE"
+        },
+        {
+          "fr": "Norme",
+          "en": "standard",
+          "es": "norma"
+        },
+        {
+          "fr": "Étiquetage",
+          "en": "labelling",
+          "es": "etiquetado"
+        },
+        {
+          "fr": "Dépôt de marque",
+          "en": "trademark registration",
+          "es": "registro de marca"
+        },
+        {
+          "fr": "Escalade des prix",
+          "en": "price escalation",
+          "es": "escalada de precios"
+        },
+        {
+          "fr": "Coût débarqué",
+          "en": "landed cost",
+          "es": "coste puesto en destino"
+        },
+        {
+          "fr": "Prix départ usine",
+          "en": "ex-works price",
+          "es": "precio en fábrica"
+        },
+        {
+          "fr": "Canal de distribution",
+          "en": "distribution channel",
+          "es": "canal de distribución"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "ici.segmentation",
+      "titre": "Segmentation et positionnement (chapitre VII du cours)",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Segmentation : définition, intérêts, limites",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Macro-segmentation, micro-segmentation, segments cross-culturels",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Conditions d'efficacité d'un segment",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Méthodes : 20/80 et ABC, RFM, associations, corrélation",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Marketing indifférencié, différencié, concentré, adapté",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Positionnement : six qualités, identification et différenciation, triangle d'or, cartes perceptuelles",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Positionnement international standardisé ou adapté ; matrice de Quelch et Hoff (1986)",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.ici-ch7"
+      ],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [],
+      "note": null
+    }
+  ]
+}

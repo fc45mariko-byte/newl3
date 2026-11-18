@@ -1,0 +1,1013 @@
+{
+  "id": "tci",
+  "titre": "Techniques du commerce international",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J6B, TD 24 h, 3 ECTS) et S6 (LLA6J6C, TD 20 h, 2 ECTS)",
+    "enseignant": "Isabelle Noël",
+    "description": "S5 : Incoterms, logistique et supply chain, moyens de paiement, gestion documentaire. S6 : échanges intracommunautaires, procédures de dédouanement, régimes douaniers, détermination et liquidation de la dette douanière.",
+    "bibliographie": [
+      "Incoterms 2010, CCI (édition dépassée : Incoterms® 2020 en vigueur)",
+      "Exporter, 26e édition, Foucher",
+      "Belotti, Transport international de marchandises, 5e édition, Vuibert"
+    ],
+    "sources": [
+      "r.orleans-l3-s5",
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [
+    "Incoterms® 2020 (ICC, publication 723)",
+    "RUU 600 (crédit documentaire)",
+    "RUE 522 (encaissements)",
+    "Code des douanes de l'Union (règlement UE 952/2013)",
+    "Directive TVA 2006/112/CE"
+  ],
+  "competences_examen": [
+    "Choisir et rédiger un Incoterm adapté à une opération",
+    "Calculer un fret maritime ou aérien (poids taxable)",
+    "Vérifier la cohérence d'un jeu de documents",
+    "Choisir une technique de paiement selon le risque",
+    "Calculer une valeur en douane, des droits et une TVA à l'import",
+    "Traiter une livraison intracommunautaire"
+  ],
+  "incertitudes": [
+    "Le contenu exact des séances (TD) n'est pas connu : seuls les schémas FCA, FOB et CIF de l'enseignante ont été reçus.",
+    "La bibliographie officielle cite Incoterms 2010 : vérifier auprès de l'enseignante que le cours suit bien la version 2020.",
+    "Applications reçues (11 exercices de transport) : la carte doit ajouter ISPS, SOLAS VGM et la tarification ULD au chapitre transport."
+  ],
+  "chapitres": [
+    {
+      "id": "tci.operation",
+      "titre": "L'opération d'import-export",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.operation.acteurs",
+          "titre": "Les acteurs : vendeur, acheteur, transporteur, commissionnaire, transitaire, banques, douane, assureur",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.operation.flux",
+          "titre": "Flux physique, documentaire et financier",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.operation.offre-export",
+          "titre": "L'offre et la facture pro forma",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.operation.facture-commerciale",
+          "titre": "La facture commerciale internationale : mentions",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.tci-transport-app"
+      ],
+      "sources": [
+        "src.douane-fr",
+        "src.icc-ucp600"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Commissionnaire de transport",
+          "en": "freight forwarder (acting as principal)",
+          "es": "comisionista de transporte"
+        },
+        {
+          "fr": "Transitaire",
+          "en": "forwarding agent",
+          "es": "transitario"
+        },
+        {
+          "fr": "Exportateur",
+          "en": "exporter",
+          "es": "exportador"
+        },
+        {
+          "fr": "Facture pro forma",
+          "en": "pro forma invoice",
+          "es": "factura proforma"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.incoterms",
+      "titre": "Incoterms® 2020",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.incoterms.fonction",
+          "titre": "Fonction et nature contractuelle des Incoterms",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.familles",
+          "titre": "Les 4 familles E, F, C, D et les 2 catégories (tous modes / maritime)",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.transfert-risque",
+          "titre": "Le point de transfert des risques",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.repartition-couts",
+          "titre": "Le point de transfert des frais",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.dissociation-c",
+          "titre": "La règle des deux points critiques dans la famille C",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.incoterms.exw",
+          "titre": "EXW",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.fca",
+          "titre": "FCA, y compris le connaissement « à bord »",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.fas-fob",
+          "titre": "FAS et FOB",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.cfr-cif",
+          "titre": "CFR et CIF",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.cpt-cip",
+          "titre": "CPT et CIP",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.dap-dpu-ddp",
+          "titre": "DAP, DPU et DDP",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.assurance",
+          "titre": "Obligations d'assurance : CIF en clause C, CIP en clause A",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.dedouanement",
+          "titre": "Qui dédouane à l'export et à l'import",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.chargement-dechargement",
+          "titre": "Chargement et déchargement selon la règle",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.incoterms.choix",
+          "titre": "Choisir un Incoterm : critères et erreurs",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.incoterms.redaction",
+          "titre": "Rédiger la clause : règle, lieu précis, version",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.incoterms.vs-propriete",
+          "titre": "Incoterm, transfert de propriété et contrat de vente",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.incoterms.cas",
+          "titre": "Études de cas",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.incoterms-schemas",
+        "doc.tci-transport-app",
+        "doc.tci-assurance-formule"
+      ],
+      "sources": [
+        "src.icc-incoterms-2020",
+        "src.cvim"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.operation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Incoterm",
+          "en": "Incoterms® rule",
+          "es": "regla Incoterms®"
+        },
+        {
+          "fr": "Chambre de commerce internationale (CCI / ICC)",
+          "en": "International Chamber of Commerce",
+          "es": "Cámara de Comercio Internacional"
+        },
+        {
+          "fr": "Vente au départ",
+          "en": "shipment contract",
+          "es": "venta en origen"
+        },
+        {
+          "fr": "Vente à l'arrivée",
+          "en": "arrival contract",
+          "es": "venta en destino"
+        },
+        {
+          "fr": "Livraison (au sens Incoterms)",
+          "en": "delivery",
+          "es": "entrega"
+        },
+        {
+          "fr": "Pré-acheminement",
+          "en": "pre-carriage",
+          "es": "pretransporte"
+        },
+        {
+          "fr": "Post-acheminement",
+          "en": "on-carriage",
+          "es": "postransporte"
+        },
+        {
+          "fr": "Fret",
+          "en": "freight",
+          "es": "flete"
+        },
+        {
+          "fr": "Mise à disposition",
+          "en": "placing at the disposal",
+          "es": "puesta a disposición"
+        },
+        {
+          "fr": "Rendu droits acquittés",
+          "en": "Delivered Duty Paid",
+          "es": "Entregada derechos pagados"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.transport",
+      "titre": "Transport international",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.transport.choix-mode",
+          "titre": "Choisir un mode : coût, délai, sécurité, nature de la marchandise",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.transport.maritime",
+          "titre": "Transport maritime : lignes régulières, tramping, conteneurs EVP, FCL / LCL",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.transport.fret-maritime",
+          "titre": "Calcul du fret maritime : unité payante, BAF, CAF, THC",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.transport.aerien",
+          "titre": "Transport aérien : LTA / AWB, poids taxable (rapport 1/6)",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.transport.routier",
+          "titre": "Transport routier : lettre de voiture CMR",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.transport.ferroviaire",
+          "titre": "Transport ferroviaire : lettre de voiture CIM",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.transport.multimodal",
+          "titre": "Transport multimodal et commissionnaire de transport",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.transport.responsabilite",
+          "titre": "Responsabilité et limites d'indemnisation du transporteur",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.transport.emballage-marquage",
+          "titre": "Emballage, marquage, colisage",
+          "niveau": "F"
+        }
+      ],
+      "documents": [
+        "doc.tci-transport-app",
+        "doc.tci-conteneur"
+      ],
+      "sources": [
+        "src.montreal",
+        "src.cmr"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.operation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Empotage / dépotage",
+          "en": "stuffing / stripping",
+          "es": "llenado / vaciado"
+        },
+        {
+          "fr": "Équivalent vingt pieds (EVP)",
+          "en": "TEU",
+          "es": "TEU"
+        },
+        {
+          "fr": "Groupage",
+          "en": "consolidation (LCL)",
+          "es": "grupaje"
+        },
+        {
+          "fr": "Unité payante",
+          "en": "freight ton / revenue ton",
+          "es": "unidad de flete"
+        },
+        {
+          "fr": "Lettre de transport aérien (LTA)",
+          "en": "Air Waybill (AWB)",
+          "es": "carta de porte aéreo"
+        },
+        {
+          "fr": "Poids taxable",
+          "en": "chargeable weight",
+          "es": "peso tasable"
+        },
+        {
+          "fr": "Lettre de voiture CMR",
+          "en": "CMR consignment note",
+          "es": "carta de porte CMR"
+        },
+        {
+          "fr": "Droit de tirage spécial (DTS)",
+          "en": "Special Drawing Right (SDR)",
+          "es": "derecho especial de giro (DEG)"
+        },
+        {
+          "fr": "Lettre de voiture CIM",
+          "en": "CIM consignment note",
+          "es": "carta de porte CIM"
+        },
+        {
+          "fr": "Transport combiné",
+          "en": "combined transport",
+          "es": "transporte combinado"
+        },
+        {
+          "fr": "Transport multimodal",
+          "en": "multimodal transport",
+          "es": "transporte multimodal"
+        },
+        {
+          "fr": "Rupture de charge",
+          "en": "transshipment / break of bulk",
+          "es": "ruptura de carga"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.documents",
+      "titre": "Documents du commerce international",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.documents.connaissement",
+          "titre": "Le connaissement : fonctions, titre de propriété",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.documents.connaissement-net-clause",
+          "titre": "Connaissement net ou clausé ; connaissement à ordre, nominatif, au porteur",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.documents.autres-transport",
+          "titre": "Sea waybill, LTA, CMR, CIM : non négociables",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.documents.liste-colisage",
+          "titre": "Liste de colisage et certificats (origine, sanitaire, inspection)",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.documents.coherence",
+          "titre": "Cohérence documentaire",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.tci-packing-list"
+      ],
+      "sources": [
+        "src.icc-ucp600"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.transport",
+        "tci.operation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Connaissement",
+          "en": "bill of lading (B/L)",
+          "es": "conocimiento de embarque"
+        },
+        {
+          "fr": "Chargeur",
+          "en": "shipper",
+          "es": "cargador"
+        },
+        {
+          "fr": "Endossement",
+          "en": "endorsement",
+          "es": "endoso"
+        },
+        {
+          "fr": "Connaissement net",
+          "en": "clean bill of lading",
+          "es": "conocimiento limpio"
+        },
+        {
+          "fr": "Liste de colisage",
+          "en": "packing list",
+          "es": "lista de empaque / lista de bultos"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.paiement",
+      "titre": "Paiements internationaux",
+      "priorite": "ESSENTIAL",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.paiement.risques",
+          "titre": "Risque de non-paiement, risque pays, risque de change",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.instruments-vs-techniques",
+          "titre": "Instruments (virement, chèque, effet) et techniques (encaissement simple, remise, crédit)",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.virement-swift",
+          "titre": "Virement SWIFT, IBAN / BIC",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.lettre-change",
+          "titre": "Lettre de change et billet à ordre",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.remise-documentaire",
+          "titre": "Remise documentaire D/P et D/A (URC 522)",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.credit-documentaire",
+          "titre": "Le crédit documentaire : mécanisme et acteurs",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.credoc-types",
+          "titre": "Révocable / irrévocable ; notifié / confirmé",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.paiement.credoc-realisation",
+          "titre": "Réalisation : à vue, paiement différé, acceptation, négociation",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.paiement.credoc-conformite",
+          "titre": "Examen des documents, réserves, autonomie",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.paiement.garanties",
+          "titre": "Garanties bancaires et lettre de crédit stand-by",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.paiement.choix",
+          "titre": "Choisir une technique de paiement selon le risque",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.financement-intl"
+      ],
+      "sources": [
+        "src.icc-urc522",
+        "src.icc-ucp600"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.operation",
+        "tci.documents"
+      ],
+      "terminologie": [
+        {
+          "fr": "Encaissement simple",
+          "en": "open account",
+          "es": "cuenta abierta"
+        },
+        {
+          "fr": "BIC",
+          "en": "Bank Identifier Code (SWIFT code)",
+          "es": "código BIC / SWIFT"
+        },
+        {
+          "fr": "IBAN",
+          "en": "International Bank Account Number",
+          "es": "IBAN"
+        },
+        {
+          "fr": "Frais OUR / SHA / BEN",
+          "en": "OUR / SHA / BEN charges",
+          "es": "gastos OUR / SHA / BEN"
+        },
+        {
+          "fr": "Lettre de change",
+          "en": "bill of exchange (draft)",
+          "es": "letra de cambio"
+        },
+        {
+          "fr": "Billet à ordre",
+          "en": "promissory note",
+          "es": "pagaré"
+        },
+        {
+          "fr": "Documents contre paiement",
+          "en": "documents against payment (D/P)",
+          "es": "documentos contra pago"
+        },
+        {
+          "fr": "Documents contre acceptation",
+          "en": "documents against acceptance (D/A)",
+          "es": "documentos contra aceptación"
+        },
+        {
+          "fr": "Crédit documentaire",
+          "en": "documentary credit / letter of credit (L/C)",
+          "es": "crédito documentario"
+        },
+        {
+          "fr": "Donneur d'ordre",
+          "en": "applicant",
+          "es": "ordenante"
+        },
+        {
+          "fr": "Bénéficiaire",
+          "en": "beneficiary",
+          "es": "beneficiario"
+        },
+        {
+          "fr": "Banque émettrice",
+          "en": "issuing bank",
+          "es": "banco emisor"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.change",
+      "titre": "Risque de change",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.change.notion",
+          "titre": "Cours au comptant et à terme, cotation",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.change.couverture-terme",
+          "titre": "Couverture à terme",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.change.options",
+          "titre": "Options de change",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.change.techniques-internes",
+          "titre": "Facturation en devise nationale, termaillage",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.paiement"
+      ],
+      "terminologie": [
+        {
+          "fr": "Cotation au certain",
+          "en": "direct quotation (from the euro side)",
+          "es": "cotización indirecta / al cierto"
+        },
+        {
+          "fr": "Cours à terme",
+          "en": "forward rate",
+          "es": "tipo de cambio a plazo"
+        },
+        {
+          "fr": "Prime",
+          "en": "premium",
+          "es": "prima"
+        },
+        {
+          "fr": "Prix d'exercice",
+          "en": "strike price",
+          "es": "precio de ejercicio"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.assurance",
+      "titre": "Assurances",
+      "priorite": "IMPORTANT",
+      "statut": "Supported by university material",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.assurance.transport",
+          "titre": "Assurance transport : police, clauses ICC A / B / C",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.assurance.avaries",
+          "titre": "Avaries particulières et avarie commune",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.assurance.reserves",
+          "titre": "Réserves à la livraison et recours",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.assurance.credit",
+          "titre": "Assurance-crédit export",
+          "niveau": "A"
+        }
+      ],
+      "documents": [
+        "doc.tci-transport-app",
+        "doc.tci-assurance-formule"
+      ],
+      "sources": [
+        "src.cmr",
+        "src.montreal"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.transport",
+        "tci.incoterms",
+        "tci.paiement"
+      ],
+      "terminologie": [
+        {
+          "fr": "Assurance sur facultés",
+          "en": "cargo insurance",
+          "es": "seguro de mercancías"
+        },
+        {
+          "fr": "Valeur assurée",
+          "en": "insured value",
+          "es": "valor asegurado"
+        },
+        {
+          "fr": "Avarie commune",
+          "en": "general average",
+          "es": "avería gruesa"
+        },
+        {
+          "fr": "Dispacheur",
+          "en": "average adjuster",
+          "es": "liquidador de averías"
+        },
+        {
+          "fr": "Quotité garantie",
+          "en": "percentage of cover",
+          "es": "porcentaje de cobertura"
+        },
+        {
+          "fr": "Agrément (limite de crédit)",
+          "en": "credit limit",
+          "es": "límite de crédito"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.douane",
+      "titre": "Douane",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.douane.role",
+          "titre": "Rôle de la douane, union douanière de l'UE",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.douane.espece",
+          "titre": "Espèce tarifaire : SH, NC, TARIC",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.douane.origine",
+          "titre": "Origine préférentielle et non préférentielle",
+          "niveau": "A"
+        },
+        {
+          "id": "tci.douane.valeur",
+          "titre": "Valeur en douane (valeur transactionnelle, ajustements)",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.douane.calcul-droits-tva",
+          "titre": "Calcul des droits et de la TVA à l'importation",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.douane.declaration",
+          "titre": "Déclaration en douane, EORI, statut OEA",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.douane.regimes-particuliers",
+          "titre": "Entrepôt, perfectionnement actif / passif, admission temporaire, transit",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.cdu",
+        "src.douane-fr",
+        "src.directive-tva"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.operation",
+        "tci.incoterms"
+      ],
+      "terminologie": [
+        {
+          "fr": "Union douanière",
+          "en": "customs union",
+          "es": "unión aduanera"
+        },
+        {
+          "fr": "Pays tiers",
+          "en": "third country",
+          "es": "tercer país"
+        },
+        {
+          "fr": "Système harmonisé (SH)",
+          "en": "Harmonized System (HS)",
+          "es": "Sistema Armonizado (SA)"
+        },
+        {
+          "fr": "Renseignement tarifaire contraignant (RTC)",
+          "en": "Binding Tariff Information (BTI)",
+          "es": "información arancelaria vinculante (IAV)"
+        },
+        {
+          "fr": "Origine préférentielle",
+          "en": "preferential origin",
+          "es": "origen preferencial"
+        },
+        {
+          "fr": "Cumul d'origine",
+          "en": "cumulation of origin",
+          "es": "acumulación de origen"
+        },
+        {
+          "fr": "Valeur transactionnelle",
+          "en": "transaction value",
+          "es": "valor de transacción"
+        },
+        {
+          "fr": "Droit ad valorem",
+          "en": "ad valorem duty",
+          "es": "derecho ad valorem"
+        },
+        {
+          "fr": "Autoliquidation de la TVA à l'importation",
+          "en": "import VAT reverse charge / postponed accounting",
+          "es": "autoliquidación del IVA de importación"
+        },
+        {
+          "fr": "Numéro EORI",
+          "en": "EORI number",
+          "es": "número EORI"
+        },
+        {
+          "fr": "Opérateur économique agréé (OEA)",
+          "en": "Authorised Economic Operator (AEO)",
+          "es": "operador económico autorizado (OEA)"
+        },
+        {
+          "fr": "Mise en libre pratique",
+          "en": "release for free circulation",
+          "es": "despacho a libre práctica"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.intra-ue",
+      "titre": "Échanges intracommunautaires",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "tci.intra-ue.livraison-acquisition",
+          "titre": "Livraison et acquisition intracommunautaires",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.intra-ue.autoliquidation",
+          "titre": "Autoliquidation de la TVA",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.intra-ue.declarations",
+          "titre": "État récapitulatif TVA et enquête EMEBI",
+          "niveau": "F"
+        },
+        {
+          "id": "tci.intra-ue.vs-pays-tiers",
+          "titre": "Comparaison UE / pays tiers",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.directive-tva",
+        "src.douane-fr",
+        "src.cdu"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.tva",
+        "tci.douane"
+      ],
+      "terminologie": [
+        {
+          "fr": "Livraison intracommunautaire",
+          "en": "intra-Community supply",
+          "es": "entrega intracomunitaria"
+        },
+        {
+          "fr": "Acquisition intracommunautaire",
+          "en": "intra-Community acquisition",
+          "es": "adquisición intracomunitaria"
+        },
+        {
+          "fr": "Numéro de TVA intracommunautaire",
+          "en": "VAT identification number",
+          "es": "NIF-IVA"
+        },
+        {
+          "fr": "Déclaration d'échanges de biens (DEB)",
+          "en": "Intrastat return (former French DEB)",
+          "es": "declaración Intrastat"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "tci.financement",
+      "titre": "Financement de l'international",
+      "priorite": "IMPORTANT",
+      "statut": "Verified against additional academic sources",
+      "provenance": [
+        "UNIVERSITY MATERIAL",
+        "ACADEMIC RESEARCH"
+      ],
+      "origine": "ajouté d’après les documents de cours",
+      "notions": [
+        {
+          "id": null,
+          "titre": "Financements à court terme : préfinancement, MCNE, affacturage international, avance en devises",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Crédit documentaire escomptable et lettre de crédit stand-by",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Crédit fournisseur et crédit acheteur",
+          "niveau": null
+        },
+        {
+          "id": null,
+          "titre": "Aides publiques : assurance prospection, garantie de projets à l'international",
+          "niveau": null
+        }
+      ],
+      "documents": [
+        "doc.financement-intl"
+      ],
+      "sources": [
+        "r.bpifrance-gpi",
+        "r.bpifrance-assurance-prospection"
+      ],
+      "verifie_par": [
+        "r.bpifrance-gpi",
+        "r.bpifrance-assurance-prospection"
+      ],
+      "prerequis": [],
+      "terminologie": [],
+      "note": "Rattachement à TCI provisoire : le support ne nomme pas la matière."
+    }
+  ]
+}

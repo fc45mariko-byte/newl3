@@ -1,0 +1,9 @@
+// Applies the SQL migrations in ./drizzle, then the search index (full text on documents and concepts).
+import { drizzle } from 'drizzle-orm/node-postgres';
+import { migrate } from 'drizzle-orm/node-postgres/migrator';
+import { Pool } from 'pg';
+
+const pool = new Pool({ connectionString: process.env.DATABASE_URL });
+await migrate(drizzle(pool), { migrationsFolder: './drizzle' });
+console.log('Migrations applied.');
+await pool.end();

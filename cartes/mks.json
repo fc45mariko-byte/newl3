@@ -1,0 +1,193 @@
+{
+  "id": "mks",
+  "titre": "Marketing international et supply chain",
+  "langue": "fr",
+  "statut_maquette": "COMP",
+  "complement": true,
+  "officiel": {
+    "semestres": "hors maquette",
+    "enseignant": "aucun",
+    "description": "Complément hors maquette : prérequis pour ICI et le projet de filiale.",
+    "bibliographie": [],
+    "sources": []
+  },
+  "cadres": [],
+  "competences_examen": [],
+  "incertitudes": [],
+  "chapitres": [
+    {
+      "id": "mks.marketing",
+      "titre": "Marketing international",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE",
+        "SUPPLEMENTARY KNOWLEDGE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "mks.marketing.segmentation",
+          "titre": "Segmentation, ciblage, positionnement",
+          "niveau": "F"
+        },
+        {
+          "id": "mks.marketing.digital",
+          "titre": "Marketing digital à l'international",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.kotler",
+        "src.levitt",
+        "src.rgpd"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "ici.diagnostic"
+      ],
+      "terminologie": [
+        {
+          "fr": "Segmentation",
+          "en": "segmentation",
+          "es": "segmentación"
+        },
+        {
+          "fr": "Ciblage",
+          "en": "targeting",
+          "es": "selección del público objetivo / targeting"
+        },
+        {
+          "fr": "Positionnement",
+          "en": "positioning",
+          "es": "posicionamiento"
+        },
+        {
+          "fr": "Proposition de valeur",
+          "en": "value proposition",
+          "es": "propuesta de valor"
+        },
+        {
+          "fr": "Carte perceptuelle",
+          "en": "perceptual map",
+          "es": "mapa perceptual / mapa de posicionamiento"
+        },
+        {
+          "fr": "Référencement naturel / payant",
+          "en": "SEO / SEA (search engine optimisation / advertising)",
+          "es": "posicionamiento orgánico / de pago (SEO / SEM)"
+        },
+        {
+          "fr": "Place de marché",
+          "en": "marketplace",
+          "es": "marketplace / mercado en línea"
+        },
+        {
+          "fr": "Localisation",
+          "en": "localisation",
+          "es": "localización"
+        },
+        {
+          "fr": "Coût d'acquisition client",
+          "en": "customer acquisition cost (CAC)",
+          "es": "coste de adquisición de clientes"
+        },
+        {
+          "fr": "Consentement",
+          "en": "consent",
+          "es": "consentimiento"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "mks.supply",
+      "titre": "Supply chain",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE",
+        "SUPPLEMENTARY KNOWLEDGE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "mks.supply.chaine-logistique",
+          "titre": "La chaîne logistique",
+          "niveau": "F"
+        },
+        {
+          "id": "mks.supply.entreposage",
+          "titre": "Entreposage, stocks, plateformes",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.chopra",
+        "src.lee-bullwhip",
+        "src.wilson"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "tci.operation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Chaîne logistique",
+          "en": "supply chain",
+          "es": "cadena de suministro"
+        },
+        {
+          "fr": "Juste-à-temps",
+          "en": "just-in-time (JIT)",
+          "es": "justo a tiempo"
+        },
+        {
+          "fr": "Effet coup de fouet",
+          "en": "bullwhip effect",
+          "es": "efecto látigo"
+        },
+        {
+          "fr": "Logistique inverse",
+          "en": "reverse logistics",
+          "es": "logística inversa"
+        },
+        {
+          "fr": "Délai d'approvisionnement",
+          "en": "lead time",
+          "es": "plazo de entrega / lead time"
+        },
+        {
+          "fr": "Entrepôt",
+          "en": "warehouse",
+          "es": "almacén"
+        },
+        {
+          "fr": "Transbordement sans stockage",
+          "en": "cross-docking",
+          "es": "cross-docking / transbordo directo"
+        },
+        {
+          "fr": "Stock de sécurité",
+          "en": "safety stock",
+          "es": "stock de seguridad"
+        },
+        {
+          "fr": "Prestataire logistique",
+          "en": "third-party logistics provider (3PL)",
+          "es": "operador logístico (3PL)"
+        },
+        {
+          "fr": "Préparation de commandes",
+          "en": "order picking",
+          "es": "preparación de pedidos / picking"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

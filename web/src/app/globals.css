@@ -1,0 +1,78 @@
+@import 'tailwindcss';
+@import '@fontsource/dm-serif-display/400.css';
+@import '@fontsource/dm-serif-display/400-italic.css';
+@import '@fontsource-variable/inter';
+
+/* Design system. Colours carry meaning:
+   rose = primary action and selection · butter = key concepts · sage = understood / completed
+   powder = analysis, examples · coral = errors, misconceptions, urgent deadlines. */
+@theme {
+  --color-ivory: #f8f2e7;
+  --color-paper: #fffdf8;
+  --color-charcoal: #171717;
+  --color-ink: #1f1b19;
+  --color-muted: #6f655f;
+  --color-line: #e7dccb;
+  --color-rose: #eba5c4;
+  --color-rose-soft: #f4c8dc;
+  --color-rose-ink: #8e3a62;
+  --color-butter: #f2d878;
+  --color-butter-soft: #f8ebb8;
+  --color-sage: #a9b995;
+  --color-sage-soft: #dfe7d4;
+  --color-sage-ink: #3f5530;
+  --color-powder: #afc4e3;
+  --color-powder-soft: #dce6f3;
+  --color-powder-ink: #2f4a72;
+  --color-mauve: #b78da5;
+  --color-coral: #e08a78;
+  --color-coral-soft: #f6d6cc;
+  --color-coral-ink: #8a3322;
+
+  --font-serif: 'DM Serif Display', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --radius-card: 18px;
+  --shadow-card: 0 1px 0 rgba(31, 27, 25, 0.04), 0 8px 24px -12px rgba(31, 27, 25, 0.12);
+}
+
+@layer base {
+  /* Grids without explicit columns get one shrinkable column, so long content never widens the page. */
+  .grid { grid-template-columns: minmax(0, 1fr); }
+}
+html { background: var(--color-ivory); color: var(--color-ink); }
+body { font-family: var(--font-sans); font-size: 15px; line-height: 1.55; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { text-wrap: balance; }
+:focus-visible { outline: 2px solid var(--color-rose-ink); outline-offset: 2px; border-radius: 6px; }
+
+@layer components {
+  .card { background: var(--color-paper); border: 1px solid var(--color-line); border-radius: var(--radius-card); box-shadow: var(--shadow-card); }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .4rem; border-radius: 999px; padding: .5rem 1rem; font-weight: 500; font-size: .9rem; border: 1px solid var(--color-line); background: var(--color-paper); color: var(--color-ink); cursor: pointer; transition: border-color .15s, background .15s; }
+  .btn:hover { border-color: var(--color-ink); }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-primary { background: var(--color-charcoal); color: var(--color-paper); border-color: var(--color-charcoal); }
+  .btn-primary:hover { background: #000; }
+  .btn-rose { background: var(--color-rose); border-color: var(--color-rose); color: var(--color-charcoal); }
+  .btn-ghost { background: transparent; border-color: transparent; }
+  .input { width: 100%; border: 1px solid var(--color-line); background: var(--color-paper); border-radius: 12px; padding: .55rem .8rem; font: inherit; color: inherit; }
+  .input:focus { outline: 2px solid var(--color-rose); outline-offset: 0; }
+  .label { display: flex; flex-direction: column; gap: .3rem; font-size: .8rem; font-weight: 500; color: var(--color-muted); }
+  .eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--color-muted); }
+  .chip { display: inline-flex; align-items: center; gap: .3rem; border-radius: 999px; padding: .15rem .6rem; font-size: .72rem; font-weight: 600; white-space: nowrap; }
+  /* Long-form reading */
+  .prose-lea { max-width: 70ch; font-size: 1.02rem; line-height: 1.7; }
+  .prose-lea p { margin: .75em 0; }
+  .prose-lea h3 { font-family: var(--font-serif); font-size: 1.35rem; margin: 1.4em 0 .4em; font-weight: 400; }
+  .prose-lea h4 { font-weight: 600; margin: 1.2em 0 .3em; }
+  .prose-lea ul, .prose-lea ol { padding-left: 1.3em; margin: .6em 0; }
+  .prose-lea ul { list-style: disc; } .prose-lea ol { list-style: decimal; }
+  .prose-lea li { margin: .3em 0; }
+  .prose-lea blockquote { border-left: 3px solid var(--color-butter); padding: .2em 0 .2em 1em; color: var(--color-muted); font-style: italic; }
+  .prose-lea a { color: var(--color-rose-ink); text-decoration: underline; text-underline-offset: 2px; }
+  .prose-lea code { background: var(--color-ivory); padding: .05em .3em; border-radius: 4px; font-size: .9em; }
+  .prose-lea table { border-collapse: collapse; font-size: .9rem; width: 100%; }
+  .prose-lea th, .prose-lea td { border: 1px solid var(--color-line); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+  .prose-lea th { background: var(--color-ivory); font-weight: 600; }
+}
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }

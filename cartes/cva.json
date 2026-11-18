@@ -1,0 +1,452 @@
+{
+  "id": "cva",
+  "titre": "Civilisation américaine : publicité et marketing",
+  "langue": "en",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6J30, CM 10 h + TD 10 h, 2 ECTS)",
+    "enseignant": "Eric Tabuteau",
+    "description": "Histoire de la publicité et du marketing aux États-Unis, de la première moitié du XXe siècle à nos jours.",
+    "bibliographie": [
+      "Bibliographie sélective donnée en début de semestre"
+    ],
+    "sources": [
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [],
+  "competences_examen": [
+    "Analyser une publicité comme document historique"
+  ],
+  "incertitudes": [
+    "Bibliographie non publiée."
+  ],
+  "chapitres": [
+    {
+      "id": "cva.naissance",
+      "titre": "The birth of advertising",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cva.naissance.surproduction",
+          "titre": "Mass production and the birth of modern advertising",
+          "niveau": "F"
+        },
+        {
+          "id": "cva.naissance.agences",
+          "titre": "The agencies: Ayer, Lasker, Hopkins and reason-why",
+          "niveau": "F"
+        },
+        {
+          "id": "cva.naissance.relations-publiques",
+          "titre": "Bernays and public relations",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.fox",
+        "src.marchand",
+        "src.hopkins",
+        "src.bernays",
+        "src.tye"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Production de masse",
+          "en": "mass production",
+          "es": "producción en masa"
+        },
+        {
+          "fr": "Marque",
+          "en": "brand",
+          "es": "marca"
+        },
+        {
+          "fr": "Produit de marque emballé",
+          "en": "packaged branded good",
+          "es": "producto de marca envasado"
+        },
+        {
+          "fr": "Société de consommation",
+          "en": "consumer society / consumer culture",
+          "es": "sociedad de consumo"
+        },
+        {
+          "fr": "Agence de publicité",
+          "en": "advertising agency",
+          "es": "agencia de publicidad"
+        },
+        {
+          "fr": "Annonceur",
+          "en": "advertiser",
+          "es": "anunciante"
+        },
+        {
+          "fr": "Rédacteur publicitaire",
+          "en": "copywriter",
+          "es": "redactor publicitario"
+        },
+        {
+          "fr": "Texte publicitaire",
+          "en": "copy",
+          "es": "texto publicitario"
+        },
+        {
+          "fr": "Publicité argumentée",
+          "en": "reason-why advertising",
+          "es": "publicidad argumentativa"
+        },
+        {
+          "fr": "Relations publiques",
+          "en": "public relations (PR)",
+          "es": "relaciones públicas"
+        },
+        {
+          "fr": "Propagande",
+          "en": "propaganda",
+          "es": "propaganda"
+        },
+        {
+          "fr": "Fabrique du consentement",
+          "en": "engineering of consent",
+          "es": "ingeniería del consentimiento"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cva.mesure",
+      "titre": "Measurement",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cva.mesure.etudes",
+          "titre": "Gallup, Nielsen and market research",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.fox"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cva.naissance"
+      ],
+      "terminologie": [
+        {
+          "fr": "Étude de marché",
+          "en": "market research",
+          "es": "estudio de mercado"
+        },
+        {
+          "fr": "Échantillon représentatif",
+          "en": "representative sample",
+          "es": "muestra representativa"
+        },
+        {
+          "fr": "Audience",
+          "en": "ratings / audience share",
+          "es": "audiencia / índice de audiencia"
+        },
+        {
+          "fr": "Sondage d'opinion",
+          "en": "opinion poll",
+          "es": "sondeo / encuesta de opinión"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cva.age-or",
+      "titre": "The golden age",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cva.age-or.television",
+          "titre": "Television and the Unique Selling Proposition",
+          "niveau": "F"
+        },
+        {
+          "id": "cva.age-or.creative-revolution",
+          "titre": "The creative revolution of the 1960s",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.reeves",
+        "src.fox",
+        "src.cohen-consumers",
+        "src.frank-cool",
+        "src.ogilvy"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cva.naissance"
+      ],
+      "terminologie": [
+        {
+          "fr": "Proposition unique de vente",
+          "en": "Unique Selling Proposition (USP)",
+          "es": "propuesta única de venta"
+        },
+        {
+          "fr": "Spot publicitaire",
+          "en": "TV commercial / spot",
+          "es": "anuncio televisivo / spot"
+        },
+        {
+          "fr": "Parrainage",
+          "en": "sponsorship",
+          "es": "patrocinio"
+        },
+        {
+          "fr": "Heure de grande écoute",
+          "en": "prime time",
+          "es": "horario de máxima audiencia"
+        },
+        {
+          "fr": "Directeur artistique",
+          "en": "art director",
+          "es": "director de arte"
+        },
+        {
+          "fr": "Équipe créative",
+          "en": "creative team",
+          "es": "equipo creativo"
+        },
+        {
+          "fr": "Autodérision",
+          "en": "self-deprecation",
+          "es": "autocrítica humorística"
+        },
+        {
+          "fr": "Image de marque",
+          "en": "brand image",
+          "es": "imagen de marca"
+        },
+        {
+          "fr": "Contre-culture",
+          "en": "counterculture",
+          "es": "contracultura"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cva.regulation",
+      "titre": "Regulation",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cva.regulation.ftc",
+          "titre": "Regulating advertising: the FTC and tobacco",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.ftc-act",
+        "src.fox"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cva.naissance"
+      ],
+      "terminologie": [
+        {
+          "fr": "Publicité mensongère",
+          "en": "deceptive / false advertising",
+          "es": "publicidad engañosa"
+        },
+        {
+          "fr": "Publicité rectificative",
+          "en": "corrective advertising",
+          "es": "publicidad correctiva"
+        },
+        {
+          "fr": "Discours commercial",
+          "en": "commercial speech",
+          "es": "discurso comercial"
+        },
+        {
+          "fr": "Avertissement sanitaire",
+          "en": "health warning",
+          "es": "advertencia sanitaria"
+        },
+        {
+          "fr": "Autorégulation",
+          "en": "self-regulation",
+          "es": "autorregulación"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cva.contemporain",
+      "titre": "The contemporary era",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cva.contemporain.segmentation",
+          "titre": "Audience segmentation",
+          "niveau": "F"
+        },
+        {
+          "id": "cva.contemporain.numerique",
+          "titre": "Digital advertising and personal data",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.wendell-smith",
+        "src.cohen-consumers",
+        "src.zuboff",
+        "src.ftc-act"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cva.mesure"
+      ],
+      "terminologie": [
+        {
+          "fr": "Segmentation",
+          "en": "market segmentation",
+          "es": "segmentación de mercado"
+        },
+        {
+          "fr": "Cible",
+          "en": "target audience",
+          "es": "público objetivo"
+        },
+        {
+          "fr": "Marché de masse",
+          "en": "mass market",
+          "es": "mercado de masas"
+        },
+        {
+          "fr": "Marketing ethnique",
+          "en": "ethnic / multicultural marketing",
+          "es": "marketing étnico / multicultural"
+        },
+        {
+          "fr": "Bannière",
+          "en": "banner ad",
+          "es": "banner / anuncio gráfico"
+        },
+        {
+          "fr": "Coût par clic",
+          "en": "pay-per-click / cost per click (CPC)",
+          "es": "pago por clic / coste por clic"
+        },
+        {
+          "fr": "Publicité programmatique",
+          "en": "programmatic advertising",
+          "es": "publicidad programática"
+        },
+        {
+          "fr": "Marketing d'influence",
+          "en": "influencer marketing",
+          "es": "marketing de influencers"
+        },
+        {
+          "fr": "Vie privée",
+          "en": "privacy",
+          "es": "privacidad"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cva.methode",
+      "titre": "Method",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cva.methode.analyse-publicite",
+          "titre": "Analyzing an advertisement",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.barthes",
+        "src.marchand"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cva.age-or"
+      ],
+      "terminologie": [
+        {
+          "fr": "Accroche",
+          "en": "headline",
+          "es": "titular / gancho"
+        },
+        {
+          "fr": "Dénotation",
+          "en": "denotation",
+          "es": "denotación"
+        },
+        {
+          "fr": "Connotation",
+          "en": "connotation",
+          "es": "connotación"
+        },
+        {
+          "fr": "Stéréotype",
+          "en": "stereotype",
+          "es": "estereotipo"
+        },
+        {
+          "fr": "Appel à l'action",
+          "en": "call to action",
+          "es": "llamada a la acción"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

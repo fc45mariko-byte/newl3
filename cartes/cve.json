@@ -1,0 +1,486 @@
+{
+  "id": "cve",
+  "titre": "Civilisation espagnole",
+  "langue": "es",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J5C, CM 12 h + TD 12 h, 1 ECTS)",
+    "enseignant": "Claire Decobert",
+    "description": "L'Espagne de la Transition à nos jours.",
+    "bibliographie": [
+      "Donnée en cours"
+    ],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "Constitution de 1978",
+    "Pactes de la Moncloa"
+  ],
+  "competences_examen": [
+    "Commenter un document de civilisation espagnole",
+    "Expliquer les étapes de la Transition"
+  ],
+  "incertitudes": [
+    "Le chapitre cve.franquismo sert de prérequis : le programme officiel commence à la Transition. ECTS : 1 sur la page actuelle (la phase 2 de cours indiquait 2)."
+  ],
+  "chapitres": [
+    {
+      "id": "cve.franquismo",
+      "titre": "El franquismo",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cve.franquismo.herencia",
+          "titre": "La herencia franquista",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.julia"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Franquisme",
+          "en": "Francoism",
+          "es": "franquismo"
+        },
+        {
+          "fr": "National-catholicisme",
+          "en": "National Catholicism",
+          "es": "nacionalcatolicismo"
+        },
+        {
+          "fr": "Développementalisme",
+          "en": "developmentalism",
+          "es": "desarrollismo"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cve.transicion",
+      "titre": "La Transición",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cve.transicion.reforma",
+          "titre": "La Ley para la Reforma Política (1976)",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.transicion.elecciones-1977",
+          "titre": "Las elecciones de 1977 y la legalización del PCE",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.transicion.moncloa",
+          "titre": "Los Pactos de la Moncloa (1977)",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.transicion.constitucion",
+          "titre": "La Constitución de 1978",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.julia",
+        "src.congreso",
+        "src.constitucion-1978"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cve.franquismo"
+      ],
+      "terminologie": [
+        {
+          "fr": "Transition démocratique",
+          "en": "transition to democracy",
+          "es": "Transición democrática"
+        },
+        {
+          "fr": "Réforme pactée",
+          "en": "negotiated reform",
+          "es": "reforma pactada"
+        },
+        {
+          "fr": "Référendum",
+          "en": "referendum",
+          "es": "referéndum"
+        },
+        {
+          "fr": "Légalisation",
+          "en": "legalisation",
+          "es": "legalización"
+        },
+        {
+          "fr": "Cortes constituantes",
+          "en": "constituent Cortes",
+          "es": "Cortes constituyentes"
+        },
+        {
+          "fr": "Eurocommunisme",
+          "en": "Eurocommunism",
+          "es": "eurocomunismo"
+        },
+        {
+          "fr": "Pacte social",
+          "en": "social pact",
+          "es": "pacto social"
+        },
+        {
+          "fr": "Modération salariale",
+          "en": "wage restraint",
+          "es": "moderación salarial"
+        },
+        {
+          "fr": "Consensus",
+          "en": "consensus",
+          "es": "consenso"
+        },
+        {
+          "fr": "Monarchie parlementaire",
+          "en": "parliamentary monarchy",
+          "es": "monarquía parlamentaria"
+        },
+        {
+          "fr": "État de droit",
+          "en": "rule of law",
+          "es": "Estado de derecho"
+        },
+        {
+          "fr": "Nationalités",
+          "en": "nationalities",
+          "es": "nacionalidades"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cve.consolidacion",
+      "titre": "La consolidación democrática",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cve.consolidacion.23f",
+          "titre": "El 23-F (1981)",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.consolidacion.gonzalez",
+          "titre": "Los gobiernos de González, la entrada en la CEE y 1992",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.consolidacion.aznar",
+          "titre": "Los gobiernos de Aznar y el euro",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.consolidacion.11m",
+          "titre": "El 11-M (2004)",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.julia"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cve.transicion"
+      ],
+      "terminologie": [
+        {
+          "fr": "Coup d'État",
+          "en": "coup d'état / attempted coup",
+          "es": "golpe de Estado / intentona golpista"
+        },
+        {
+          "fr": "Putschiste",
+          "en": "putschist / coup plotter",
+          "es": "golpista"
+        },
+        {
+          "fr": "Investiture",
+          "en": "investiture vote",
+          "es": "investidura"
+        },
+        {
+          "fr": "Alternance",
+          "en": "transfer of power / alternation",
+          "es": "alternancia"
+        },
+        {
+          "fr": "Reconversion industrielle",
+          "en": "industrial restructuring",
+          "es": "reconversión industrial"
+        },
+        {
+          "fr": "Adhésion",
+          "en": "accession",
+          "es": "adhesión"
+        },
+        {
+          "fr": "Privatisation",
+          "en": "privatisation",
+          "es": "privatización"
+        },
+        {
+          "fr": "Critères de convergence",
+          "en": "convergence criteria",
+          "es": "criterios de convergencia"
+        },
+        {
+          "fr": "Marée noire",
+          "en": "oil spill",
+          "es": "marea negra"
+        },
+        {
+          "fr": "Attentat",
+          "en": "terrorist attack / bombing",
+          "es": "atentado"
+        },
+        {
+          "fr": "Train de banlieue",
+          "en": "commuter train",
+          "es": "tren de Cercanías"
+        },
+        {
+          "fr": "Gestion de crise",
+          "en": "crisis management",
+          "es": "gestión de crisis"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cve.autonomias",
+      "titre": "El Estado de las autonomías",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cve.autonomias.estado",
+          "titre": "El Estado de las autonomías",
+          "niveau": "F"
+        },
+        {
+          "id": "cve.autonomias.cataluna",
+          "titre": "La cuestión catalana (2006-2017)",
+          "niveau": "A"
+        },
+        {
+          "id": "cve.autonomias.pais-vasco",
+          "titre": "El País Vasco y ETA",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.constitucion-1978",
+        "src.julia",
+        "src.boe"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cve.transicion"
+      ],
+      "terminologie": [
+        {
+          "fr": "Communauté autonome",
+          "en": "autonomous community",
+          "es": "comunidad autónoma"
+        },
+        {
+          "fr": "Statut d'autonomie",
+          "en": "Statute of Autonomy",
+          "es": "Estatuto de Autonomía"
+        },
+        {
+          "fr": "Régime foral",
+          "en": "foral regime",
+          "es": "régimen foral"
+        },
+        {
+          "fr": "Décentralisation",
+          "en": "devolution / decentralisation",
+          "es": "descentralización"
+        },
+        {
+          "fr": "Indépendantisme",
+          "en": "pro-independence movement / secessionism",
+          "es": "independentismo / soberanismo"
+        },
+        {
+          "fr": "Généralité de Catalogne",
+          "en": "Government of Catalonia (Generalitat)",
+          "es": "Generalitat de Catalunya"
+        },
+        {
+          "fr": "Déclaration unilatérale d'indépendance",
+          "en": "unilateral declaration of independence",
+          "es": "declaración unilateral de independencia (DUI)"
+        },
+        {
+          "fr": "Amnistie",
+          "en": "amnesty",
+          "es": "amnistía"
+        },
+        {
+          "fr": "Grâce",
+          "en": "pardon",
+          "es": "indulto"
+        },
+        {
+          "fr": "Terrorisme",
+          "en": "terrorism",
+          "es": "terrorismo"
+        },
+        {
+          "fr": "Trêve",
+          "en": "ceasefire / truce",
+          "es": "tregua / alto el fuego"
+        },
+        {
+          "fr": "Nationalisme basque",
+          "en": "Basque nationalism",
+          "es": "nacionalismo vasco"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cve.actualidad",
+      "titre": "España desde 2008",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cve.actualidad.crisis-2008",
+          "titre": "La crisis de 2008 y el fin del bipartidismo",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.ine",
+        "src.constitucion-1978",
+        "src.congreso"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cve.consolidacion"
+      ],
+      "terminologie": [
+        {
+          "fr": "Bulle immobilière",
+          "en": "housing bubble",
+          "es": "burbuja inmobiliaria"
+        },
+        {
+          "fr": "Austérité",
+          "en": "austerity",
+          "es": "austeridad / recortes"
+        },
+        {
+          "fr": "Expulsion locative / saisie immobilière",
+          "en": "eviction / foreclosure",
+          "es": "desahucio"
+        },
+        {
+          "fr": "Bipartisme",
+          "en": "two-party system",
+          "es": "bipartidismo"
+        },
+        {
+          "fr": "Motion de censure",
+          "en": "motion of no confidence",
+          "es": "moción de censura"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cve.metodo",
+      "titre": "Método",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cve.metodo.comentario",
+          "titre": "El comentario de texto histórico",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "red.argumentation"
+      ],
+      "terminologie": [
+        {
+          "fr": "Commentaire de texte",
+          "en": "text commentary",
+          "es": "comentario de texto"
+        },
+        {
+          "fr": "Problématique",
+          "en": "research question",
+          "es": "problemática / pregunta central"
+        },
+        {
+          "fr": "Portée",
+          "en": "significance",
+          "es": "alcance"
+        },
+        {
+          "fr": "Source primaire",
+          "en": "primary source",
+          "es": "fuente primaria"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "id": "cea",
+  "titre": "Compréhension et expression anglaises",
+  "langue": "en",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6J11, TD 20 h, 2 ECTS)",
+    "enseignant": "Elodie Gallet",
+    "description": "Compréhension de documents audio authentiques de la BBC.",
+    "bibliographie": [],
+    "sources": [
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [],
+  "competences_examen": [
+    "Restituer un document audio de la BBC (compte rendu, réponses à des questions)"
+  ],
+  "incertitudes": [
+    "Format exact de l'épreuve inconnu."
+  ],
+  "chapitres": [
+    {
+      "id": "cea.oral",
+      "titre": "Spoken English",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cea.oral.formes-faibles",
+          "titre": "Weak forms",
+          "niveau": "F"
+        },
+        {
+          "id": "cea.oral.liaisons",
+          "titre": "Linking and assimilation",
+          "niveau": "F"
+        },
+        {
+          "id": "cea.oral.accents",
+          "titre": "Accents of English",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Forme faible",
+          "en": "weak form",
+          "es": "forma débil"
+        },
+        {
+          "fr": "Schwa",
+          "en": "schwa /ə/",
+          "es": "schwa / vocal neutra"
+        },
+        {
+          "fr": "Accent de phrase",
+          "en": "sentence stress",
+          "es": "acento de frase"
+        },
+        {
+          "fr": "Enchaînement / liaison",
+          "en": "linking / connected speech",
+          "es": "enlace / habla conectada"
+        },
+        {
+          "fr": "Assimilation",
+          "en": "assimilation",
+          "es": "asimilación"
+        },
+        {
+          "fr": "Élision",
+          "en": "elision",
+          "es": "elisión"
+        },
+        {
+          "fr": "Accent",
+          "en": "accent",
+          "es": "acento"
+        },
+        {
+          "fr": "Prononciation reçue",
+          "en": "Received Pronunciation (RP)",
+          "es": "pronunciación estándar británica (RP)"
+        },
+        {
+          "fr": "Anglais international",
+          "en": "English as a lingua franca",
+          "es": "inglés como lengua franca"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cea.methode",
+      "titre": "Listening method",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cea.methode.ecoute",
+          "titre": "Global then focused listening",
+          "niveau": "F"
+        },
+        {
+          "id": "cea.methode.prise-notes",
+          "titre": "Note-taking",
+          "niveau": "F"
+        },
+        {
+          "id": "cea.methode.restitution",
+          "titre": "Restitution: the report",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "cea.oral"
+      ],
+      "terminologie": [
+        {
+          "fr": "Compréhension de l'oral",
+          "en": "listening comprehension",
+          "es": "comprensión auditiva"
+        },
+        {
+          "fr": "Mot transparent",
+          "en": "cognate",
+          "es": "palabra transparente / cognado"
+        },
+        {
+          "fr": "Anticipation",
+          "en": "prediction",
+          "es": "anticipación"
+        },
+        {
+          "fr": "Prise de notes",
+          "en": "note-taking",
+          "es": "toma de apuntes"
+        },
+        {
+          "fr": "Carte mentale",
+          "en": "mind map",
+          "es": "mapa mental"
+        },
+        {
+          "fr": "Compte rendu",
+          "en": "report / account / summary",
+          "es": "resumen / informe"
+        },
+        {
+          "fr": "Locuteur",
+          "en": "speaker",
+          "es": "hablante / interlocutor"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "cea.expression",
+      "titre": "Speaking",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "cea.expression.presentation",
+          "titre": "Giving an oral presentation in English",
+          "niveau": "A"
+        },
+        {
+          "id": "cea.expression.interaction",
+          "titre": "Spoken interaction in English",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "cea.oral"
+      ],
+      "terminologie": [
+        {
+          "fr": "Balisage du discours",
+          "en": "signposting",
+          "es": "marcadores del discurso"
+        },
+        {
+          "fr": "Diapositive",
+          "en": "slide",
+          "es": "diapositiva"
+        },
+        {
+          "fr": "Support visuel",
+          "en": "visual aid",
+          "es": "apoyo visual"
+        },
+        {
+          "fr": "Prendre la parole",
+          "en": "to take the floor / to chip in",
+          "es": "tomar la palabra"
+        },
+        {
+          "fr": "Reformuler",
+          "en": "to rephrase / to paraphrase",
+          "es": "reformular"
+        },
+        {
+          "fr": "Épeler",
+          "en": "to spell",
+          "es": "deletrear"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

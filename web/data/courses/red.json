@@ -1,0 +1,1340 @@
+{
+ "course": "red",
+ "language": "fr",
+ "missing": false,
+ "researchStatus": "university_material",
+ "merge": true,
+ "order": [
+  "red.demarche",
+  "red.question",
+  "red.problematique",
+  "red.methodes",
+  "red.sources",
+  "red.argumentation",
+  "red.attribution"
+ ],
+ "officialDescription": "Aucun descriptif ni bibliographie sur la page officielle.",
+ "uncertainties": [
+  "Intitulé officiel : « Rédaction de documents universitaires » ; le catalogue de cours l'appelle « Initiation à la recherche et rédaction universitaire ». Garder l'intitulé officiel.",
+  "Le support reçu est intitulé « Initiation à la recherche L3 LEA » et le TD qui l'accompagne « Stage et initiation à la recherche » (10 séances : 6 de 1 h puis 4 de 1 h 30). Il n'est pas établi que ce TD corresponde à cette UE plutôt qu'à la préparation de l'UE de stage du S6 : à vérifier sur l'emploi du temps.",
+  "Enseignant : le catalogue indique Sonia Tesson ; les métadonnées du support de stage portent le nom de Camille Letang. Le nom affiché n'a pas été modifié.",
+  "« Argumentation » et « Citer et référencer » restent reconstruits : les supports reçus ne les traitent pas.",
+  "Les corrigés des huit situations, de l'exercice « opinion → question » et des exercices sur les thèmes sont reconstruits : le support n'en donne pas.",
+  "Modalités d'évaluation inconnues."
+ ],
+ "chapters": [
+  {
+   "slug": "red.demarche",
+   "title": "Recherche d'information et recherche scientifique",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Ouvre le support de TD « Initiation à la recherche L3 LEA » (objectifs de la séance, cinq éléments d'une recherche).",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "Chercher une information et faire une recherche ne sont pas la même activité : la seconde suppose une question, une méthode, des données, une analyse et une réponse argumentée.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.red-initiation"
+   ],
+   "prerequisites": [],
+   "sections": [
+    {
+     "kind": "opening",
+     "title": "Deux façons de répondre à la même question",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Deux étudiantes de L3 reçoivent la même consigne : « Pourquoi les étudiants utilisent-ils ChatGPT ? ».\n\nLa première ouvre un moteur de recherche. En dix minutes, elle trouve des articles de presse, des billets de blog et un sondage commandé par une entreprise. Elle recopie les raisons qui reviennent le plus souvent : gagner du temps, comprendre un texte difficile, traduire. Sa réponse est plausible, mais elle ne sait ni qui a été interrogé, ni quand, ni comment. Elle a rapporté ce que d'autres ont dit.\n\nLa seconde commence par poser des limites. De quels étudiants parle-t-on : tous, ou les L3 LEA d'Orléans ? Sur quelle période ? Pour quels travaux : traduction, rédaction, révision ? Elle prépare un questionnaire, prévoit quelques entretiens, décide comment elle analysera les réponses. Sa réponse arrivera plus tard, mais elle pourra dire d'où elle vient et jusqu'où elle vaut.\n\nC'est exactement l'exercice proposé dans votre support (« Google n'est pas un chercheur », missions A et B). La différence entre les deux étudiantes est le sujet de ce chapitre."
+    },
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "**Objectifs annoncés.** À la fin du semestre, vous devez être capable de :\n\n- distinguer recherche d'information et recherche scientifique ;\n- identifier les éléments d'une démarche de recherche ;\n- comprendre le vocabulaire de base ;\n- transformer une observation en question de recherche ;\n- évaluer une question : claire, précise, faisable, ouverte.\n\n**Définition donnée.** Une recherche scientifique consiste à poser une question précise et à chercher à y répondre de manière méthodique, en s'appuyant sur des données, des travaux existants et une démarche explicite.\n\n**Les cinq éléments essentiels**, dans cet ordre :\n\n1. une **question** ;\n2. une **méthode** ;\n3. des **données** ;\n4. une **analyse** ;\n5. une **réponse argumentée**.\n\nLe rappel de fin de séance donne la chaîne complète : question → méthode → données → analyse → résultats → conclusion.\n\n**Recherche documentaire ≠ recherche scientifique.**\n\n- La recherche documentaire consiste à trouver ce que d'autres ont déjà dit.\n- La recherche scientifique consiste à construire une réponse à une question en suivant une démarche explicite.\n\nLe support insiste sur un point : une recherche scientifique ne consiste pas forcément à découvrir quelque chose que personne n'a jamais découvert.\n\n**Ce que peut faire un étudiant-chercheur :**\n\n- reproduire une étude ;\n- appliquer une méthode à un nouveau corpus ;\n- comparer deux populations ;\n- analyser un phénomène dans un contexte particulier ;\n- confronter plusieurs travaux ;\n- produire et analyser ses propres données.\n\n**Exemple LEA : IA et traduction.**\n\n| Élément | Dans l'exemple |\n|---|---|\n| Question | Comment les étudiants utilisent-ils les outils d'IA générative pour leurs travaux de traduction ? |\n| Méthode | Questionnaire + entretiens |\n| Données | Réponses de 100 étudiants + 10 entretiens |\n| Analyse | Analyse statistique + analyse thématique |\n| Aboutissement | Résultats → conclusion |"
+    },
+    {
+     "kind": "visual",
+     "title": "Voir la démarche",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Cliquez sur chaque étape pour voir ce qu'elle devient dans l'exemple de votre support.\n\n```diagram\ndemarche\n```"
+    },
+    {
+     "kind": "key_concepts",
+     "title": "Les notions à maîtriser",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "- **Recherche d'information** : retrouver un fait ou un document qui existe déjà (une date, une définition, un chiffre publié). Elle s'arrête quand l'information est trouvée.\n- **Recherche documentaire** : rassembler et lire ce qui a été écrit sur un sujet. Elle est indispensable à toute recherche (c'est l'état de l'art), mais à elle seule elle ne produit pas de réponse nouvelle.\n- **Recherche scientifique** : construire une réponse à une question précise, par une méthode explicite, à partir de données recueillies ou sélectionnées, puis analysées.\n- **Démarche explicite** : une démarche que vous pouvez décrire et justifier, de sorte qu'un lecteur sache comment vous êtes arrivée au résultat et puisse en mesurer les limites.\n\nCe qui fait basculer une activité dans la recherche n'est donc ni le sujet, ni le nombre de sources, mais la présence des cinq éléments."
+    },
+    {
+     "kind": "comparison",
+     "title": "Les huit situations du support",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Le support demande de classer huit situations : **A** recherche d'information, **B** recherche scientifique, **C** les deux, **D** ni l'une ni l'autre. Il ne donne pas de corrigé. Les réponses ci-dessous sont **reconstruites** à partir des critères du support (question, méthode, données, analyse, réponse argumentée). Discutez-les en TD : plusieurs se défendent selon la justification.\n\n| Situation | Proposition | Justification |\n|---|---|---|\n| 1. Chercher sur Google la date d'entrée en vigueur du Brexit | A | Un fait déjà établi, trouvé tel quel. |\n| 2. Lire dix articles sur les conséquences économiques du Brexit | A (ou C) | C'est une recherche documentaire. Elle devient l'étape « travaux existants » d'une recherche si elle sert une question précise. |\n| 3. Interroger 100 étudiants sur l'usage de ChatGPT pour traduire | B | Une question, une population, une collecte de données à analyser. |\n| 4. Chercher sur Internet « les avantages de l'IA » | A | Une collecte d'opinions sans question délimitée ni méthode. |\n| 5. Comparer 50 traductions de Google Translate et 50 traductions humaines | B | Un corpus construit et une analyse comparative. |\n| 6. Regarder des vidéos TikTok pour voir si les jeunes utilisent encore certains anglicismes | D telle que décrite | Pas de corpus défini (combien de vidéos, lesquelles, quelle période) ni de grille d'analyse. Avec ces choix, elle deviendrait B. |\n| 7. Demander à ses amis si l'anglais est important au travail | D | Des opinions d'un entourage choisi au hasard, sans méthode : ce n'est ni chercher une information fiable, ni produire des données exploitables. |\n| 8. Analyser 200 offres d'emploi pour identifier les compétences linguistiques demandées | B | Un corpus, une question, une analyse. |\n\n> Le critère décisif : peut-on dire quelle question, quelle méthode et quelles données ? Si l'une manque, ce n'est pas encore une recherche."
+    },
+    {
+     "kind": "application",
+     "title": "Mission B : transformer la question ChatGPT en projet",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Le support demande d'imaginer ce qu'il faudrait définir pour traiter scientifiquement « Pourquoi les étudiants utilisent-ils ChatGPT ? ». Voici une proposition **reconstruite**, à confronter à la vôtre.\n\n| À définir | Proposition |\n|---|---|\n| Population | Étudiants de L3 LEA de l'Université d'Orléans |\n| Période | Un semestre, avec une collecte en fin de semestre |\n| Données | Réponses à un questionnaire ; transcriptions d'entretiens |\n| Outils | Questionnaire en ligne (fréquence d'usage, types de travaux, raisons) ; 8 à 10 entretiens semi-directifs |\n| Nombre de participants | Le plus grand nombre possible de la promotion pour le questionnaire ; une dizaine d'entretiens |\n| Analyse | Statistique descriptive pour le questionnaire ; analyse thématique des entretiens |\n\nLa question elle-même gagne à être reformulée : « Pour quels travaux et pour quelles raisons les étudiants de L3 LEA d'Orléans utilisent-ils ChatGPT ? ». Elle précise la population, le phénomène et le contexte, comme le recommande le chapitre suivant."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Une recherche scientifique pose une question précise et y répond par une démarche explicite. Elle a cinq éléments : question, méthode, données, analyse, réponse argumentée.\n\n- Recherche documentaire : trouver ce que d'autres ont dit. Recherche scientifique : construire une réponse.\n- Une recherche ne doit pas forcément découvrir du jamais vu : reproduire une étude, appliquer une méthode à un nouveau corpus ou comparer deux populations, c'est déjà de la recherche.\n- Ce qui manque le plus souvent dans une « fausse » recherche : la méthode et des données définies.\n\n> Q-M-D-A-R : Question, Méthode, Données, Analyse, Réponse argumentée."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Citez les cinq éléments d'une recherche scientifique.**\n\nUne question, une méthode, des données, une analyse, une réponse argumentée.\n\n**Quelle différence entre recherche documentaire et recherche scientifique ?**\n\nLa première trouve ce que d'autres ont dit ; la seconde construit une réponse à une question par une démarche explicite.\n\n**Une recherche d'étudiant doit-elle découvrir quelque chose de nouveau ?**\n\nNon : appliquer une méthode connue à un nouveau corpus, comparer deux populations ou reproduire une étude suffit.\n\n**Confusions fréquentes**\n\n- **Lire beaucoup** / **Faire une recherche** : dix articles lus ne font pas une recherche s'il n'y a ni question précise ni données analysées.\n- **Sondage entre amis** / **Questionnaire** : un questionnaire suppose une population définie et des questions construites pour être analysées."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "red.demarche.recherche-scientifique",
+     "term": "Recherche scientifique",
+     "definition": "Démarche qui pose une question précise et cherche à y répondre de manière méthodique, en s'appuyant sur des données, des travaux existants et une démarche explicite (définition du support).",
+     "intuitive": "Répondre à une question en montrant comment on a fait, pour que quelqu'un d'autre puisse vérifier.",
+     "analytical": "Sa valeur ne vient pas de la nouveauté du résultat mais de la transparence de la démarche : un résultat dont on connaît la méthode et les données peut être discuté, reproduit ou contredit.",
+     "examRelevance": "Expliquez pourquoi interroger 100 étudiants relève de la recherche scientifique alors que demander à ses amis n'en relève pas.",
+     "sourceKeys": [],
+     "related": [
+      "red.demarche.recherche-documentaire",
+      "red.question.question-recherche"
+     ]
+    },
+    {
+     "slug": "red.demarche.recherche-documentaire",
+     "term": "Recherche documentaire",
+     "definition": "Recherche qui consiste à trouver ce que d'autres ont déjà dit ou écrit sur un sujet (support de TD).",
+     "intuitive": "Aller voir ce qui existe déjà avant de commencer.",
+     "analytical": "Elle n'est pas opposée à la recherche scientifique : elle en est une étape (les « travaux existants »). Elle ne suffit pas seule, car elle ne produit ni données propres ni analyse.",
+     "examRelevance": "Dans quel cas la lecture de dix articles sur le Brexit fait-elle partie d'une recherche scientifique ?",
+     "sourceKeys": [],
+     "related": [
+      "red.sources"
+     ]
+    },
+    {
+     "slug": "red.demarche.cinq-elements",
+     "term": "Les cinq éléments d’une recherche",
+     "definition": "Une question, une méthode, des données, une analyse, une réponse argumentée (support de TD).",
+     "intuitive": "Sans question, on ne sait pas quoi chercher ; sans méthode et sans données, on ne peut rien prouver.",
+     "analytical": "Les éléments sont liés : la question détermine la méthode, la méthode détermine les données recueillies, et l'analyse doit répondre à la question posée au départ. Un manque à une étape affaiblit toute la chaîne.",
+     "examRelevance": "Pour un projet donné, identifiez chacun des cinq éléments ou dites lequel manque.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "red.demarche.q1",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "distinguer",
+     "concept": "red.demarche.recherche-scientifique",
+     "stem": "Vous analysez 200 offres d'emploi afin d'identifier les compétences linguistiques demandées par les entreprises. De quoi s'agit-il ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Recherche scientifique",
+        "correct": true,
+        "explanation": "Une question, un corpus défini (200 offres) et une analyse."
+       },
+       {
+        "id": "b",
+        "text": "Recherche d'information",
+        "correct": false,
+        "explanation": "Vous ne retrouvez pas une information existante : vous produisez une réponse à partir d'un corpus."
+       },
+       {
+        "id": "c",
+        "text": "Ni l'une ni l'autre",
+        "correct": false,
+        "explanation": "Les éléments d'une recherche sont présents."
+       }
+      ]
+     },
+     "explanation": "Situation 8 du support (corrigé reconstruit)."
+    },
+    {
+     "key": "red.demarche.q2",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "distinguer",
+     "concept": "red.demarche.recherche-scientifique",
+     "stem": "Vous cherchez sur Google la date d'entrée en vigueur du Brexit. De quoi s'agit-il ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Recherche d'information",
+        "correct": true,
+        "explanation": "Vous retrouvez un fait déjà établi."
+       },
+       {
+        "id": "b",
+        "text": "Recherche scientifique",
+        "correct": false,
+        "explanation": "Il n'y a ni méthode ni données à analyser."
+       },
+       {
+        "id": "c",
+        "text": "Les deux",
+        "correct": false,
+        "explanation": "Rien n'est construit : l'information existe telle quelle."
+       }
+      ]
+     },
+     "explanation": "Situation 1 du support (corrigé reconstruit)."
+    },
+    {
+     "key": "red.demarche.q3",
+     "type": "true_false",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "red.demarche.recherche-scientifique",
+     "stem": "Une recherche scientifique doit découvrir quelque chose que personne n'a jamais découvert.",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Vrai",
+        "correct": false,
+        "explanation": "Le support affirme le contraire."
+       },
+       {
+        "id": "b",
+        "text": "Faux",
+        "correct": true,
+        "explanation": "Reproduire une étude, appliquer une méthode à un nouveau corpus ou comparer deux populations, c'est déjà de la recherche."
+       }
+      ]
+     },
+     "explanation": "Support de TD : « une recherche scientifique ne consiste pas forcément à découvrir quelque chose que personne n'a jamais découvert »."
+    },
+    {
+     "key": "red.demarche.q4",
+     "type": "ordering",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.demarche.cinq-elements",
+     "stem": "Remettez dans l'ordre la chaîne de la démarche donnée dans le rappel du support.",
+     "data": {
+      "items": [
+       "Question",
+       "Méthode",
+       "Données",
+       "Analyse",
+       "Résultats",
+       "Conclusion"
+      ]
+     },
+     "explanation": "Question → méthode → données → analyse → résultats → conclusion."
+    },
+    {
+     "key": "red.demarche.q5",
+     "type": "multiple",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.demarche.recherche-scientifique",
+     "stem": "Selon le support, lesquelles de ces activités un étudiant-chercheur peut-il mener ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Appliquer une méthode à un nouveau corpus",
+        "correct": true,
+        "explanation": "Cité dans le support."
+       },
+       {
+        "id": "b",
+        "text": "Comparer deux populations",
+        "correct": true,
+        "explanation": "Cité dans le support."
+       },
+       {
+        "id": "c",
+        "text": "Confronter plusieurs travaux",
+        "correct": true,
+        "explanation": "Cité dans le support."
+       },
+       {
+        "id": "d",
+        "text": "Recopier la conclusion d'un article qui répond à sa question",
+        "correct": false,
+        "explanation": "C'est rapporter un résultat, pas le construire."
+       }
+      ]
+     },
+     "explanation": "Le support en cite six : reproduire une étude, appliquer une méthode à un nouveau corpus, comparer deux populations, analyser un phénomène dans un contexte, confronter plusieurs travaux, produire et analyser ses données."
+    },
+    {
+     "key": "red.demarche.q6",
+     "type": "matching",
+     "difficulty": 2,
+     "topic": "appliquer",
+     "concept": "red.demarche.cinq-elements",
+     "stem": "Associez chaque élément à ce qu'il devient dans l'exemple « IA et traduction » du support.",
+     "data": {
+      "pairs": [
+       {
+        "left": "Question",
+        "right": "Comment les étudiants utilisent-ils l'IA générative pour traduire ?"
+       },
+       {
+        "left": "Méthode",
+        "right": "Questionnaire + entretiens"
+       },
+       {
+        "left": "Données",
+        "right": "100 réponses + 10 entretiens"
+       },
+       {
+        "left": "Analyse",
+        "right": "Statistique + thématique"
+       }
+      ]
+     },
+     "explanation": "Exemple LEA du support."
+    },
+    {
+     "key": "red.demarche.q7",
+     "type": "short",
+     "difficulty": 2,
+     "topic": "analyser-cas",
+     "concept": "red.demarche.recherche-scientifique",
+     "stem": "« Je regarde plusieurs vidéos TikTok pour savoir si les jeunes utilisent encore certains anglicismes. » Est-ce une recherche scientifique ? Que faudrait-il ajouter pour qu'elle le devienne ?",
+     "data": {
+      "rubric": [
+       "Répond que, telle quelle, ce n'est pas une recherche scientifique",
+       "Identifie le manque : corpus non défini, pas de méthode d'analyse",
+       "Propose des choix concrets : nombre de vidéos, critères de sélection, période, liste d'anglicismes, grille de relevé"
+      ],
+      "modelAnswer": "Telle qu'elle est décrite, non : on ne sait ni combien de vidéos, ni lesquelles, ni comment on relève les anglicismes. Elle le devient si l'on définit un corpus (par exemple 100 vidéos de comptes francophones de 15-25 ans publiées sur trois mois), une liste d'anglicismes à relever et une grille d'analyse (fréquence, contexte d'emploi)."
+     },
+     "explanation": "Situation 6 du support : la réponse dépend de la méthode, pas du sujet."
+    }
+   ]
+  },
+  {
+   "slug": "red.question",
+   "title": "Du thème à la question de recherche",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Cœur du support de TD : délimitation progressive, critères d'une bonne question, exercices de transformation.",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "Un thème est trop large pour être étudié : on le resserre en sujet, puis en angle d'étude, jusqu'à une question de recherche claire, précise, faisable et ouverte.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.red-initiation"
+   ],
+   "prerequisites": [
+    "red.demarche"
+   ],
+   "sections": [
+    {
+     "kind": "opening",
+     "title": "Une affirmation n’est pas une recherche",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "« L'anglais est très présent dans les entreprises françaises. »\n\nVotre support part de cette phrase et la qualifie aussitôt : ce n'est pas encore une recherche, c'est une affirmation. On peut être d'accord ou non ; on ne peut pas l'étudier telle quelle.\n\nElle devient un point de départ dès qu'on la transforme en question :\n\n- Pourquoi l'anglais est-il utilisé dans les entreprises françaises ?\n- Dans quelles situations professionnelles l'anglais est-il utilisé ?\n- Quels facteurs expliquent le recours à l'anglais dans les communications internes ?\n\nAvec la troisième question, dit le support, « on commence à construire un objet de recherche »."
+    },
+    {
+     "kind": "big_picture",
+     "title": "Le chemin complet",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "Le support décrit la progression d'une question jusqu'à l'objet de recherche :\n\nthème → sujet → question de recherche → problématique → hypothèses → méthode → données\n\nTout commence par une **curiosité** autour d'un thème. Un chercheur peut se demander : pourquoi ? comment ? dans quelle mesure ? quelles différences ? quels effets ? quelles représentations ? quelles stratégies ? comment un phénomène évolue-t-il ?\n\nCe chapitre couvre la première moitié du chemin (jusqu'à la question). Le chapitre suivant traite de la problématique et des hypothèses ; le chapitre « Choisir une méthode de recherche » traite de la suite."
+    },
+    {
+     "kind": "explanation",
+     "title": "La délimitation progressive d’un sujet",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "Le support illustre la délimitation en quatre étapes sur l'exemple de l'anglais dans le monde professionnel :\n\n| Étape | Ce que c'est | Exemple du support |\n|---|---|---|\n| 1. Thème | Le domaine général | Les langues dans l'entreprise |\n| 2. Sujet | Une précision du thème | L'utilisation de l'anglais dans les entreprises françaises |\n| 3. Angle d'étude | L'objet de recherche | L'utilisation de l'anglais dans la communication interne |\n| 4. Question de recherche | Ce que l'on veut savoir | Quels facteurs expliquent le recours à l'anglais dans la communication interne des entreprises françaises ? |\n\nPour chaque sujet trop large, le support propose quatre questions : qu'est-ce qui pose problème ? que faudrait-il préciser ? peut-on traiter ce sujet dans son intégralité ? quels éléments faudrait-il délimiter ? On peut préciser la population concernée, le contexte, les cibles, une durée ou une méthodologie.\n\n**Une bonne question** se juge sur quatre critères :\n\n1. Est-elle **claire** ?\n2. Est-elle **précise** ?\n3. Est-elle **faisable** ?\n4. Est-elle **ouverte** ? Une bonne question ne se limite généralement pas à « oui » ou « non ».\n\nLes exemples du support :\n\n| Question | Jugement du support |\n|---|---|\n| « L'anglais est-il important ? » | trop vague |\n| « Est-ce que les étudiants aiment l'anglais ? » | possible, mais peu problématisé |\n| « Quels usages de l'anglais les étudiants de L3 LEA font-ils dans leurs pratiques de communication sur les réseaux sociaux ? » | population + phénomène + contexte |"
+    },
+    {
+     "kind": "visual",
+     "title": "Resserrer pas à pas",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "```diagram\ndelimitation\n```"
+    },
+    {
+     "kind": "key_concepts",
+     "title": "Le vocabulaire de base",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "Le support donne dix termes à connaître :\n\n| Terme | Définition du support |\n|---|---|\n| Objet de recherche | le phénomène étudié |\n| Question de recherche | une question précise |\n| Problématique | un questionnement construit |\n| Hypothèse | une réponse provisoire |\n| Méthode | la manière de recueillir et d'analyser |\n| Corpus | l'ensemble des données étudiées |\n| Terrain | le milieu ou la population étudiés |\n| Données | les informations recueillies |\n| Résultats | ce que l'analyse met en évidence |\n| Bibliographie | les références utilisées |\n\nDeux paires se confondent souvent. Le **corpus** est un ensemble de documents ou d'énoncés (des publicités, des traductions, des offres d'emploi) ; le **terrain** est un milieu ou une population que l'on observe ou interroge (une entreprise, une promotion d'étudiants). Les **données** sont ce que l'on recueille ; les **résultats** sont ce que l'analyse de ces données fait apparaître."
+    },
+    {
+     "kind": "comparison",
+     "title": "Transformer une opinion en question",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Le support propose six opinions à transformer en questions de recherche, sans corrigé. Les propositions ci-dessous sont **reconstruites** ; d'autres formulations sont possibles si elles respectent les quatre critères.\n\n| Opinion | Question de recherche possible |\n|---|---|\n| Les réseaux sociaux appauvrissent le langage. | Quelles évolutions lexicales et syntaxiques observe-t-on dans les messages publiés sur Instagram par des 15-20 ans francophones ? |\n| L'anglais domine dans les entreprises. | Dans quelles situations les salariés d'entreprises exportatrices de la région Centre-Val de Loire utilisent-ils l'anglais plutôt que le français ? |\n| Les étudiants utilisent trop l'IA. | Pour quels types de travaux les étudiants de L3 LEA utilisent-ils l'IA générative, et à quelle fréquence ? |\n| Les traductions automatiques sont mauvaises. | Quels types d'erreurs une traduction automatique produit-elle, par rapport à une traduction humaine, sur des textes commerciaux ? |\n| Les séries américaines influencent le français. | Quels anglicismes issus de séries américaines apparaissent dans le français oral de jeunes adultes ? |\n| Les entreprises utilisent de plus en plus l'anglais. | Comment la part de l'anglais dans les offres d'emploi de cadres a-t-elle évolué entre 2016 et 2026 ? |\n\nCe qui change à chaque fois : le jugement (« trop », « mauvaises », « appauvrissent ») disparaît au profit d'un phénomène observable, d'une population ou d'un corpus, et d'un contexte."
+    },
+    {
+     "kind": "application",
+     "title": "Construire un projet en groupe",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "**Consigne du support** (groupes de 3). À partir d'un thème, proposez :\n\n1. une observation : « Nous avons remarqué que… » ;\n2. une question : « Nous nous demandons pourquoi / comment / dans quelle mesure… » ;\n3. une population ou un corpus : « Nous pourrions étudier… » ;\n4. une méthode : « Nous pourrions recueillir / analyser… ».\n\nThèmes proposés : IA et traduction ; anglais et monde professionnel ; réseaux sociaux et langage ; communication interculturelle ; tourisme et langues ; films et séries en anglais (passage de la VO à la VF) ; traduction automatique ; langues et commerce international.\n\n**Exemple du support : publicité et anglais.**\n\n| | |\n|---|---|\n| Observation | L'anglais apparaît fréquemment dans les publicités françaises. |\n| Question | Pourquoi les marques françaises utilisent-elles des mots ou expressions anglaises dans leurs publicités ? |\n| Corpus | Des publicités de marques françaises diffusées sur les réseaux sociaux. |\n| Méthode | Analyse linguistique et discursive d'un corpus de publicités. |\n\n**Exemple reconstruit : tourisme et langues.**\n\n| | |\n|---|---|\n| Observation | Les sites des offices de tourisme du Loiret ne proposent pas tous les mêmes langues. |\n| Question | Quelles langues les offices de tourisme du Loiret proposent-ils sur leur site, et en fonction de quelles clientèles ? |\n| Corpus | Les sites des offices de tourisme du département ; leurs données de fréquentation par nationalité. |\n| Méthode | Relevé systématique des versions linguistiques, puis comparaison avec les clientèles étrangères ; quelques entretiens avec les responsables. |"
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "On resserre en quatre étapes : thème → sujet → angle d'étude (objet de recherche) → question de recherche.\n\n- Une affirmation ou une opinion n'est pas une question : il faut la transformer.\n- Une bonne question est claire, précise, faisable et ouverte ; elle ne se résume pas à oui ou non.\n- Une question bien construite nomme une population (ou un corpus), un phénomène et un contexte.\n\n> CPFO : Claire, Précise, Faisable, Ouverte."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Donnez les quatre étapes de la délimitation d'un sujet.**\n\nThème, sujet, angle d'étude (objet de recherche), question de recherche.\n\n**Pourquoi « L'anglais est-il important ? » n'est-elle pas une bonne question ?**\n\nElle est trop vague (important pour qui, où, dans quel domaine ?) et fermée (oui ou non).\n\n**Quels critères pour évaluer une question de recherche ?**\n\nClaire, précise, faisable, ouverte.\n\n**Corpus ou terrain ?**\n\nLe corpus est un ensemble de données étudiées (des documents, des énoncés) ; le terrain est un milieu ou une population étudiés.\n\n**Confusions fréquentes**\n\n- **Sujet** / **Question de recherche** : « L'anglais dans les entreprises » délimite un domaine ; la question dit ce que l'on veut savoir.\n- **Question précise** / **Question faisable** : une question peut être précise et pourtant impossible à traiter en un semestre (par exemple, toutes les entreprises européennes)."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "red.question.delimitation",
+     "term": "Délimitation du sujet",
+     "definition": "Resserrement progressif d'un thème en sujet, puis en angle d'étude (objet de recherche), jusqu'à une question de recherche (support de TD, quatre étapes).",
+     "intuitive": "Passer de « de quoi je parle » à « qu'est-ce que je veux savoir exactement ».",
+     "analytical": "Chaque étape ajoute une contrainte (un pays, un type d'entreprise, une situation de communication, une population, une période). La délimitation conditionne la faisabilité : plus le champ est étroit, plus la collecte de données est réaliste.",
+     "examRelevance": "Délimitez « Le tourisme international » en quatre étapes.",
+     "sourceKeys": [],
+     "related": [
+      "red.question.question-recherche"
+     ]
+    },
+    {
+     "slug": "red.question.question-recherche",
+     "term": "Question de recherche",
+     "definition": "Question précise qui identifie ce que l'on veut savoir ; elle doit être claire, précise, faisable et ouverte (support de TD).",
+     "intuitive": "La question à laquelle tout le travail va répondre.",
+     "analytical": "Une bonne question contient en germe la méthode : « combien » appelle un questionnaire, « pourquoi » des entretiens, « quels… apparaissent dans » une analyse de corpus.",
+     "examRelevance": "Évaluez une question donnée avec les quatre critères et proposez une version améliorée.",
+     "sourceKeys": [],
+     "related": [
+      "red.problematique.problematique"
+     ]
+    },
+    {
+     "slug": "red.question.objet",
+     "term": "Objet de recherche",
+     "definition": "Le phénomène étudié (support de TD) ; dans la délimitation, il correspond à l'angle d'étude.",
+     "intuitive": "Ce que l'on regarde précisément, à l'intérieur du sujet.",
+     "analytical": "L'objet n'est pas encore une question : « l'utilisation de l'anglais dans la communication interne » désigne un phénomène ; la question dit ce que l'on veut en savoir (ses facteurs, ses effets, son évolution).",
+     "examRelevance": "Distinguez sujet, objet et question dans l'exemple de l'anglais en entreprise.",
+     "sourceKeys": [],
+     "related": []
+    },
+    {
+     "slug": "red.question.corpus-terrain",
+     "term": "Corpus et terrain",
+     "definition": "Corpus : ensemble de données étudiées. Terrain : milieu ou population étudiés (support de TD).",
+     "intuitive": "Le corpus, ce sont des documents qu'on analyse ; le terrain, ce sont des gens ou un lieu qu'on observe.",
+     "analytical": "Le choix entre corpus et terrain découle de la question : étudier des publicités suppose un corpus ; étudier des pratiques de salariés suppose un terrain (entretiens, observation). Un même travail peut combiner les deux.",
+     "examRelevance": "Pour une question donnée, dites si l'on travaille sur un corpus, un terrain ou les deux.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "red.question.q1",
+     "type": "ordering",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.question.delimitation",
+     "stem": "Remettez dans l'ordre les étapes de la délimitation du support (exemple de l'anglais professionnel).",
+     "data": {
+      "items": [
+       "Les langues dans l'entreprise",
+       "L'utilisation de l'anglais dans les entreprises françaises",
+       "L'utilisation de l'anglais dans la communication interne",
+       "Quels facteurs expliquent le recours à l'anglais dans la communication interne des entreprises françaises ?"
+      ]
+     },
+     "explanation": "Thème → sujet → angle d'étude → question de recherche."
+    },
+    {
+     "key": "red.question.q2",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "red.question.question-recherche",
+     "stem": "Que reproche le support à la question « L'anglais est-il important ? » ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Elle est trop vague",
+        "correct": true,
+        "explanation": "Important pour qui, où, dans quel domaine ? Rien n'est délimité."
+       },
+       {
+        "id": "b",
+        "text": "Elle est trop précise",
+        "correct": false,
+        "explanation": "C'est l'inverse."
+       },
+       {
+        "id": "c",
+        "text": "Elle n'est pas faisable faute de sources",
+        "correct": false,
+        "explanation": "Le problème est d'abord son imprécision."
+       }
+      ]
+     },
+     "explanation": "Jugement du support : « trop vague »."
+    },
+    {
+     "key": "red.question.q3",
+     "type": "multiple",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.question.question-recherche",
+     "stem": "Quels sont les quatre critères d'une bonne question de recherche selon le support ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Claire",
+        "correct": true,
+        "explanation": "Critère 1."
+       },
+       {
+        "id": "b",
+        "text": "Précise",
+        "correct": true,
+        "explanation": "Critère 2."
+       },
+       {
+        "id": "c",
+        "text": "Faisable",
+        "correct": true,
+        "explanation": "Critère 3."
+       },
+       {
+        "id": "d",
+        "text": "Ouverte",
+        "correct": true,
+        "explanation": "Critère 4 : pas seulement oui ou non."
+       },
+       {
+        "id": "e",
+        "text": "Originale",
+        "correct": false,
+        "explanation": "Ce n'est pas un critère du support ; une recherche n'a pas à être inédite."
+       }
+      ]
+     },
+     "explanation": "Claire, précise, faisable, ouverte."
+    },
+    {
+     "key": "red.question.q4",
+     "type": "matching",
+     "difficulty": 2,
+     "topic": "memoriser",
+     "concept": "red.question.corpus-terrain",
+     "stem": "Associez chaque terme à sa définition dans le support.",
+     "data": {
+      "pairs": [
+       {
+        "left": "Objet de recherche",
+        "right": "Phénomène étudié"
+       },
+       {
+        "left": "Hypothèse",
+        "right": "Réponse provisoire"
+       },
+       {
+        "left": "Corpus",
+        "right": "Ensemble de données étudiées"
+       },
+       {
+        "left": "Terrain",
+        "right": "Milieu ou population étudiés"
+       },
+       {
+        "left": "Résultats",
+        "right": "Ce que l'analyse met en évidence"
+       }
+      ]
+     },
+     "explanation": "Vocabulaire de base du support."
+    },
+    {
+     "key": "red.question.q5",
+     "type": "single",
+     "difficulty": 2,
+     "topic": "distinguer",
+     "concept": "red.question.question-recherche",
+     "stem": "Laquelle de ces questions réunit population, phénomène et contexte ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Quels usages de l'anglais les étudiants de L3 LEA font-ils dans leurs pratiques de communication sur les réseaux sociaux ?",
+        "correct": true,
+        "explanation": "Population (L3 LEA), phénomène (usages de l'anglais), contexte (réseaux sociaux) : l'exemple validé du support."
+       },
+       {
+        "id": "b",
+        "text": "Est-ce que les étudiants aiment l'anglais ?",
+        "correct": false,
+        "explanation": "Possible mais peu problématisée, et fermée."
+       },
+       {
+        "id": "c",
+        "text": "L'anglais est-il important sur les réseaux sociaux ?",
+        "correct": false,
+        "explanation": "Vague et fermée."
+       }
+      ]
+     },
+     "explanation": "Exemples du support."
+    },
+    {
+     "key": "red.question.q6",
+     "type": "short",
+     "difficulty": 2,
+     "topic": "appliquer",
+     "concept": "red.question.question-recherche",
+     "stem": "Transformez l'opinion « Les traductions automatiques sont mauvaises » en question de recherche, puis dites pourquoi votre question respecte les quatre critères.",
+     "data": {
+      "rubric": [
+       "Supprime le jugement de valeur (« mauvaises »)",
+       "Nomme un phénomène observable (erreurs, qualité selon des critères)",
+       "Délimite un corpus ou un contexte (type de textes, langues, outil)",
+       "Justifie claire, précise, faisable, ouverte"
+      ],
+      "modelAnswer": "« Quels types d'erreurs une traduction automatique anglais-français produit-elle, par rapport à une traduction humaine, sur des fiches produits ? » Elle est claire (un seul objet), précise (type d'erreurs, paire de langues, type de textes), faisable (un corpus de quelques dizaines de fiches) et ouverte (elle appelle une typologie, pas un oui ou non)."
+     },
+     "explanation": "Exercice « opinion → question » du support (corrigé reconstruit)."
+    },
+    {
+     "key": "red.question.q7",
+     "type": "scenario",
+     "difficulty": 3,
+     "topic": "analyser-cas",
+     "concept": "red.question.delimitation",
+     "stem": "Le sujet « Le tourisme international » est difficile à traiter dans un travail universitaire. Expliquez pourquoi et délimitez-le en quatre étapes.",
+     "data": {
+      "rubric": [
+       "Explique que le sujet est trop vaste pour être traité dans son intégralité",
+       "Propose un thème, un sujet, un angle d'étude et une question cohérents entre eux",
+       "La question finale est ouverte et nomme population ou corpus et contexte"
+      ],
+      "modelAnswer": "Le sujet couvre tous les pays, tous les acteurs et toutes les formes de tourisme : impossible à traiter entièrement. Thème : le tourisme international. Sujet : l'accueil des touristes étrangers dans le Loiret. Angle : l'offre en langues étrangères des offices de tourisme. Question : quelles langues les offices de tourisme du Loiret proposent-ils, et en fonction de quelles clientèles ?"
+     },
+     "explanation": "Activité « du thème à la problématique » du support (corrigé reconstruit)."
+    }
+   ]
+  },
+  {
+   "slug": "red.problematique",
+   "title": "Problématique et hypothèses",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Traité par le support de TD (distinction question / problématique, activité sur cinq propositions, construction d'hypothèses).",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "La question de recherche dit ce que l'on veut savoir ; la problématique dit pourquoi cela pose question ; les hypothèses proposent des réponses provisoires que les données confirmeront ou infirmeront.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.red-initiation"
+   ],
+   "prerequisites": [
+    "red.question"
+   ],
+   "sections": [
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "**Distinction.**\n\n- Une **question de recherche** identifie ce que l'on veut savoir.\n- Une **problématique** met en évidence un questionnement, un enjeu ou une tension qui mérite d'être étudié.\n\n**Activité : qu'est-ce qu'une bonne problématique ?** Le support soumet cinq propositions et donne ensuite cinq appréciations, dans le même ordre :\n\n| Proposition | Appréciation du support |\n|---|---|\n| L'IA est-elle dangereuse ? | Trop général |\n| Les étudiants aiment-ils l'anglais ? | Question fermée et peu approfondie |\n| Comment l'IA transforme-t-elle la traduction ? | Intéressant mais périmètre un peu large |\n| Pourquoi les marques utilisent-elles l'anglais ? | Correct mais juste préciser quelles marques ou quel contexte |\n| L'utilisation de l'anglais dans les publicités françaises peut contribuer à construire une image internationale des marques ? | Bien structuré, complet |\n\nL'association ligne à ligne suit l'ordre de la diapositive ; le support ne la trace pas explicitement.\n\n**Construire ses hypothèses.** Une hypothèse est une proposition provisoire que le chercheur va confronter aux données. Exemple du support :\n\n*Question : pourquoi les entreprises françaises utilisent-elles l'anglais dans leur communication ?*\n\n- **H1** : l'anglais est utilisé pour donner une image internationale à l'entreprise.\n- **H2** : l'anglais facilite la communication avec les partenaires étrangers.\n- **H3** : l'anglais est parfois utilisé comme marqueur de modernité ou de prestige.\n\nAttention, dit le support : une hypothèse n'est pas une vérité, et elle peut être infirmée par les résultats.\n\n**À quoi servent les hypothèses** (support) :\n\n1. **guider la recherche** : elles donnent une direction et un cadre pour organiser les observations ;\n2. **tester les théories** : une bonne hypothèse est testable et peut se révéler fausse (réfutabilité) ; elle permet de prévoir ce que l'on devrait observer ;\n3. **faire progresser les connaissances** : même rejetée, une hypothèse fait apparaître de nouvelles questions ;\n4. **résoudre des problèmes** : en recherche appliquée, elle propose une solution à mettre à l'épreuve.\n\nLa diapositive sur le rôle des hypothèses semble traduite automatiquement (« peut être prouvée tort ») : retenez l'idée, pas la formulation.\n\n**Vérifications finales** proposées par le support : le sujet est-il suffisamment précis ? La question est-elle compréhensible ? La problématique présente-t-elle un véritable enjeu ? Les hypothèses sont-elles vérifiables ?"
+    },
+    {
+     "kind": "comparison",
+     "title": "Question, problématique, hypothèse",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "| | Question de recherche | Problématique | Hypothèse |\n|---|---|---|---|\n| Fonction | dire ce que l'on veut savoir | montrer pourquoi c'est un problème | proposer une réponse provisoire |\n| Forme | question précise | question qui fait apparaître une tension ou un enjeu | affirmation vérifiable |\n| Exemple | Pourquoi les marques françaises utilisent-elles l'anglais dans leurs publicités ? | Alors que la loi Toubon encadre l'usage du français, dans quelle mesure l'anglais publicitaire sert-il à construire une image internationale ? | H1 : l'anglais est surtout employé par les marques qui exportent. |\n\n**Lien avec le chapitre « Argumentation ».** La problématique d'une dissertation et celle d'une recherche obéissent à la même logique : une question ouverte qui révèle un enjeu ou un paradoxe. La différence est dans la réponse. En dissertation, on répond par une démonstration à partir de connaissances et d'exemples ; en recherche, par l'analyse de données recueillies selon une méthode.\n\nLa loi Toubon citée dans l'exemple est la loi n° 94-665 du 4 août 1994 relative à l'emploi de la langue française (contexte supplémentaire, non issu du support)."
+    },
+    {
+     "kind": "application",
+     "title": "Du thème aux hypothèses : un exemple complet",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Le support demande, pour chacun des huit thèmes, un objet de recherche, une problématique et deux ou trois hypothèses. Exemple **reconstruit** pour « La communication interculturelle » :\n\n| Étape | Proposition |\n|---|---|\n| Objet de recherche | Les malentendus dans les échanges par courriel entre une PME française et ses clients japonais |\n| Problématique | Les deux parties communiquent en anglais, langue commune : dans quelle mesure cette langue partagée masque-t-elle des différences de normes de politesse qui créent des malentendus ? |\n| H1 | Les courriels français jugés « directs » sont perçus comme impolis par les interlocuteurs japonais. |\n| H2 | Les refus indirects des interlocuteurs japonais ne sont pas compris comme des refus par les Français. |\n| H3 | Les malentendus diminuent quand un salarié a vécu au Japon. |\n| Comment vérifier | Un corpus de courriels (anonymisés, avec accord de l'entreprise) et des entretiens avec les salariés des deux côtés. |\n\nChaque hypothèse est vérifiable : on peut imaginer les données qui la confirmeraient ou l'infirmeraient."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "- Question de recherche : ce que l'on veut savoir. Problématique : le questionnement, l'enjeu ou la tension qui mérite d'être étudié.\n- Une problématique trop générale, fermée ou au périmètre trop large doit être resserrée (marques, contexte, population).\n- Une hypothèse est une réponse provisoire, vérifiable, que les données peuvent infirmer.\n- Les hypothèses servent à guider la recherche, tester des théories, faire progresser les connaissances et résoudre des problèmes.\n\n> Une hypothèse n'est pas une vérité : c'est un pari que l'on accepte de perdre."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Quelle différence entre question de recherche et problématique ?**\n\nLa question identifie ce que l'on veut savoir ; la problématique met en évidence un questionnement, un enjeu ou une tension qui mérite d'être étudié.\n\n**Qu'est-ce qu'une hypothèse ?**\n\nUne proposition provisoire, que le chercheur confronte aux données et qui peut être infirmée.\n\n**Pourquoi « L'IA est-elle dangereuse ? » est-elle une mauvaise problématique ?**\n\nElle est trop générale (quelle IA, pour qui, dans quel domaine ?) et appelle un oui ou un non.\n\n**Confusions fréquentes**\n\n- **Hypothèse** / **Conclusion** : l'hypothèse est posée avant l'analyse et peut être fausse ; la conclusion vient après.\n- **Hypothèse** / **Opinion** : une hypothèse est formulée pour être vérifiée par des données ; une opinion n'attend pas de preuve."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "red.problematique.problematique",
+     "term": "Problématique (de recherche)",
+     "definition": "Questionnement construit qui met en évidence un enjeu ou une tension qui mérite d'être étudié (support de TD).",
+     "intuitive": "La raison pour laquelle la question vaut la peine d'être posée.",
+     "analytical": "La problématique transforme une curiosité en problème : elle fait apparaître une contradiction (entre une règle et une pratique, entre deux résultats, entre une attente et une observation). C'est elle qui justifie le choix de la méthode et des hypothèses.",
+     "examRelevance": "Améliorez « Comment l'IA transforme-t-elle la traduction ? », jugée au périmètre trop large.",
+     "sourceKeys": [],
+     "related": [
+      "red.question.question-recherche",
+      "red.problematique.hypothese"
+     ]
+    },
+    {
+     "slug": "red.problematique.hypothese",
+     "term": "Hypothèse",
+     "definition": "Proposition provisoire que le chercheur va confronter aux données ; ce n'est pas une vérité et elle peut être infirmée par les résultats (support de TD).",
+     "intuitive": "Une réponse que l'on pense juste et que l'on va mettre à l'épreuve.",
+     "analytical": "Une bonne hypothèse est réfutable : on peut dire à l'avance quelles données la contrediraient. Formuler plusieurs hypothèses concurrentes (H1, H2, H3) évite de ne chercher que ce qui confirme une idée de départ.",
+     "examRelevance": "Formulez deux hypothèses vérifiables pour une question donnée et dites quelles données les infirmeraient.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "red.problematique.q1",
+     "type": "single",
+     "difficulty": 2,
+     "topic": "distinguer",
+     "concept": "red.problematique.problematique",
+     "stem": "Laquelle de ces propositions le support juge-t-il « bien structurée, complète » ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "L'utilisation de l'anglais dans les publicités françaises peut contribuer à construire une image internationale des marques ?",
+        "correct": true,
+        "explanation": "Dernière proposition de l'activité, appréciée « bien structuré, complet »."
+       },
+       {
+        "id": "b",
+        "text": "Pourquoi les marques utilisent-elles l'anglais ?",
+        "correct": false,
+        "explanation": "« Correct mais juste préciser quelles marques ou quel contexte »."
+       },
+       {
+        "id": "c",
+        "text": "Comment l'IA transforme-t-elle la traduction ?",
+        "correct": false,
+        "explanation": "« Intéressant mais périmètre un peu large »."
+       }
+      ]
+     },
+     "explanation": "Activité « qu'est-ce qu'une bonne problématique ? »."
+    },
+    {
+     "key": "red.problematique.q2",
+     "type": "matching",
+     "difficulty": 2,
+     "topic": "distinguer",
+     "concept": "red.problematique.problematique",
+     "stem": "Associez chaque proposition à l'appréciation du support.",
+     "data": {
+      "pairs": [
+       {
+        "left": "L'IA est-elle dangereuse ?",
+        "right": "Trop général"
+       },
+       {
+        "left": "Les étudiants aiment-ils l'anglais ?",
+        "right": "Question fermée et peu approfondie"
+       },
+       {
+        "left": "Comment l'IA transforme-t-elle la traduction ?",
+        "right": "Périmètre un peu large"
+       },
+       {
+        "left": "Pourquoi les marques utilisent-elles l'anglais ?",
+        "right": "Préciser quelles marques ou quel contexte"
+       }
+      ]
+     },
+     "explanation": "Les appréciations suivent l'ordre des propositions sur la diapositive."
+    },
+    {
+     "key": "red.problematique.q3",
+     "type": "true_false",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "red.problematique.hypothese",
+     "stem": "Une hypothèse est une vérité que la recherche doit démontrer.",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Vrai",
+        "correct": false,
+        "explanation": "Le support dit le contraire."
+       },
+       {
+        "id": "b",
+        "text": "Faux",
+        "correct": true,
+        "explanation": "Une hypothèse est une proposition provisoire, qui peut être infirmée par les résultats."
+       }
+      ]
+     },
+     "explanation": "« Attention : une hypothèse n'est pas une vérité. »"
+    },
+    {
+     "key": "red.problematique.q4",
+     "type": "single",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "red.problematique.problematique",
+     "stem": "Qu'apporte une problématique par rapport à une question de recherche ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Elle met en évidence un enjeu ou une tension qui mérite d'être étudié",
+        "correct": true,
+        "explanation": "Définition du support."
+       },
+       {
+        "id": "b",
+        "text": "Elle donne la réponse attendue",
+        "correct": false,
+        "explanation": "C'est le rôle, provisoire, des hypothèses."
+       },
+       {
+        "id": "c",
+        "text": "Elle décrit la méthode de collecte",
+        "correct": false,
+        "explanation": "C'est la méthode."
+       }
+      ]
+     },
+     "explanation": "Question : ce que l'on veut savoir. Problématique : pourquoi cela pose question."
+    },
+    {
+     "key": "red.problematique.q5",
+     "type": "multiple",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.problematique.hypothese",
+     "stem": "Selon le support, à quoi servent les hypothèses ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Guider la recherche",
+        "correct": true,
+        "explanation": "Direction et cadre."
+       },
+       {
+        "id": "b",
+        "text": "Tester des théories",
+        "correct": true,
+        "explanation": "Elles sont testables et peuvent se révéler fausses."
+       },
+       {
+        "id": "c",
+        "text": "Faire progresser les connaissances",
+        "correct": true,
+        "explanation": "Même rejetées, elles ouvrent des questions."
+       },
+       {
+        "id": "d",
+        "text": "Garantir que les résultats seront positifs",
+        "correct": false,
+        "explanation": "Une hypothèse peut être infirmée."
+       }
+      ]
+     },
+     "explanation": "Le support cite aussi la résolution de problèmes en recherche appliquée."
+    },
+    {
+     "key": "red.problematique.q6",
+     "type": "short",
+     "difficulty": 2,
+     "topic": "appliquer",
+     "concept": "red.problematique.hypothese",
+     "stem": "Question : « Pourquoi les entreprises françaises utilisent-elles l'anglais dans leur communication ? » Proposez une hypothèse qui ne figure pas dans le support et indiquez quelles données pourraient l'infirmer.",
+     "data": {
+      "rubric": [
+       "L'hypothèse est une affirmation provisoire liée à la question",
+       "Elle diffère de H1-H3 du support (image internationale, partenaires étrangers, modernité)",
+       "Indique des données précises qui la contrediraient"
+      ],
+      "modelAnswer": "H4 : l'anglais est surtout utilisé par les entreprises dont une part importante du chiffre d'affaires est réalisée à l'export. Elle serait infirmée si un corpus de communications montrait autant d'anglais chez des entreprises qui n'exportent pas."
+     },
+     "explanation": "Activité « construire ses hypothèses » du support."
+    },
+    {
+     "key": "red.problematique.q7",
+     "type": "scenario",
+     "difficulty": 3,
+     "topic": "analyser-cas",
+     "concept": "red.problematique.problematique",
+     "stem": "Pour le thème « La place des langues étrangères aujourd'hui », proposez un objet de recherche, une problématique et deux hypothèses vérifiables.",
+     "data": {
+      "rubric": [
+       "L'objet est délimité (population ou corpus, contexte)",
+       "La problématique fait apparaître un enjeu ou une tension",
+       "Deux hypothèses provisoires et vérifiables",
+       "Cohérence entre objet, problématique et hypothèses"
+      ],
+      "modelAnswer": "Objet : le choix de la langue B par les étudiants de LEA d'Orléans. Problématique : alors que l'anglais est jugé indispensable, comment les étudiants arbitrent-ils entre utilité professionnelle et goût personnel dans le choix de leur deuxième langue ? H1 : l'espagnol est choisi d'abord pour sa facilité perçue. H2 : les étudiants qui visent un métier précis choisissent selon les débouchés, les autres selon leur parcours scolaire."
+     },
+     "explanation": "Exercice du support (corrigé reconstruit)."
+    }
+   ]
+  },
+  {
+   "slug": "red.methodes",
+   "title": "Choisir une méthode de recherche",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Dernière partie du support de TD (« Quelques méthodologies de recherche »), avec un exercice d'association corrigé.",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "La méthode découle de la question : « combien » appelle un questionnaire, « pourquoi » des entretiens, « quels… apparaissent » une analyse de corpus.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.red-initiation"
+   ],
+   "prerequisites": [
+    "red.problematique"
+   ],
+   "sections": [
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "Le support propose d'associer chaque question à une méthode adaptée, puis donne la correction :\n\n| Question | Méthode |\n|---|---|\n| Combien d'étudiants utilisent ChatGPT pour traduire ? | Questionnaire |\n| Pourquoi les traducteurs utilisent-ils l'IA ? | Entretiens |\n| Quels anglicismes apparaissent dans les publicités ? | Analyse de corpus |\n| Comment les étudiants utilisent-ils l'anglais à l'oral ? | Observation |\n| Comment les entreprises présentent-elles leur engagement écologique ? | Analyse documentaire |\n| Quelles différences entre deux traductions d'un même texte ? | Analyse comparative |\n\nL'exemple « IA et traduction » du premier chapitre combine deux méthodes : questionnaire et entretiens, analysés par une analyse statistique et une analyse thématique."
+    },
+    {
+     "kind": "key_concepts",
+     "title": "Les six méthodes",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "- **Questionnaire** : mêmes questions posées à un grand nombre de personnes, souvent fermées, pour mesurer et compter. Il répond à « combien », « à quelle fréquence », « quelle proportion ».\n- **Entretien** : échange avec quelques personnes, souvent semi-directif (une grille de thèmes, des relances). Il répond à « pourquoi », « comment le vivent-ils », et fait apparaître des raisons et des représentations.\n- **Analyse de corpus** : relevé systématique dans un ensemble de documents ou d'énoncés choisis selon des critères (publicités, sous-titres, offres d'emploi), à l'aide d'une grille.\n- **Observation** : regarder et noter des pratiques en situation, sans les provoquer, avec une grille d'observation (qui parle, quand, dans quelle langue).\n- **Analyse documentaire** : étude de documents produits par les acteurs eux-mêmes (rapports, sites, chartes) pour comprendre comment ils se présentent.\n- **Analyse comparative** : confronter deux objets ou plus (deux traductions, deux pays, deux populations) selon les mêmes critères.\n\nLes méthodes se combinent : un questionnaire montre combien, des entretiens expliquent pourquoi."
+    },
+    {
+     "kind": "comparison",
+     "title": "Quantitatif et qualitatif",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "| | Approche quantitative | Approche qualitative |\n|---|---|---|\n| Question type | Combien ? Quelle proportion ? | Pourquoi ? Comment ? |\n| Outils | questionnaire, comptage dans un corpus | entretiens, observation, analyse de discours |\n| Échantillon | grand | réduit, choisi pour sa diversité |\n| Analyse | statistique (pourcentages, comparaisons) | thématique (regrouper les idées récurrentes) |\n| Limite | dit peu sur les raisons | ne permet pas de généraliser |\n\nRepère simple : le mot interrogatif de la question oriente vers la méthode. Ce n'est qu'un indice : « comment » peut appeler une observation (pratiques) ou une analyse documentaire (discours), selon ce que l'on étudie."
+    },
+    {
+     "kind": "application",
+     "title": "Associer une méthode à votre projet",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Reprenez le projet construit au chapitre « Du thème à la question de recherche » et vérifiez trois points :\n\n1. Le mot interrogatif de votre question correspond-il à la méthode choisie ?\n2. Pouvez-vous réellement recueillir ces données en un semestre (accès au terrain, taille du corpus) ?\n3. Savez-vous comment vous analyserez les données avant de les recueillir ?\n\nExemple : « Quelles langues les offices de tourisme du Loiret proposent-ils sur leur site, et en fonction de quelles clientèles ? ». La première partie appelle une **analyse documentaire** (relevé des versions des sites), la seconde une **analyse comparative** avec les données de fréquentation, complétée par des **entretiens** si l'on veut comprendre les choix."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "- Combien → questionnaire. Pourquoi → entretiens. Quels éléments dans des documents → analyse de corpus.\n- Pratiques en situation → observation. Discours des acteurs → analyse documentaire. Différences entre deux objets → analyse comparative.\n- Les méthodes se combinent, et la méthode d'analyse se décide avant la collecte."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Quelle méthode pour « Combien d'étudiants utilisent ChatGPT pour traduire ? »**\n\nUn questionnaire.\n\n**Quelle méthode pour « Pourquoi les traducteurs utilisent-ils l'IA ? »**\n\nDes entretiens.\n\n**Quelle différence entre analyse de corpus et analyse documentaire ?**\n\nL'analyse de corpus relève systématiquement des éléments (mots, formes) dans un ensemble d'énoncés ; l'analyse documentaire étudie des documents produits par des acteurs pour comprendre ce qu'ils disent et comment ils se présentent.\n\n**Confusions fréquentes**\n\n- **Questionnaire** / **Entretien** : le questionnaire mesure sur beaucoup de personnes ; l'entretien explique avec quelques-unes.\n- **Observation** / **Entretien** : observer, c'est voir ce que les gens font ; interroger, c'est recueillir ce qu'ils disent faire."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "red.methodes.questionnaire",
+     "term": "Questionnaire",
+     "definition": "Méthode de recueil qui pose les mêmes questions à un grand nombre de personnes pour mesurer un phénomène (« Combien d'étudiants… ? » dans le support).",
+     "intuitive": "Le même formulaire pour tout le monde, pour pouvoir compter.",
+     "analytical": "Sa valeur dépend de l'échantillon (qui répond, combien) et de la formulation des questions : une question orientée produit des réponses orientées.",
+     "examRelevance": "Pour quelle question du support le questionnaire est-il la méthode adaptée ?",
+     "sourceKeys": [],
+     "related": [
+      "red.methodes.entretien"
+     ]
+    },
+    {
+     "slug": "red.methodes.entretien",
+     "term": "Entretien",
+     "definition": "Méthode de recueil par échange avec quelques personnes, adaptée aux questions « pourquoi » (« Pourquoi les traducteurs utilisent-ils l'IA ? » dans le support).",
+     "intuitive": "Une conversation préparée pour comprendre les raisons des gens.",
+     "analytical": "L'entretien semi-directif suit une grille de thèmes mais laisse la personne développer ; on l'analyse en regroupant les idées récurrentes (analyse thématique). Il ne permet pas de généraliser à une population.",
+     "examRelevance": "Pourquoi l'exemple « IA et traduction » combine-t-il questionnaire et entretiens ?",
+     "sourceKeys": [],
+     "related": []
+    },
+    {
+     "slug": "red.methodes.analyse-corpus",
+     "term": "Analyse de corpus",
+     "definition": "Méthode qui relève systématiquement des éléments dans un ensemble de données choisies (« Quels anglicismes apparaissent dans les publicités ? » dans le support).",
+     "intuitive": "Prendre une pile de documents choisis avec soin et y compter ce que l'on cherche.",
+     "analytical": "Le corpus doit être délimité par des critères explicites (source, période, nombre) ; sinon, on ne trouve que ce que l'on a choisi de regarder.",
+     "examRelevance": "Construisez un corpus pour étudier l'anglais dans les publicités françaises.",
+     "sourceKeys": [],
+     "related": []
+    },
+    {
+     "slug": "red.methodes.analyse-comparative",
+     "term": "Analyse comparative",
+     "definition": "Méthode qui confronte deux objets ou plus selon les mêmes critères (« Quelles différences entre deux traductions d'un même texte ? » dans le support).",
+     "intuitive": "Mettre deux choses côte à côte et les juger avec la même grille.",
+     "analytical": "La comparaison n'a de sens que si les objets sont comparables et la grille identique ; sinon, on compare des différences de contexte plutôt que les objets eux-mêmes.",
+     "examRelevance": "Proposez une grille pour comparer une traduction automatique et une traduction humaine.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "red.methodes.q1",
+     "type": "matching",
+     "difficulty": 2,
+     "topic": "appliquer",
+     "concept": "red.methodes.questionnaire",
+     "stem": "Associez chaque question à la méthode donnée par la correction du support.",
+     "data": {
+      "pairs": [
+       {
+        "left": "Combien d'étudiants utilisent ChatGPT pour traduire ?",
+        "right": "Questionnaire"
+       },
+       {
+        "left": "Pourquoi les traducteurs utilisent-ils l'IA ?",
+        "right": "Entretiens"
+       },
+       {
+        "left": "Quels anglicismes apparaissent dans les publicités ?",
+        "right": "Analyse de corpus"
+       },
+       {
+        "left": "Comment les étudiants utilisent-ils l'anglais à l'oral ?",
+        "right": "Observation"
+       },
+       {
+        "left": "Comment les entreprises présentent-elles leur engagement écologique ?",
+        "right": "Analyse documentaire"
+       },
+       {
+        "left": "Quelles différences entre deux traductions d'un même texte ?",
+        "right": "Analyse comparative"
+       }
+      ]
+     },
+     "explanation": "Correction du support."
+    },
+    {
+     "key": "red.methodes.q2",
+     "type": "single",
+     "difficulty": 2,
+     "topic": "appliquer",
+     "concept": "red.methodes.entretien",
+     "stem": "Vous voulez comprendre pourquoi des PME du Loiret choisissent de ne pas traduire leur site en anglais. Quelle méthode est la plus adaptée ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Des entretiens avec des dirigeants",
+        "correct": true,
+        "explanation": "Une question « pourquoi » : il faut recueillir des raisons."
+       },
+       {
+        "id": "b",
+        "text": "Un comptage des sites traduits",
+        "correct": false,
+        "explanation": "Il dit combien, pas pourquoi."
+       },
+       {
+        "id": "c",
+        "text": "Une analyse comparative de deux traductions",
+        "correct": false,
+        "explanation": "Hors sujet : il n'y a pas de traduction."
+       }
+      ]
+     },
+     "explanation": "Pourquoi → entretiens."
+    },
+    {
+     "key": "red.methodes.q3",
+     "type": "single",
+     "difficulty": 2,
+     "topic": "distinguer",
+     "concept": "red.methodes.questionnaire",
+     "stem": "Quelle limite principale a un questionnaire par rapport à des entretiens ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Il dit peu sur les raisons",
+        "correct": true,
+        "explanation": "Il mesure bien mais explique peu."
+       },
+       {
+        "id": "b",
+        "text": "Il ne permet pas de compter",
+        "correct": false,
+        "explanation": "C'est sa force."
+       },
+       {
+        "id": "c",
+        "text": "Il ne peut être utilisé qu'avec dix personnes",
+        "correct": false,
+        "explanation": "Au contraire, il vise un grand nombre."
+       }
+      ]
+     },
+     "explanation": "Quantitatif : mesurer ; qualitatif : comprendre."
+    },
+    {
+     "key": "red.methodes.q4",
+     "type": "scenario",
+     "difficulty": 3,
+     "topic": "analyser-cas",
+     "concept": "red.methodes.analyse-corpus",
+     "stem": "Question : « Quels anglicismes apparaissent dans les publicités françaises ? » Décrivez le corpus que vous construiriez et la manière de l'analyser.",
+     "data": {
+      "rubric": [
+       "Définit la source et le support des publicités",
+       "Fixe une période et un nombre",
+       "Prévoit une grille de relevé (mot, catégorie, fonction, marque)",
+       "Prévoit un traitement des résultats (fréquences, comparaisons)"
+      ],
+      "modelAnswer": "Corpus : 100 publicités de marques françaises publiées sur Instagram entre janvier et juin 2026, choisies dans quatre secteurs (mode, cosmétique, alimentation, technologie). Grille : chaque anglicisme relevé avec sa place (slogan, nom de produit, mot-dièse), sa catégorie (nom, verbe, expression) et la marque. Analyse : fréquences par secteur, puis interprétation des fonctions (image internationale, modernité)."
+     },
+     "explanation": "Exemple « publicité et anglais » du support, méthode développée."
+    }
+   ]
+  },
+  {
+   "slug": "red.sources",
+   "title": "Sources",
+   "priority": "ESSENTIAL",
+   "priorityReason": "Traité par le support de TD (« Rechercher et exploiter des sources scientifiques ») et indispensable au rapport de stage.",
+   "researchStatus": "university_material",
+   "provenance": [
+    "UNIVERSITY_MATERIAL",
+    "RECONSTRUCTED_EXPLANATION"
+   ],
+   "summary": "Une source se juge sur son auteur, sa date, sa nature, ses références et sa méthode ; une source scientifique se trouve dans des bases spécialisées et se lit d'abord en survol.",
+   "sourceKeys": [],
+   "documents": [
+    "doc.red-initiation"
+   ],
+   "prerequisites": [],
+   "sections": [
+    {
+     "kind": "explanation",
+     "title": "Ce que dit votre support",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "L'objectif est de distinguer une source scientifique d'une source informative, de rechercher des publications pertinentes et de construire une première bibliographie.\n\n**Comment faire confiance à une source ?** Le support demande de classer cinq documents du plus pertinent au moins pertinent pour une recherche universitaire :\n\n1. un article scientifique publié dans une revue à comité de lecture ;\n2. un article de presse sur l'intelligence artificielle ;\n3. un billet de blog rédigé par un traducteur ;\n4. une page Wikipédia ;\n5. un rapport institutionnel sur les pratiques linguistiques en entreprise.\n\nSa réponse : **il n'existe pas de classement universel**. Tout dépend de la question de recherche et de l'usage de la source. Il faut s'appuyer sur cinq critères :\n\n- l'**auteur** ;\n- la **date** ;\n- la **nature** du document ;\n- les **références** mobilisées ;\n- la **méthode** et les **données** utilisées.\n\n**Où trouver des sources scientifiques ?**\n\n| Outil | Contenu (d'après le support) |\n|---|---|\n| Google Scholar | articles scientifiques, ouvrages, citations et références |\n| HAL | articles, communications, thèses et travaux de recherche |\n| OpenEdition | revues, livres et publications en sciences humaines et sociales |\n| Cairn.info | revues et ouvrages en sciences humaines et sociales |\n\nAstuce du support : une recherche en anglais permet souvent de trouver davantage de publications, notamment en traduction, en marketing et en communication interculturelle.\n\n**Relever une publication.** Pour chacune des trois références à trouver, noter : auteur(s), date, titre, revue ou ouvrage, sujet, intérêt pour votre recherche.\n\n**Lire en survol.** Les articles scientifiques sont longs ; il ne faut pas se laisser impressionner. Méthode de lecture rapide :\n\n1. lire le titre ;\n2. lire le résumé ;\n3. repérer les mots-clés ;\n4. lire l'introduction ;\n5. identifier la question de recherche ;\n6. repérer la méthodologie ;\n7. consulter la conclusion.\n\nLe survol permet d'appréhender un article dans son ensemble. Attention à ne pas surinterpréter : en cas de doute, il faut une lecture approfondie."
+    },
+    {
+     "kind": "key_concepts",
+     "title": "Types de sources et grille de fiabilité",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Contenu reconstruit, cohérent avec les critères du support :\n\n- **Source primaire** : données brutes, textes officiels, statistiques, entretiens, documents d'entreprise. Ce sont des preuves.\n- **Source secondaire** : analyses, manuels, articles scientifiques qui interprètent les sources primaires. Elles fournissent le cadre théorique.\n- **Source tertiaire** : encyclopédies, vulgarisation. Elles servent de première approche et doivent être dépassées. Pour la presse, vérifier les chiffres à leur source.\n\nLes cinq critères du support se traduisent en questions : **qui** écrit (auteur, compétence) ? **quand** (date, actualité) ? **quoi** (nature : revue à comité de lecture, presse, blog, rapport) ? **sur quoi** s'appuie-t-il (références) ? **comment** sait-il ce qu'il affirme (méthode, données) ?\n\nPour chercher : mots-clés en plusieurs langues, catalogue de la bibliothèque universitaire et bases de données, opérateurs ET, OU, SAUF et guillemets. Notez la référence complète et la date de consultation dès la lecture, et suivez les bibliographies des articles trouvés (méthode « boule de neige »). Les sources d'un rapport ne peuvent pas se limiter à des sites Internet (support de stage)."
+    },
+    {
+     "kind": "comparison",
+     "title": "Les cinq documents passés à la grille",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "Proposition **reconstruite** pour une question précise : « Quelles compétences linguistiques les entreprises exportatrices françaises attendent-elles de leurs assistants export ? ».\n\n| Document | Auteur | Méthode et données | Usage possible |\n|---|---|---|---|\n| Article de revue à comité de lecture | chercheur, évalué par des pairs | explicites | cadre théorique, résultats comparables |\n| Rapport institutionnel | organisme public ou professionnel | enquête souvent décrite | chiffres et constat de terrain |\n| Article de presse | journaliste | rarement décrites | contexte, piste à vérifier à la source |\n| Billet de blog d'un traducteur | professionnel, non évalué | expérience personnelle | témoignage, donnée qualitative si on l'analyse comme telle |\n| Page Wikipédia | anonyme, collective | aucune propre | première approche ; suivre ses références |\n\nPour une autre question, par exemple sur le discours des traducteurs face à l'IA, le billet de blog devient une source primaire de premier plan. C'est le sens de « il n'existe pas de classement universel »."
+    },
+    {
+     "kind": "synthesis",
+     "title": "Synthèse",
+     "provenance": "UNIVERSITY_MATERIAL",
+     "sourceKeys": [],
+     "body": "- Pas de classement universel des sources : la pertinence dépend de la question et de l'usage.\n- Cinq critères : auteur, date, nature, références, méthode et données.\n- Outils : Google Scholar, HAL, OpenEdition, Cairn.info ; chercher aussi en anglais.\n- Lecture rapide : titre, résumé, mots-clés, introduction, question, méthode, conclusion ; puis lecture approfondie si besoin."
+    },
+    {
+     "kind": "exam",
+     "title": "Préparation à l'examen",
+     "provenance": "RECONSTRUCTED_EXPLANATION",
+     "sourceKeys": [],
+     "body": "**Quels sont les cinq critères pour évaluer une source ?**\n\nL'auteur, la date, la nature du document, les références mobilisées, la méthode et les données utilisées.\n\n**Un article scientifique est-il toujours plus pertinent qu'un billet de blog ?**\n\nNon : il n'existe pas de classement universel ; tout dépend de la question de recherche et de l'usage de la source.\n\n**Citez deux bases de publications en sciences humaines et sociales.**\n\nOpenEdition et Cairn.info (aussi HAL et Google Scholar, plus généraux).\n\n**Confusions fréquentes**\n\n- **Lecture rapide** / **Lecture complète** : le survol sert à décider si l'article est utile ; on ne cite pas un résultat compris seulement en survol.\n- **Source fiable** / **Source pertinente** : une source peut être fiable sans répondre à votre question."
+    }
+   ],
+   "concepts": [
+    {
+     "slug": "red.sources.criteres",
+     "term": "Critères d’évaluation d’une source",
+     "definition": "Auteur, date, nature du document, références mobilisées, méthode et données utilisées (support de TD).",
+     "intuitive": "Avant de croire un document, demander qui l'a écrit, quand, de quel type il est, sur quoi il s'appuie et comment il sait.",
+     "analytical": "Les critères ne produisent pas un classement absolu : ils situent la source par rapport à une question. Un même document peut être une preuve (source primaire) pour une question et un simple contexte pour une autre.",
+     "examRelevance": "Classez cinq documents pour une question donnée et justifiez avec les cinq critères.",
+     "sourceKeys": [],
+     "related": [
+      "red.demarche.recherche-documentaire"
+     ]
+    },
+    {
+     "slug": "red.sources.lecture-rapide",
+     "term": "Lecture rapide (survol)",
+     "definition": "Méthode de lecture en sept étapes : titre, résumé, mots-clés, introduction, question de recherche, méthodologie, conclusion (support de TD).",
+     "intuitive": "Lire les parties qui résument l'article avant de décider de tout lire.",
+     "analytical": "Le survol sert au tri et à la compréhension d'ensemble ; il expose à la surinterprétation, d'où la consigne du support de passer à une lecture approfondie en cas de doute.",
+     "examRelevance": "Remettez dans l'ordre les étapes de la lecture rapide.",
+     "sourceKeys": [],
+     "related": []
+    }
+   ],
+   "questions": [
+    {
+     "key": "red.sources.q-lecture",
+     "type": "ordering",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.sources.lecture-rapide",
+     "stem": "Remettez dans l'ordre les étapes de la lecture rapide proposées par le support.",
+     "data": {
+      "items": [
+       "Lire le titre",
+       "Lire le résumé",
+       "Repérer les mots-clés",
+       "Lire l'introduction",
+       "Identifier la question de recherche",
+       "Repérer la méthodologie",
+       "Consulter la conclusion"
+      ]
+     },
+     "explanation": "Méthode de lecture rapide du support."
+    },
+    {
+     "key": "red.sources.q-criteres",
+     "type": "multiple",
+     "difficulty": 1,
+     "topic": "memoriser",
+     "concept": "red.sources.criteres",
+     "stem": "Lesquels de ces critères le support retient-il pour évaluer une source ?",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "L'auteur",
+        "correct": true,
+        "explanation": "Critère 1."
+       },
+       {
+        "id": "b",
+        "text": "La date",
+        "correct": true,
+        "explanation": "Critère 2."
+       },
+       {
+        "id": "c",
+        "text": "La méthode et les données utilisées",
+        "correct": true,
+        "explanation": "Critère 5."
+       },
+       {
+        "id": "d",
+        "text": "Le nombre de partages sur les réseaux sociaux",
+        "correct": false,
+        "explanation": "La popularité ne dit rien de la fiabilité."
+       }
+      ]
+     },
+     "explanation": "Auteur, date, nature, références, méthode et données."
+    },
+    {
+     "key": "red.sources.q-classement",
+     "type": "true_false",
+     "difficulty": 1,
+     "topic": "comprendre",
+     "concept": "red.sources.criteres",
+     "stem": "Selon le support, il existe un classement universel des sources, de l'article scientifique à la page Wikipédia.",
+     "data": {
+      "choices": [
+       {
+        "id": "a",
+        "text": "Vrai",
+        "correct": false,
+        "explanation": "Le support dit le contraire."
+       },
+       {
+        "id": "b",
+        "text": "Faux",
+        "correct": true,
+        "explanation": "« Il n'existe pas de classement universel. Tout dépend de la question de recherche et de l'usage de la source. »"
+       }
+      ]
+     },
+     "explanation": "Activité « comment faire confiance à une source ? »."
+    },
+    {
+     "key": "red.sources.q-outils",
+     "type": "matching",
+     "difficulty": 2,
+     "topic": "memoriser",
+     "concept": "red.sources.criteres",
+     "stem": "Associez chaque outil à son contenu d'après le support.",
+     "data": {
+      "pairs": [
+       {
+        "left": "HAL",
+        "right": "Articles, communications, thèses et travaux de recherche"
+       },
+       {
+        "left": "OpenEdition",
+        "right": "Revues, livres et publications en SHS"
+       },
+       {
+        "left": "Cairn.info",
+        "right": "Revues et ouvrages en SHS"
+       },
+       {
+        "left": "Google Scholar",
+        "right": "Articles, ouvrages, citations et références"
+       }
+      ]
+     },
+     "explanation": "Diapositive « Où trouver des sources scientifiques ? »."
+    }
+   ]
+  }
+ ]
+}

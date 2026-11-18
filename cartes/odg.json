@@ -1,0 +1,439 @@
+{
+  "id": "odg",
+  "titre": "Outils de gestion",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S6 (LLA6J6B, CM 15 h, 2 ECTS)",
+    "enseignant": "Isabelle Noël selon la page officielle ; Izabela Jankiewicz-Anker selon le plan des modules du support de comptabilité",
+    "description": "Outils de contrôle de gestion : prévision, gestion des stocks, seuil de rentabilité ; objectif : construire un tableau de bord.",
+    "bibliographie": [],
+    "sources": [
+      "r.orleans-l3-s6"
+    ]
+  },
+  "cadres": [
+    "Seuil de rentabilité",
+    "Modèle de Wilson",
+    "Moindres carrés",
+    "Balanced scorecard (Kaplan et Norton)"
+  ],
+  "competences_examen": [
+    "Calculer un seuil de rentabilité",
+    "Valoriser des stocks (CMUP, FIFO)",
+    "Calculer une quantité économique",
+    "Construire un tableau de bord"
+  ],
+  "incertitudes": [
+    "Aucune bibliographie officielle."
+  ],
+  "chapitres": [
+    {
+      "id": "odg.couts",
+      "titre": "Coûts et rentabilité",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "odg.couts.fixes-variables",
+          "titre": "Charges fixes et variables",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.couts.mcv",
+          "titre": "Marge sur coût variable, taux de marge",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.couts.seuil",
+          "titre": "Seuil de rentabilité, point mort, marge de sécurité",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.couts.levier-operationnel",
+          "titre": "Levier opérationnel",
+          "niveau": "A"
+        },
+        {
+          "id": "odg.couts.couts-complets",
+          "titre": "Coûts complets, centres d'analyse",
+          "niveau": "A"
+        },
+        {
+          "id": "odg.couts.abc",
+          "titre": "Méthode ABC (Activity-Based Costing)",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.synthese"
+      ],
+      "terminologie": [
+        {
+          "fr": "Charge variable",
+          "en": "variable cost",
+          "es": "coste variable"
+        },
+        {
+          "fr": "Charge fixe",
+          "en": "fixed cost / overhead",
+          "es": "coste fijo"
+        },
+        {
+          "fr": "Charge semi-variable",
+          "en": "semi-variable / mixed cost",
+          "es": "coste semivariable / mixto"
+        },
+        {
+          "fr": "Marge sur coût variable",
+          "en": "contribution margin",
+          "es": "margen de contribución"
+        },
+        {
+          "fr": "Compte de résultat différentiel",
+          "en": "contribution margin income statement",
+          "es": "cuenta de resultados analítica (variable / fijo)"
+        },
+        {
+          "fr": "Seuil de rentabilité",
+          "en": "break-even point (in sales)",
+          "es": "umbral de rentabilidad / punto de equilibrio"
+        },
+        {
+          "fr": "Point mort",
+          "en": "break-even date",
+          "es": "fecha del punto muerto"
+        },
+        {
+          "fr": "Marge de sécurité",
+          "en": "margin of safety",
+          "es": "margen de seguridad"
+        },
+        {
+          "fr": "Levier opérationnel",
+          "en": "operating leverage (degree of operating leverage)",
+          "es": "apalancamiento operativo"
+        },
+        {
+          "fr": "Charge directe",
+          "en": "direct cost",
+          "es": "coste directo"
+        },
+        {
+          "fr": "Charge indirecte",
+          "en": "indirect cost / overhead",
+          "es": "coste indirecto"
+        },
+        {
+          "fr": "Unité d'œuvre",
+          "en": "cost driver / allocation base",
+          "es": "unidad de obra"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "odg.stocks",
+      "titre": "Gestion des stocks",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "odg.stocks.valorisation",
+          "titre": "Valorisation des stocks : CMUP, FIFO",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.stocks.wilson",
+          "titre": "Quantité économique de commande (Wilson / Harris)",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.stocks.point-commande",
+          "titre": "Stock d'alerte, stock de sécurité",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.stocks.pareto",
+          "titre": "Méthode ABC / Pareto (20 / 80)",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.pcg",
+        "src.wilson"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "cpt.inventaire",
+        "odg.couts"
+      ],
+      "terminologie": [
+        {
+          "fr": "Coût moyen unitaire pondéré (CMUP)",
+          "en": "weighted average cost (WAC)",
+          "es": "precio medio ponderado (PMP)"
+        },
+        {
+          "fr": "Premier entré, premier sorti (PEPS)",
+          "en": "first in, first out (FIFO)",
+          "es": "FIFO (primera entrada, primera salida)"
+        },
+        {
+          "fr": "Fiche de stock",
+          "en": "stock card / inventory record",
+          "es": "ficha de almacén"
+        },
+        {
+          "fr": "Quantité économique de commande",
+          "en": "economic order quantity (EOQ)",
+          "es": "lote económico de pedido"
+        },
+        {
+          "fr": "Coût de passation",
+          "en": "ordering cost",
+          "es": "coste de emisión de pedido"
+        },
+        {
+          "fr": "Coût de possession",
+          "en": "holding / carrying cost",
+          "es": "coste de posesión / mantenimiento"
+        },
+        {
+          "fr": "Stock de sécurité",
+          "en": "safety stock / buffer stock",
+          "es": "stock de seguridad"
+        },
+        {
+          "fr": "Stock d'alerte / point de commande",
+          "en": "reorder point",
+          "es": "punto de pedido"
+        },
+        {
+          "fr": "Rupture de stock",
+          "en": "stockout",
+          "es": "rotura de stock"
+        },
+        {
+          "fr": "Délai de réapprovisionnement",
+          "en": "lead time",
+          "es": "plazo de reaprovisionamiento"
+        },
+        {
+          "fr": "Loi de Pareto (20/80)",
+          "en": "Pareto principle (80/20 rule)",
+          "es": "principio de Pareto (80/20)"
+        },
+        {
+          "fr": "Analyse ABC",
+          "en": "ABC analysis",
+          "es": "análisis ABC"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "odg.prevision",
+      "titre": "Prévision",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "odg.prevision.moindres-carres",
+          "titre": "Ajustement linéaire (moindres carrés)",
+          "niveau": "A"
+        },
+        {
+          "id": "odg.prevision.saisonnalite",
+          "titre": "Coefficients saisonniers",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Méthode des moindres carrés",
+          "en": "least squares method",
+          "es": "método de mínimos cuadrados"
+        },
+        {
+          "fr": "Série chronologique",
+          "en": "time series",
+          "es": "serie temporal"
+        },
+        {
+          "fr": "Tendance",
+          "en": "trend",
+          "es": "tendencia"
+        },
+        {
+          "fr": "Coefficient saisonnier",
+          "en": "seasonal index / seasonal factor",
+          "es": "coeficiente estacional"
+        },
+        {
+          "fr": "Série désaisonnalisée",
+          "en": "seasonally adjusted series",
+          "es": "serie desestacionalizada"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "odg.budget",
+      "titre": "Budgets et écarts",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "odg.budget.budgets",
+          "titre": "Budgets et prévisions",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.budget.ecarts",
+          "titre": "Analyse des écarts",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [],
+      "verifie_par": null,
+      "prerequis": [
+        "odg.prevision",
+        "cpt.tva",
+        "odg.couts"
+      ],
+      "terminologie": [
+        {
+          "fr": "Budget",
+          "en": "budget",
+          "es": "presupuesto"
+        },
+        {
+          "fr": "Budget de trésorerie",
+          "en": "cash budget / cash flow forecast",
+          "es": "presupuesto de tesorería"
+        },
+        {
+          "fr": "Contrôle budgétaire",
+          "en": "budgetary control",
+          "es": "control presupuestario"
+        },
+        {
+          "fr": "Écart",
+          "en": "variance",
+          "es": "desviación"
+        },
+        {
+          "fr": "Écart favorable / défavorable",
+          "en": "favourable / adverse (unfavourable) variance",
+          "es": "desviación favorable / desfavorable"
+        },
+        {
+          "fr": "Budget flexible",
+          "en": "flexible budget",
+          "es": "presupuesto flexible"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "odg.pilotage",
+      "titre": "Pilotage et tableau de bord",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "odg.pilotage.indicateurs",
+          "titre": "Choisir des indicateurs (KPI)",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.pilotage.tableau-de-bord",
+          "titre": "Construire un tableau de bord",
+          "niveau": "F"
+        },
+        {
+          "id": "odg.pilotage.balanced-scorecard",
+          "titre": "Balanced scorecard",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.kaplan-norton"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Indicateur clé de performance",
+          "en": "key performance indicator (KPI)",
+          "es": "indicador clave de rendimiento"
+        },
+        {
+          "fr": "Indicateur avancé",
+          "en": "leading indicator",
+          "es": "indicador adelantado"
+        },
+        {
+          "fr": "Indicateur de résultat",
+          "en": "lagging indicator",
+          "es": "indicador de resultado / retrasado"
+        },
+        {
+          "fr": "Tableau de bord",
+          "en": "dashboard",
+          "es": "cuadro de mando"
+        },
+        {
+          "fr": "Action corrective",
+          "en": "corrective action",
+          "es": "acción correctiva"
+        },
+        {
+          "fr": "Tableau de bord prospectif",
+          "en": "balanced scorecard (BSC)",
+          "es": "cuadro de mando integral"
+        },
+        {
+          "fr": "Carte stratégique",
+          "en": "strategy map",
+          "es": "mapa estratégico"
+        }
+      ],
+      "note": null
+    }
+  ]
+}

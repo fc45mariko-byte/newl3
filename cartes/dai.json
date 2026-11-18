@@ -1,0 +1,592 @@
+{
+  "id": "dai",
+  "titre": "Droit des affaires internationales",
+  "langue": "fr",
+  "statut_maquette": "ORL",
+  "complement": false,
+  "officiel": {
+    "semestres": "S5 (LLA5J7A, CM 10 h + TD 10 h, 3 ECTS)",
+    "enseignant": "Isabelle Noël",
+    "description": "Sources du droit du commerce international, instruments d'harmonisation (hard law et soft law), règlement des litiges.",
+    "bibliographie": [
+      "Boyé (LexisNexis)",
+      "Deman et Julian (LexisNexis)",
+      "Gleason, International Commercial Law for Managers (Campus ouvert)"
+    ],
+    "sources": [
+      "r.orleans-l3-s5"
+    ]
+  },
+  "cadres": [
+    "CVIM (Vienne, 1980)",
+    "Principes UNIDROIT",
+    "Règlements Rome I et Bruxelles I bis",
+    "Convention de New York (1958)"
+  ],
+  "competences_examen": [
+    "Identifier la source applicable à une situation",
+    "Appliquer la CVIM (champ, formation, obligations, remèdes)",
+    "Distinguer loi applicable et juridiction compétente",
+    "Rédiger une clause compromissoire"
+  ],
+  "incertitudes": [
+    "La bibliographie officielle cite Gleason : la phase 2 de cours disait ne pas l'avoir trouvé. La page S5 le cite bien pour DAI (pas pour la common law)."
+  ],
+  "chapitres": [
+    {
+      "id": "dai.normes",
+      "titre": "Sources et normes du commerce international",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dai.normes.sources",
+          "titre": "Sources du droit du commerce international",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.normes.hard-law",
+          "titre": "Traités, règlements et directives de l'UE",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.normes.soft-law",
+          "titre": "Soft law, lex mercatoria, usages, règles de la CCI",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.normes.omc",
+          "titre": "OMC : principes (nation la plus favorisée, traitement national), ORD",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.cvim",
+        "src.icc-incoterms-2020",
+        "src.new-york-1958",
+        "src.tfue",
+        "src.directive-agents",
+        "src.rome1",
+        "src.icc-ucp600",
+        "src.unidroit",
+        "src.omc"
+      ],
+      "verifie_par": null,
+      "prerequis": [],
+      "terminologie": [
+        {
+          "fr": "Droit international privé",
+          "en": "private international law / conflict of laws",
+          "es": "derecho internacional privado"
+        },
+        {
+          "fr": "Autonomie de la volonté",
+          "en": "party autonomy",
+          "es": "autonomía de la voluntad"
+        },
+        {
+          "fr": "Convention internationale",
+          "en": "international convention / treaty",
+          "es": "convención / tratado internacional"
+        },
+        {
+          "fr": "Règlement (UE)",
+          "en": "EU regulation",
+          "es": "reglamento (UE)"
+        },
+        {
+          "fr": "Directive (UE)",
+          "en": "EU directive",
+          "es": "directiva (UE)"
+        },
+        {
+          "fr": "Transposition",
+          "en": "transposition / implementation",
+          "es": "transposición"
+        },
+        {
+          "fr": "Ratification",
+          "en": "ratification",
+          "es": "ratificación"
+        },
+        {
+          "fr": "Droit souple",
+          "en": "soft law",
+          "es": "derecho blando (soft law)"
+        },
+        {
+          "fr": "Lex mercatoria",
+          "en": "lex mercatoria / law merchant",
+          "es": "lex mercatoria"
+        },
+        {
+          "fr": "Usage du commerce",
+          "en": "trade usage",
+          "es": "uso comercial"
+        },
+        {
+          "fr": "Chambre de commerce internationale (CCI)",
+          "en": "International Chamber of Commerce (ICC)",
+          "es": "Cámara de Comercio Internacional (CCI)"
+        },
+        {
+          "fr": "Clause de la nation la plus favorisée",
+          "en": "most-favoured-nation (MFN) treatment",
+          "es": "cláusula de la nación más favorecida"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dai.cvim",
+      "titre": "La vente internationale (CVIM)",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dai.cvim.champ",
+          "titre": "Champ d'application et exclusion",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.cvim.formation",
+          "titre": "Offre et acceptation",
+          "niveau": "A"
+        },
+        {
+          "id": "dai.cvim.obligations",
+          "titre": "Obligations du vendeur et de l'acheteur",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.cvim.contravention-essentielle",
+          "titre": "Contravention essentielle et résolution",
+          "niveau": "A"
+        },
+        {
+          "id": "dai.cvim.remedes",
+          "titre": "Remèdes et dommages-intérêts",
+          "niveau": "A"
+        },
+        {
+          "id": "dai.cvim.exoneration",
+          "titre": "Exonération (art. 79)",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.cvim"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dai.normes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Convention de Vienne (CVIM)",
+          "en": "United Nations Convention on Contracts for the International Sale of Goods (CISG)",
+          "es": "Convención de Viena sobre compraventa internacional de mercaderías (CISG)"
+        },
+        {
+          "fr": "Établissement",
+          "en": "place of business",
+          "es": "establecimiento"
+        },
+        {
+          "fr": "Exclusion (opt-out)",
+          "en": "exclusion / opting out",
+          "es": "exclusión"
+        },
+        {
+          "fr": "Offre",
+          "en": "offer",
+          "es": "oferta"
+        },
+        {
+          "fr": "Acceptation",
+          "en": "acceptance",
+          "es": "aceptación"
+        },
+        {
+          "fr": "Contre-offre",
+          "en": "counter-offer",
+          "es": "contraoferta"
+        },
+        {
+          "fr": "Bataille des formulaires",
+          "en": "battle of the forms",
+          "es": "batalla de los formularios"
+        },
+        {
+          "fr": "Conformité",
+          "en": "conformity of the goods",
+          "es": "conformidad de las mercaderías"
+        },
+        {
+          "fr": "Dénonciation du défaut",
+          "en": "notice of non-conformity",
+          "es": "denuncia de la falta de conformidad"
+        },
+        {
+          "fr": "Prendre livraison",
+          "en": "take delivery",
+          "es": "recibir la entrega"
+        },
+        {
+          "fr": "Contravention essentielle",
+          "en": "fundamental breach",
+          "es": "incumplimiento esencial"
+        },
+        {
+          "fr": "Résolution du contrat",
+          "en": "avoidance of the contract",
+          "es": "resolución del contrato"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dai.contrat",
+      "titre": "Le contrat international",
+      "priorite": "IMPORTANT",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dai.contrat.clauses",
+          "titre": "Clauses clés : prix, livraison, force majeure, hardship, réserve de propriété",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.contrat.unidroit",
+          "titre": "Principes UNIDROIT",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.icc-fm-hardship",
+        "src.code-civil",
+        "src.unidroit"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dai.cvim",
+        "dai.normes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Clause de réserve de propriété",
+          "en": "retention of title clause (Romalpa clause)",
+          "es": "cláusula de reserva de dominio"
+        },
+        {
+          "fr": "Clause de hardship",
+          "en": "hardship clause",
+          "es": "cláusula de excesiva onerosidad (hardship)"
+        },
+        {
+          "fr": "Clause pénale",
+          "en": "liquidated damages clause / penalty clause",
+          "es": "cláusula penal"
+        },
+        {
+          "fr": "Clause de limitation de responsabilité",
+          "en": "limitation of liability clause",
+          "es": "cláusula de limitación de responsabilidad"
+        },
+        {
+          "fr": "Principes d'UNIDROIT",
+          "en": "UNIDROIT Principles of International Commercial Contracts (PICC)",
+          "es": "Principios UNIDROIT sobre los contratos comerciales internacionales"
+        },
+        {
+          "fr": "Bonne foi",
+          "en": "good faith and fair dealing",
+          "es": "buena fe"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dai.conflits",
+      "titre": "Loi applicable et juridiction",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dai.conflits.loi-applicable",
+          "titre": "Loi applicable : Rome I",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.conflits.juridiction",
+          "titre": "Juridiction compétente : Bruxelles I bis, clause attributive",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.conflits.distinction",
+          "titre": "Distinguer loi applicable et juridiction",
+          "niveau": "F"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.rome1",
+        "src.bruxelles1bis"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dai.normes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Loi applicable",
+          "en": "applicable law / governing law",
+          "es": "ley aplicable"
+        },
+        {
+          "fr": "Prestation caractéristique",
+          "en": "characteristic performance",
+          "es": "prestación característica"
+        },
+        {
+          "fr": "Loi de police",
+          "en": "overriding mandatory provision",
+          "es": "norma imperativa / ley de policía"
+        },
+        {
+          "fr": "Clause de choix de loi",
+          "en": "choice of law clause / governing law clause",
+          "es": "cláusula de elección de ley"
+        },
+        {
+          "fr": "Clause attributive de juridiction",
+          "en": "jurisdiction clause / choice of court clause",
+          "es": "cláusula de sumisión / de elección de foro"
+        },
+        {
+          "fr": "Compétence internationale",
+          "en": "international jurisdiction",
+          "es": "competencia judicial internacional"
+        },
+        {
+          "fr": "Défendeur",
+          "en": "defendant",
+          "es": "demandado"
+        },
+        {
+          "fr": "Conflit de lois",
+          "en": "conflict of laws (choice of law)",
+          "es": "conflicto de leyes"
+        },
+        {
+          "fr": "Conflit de juridictions",
+          "en": "conflict of jurisdictions",
+          "es": "conflicto de jurisdicciones"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dai.litiges",
+      "titre": "Règlement des litiges",
+      "priorite": "ESSENTIAL",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dai.litiges.modes-amiables",
+          "titre": "Négociation, médiation, conciliation",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.litiges.arbitrage",
+          "titre": "Arbitrage : clause compromissoire, institutions",
+          "niveau": "F"
+        },
+        {
+          "id": "dai.litiges.new-york",
+          "titre": "Convention de New York et exécution des sentences",
+          "niveau": "A"
+        },
+        {
+          "id": "dai.litiges.exequatur",
+          "titre": "Exécution des jugements étrangers",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.new-york-1958",
+        "src.bruxelles1bis",
+        "src.la-haye"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "dai.conflits"
+      ],
+      "terminologie": [
+        {
+          "fr": "Médiation",
+          "en": "mediation",
+          "es": "mediación"
+        },
+        {
+          "fr": "Modes alternatifs de règlement des différends",
+          "en": "alternative dispute resolution (ADR)",
+          "es": "métodos alternativos de solución de conflictos (MASC)"
+        },
+        {
+          "fr": "Clause de médiation préalable",
+          "en": "mediation clause / escalation clause",
+          "es": "cláusula de mediación previa"
+        },
+        {
+          "fr": "Arbitrage",
+          "en": "arbitration",
+          "es": "arbitraje"
+        },
+        {
+          "fr": "Clause compromissoire",
+          "en": "arbitration clause",
+          "es": "cláusula compromisoria / convenio arbitral"
+        },
+        {
+          "fr": "Compromis d'arbitrage",
+          "en": "submission agreement",
+          "es": "compromiso arbitral"
+        },
+        {
+          "fr": "Sentence arbitrale",
+          "en": "arbitral award",
+          "es": "laudo arbitral"
+        },
+        {
+          "fr": "Siège de l'arbitrage",
+          "en": "seat of arbitration",
+          "es": "sede del arbitraje"
+        },
+        {
+          "fr": "Reconnaissance et exécution",
+          "en": "recognition and enforcement",
+          "es": "reconocimiento y ejecución"
+        },
+        {
+          "fr": "Ordre public international",
+          "en": "international public policy",
+          "es": "orden público internacional"
+        },
+        {
+          "fr": "Exequatur",
+          "en": "exequatur / enforcement order",
+          "es": "exequátur"
+        },
+        {
+          "fr": "Force exécutoire",
+          "en": "enforceability",
+          "es": "fuerza ejecutiva"
+        }
+      ],
+      "note": null
+    },
+    {
+      "id": "dai.distribution",
+      "titre": "Distribution et concurrence",
+      "priorite": "ADVANCED",
+      "statut": "Reconstructed",
+      "provenance": [
+        "ACADEMIC RESEARCH",
+        "RECONSTRUCTED COURSE"
+      ],
+      "origine": "catalogue du dépôt cours",
+      "notions": [
+        {
+          "id": "dai.distribution.agent",
+          "titre": "Statut de l'agent commercial (directive 86/653)",
+          "niveau": "A"
+        },
+        {
+          "id": "dai.distribution.concurrence",
+          "titre": "Droit de la concurrence de l'UE : ententes et restrictions verticales",
+          "niveau": "A"
+        }
+      ],
+      "documents": [],
+      "sources": [
+        "src.directive-agents",
+        "src.code-commerce",
+        "src.tfue",
+        "src.vber"
+      ],
+      "verifie_par": null,
+      "prerequis": [
+        "ici.presence",
+        "dai.normes"
+      ],
+      "terminologie": [
+        {
+          "fr": "Indemnité de fin de contrat",
+          "en": "goodwill indemnity / compensation on termination",
+          "es": "indemnización por clientela"
+        },
+        {
+          "fr": "Préavis",
+          "en": "notice period",
+          "es": "preaviso"
+        },
+        {
+          "fr": "Faute grave",
+          "en": "serious misconduct / gross breach",
+          "es": "falta grave"
+        },
+        {
+          "fr": "Entente",
+          "en": "anticompetitive agreement / cartel",
+          "es": "acuerdo colusorio / cártel"
+        },
+        {
+          "fr": "Restriction verticale",
+          "en": "vertical restraint",
+          "es": "restricción vertical"
+        },
+        {
+          "fr": "Abus de position dominante",
+          "en": "abuse of a dominant position",
+          "es": "abuso de posición dominante"
+        },
+        {
+          "fr": "Ventes passives",
+          "en": "passive sales",
+          "es": "ventas pasivas"
+        }
+      ],
+      "note": null
+    }
+  ]
+}
